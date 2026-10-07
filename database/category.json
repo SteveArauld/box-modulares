@@ -1,0 +1,543 @@
+[
+  {
+    "name": {
+      "fr": "Astilladoras de Leña",
+      "it": "Spaccalegna",
+      "es": "Astilladoras de Leña",
+      "de": "Holzspalter",
+      "pt": "Rachadores de Lenha",
+      "en": "Log Splitters"
+    },
+    "slug": {
+      "fr": "astilladoras-de-le-a",
+      "it": "astilladoras-de-le-a",
+      "es": "astilladoras-de-le-a",
+      "de": "astilladoras-de-le-a",
+      "pt": "astilladoras-de-le-a",
+      "en": "astilladoras-de-le-a"
+    }
+  },
+  {
+    "name": {
+      "fr": "Barbacoas",
+      "it": "Barbecue",
+      "es": "Barbacoas",
+      "de": "Grillgeräte",
+      "pt": "Churrasqueiras",
+      "en": "Barbecues"
+    },
+    "slug": {
+      "fr": "barbacoas",
+      "it": "barbacoas",
+      "es": "barbacoas",
+      "de": "barbacoas",
+      "pt": "barbacoas",
+      "en": "barbacoas"
+    }
+  },
+  {
+    "name": {
+      "fr": "Casas Móviles y Prefabricadas",
+      "it": "Case Mobili e Prefabbricate",
+      "es": "Casas Móviles y Prefabricadas",
+      "de": "Mobilheime und Fertighäuser",
+      "pt": "Casas Móveis e Pré-fabricadas",
+      "en": "Mobile and Prefabricated Homes"
+    },
+    "slug": {
+      "fr": "casas-m-viles-y-prefabricadas",
+      "it": "casas-m-viles-y-prefabricadas",
+      "es": "casas-m-viles-y-prefabricadas",
+      "de": "casas-m-viles-y-prefabricadas",
+      "pt": "casas-m-viles-y-prefabricadas",
+      "en": "casas-m-viles-y-prefabricadas"
+    }
+  },
+  {
+    "name": {
+      "fr": "Casetas de jardín",
+      "it": "Capanne da Giardino",
+      "es": "Casetas de jardín",
+      "de": "Gartenhäuser",
+      "pt": "Casas de Jardim",
+      "en": "Garden Sheds"
+    },
+    "slug": {
+      "fr": "casetas-de-jard-n",
+      "it": "casetas-de-jard-n",
+      "es": "casetas-de-jard-n",
+      "de": "casetas-de-jard-n",
+      "pt": "casetas-de-jard-n",
+      "en": "casetas-de-jard-n"
+    }
+  },
+  {
+    "name": {
+      "fr": "Cenadores",
+      "it": "Gazebo da Giardino",
+      "es": "Cenadores",
+      "de": "Gartenpavillons",
+      "pt": "Gazebos de Jardim",
+      "en": "Garden Gazebos"
+    },
+    "slug": {
+      "fr": "cenadores",
+      "it": "cenadores",
+      "es": "cenadores",
+      "de": "cenadores",
+      "pt": "cenadores",
+      "en": "cenadores"
+    }
+  },
+  {
+    "name": {
+      "fr": "Cortacéspedes Giro Cero",
+      "it": "Tosaerba a Raggio Zero",
+      "es": "Cortacéspedes Giro Cero",
+      "de": "Zero-Turn-Rasenmäher",
+      "pt": "Cortadores de Relva de Raio Zero",
+      "en": "Zero-Turn Mowers"
+    },
+    "slug": {
+      "fr": "cortac-spedes-giro-cero",
+      "it": "cortac-spedes-giro-cero",
+      "es": "cortac-spedes-giro-cero",
+      "de": "cortac-spedes-giro-cero",
+      "pt": "cortac-spedes-giro-cero",
+      "en": "cortac-spedes-giro-cero"
+    }
+  },
+  {
+    "name": {
+      "fr": "Generadores de apoyo solar",
+      "it": "Generatori Solari di Supporto",
+      "es": "Generadores de apoyo solar",
+      "de": "Solar-Generatoren zur Unterstützung",
+      "pt": "Geradores de Apoio Solar",
+      "en": "Solar Backup Generators"
+    },
+    "slug": {
+      "fr": "generadores-de-apoyo-solar",
+      "it": "generadores-de-apoyo-solar",
+      "es": "generadores-de-apoyo-solar",
+      "de": "generadores-de-apoyo-solar",
+      "pt": "generadores-de-apoyo-solar",
+      "en": "generadores-de-apoyo-solar"
+    }
+  },
+  {
+    "name": {
+      "fr": "Generadores Eléctricos",
+      "it": "Generatori Elettrici",
+      "es": "Generadores Eléctricos",
+      "de": "Stromgeneratoren",
+      "pt": "Geradores Elétricos",
+      "en": "Electric Generators"
+    },
+    "slug": {
+      "fr": "generadores-el-ctricos",
+      "it": "generadores-el-ctricos",
+      "es": "generadores-el-ctricos",
+      "de": "generadores-el-ctricos",
+      "pt": "generadores-el-ctricos",
+      "en": "generadores-el-ctricos"
+    }
+  },
+  {
+    "name": {
+      "fr": "Generadores Eléctricos Inverter",
+      "it": "Generatori Elettrici Inverter",
+      "es": "Generadores Eléctricos Inverter",
+      "de": "Inverter-Stromgeneratoren",
+      "pt": "Geradores Elétricos Inverter",
+      "en": "Inverter Generators"
+    },
+    "slug": {
+      "fr": "generadores-el-ctricos-inverter",
+      "it": "generadores-el-ctricos-inverter",
+      "es": "generadores-el-ctricos-inverter",
+      "de": "generadores-el-ctricos-inverter",
+      "pt": "generadores-el-ctricos-inverter",
+      "en": "generadores-el-ctricos-inverter"
+    }
+  },
+  {
+    "name": {
+      "fr": "Minidumpers",
+      "it": "Mini Dumper",
+      "es": "Minidumpers",
+      "de": "Mini-Dumper",
+      "pt": "Mini Dumpers",
+      "en": "Mini Dumpers"
+    },
+    "slug": {
+      "fr": "minidumpers",
+      "it": "minidumpers",
+      "es": "minidumpers",
+      "de": "minidumpers",
+      "pt": "minidumpers",
+      "en": "minidumpers"
+    }
+  },
+  {
+    "name": {
+      "fr": "Muebles de jardín",
+      "it": "Arredi da Giardino",
+      "es": "Muebles de jardín",
+      "de": "Gartenmöbel",
+      "pt": "Móveis de Jardim",
+      "en": "Garden Furniture"
+    },
+    "slug": {
+      "fr": "muebles-de-jard-n",
+      "it": "muebles-de-jard-n",
+      "es": "muebles-de-jard-n",
+      "de": "muebles-de-jard-n",
+      "pt": "muebles-de-jard-n",
+      "en": "muebles-de-jard-n"
+    }
+  },
+  {
+    "name": {
+      "fr": "Pérgolas para jardines y terrazas",
+      "it": "Pergole per Giardini e Terrazze",
+      "es": "Pérgolas para jardines y terrazas",
+      "de": "Pergolen für Gärten und Terrassen",
+      "pt": "Pérgulas para Jardins e Terraços",
+      "en": "Pergolas for Gardens and Terraces"
+    },
+    "slug": {
+      "fr": "p-rgolas-para-jardines-y-terrazas",
+      "it": "p-rgolas-para-jardines-y-terrazas",
+      "es": "p-rgolas-para-jardines-y-terrazas",
+      "de": "p-rgolas-para-jardines-y-terrazas",
+      "pt": "p-rgolas-para-jardines-y-terrazas",
+      "en": "p-rgolas-para-jardines-y-terrazas"
+    }
+  },
+  {
+    "name": {
+      "fr": "Palet de leña",
+      "it": "Pallet di Legna da Ardere",
+      "es": "Palet de leña",
+      "de": "Brennholzpalette",
+      "pt": "Palete de Lenha",
+      "en": "Firewood Pallet"
+    },
+    "slug": {
+      "fr": "palet-de-le-a",
+      "it": "palet-de-le-a",
+      "es": "palet-de-le-a",
+      "de": "palet-de-le-a",
+      "pt": "palet-de-le-a",
+      "en": "palet-de-le-a"
+    }
+  },
+  {
+    "name": {
+      "fr": "Pellet",
+      "it": "Pellet",
+      "es": "Pellet",
+      "de": "Pellets",
+      "pt": "Pellet",
+      "en": "Pellets"
+    },
+    "slug": {
+      "fr": "pellet",
+      "it": "pellet",
+      "es": "pellet",
+      "de": "pellet",
+      "pt": "pellet",
+      "en": "pellet"
+    }
+  },
+  {
+    "name": {
+      "fr": "Pergolas-carpas-y-cenadores",
+      "it": "Pergole, Tende e Gazebo",
+      "es": "Pergolas-carpas-y-cenadores",
+      "de": "Pergolen, Zelte und Pavillons",
+      "pt": "Pérgulas, Toldos e Gazebos",
+      "en": "Pergolas, Tents and Gazebos"
+    },
+    "slug": {
+      "fr": "pergolas-carpas-y-cenadores",
+      "it": "pergolas-carpas-y-cenadores",
+      "es": "pergolas-carpas-y-cenadores",
+      "de": "pergolas-carpas-y-cenadores",
+      "pt": "pergolas-carpas-y-cenadores",
+      "en": "pergolas-carpas-y-cenadores"
+    }
+  },
+  {
+    "name": {
+      "fr": "Piscina",
+      "it": "Piscina",
+      "es": "Piscina",
+      "de": "Pool",
+      "pt": "Piscina",
+      "en": "Pool"
+    },
+    "slug": {
+      "fr": "piscina",
+      "it": "piscina",
+      "es": "piscina",
+      "de": "piscina",
+      "pt": "piscina",
+      "en": "piscina"
+    }
+  },
+  {
+    "name": {
+      "fr": "Piscinas desmontables",
+      "it": "Piscine Fuori Terra",
+      "es": "Piscinas desmontables",
+      "de": "Aufstellpools",
+      "pt": "Piscinas Desmontáveis",
+      "en": "Above-Ground Pools"
+    },
+    "slug": {
+      "fr": "piscinas-desmontables",
+      "it": "piscinas-desmontables",
+      "es": "piscinas-desmontables",
+      "de": "piscinas-desmontables",
+      "pt": "piscinas-desmontables",
+      "en": "piscinas-desmontables"
+    }
+  },
+  {
+    "name": {
+      "fr": "Plataformas elevadoras",
+      "it": "Piattaforme Elevatrici",
+      "es": "Plataformas elevadoras",
+      "de": "Hebebühnen",
+      "pt": "Plataformas Elevatórias",
+      "en": "Lift Platforms"
+    },
+    "slug": {
+      "fr": "plataformas-elevadoras",
+      "it": "plataformas-elevadoras",
+      "es": "plataformas-elevadoras",
+      "de": "plataformas-elevadoras",
+      "pt": "plataformas-elevadoras",
+      "en": "plataformas-elevadoras"
+    }
+  },
+  {
+    "name": {
+      "fr": "Portavehículos",
+      "it": "Porta Veicoli",
+      "es": "Portavehículos",
+      "de": "Fahrzeugträger",
+      "pt": "Transportadores de Veículos",
+      "en": "Vehicle Carriers"
+    },
+    "slug": {
+      "fr": "portaveh-culos",
+      "it": "portaveh-culos",
+      "es": "portaveh-culos",
+      "de": "portaveh-culos",
+      "pt": "portaveh-culos",
+      "en": "portaveh-culos"
+    }
+  },
+  {
+    "name": {
+      "fr": "Remolque de Equipaje",
+      "it": "Rimorchio per Bagagli",
+      "es": "Remolque de Equipaje",
+      "de": "Gepäckanhänger",
+      "pt": "Reboque de Bagagem",
+      "en": "Luggage Trailer"
+    },
+    "slug": {
+      "fr": "remolque-de-equipaje",
+      "it": "remolque-de-equipaje",
+      "es": "remolque-de-equipaje",
+      "de": "remolque-de-equipaje",
+      "pt": "remolque-de-equipaje",
+      "en": "remolque-de-equipaje"
+    }
+  },
+  {
+    "name": {
+      "fr": "Remolque para caballos",
+      "it": "Rimorchio per Cavalli",
+      "es": "Remolque para caballos",
+      "de": "Pferdeanhänger",
+      "pt": "Reboque para Cavalos",
+      "en": "Horse Trailer"
+    },
+    "slug": {
+      "fr": "remolque-para-caballos",
+      "it": "remolque-para-caballos",
+      "es": "remolque-para-caballos",
+      "de": "remolque-para-caballos",
+      "pt": "remolque-para-caballos",
+      "en": "remolque-para-caballos"
+    }
+  },
+  {
+    "name": {
+      "fr": "Remolque para Moto",
+      "it": "Rimorchio per Moto",
+      "es": "Remolque para Moto",
+      "de": "Motorradanhänger",
+      "pt": "Reboque para Moto",
+      "en": "Motorcycle Trailer"
+    },
+    "slug": {
+      "fr": "remolque-para-moto",
+      "it": "remolque-para-moto",
+      "es": "remolque-para-moto",
+      "de": "remolque-para-moto",
+      "pt": "remolque-para-moto",
+      "en": "remolque-para-moto"
+    }
+  },
+  {
+    "name": {
+      "fr": "Remolque para Perros y La caza",
+      "it": "Rimorchio per Cani e Caccia",
+      "es": "Remolque para Perros y La caza",
+      "de": "Hunde- und Jagdanhänger",
+      "pt": "Reboque para Cães e Caça",
+      "en": "Dog and Hunting Trailer"
+    },
+    "slug": {
+      "fr": "remolque-para-perros-y-la-caza",
+      "it": "remolque-para-perros-y-la-caza",
+      "es": "remolque-para-perros-y-la-caza",
+      "de": "remolque-para-perros-y-la-caza",
+      "pt": "remolque-para-perros-y-la-caza",
+      "en": "remolque-para-perros-y-la-caza"
+    }
+  },
+  {
+    "name": {
+      "fr": "Remolque Publicitario",
+      "it": "Rimorchio Pubblicitario",
+      "es": "Remolque Publicitario",
+      "de": "Werbeanhänger",
+      "pt": "Reboque Publicitário",
+      "en": "Advertising Trailer"
+    },
+    "slug": {
+      "fr": "remolque-publicitario",
+      "it": "remolque-publicitario",
+      "es": "remolque-publicitario",
+      "de": "remolque-publicitario",
+      "pt": "remolque-publicitario",
+      "en": "remolque-publicitario"
+    }
+  },
+  {
+    "name": {
+      "fr": "Remolque Venta Ambulante o FoodTruck",
+      "it": "Rimorchio per Vendita Ambulante o Food Truck",
+      "es": "Remolque Venta Ambulante o FoodTruck",
+      "de": "Verkaufsanhänger oder Food Truck",
+      "pt": "Reboque de Venda Ambulante ou Food Truck",
+      "en": "Mobile Vending or Food Truck Trailer"
+    },
+    "slug": {
+      "fr": "remolque-venta-ambulante-o-foodtruck",
+      "it": "remolque-venta-ambulante-o-foodtruck",
+      "es": "remolque-venta-ambulante-o-foodtruck",
+      "de": "remolque-venta-ambulante-o-foodtruck",
+      "pt": "remolque-venta-ambulante-o-foodtruck",
+      "en": "remolque-venta-ambulante-o-foodtruck"
+    }
+  },
+  {
+    "name": {
+      "fr": "Remolques Bicicleta",
+      "it": "Rimorchi per Biciclette",
+      "es": "Remolques Bicicleta",
+      "de": "Fahrradanhänger",
+      "pt": "Reboques para Bicicleta",
+      "en": "Bicycle Trailers"
+    },
+    "slug": {
+      "fr": "remolques-bicicleta",
+      "it": "remolques-bicicleta",
+      "es": "remolques-bicicleta",
+      "de": "remolques-bicicleta",
+      "pt": "remolques-bicicleta",
+      "en": "remolques-bicicleta"
+    }
+  },
+  {
+    "name": {
+      "fr": "Remolques de Jardín y Agricultura",
+      "it": "Rimorchi da Giardino e Agricoltura",
+      "es": "Remolques de Jardín y Agricultura",
+      "de": "Garten- und Landwirtschaftsanhänger",
+      "pt": "Reboques de Jardim e Agricultura",
+      "en": "Garden and Agriculture Trailers"
+    },
+    "slug": {
+      "fr": "remolques-de-jard-n-y-agricultura",
+      "it": "remolques-de-jard-n-y-agricultura",
+      "es": "remolques-de-jard-n-y-agricultura",
+      "de": "remolques-de-jard-n-y-agricultura",
+      "pt": "remolques-de-jard-n-y-agricultura",
+      "en": "remolques-de-jard-n-y-agricultura"
+    }
+  },
+  {
+    "name": {
+      "fr": "Techos para terrazas",
+      "it": "Coperture per Terrazze",
+      "es": "Techos para terrazas",
+      "de": "Terrassenüberdachungen",
+      "pt": "Coberturas para Terraços",
+      "en": "Terrace Roofs"
+    },
+    "slug": {
+      "fr": "techos-para-terrazas",
+      "it": "techos-para-terrazas",
+      "es": "techos-para-terrazas",
+      "de": "techos-para-terrazas",
+      "pt": "techos-para-terrazas",
+      "en": "techos-para-terrazas"
+    }
+  },
+  {
+    "name": {
+      "fr": "Tractores Cortacésped",
+      "it": "Trattorini Tosaerba",
+      "es": "Tractores Cortacésped",
+      "de": "Rasenmähertraktoren",
+      "pt": "Tratores Cortadores de Relva",
+      "en": "Lawn Tractors"
+    },
+    "slug": {
+      "fr": "tractores-cortac-sped",
+      "it": "tractores-cortac-sped",
+      "es": "tractores-cortac-sped",
+      "de": "tractores-cortac-sped",
+      "pt": "tractores-cortac-sped",
+      "en": "tractores-cortac-sped"
+    }
+  },
+  {
+    "name": {
+      "fr": "Trituradoras Semiprofesionales",
+      "it": "Biotrituratori Semiprofessionali",
+      "es": "Trituradoras Semiprofesionales",
+      "de": "Halbprofessionelle Häcksler",
+      "pt": "Trituradoras Semiprofissionais",
+      "en": "Semi-Professional Shredders"
+    },
+    "slug": {
+      "fr": "trituradoras-semiprofesionales",
+      "it": "trituradoras-semiprofesionales",
+      "es": "trituradoras-semiprofesionales",
+      "de": "trituradoras-semiprofesionales",
+      "pt": "trituradoras-semiprofesionales",
+      "en": "trituradoras-semiprofesionales"
+    }
+
+  }
+]
