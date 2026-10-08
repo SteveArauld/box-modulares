@@ -7,7 +7,7 @@
 						<div class="whb-flex-row whb-general-header-inner">
 							<div class="whb-column whb-col-left whb-column8 whb-visible-lg">
 								<div class="site-logo whb-jey7bav40wk7t8zxlr1t wd-switch-logo">
-									<a href="index.html" class="wd-logo wd-main-logo" rel="home"
+									<a href="/" class="wd-logo wd-main-logo" rel="home"
 										aria-label="Logotipo del sitio">
 										<img width="782" height="178" src="/wp-content/uploads/2026/07/logo-2.png"
 											class="attachment-full size-full" alt="" style="max-width:175px;"
@@ -16,7 +16,7 @@
 											sizes="(max-width: 782px) 100vw, 782px" /> </a>
 									<link rel="stylesheet" id="wd-header-logo-opt-swap-css"
 										href="/wp-content/themes/woodmart/css/parts/header-el-logo-opt-swap8833.css?ver=8.5.2"
-										type="text/css" media="all" /> <a href="index.html"
+										type="text/css" media="all" /> <a href="/"
 										class="wd-logo wd-sticky-logo" rel="home">
 										<img width="782" height="178" src="/wp-content/uploads/2026/07/logo-2.png"
 											class="attachment-full size-full" alt="" style="max-width:150px;"
@@ -32,7 +32,7 @@
 										class="menu wd-nav wd-nav-header wd-nav-main wd-style-default wd-gap-m">
 										<li id="menu-item-6034"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-120 current_page_item menu-item-6034 item-level-0 menu-simple-dropdown wd-event-hover">
-											<a href="index.html" class="woodmart-nav-link"><span
+											<a href="/" class="woodmart-nav-link"><span
 													class="nav-link-text">Inicio</span></a></li>
 										<li id="menu-item-8094"
 											class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-8094 item-level-0 menu-simple-dropdown wd-event-hover">
@@ -336,14 +336,14 @@
 							</div>
 							<div class="whb-column whb-mobile-center whb-column_mobile3 whb-hidden-lg">
 								<div class="site-logo whb-ep1ny3r4ky7wli5rao3g wd-switch-logo">
-									<a href="index.html" class="wd-logo wd-main-logo" rel="home"
+									<a href="/" class="wd-logo wd-main-logo" rel="home"
 										aria-label="Logotipo del sitio">
 										<img width="782" height="178" src="/wp-content/uploads/2026/07/logo-2.png"
 											class="attachment-full size-full" alt="" style="max-width:150px;"
 											decoding="async"
 											srcset="/wp-content/uploads/2026/07/logo-2.png 782w, /wp-content/uploads/2026/07/logo-2-150x34.png 150w, /wp-content/uploads/2026/07/logo-2-300x68.png 300w, /wp-content/uploads/2026/07/logo-2-768x175.png 768w"
 											sizes="(max-width: 782px) 100vw, 782px" /> </a>
-									<a href="index.html" class="wd-logo wd-sticky-logo" rel="home">
+									<a href="/" class="wd-logo wd-sticky-logo" rel="home">
 										<img width="782" height="178" src="/wp-content/uploads/2026/07/logo-2.png"
 											class="attachment-full size-full" alt="" style="max-width:150px;"
 											decoding="async"

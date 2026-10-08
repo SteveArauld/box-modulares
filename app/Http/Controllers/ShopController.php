@@ -25,7 +25,7 @@ class ShopController extends Controller
     public function category(string $slug): View
     {
 
-        return view('pages.category');
+        return view('pages.shop');
     }
 
 
@@ -37,6 +37,18 @@ class ShopController extends Controller
     public function lostPassword()
     {
         return view('pages.lost-password');
+    }
+
+
+      public function carrito()
+    {
+        return view('pages.carrito');
+    }
+
+
+          public function checkout()
+    {
+        return view('pages.checkout');
     }
 
 

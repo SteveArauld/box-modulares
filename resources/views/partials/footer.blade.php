@@ -618,7 +618,7 @@
         class="mobile-pages-menu menu wd-nav wd-nav-mobile wd-dis-hover wd-layout-dropdown wd-active">
         <li
             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-120 current_page_item menu-item-6034 item-level-0">
-            <a href="index.html" class="woodmart-nav-link"><span class="nav-link-text">Inicio</span></a>
+            <a href="/" class="woodmart-nav-link"><span class="nav-link-text">Inicio</span></a>
         </li>
         <li
             class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-8094 item-level-0">
@@ -799,6 +799,8 @@
         </a>
     </div>
 </div>
+
+
 <link rel='stylesheet' id='wd-style-base-deferred-css'
     href='/wp-content/themes/woodmart/css/parts/base-deferred8833.css?ver=8.5.2' media='all' />
 <link rel='stylesheet' id='wd-woocommerce-base-deferred-css'
@@ -829,28 +831,14 @@
 
 
 
-<script id="wd-update-cart-fragments-fix-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/updateCartFragmentsFix8833.js?ver=8.5.2"></script>
-
 <script id="fluentform-elementor-js"
     src="/wp-content/plugins/fluentform/assets/js/fluent-forms-elementor-widgetd7df.js?ver=6.2.14"></script>
 <script id="wp-hooks-js" src="wp-includes/js/dist/hooks.min4ce2.js?ver=f0f188028580e8dc1255"></script>
 <script id="wp-i18n-js" src="wp-includes/js/dist/i18n.min99af.js?ver=1dfe7db3940c23ea9216"></script>
 
-<script id="swv-js" src="/wp-content/plugins/contact-form-7/includes/swv/js/index36b6.js?ver=6.1.7"></script>
-
-
-<script id="contact-form-7-js" src="/wp-content/plugins/contact-form-7/includes/js/index36b6.js?ver=6.1.7"></script>
-
-<script id="hostinger-reach-subscription-block-view-js"
-    src="/wp-content/plugins/hostinger-reach/frontend/dist/blocks/subscription-view29b3.js?ver=1789777875"></script>
-<script data-wp-strategy="defer" defer id="hostinger-reach-embed-js"
-    src="../cdn-reach.hostinger.com/js/embed.js"></script>
 <script id="sourcebuster-js-js"
     src="/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min345d.js?ver=11.1.1"></script>
 
-<script id="wc-order-attribution-js"
-    src="/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min345d.js?ver=11.1.1"></script>
 
 <script id="disco-plugin-script-js" src="/wp-content/plugins/disco/assets/build/plugin-publicf896.js?ver=1.4.18"
     async="async"></script>
@@ -861,65 +849,28 @@
 
 <script id="jquery-ui-core-js" src="wp-includes/js/jquery/ui/core.min0a10.js?ver=1.14.2"></script>
 
-<script id="elementor-frontend-js"
-    src="/wp-content/plugins/elementor/assets/js/frontend.min4189.js?ver=4.2.4"></script>
-
 <script id="woodmart-theme-js"
     src="/wp-content/themes/woodmart/js/scripts/global/helpers.min8833.js?ver=8.5.2"></script>
 <script id="wd-elementor-integration-js"
     src="/wp-content/themes/woodmart/js/scripts/global/elementor-integration.min8833.js?ver=8.5.2"></script>
-<script id="wd-header-builder-js"
-    src="/wp-content/themes/woodmart/js/scripts/header/headerBuilder.min8833.js?ver=8.5.2"></script>
-<script id="wd-menu-offsets-js"
-    src="/wp-content/themes/woodmart/js/scripts/menu/menuOffsets.min8833.js?ver=8.5.2"></script>
-<script id="wd-menu-setup-js"
-    src="/wp-content/themes/woodmart/js/scripts/menu/menuSetUp.min8833.js?ver=8.5.2"></script>
-<script id="wd-login-dropdown-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/loginDropdown.min8833.js?ver=8.5.2"></script>
-<script id="wd-on-remove-from-cart-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/onRemoveFromCart.min8833.js?ver=8.5.2"></script>
-<script id="wd-swiper-library-js" src="/wp-content/themes/woodmart/js/libs/swiper.min8833.js?ver=8.5.2"></script>
-<script id="wd-swiper-carousel-js"
-    src="/wp-content/themes/woodmart/js/scripts/global/swiperInit.min8833.js?ver=8.5.2"></script>
-<script id="imagesloaded-js" src="wp-includes/js/imagesloaded.minbb93.js?ver=5.0.0"></script>
-<script id="wd-quick-shop-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/quickShop.min8833.js?ver=8.5.2"></script>
-<script id="wd-swatches-variations-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/swatchesVariations.min8833.js?ver=8.5.2"></script>
-<script id="wd-add-to-cart-all-types-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/addToCartAllTypes.min8833.js?ver=8.5.2"></script>
-<script id="underscore-js" src="wp-includes/js/underscore.min55e2.js?ver=1.13.8"></script>
 
-<script data-wp-strategy="defer" defer id="wc-add-to-cart-variation-js"
-    src="/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min345d.js?ver=11.1.1"></script>
-<script id="wd-isotope-bundle-library-js"
-    src="/wp-content/themes/woodmart/js/libs/isotope-bundle.min8833.js?ver=8.5.2"></script>
-<script id="wd-shop-masonry-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/shopMasonry.min8833.js?ver=8.5.2"></script>
-<script id="wd-action-after-add-to-cart-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/actionAfterAddToCart.min8833.js?ver=8.5.2"></script>
-<script id="wd-products-load-more-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/productsLoadMore.min8833.js?ver=8.5.2"></script>
-<script id="wd-click-on-scroll-btn-js"
-    src="/wp-content/themes/woodmart/js/scripts/global/clickOnScrollButton.min8833.js?ver=8.5.2"></script>
-<script id="wd-widget-collapse-js"
-    src="/wp-content/themes/woodmart/js/scripts/global/widgetCollapse.min8833.js?ver=8.5.2"></script>
-<script id="wd-toggle-element-js"
-    src="/wp-content/themes/woodmart/js/scripts/elements/toggle.min8833.js?ver=8.5.2"></script>
+
+<script id="wd-swiper-library-js" src="/wp-content/themes/woodmart/js/libs/swiper.min8833.js?ver=8.5.2"></script>
+
+
+
+
 <script id="wd-scroll-top-js"
     src="/wp-content/themes/woodmart/js/scripts/global/scrollTop.min8833.js?ver=8.5.2"></script>
 <script id="wd-search-full-screen-js"
     src="/wp-content/themes/woodmart/js/scripts/global/searchFullScreen.min8833.js?ver=8.5.2"></script>
-<script id="wd-autocomplete-library-js"
-    src="/wp-content/themes/woodmart/js/libs/autocomplete.min8833.js?ver=8.5.2"></script>
-<script id="wd-ajax-search-js"
-    src="/wp-content/themes/woodmart/js/scripts/global/ajaxSearch.min8833.js?ver=8.5.2"></script>
+
+
 <script id="wd-mobile-navigation-js"
     src="/wp-content/themes/woodmart/js/scripts/menu/mobileNavigation.min8833.js?ver=8.5.2"></script>
-<script id="wd-clear-search-js"
-    src="/wp-content/themes/woodmart/js/scripts/global/clearSearch.min8833.js?ver=8.5.2"></script>
+
 <script id="wd-cart-widget-js"
-    src="/wp-content/themes/woodmart/js/scripts/wc/cartWidget.min8833.js?ver=8.5.2"></script>
+    src="/wp-content/themes/woodmart/js/scripts/wc/cartWidget.min8833.js"></script>
 
 <script data-wp-strategy="defer" defer id="wc-cart-fragments-js"
-    src="/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min345d.js?ver=11.1.1"></script>
+    src="/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min345d.js"></script>
