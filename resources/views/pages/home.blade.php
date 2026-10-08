@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Box Modulares | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento')
+@section('title', 'nom domain | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento')
 @section('body_class', 'home page page-id-120 elementor-page elementor-page-120')
 
 
@@ -1279,7 +1279,7 @@
 
                                         <details class="mm-faq-item">
                                             <summary>¿Los gastos de envío son gratuitos?</summary>
-                                            <p>Sí. Todos los pedidos realizados en Box Modulares incluyen envío
+                                            <p>Sí. Todos los pedidos realizados en nom domain incluyen envío
                                                 gratuito, sin costes adicionales de transporte, salvo que se
                                                 indique expresamente para servicios especiales.</p>
                                         </details>

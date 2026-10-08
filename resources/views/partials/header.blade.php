@@ -14,15 +14,7 @@
 											decoding="async"
 											srcset="/wp-content/uploads/2026/07/logo-2.png 782w, /wp-content/uploads/2026/07/logo-2-150x34.png 150w, /wp-content/uploads/2026/07/logo-2-300x68.png 300w, /wp-content/uploads/2026/07/logo-2-768x175.png 768w"
 											sizes="(max-width: 782px) 100vw, 782px" /> </a>
-									<link rel="stylesheet" id="wd-header-logo-opt-swap-css"
-										href="/wp-content/themes/woodmart/css/parts/header-el-logo-opt-swap8833.css?ver=8.5.2"
-										type="text/css" media="all" /> <a href="/"
-										class="wd-logo wd-sticky-logo" rel="home">
-										<img width="782" height="178" src="/wp-content/uploads/2026/07/logo-2.png"
-											class="attachment-full size-full" alt="" style="max-width:150px;"
-											decoding="async"
-											srcset="/wp-content/uploads/2026/07/logo-2.png 782w, /wp-content/uploads/2026/07/logo-2-150x34.png 150w, /wp-content/uploads/2026/07/logo-2-300x68.png 300w, /wp-content/uploads/2026/07/logo-2-768x175.png 768w"
-											sizes="(max-width: 782px) 100vw, 782px" /> </a>
+									
 								</div>
 							</div>
 							<div class="whb-column whb-col-center whb-column9 whb-visible-lg">
@@ -202,9 +194,7 @@
 							<div class="whb-column whb-col-right whb-column10 whb-visible-lg">
 								<div class="wd-header-search wd-tools-element wd-design-1 wd-style-icon wd-display-full-screen whb-uw84u23jz1337k4d87hh"
 									title="Buscar">
-									<link rel="stylesheet" id="wd-header-search-css"
-										href="/wp-content/themes/woodmart/css/parts/header-el-search8833.css?ver=8.5.2"
-										type="text/css" media="all" /> <a href="#" rel="nofollow" aria-label="Buscar">
+									
 
 										<span class="wd-tools-icon">
 										</span>
@@ -291,9 +281,7 @@
 
 								<div class="whb-space-element whb-2x1n4a0aisve7ytt1rt8 " style="width:10px;"></div>
 								<div class="wd-header-divider whb-divider-default whb-m4vz99bnqdnhhaigz9ty">
-									<link rel="stylesheet" id="wd-header-divider-css"
-										href="/wp-content/themes/woodmart/css/parts/header-el-divider8833.css?ver=8.5.2"
-										type="text/css" media="all" />
+									
 								</div>
 
 								<div class="whb-space-element whb-wbe46k9j7ph9c86j6g33 " style="width:10px;"></div>

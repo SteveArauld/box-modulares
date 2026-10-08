@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Finalizar compra | Box Modulares')
+@section('title', 'Finalizar compra | nom domain')
 <style>
     .wd-page-title-el .wd-page-title {
   border-radius:inherit
@@ -186,16 +186,16 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="pingback" href="../xmlrpc.php">
 
-	<title>Finalizar compra &#8211; Box Modulares | Materiales de Construcción, Jardín, Pérgolas, Piscinas y
+	<title>Finalizar compra &#8211; nom domain | Materiales de Construcción, Jardín, Pérgolas, Piscinas y
 		Equipamiento</title>
 	<meta name='robots' content='max-image-preview:large, noindex, follow' />
 	<link rel='dns-prefetch' href='http://cdn-reach.hostinger.com/' />
 	<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
 	<link rel="alternate" type="application/rss+xml"
-		title="Box Modulares | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento &raquo; Feed"
+		title="nom domain | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento &raquo; Feed"
 		href="../feed/index.html" />
 	<link rel="alternate" type="application/rss+xml"
-		title="Box Modulares | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento &raquo; Feed de los comentarios"
+		title="nom domain | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento &raquo; Feed de los comentarios"
 		href="../comments/feed/index.html" />
 	<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
 		href="../wp-json/oembed/1.0/embedccb1.html?url=https%3A%2F%2Fbox-modulares.es%2Ffinalizar-compra%2F" />

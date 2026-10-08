@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contáctanos | Box Modulares')
+@section('title', 'Contáctanos | nom domain')
 
 
 @section('content')
@@ -255,9 +255,7 @@
 
 
 
-				<link rel="stylesheet" id="wd-widget-collapse-css"
-					href="../wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css?ver=8.5.2" type="text/css"
-					media="all" />
+				
 			</main>
 
 		</div>

@@ -41,6 +41,100 @@
 
 
 
+
+    <link rel="stylesheet" id="wd-categories-loop-mask-subcat-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-categories-loop-mask-subcat8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-woo-categories-loop-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-categories-loop8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-product-loop-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-product-loop8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-woo-loop-prod-el-base-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-loop-prod-el-base8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-woo-loop-prod-predefined-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-loop-prod-predefined8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-product-loop-standard-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-product-loop-standard8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-woo-mod-loop-prod-add-btn-replace-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-mod-loop-prod-add-btn-replace8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-woo-opt-products-bg-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-opt-products-bg8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+
+    <link rel="stylesheet" id="wd-widget-collapse-css"
+        href="/wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+    <link rel="stylesheet" id="wd-woo-el-notices-builder-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-el-notices-builder8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+    <link rel="stylesheet" id="wd-woo-shop-el-order-by-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-shop-el-order-by8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+    <link rel="stylesheet" id="wd-woo-shop-el-products-view-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-shop-el-products-view8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+    <link rel="stylesheet" id="wd-woo-shop-el-products-per-page-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-shop-el-products-per-page8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+
+    <link rel="stylesheet" id="wd-el-off-canvas-column-btn-css"
+        href="/wp-content/themes/woodmart/css/parts/el-off-canvas-column-btn8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-off-canvas-sidebar-critical-css"
+        href="/wp-content/themes/woodmart/css/parts/opt-off-canvas-sidebar-critical8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+    <link rel="stylesheet" id="wd-widget-general-css"
+        href="/wp-content/themes/woodmart/css/parts/widget-general8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-widget-product-cat-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-widget-product-cat8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-widget-price-filter-css"
+        href="/wp-content/themes/woodmart/css/parts/woo-widget-price-filter8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+
+    <link rel="stylesheet" id="wd-int-elem-opt-off-canvas-column-css"
+        href="/wp-content/themes/woodmart/css/parts/int-elem-opt-off-canvas-column8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+    <link rel="stylesheet" id="wd-int-elem-opt-sticky-column-css"
+        href="/wp-content/themes/woodmart/css/parts/int-elem-opt-sticky-column8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+
+    <link rel="stylesheet" id="wd-mod-breadcrumbs-no-wrap-css"
+        href="/wp-content/themes/woodmart/css/parts/mod-breadcrumbs-no-wrap8833.css?ver=8.5.2" type="text/css"
+        media="all" />
+
+    <link rel="stylesheet" id="elementor-post-1048-css"
+        href="/wp-content/uploads/elementor/css/post-104861a0.css?ver=1790099229" type="text/css" media="all">
+    <link rel='stylesheet' id='base-desktop-css'
+        href='/wp-content/uploads/elementor/css/base-desktopa49e.css?ver=6ab2bed939598' media='all' />
+    <link rel='stylesheet' id='base-mobile-css'
+        href='/wp-content/uploads/elementor/css/base-mobilea49e.css?ver=6ab2bed939598' media='(max-width:768px)' />
+
+
+
+  <link rel="stylesheet" id="wd-page-title-css"
+            href="../wp-content/themes/woodmart/css/parts/page-title8833.css?ver=8.5.2" type="text/css" media="all" />
+
+ <link rel="stylesheet" id="wd-widget-collapse-css"
+                href="../wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css?ver=8.5.2" type="text/css"
+                media="all" />
+
     <script id="jquery-core-js" src="wp-includes/js/jquery/jquery.minf43b.js"></script>
     <script id="jquery-migrate-js" src="wp-includes/js/jquery/jquery-migrate.min5589.js"></script>
 
@@ -51,6 +145,8 @@
     <link rel='stylesheet' href='/wp-content/uploads/2026/07/xts-theme_settings_default-17835068198833.css'
         media='all' />
     <link rel='stylesheet' href='{{ asset('assets/css/style.css') }}' media='all' />
+
+    @stack('styles')
 
 </head>
 

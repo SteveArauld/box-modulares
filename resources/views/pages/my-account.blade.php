@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contáctanos | Box Modulares')
+@section('title', 'Contáctanos | nom domain')
 
 <style>
     .wd-registration-page {

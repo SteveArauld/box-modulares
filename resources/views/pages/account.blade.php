@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Mi cuenta | Box Modulares')
+@section('title', 'Mi cuenta | nom domain')
 
 @section('content')
     <div class="container page-shell">
