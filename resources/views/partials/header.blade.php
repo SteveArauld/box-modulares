@@ -9,11 +9,9 @@
 								<div class="site-logo whb-jey7bav40wk7t8zxlr1t wd-switch-logo">
 									<a href="/" class="wd-logo wd-main-logo" rel="home"
 										aria-label="Logotipo del sitio">
-										<img width="782" height="178" src="/wp-content/uploads/2026/07/logo-2.png"
+										<img width="192" height="178" src="{{ asset('assets/images/logo/logo.png') }}"
 											class="attachment-full size-full" alt="" style="max-width:175px;"
-											decoding="async"
-											srcset="/wp-content/uploads/2026/07/logo-2.png 782w, /wp-content/uploads/2026/07/logo-2-150x34.png 150w, /wp-content/uploads/2026/07/logo-2-300x68.png 300w, /wp-content/uploads/2026/07/logo-2-768x175.png 768w"
-											sizes="(max-width: 782px) 100vw, 782px" /> </a>
+											decoding="async"/> </a>
 									
 								</div>
 							</div>
@@ -326,17 +324,11 @@
 								<div class="site-logo whb-ep1ny3r4ky7wli5rao3g wd-switch-logo">
 									<a href="/" class="wd-logo wd-main-logo" rel="home"
 										aria-label="Logotipo del sitio">
-										<img width="782" height="178" src="/wp-content/uploads/2026/07/logo-2.png"
-											class="attachment-full size-full" alt="" style="max-width:150px;"
+										<img width="192" height="178" src="{{ asset('assets/images/logo/logo.png') }}"
+											class="attachment-full size-full" alt="" 
 											decoding="async"
-											srcset="/wp-content/uploads/2026/07/logo-2.png 782w, /wp-content/uploads/2026/07/logo-2-150x34.png 150w, /wp-content/uploads/2026/07/logo-2-300x68.png 300w, /wp-content/uploads/2026/07/logo-2-768x175.png 768w"
-											sizes="(max-width: 782px) 100vw, 782px" /> </a>
-									<a href="/" class="wd-logo wd-sticky-logo" rel="home">
-										<img width="782" height="178" src="/wp-content/uploads/2026/07/logo-2.png"
-											class="attachment-full size-full" alt="" style="max-width:150px;"
-											decoding="async"
-											srcset="/wp-content/uploads/2026/07/logo-2.png 782w, /wp-content/uploads/2026/07/logo-2-150x34.png 150w, /wp-content/uploads/2026/07/logo-2-300x68.png 300w, /wp-content/uploads/2026/07/logo-2-768x175.png 768w"
-											sizes="(max-width: 782px) 100vw, 782px" /> </a>
+											/> </a>
+								
 								</div>
 							</div>
 							<div class="whb-column whb-mobile-right whb-column_mobile4 whb-hidden-lg">

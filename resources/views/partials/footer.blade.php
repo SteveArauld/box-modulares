@@ -24,7 +24,7 @@
                                         <div class="wd-image text-left">
                                             <a href="{{ url('/') }}" aria-label="Enlace de imagen">
                                                 <img width="167" height="24"
-                                                    src="/wp-content/uploads/2026/07/logo-2-167x24.png"
+                                                    src="{{ asset('assets/images/logo/logo.png') }}"
                                                     class="attachment-167x24 size-167x24" alt=""
                                                     decoding="async" loading="lazy" /> </a>
                                         </div>
