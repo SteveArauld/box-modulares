@@ -14,6 +14,11 @@ class Category extends Model
     protected $fillable = [
         'name',
         'slug',
+        'is_visible',
+    ];
+
+    protected $casts = [
+        'is_visible' => 'boolean',
     ];
 
     public array $translatable = [

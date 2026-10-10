@@ -120,10 +120,12 @@
 												class="color-scheme-dark wd-design-default wd-dropdown-menu wd-dropdown">
 												<div class="container wd-entry-content">
 													<ul class="wd-sub-menu color-scheme-dark">
+														@if($categoryHref->has('Palet de leña'))
 														<li id="menu-item-8123"
 															class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-8123 item-level-1 wd-event-hover {{ ($currentCategoryName ?? null) === 'Palet de leña' ? 'current-menu-item current_page_item' : '' }}">
-															<a href="{{ $categoryHref['Palet de leña'] ?? route('shop.index') }}"
+															<a href="{{ $categoryHref['Palet de leña'] }}"
 																class="woodmart-nav-link">{{ __('Palet de leña') }}</a></li>
+														@endif
 														<li id="menu-item-8124"
 															class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-8124 item-level-1 wd-event-hover {{ ($currentCategoryName ?? null) === 'Pellet' ? 'current-menu-item current_page_item' : '' }}">
 															<a href="{{ $categoryHref['Pellet'] ?? route('shop.index') }}"

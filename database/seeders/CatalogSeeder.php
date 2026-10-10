@@ -44,6 +44,7 @@ class CatalogSeeder extends Seeder
                 $category = $categoriesBySpanishSlug[$spanishSlug] ?? new Category;
                 $category->name = $categoryData['name'];
                 $category->slug = $categoryData['slug'];
+                $category->is_visible = $categoryData['visible'] ?? true;
                 $category->save();
 
                 $categoriesBySpanishName[$spanishName] = $category;

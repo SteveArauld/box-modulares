@@ -44,7 +44,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer(['partials.header', 'partials.footer'], function ($view): void {
-            $categories = Category::query()->withCount('products')->orderBy('name->es')->get();
+            $categories = Category::query()->where('is_visible', true)->withCount('products')->orderBy('name->es')->get();
 
             $slugByName = $categories->mapWithKeys(fn (Category $category) => [
                 $category->translatedValue('name') => $category->translatedValue('slug'),

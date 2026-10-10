@@ -2814,3 +2814,92 @@
             display: block;
         }
     }
+
+/* ── Error pages (404, 403, 419, 429, 500, 503…) ── */
+.wd-error-page {
+    padding: 100px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.wd-error-page__content {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.wd-error-page__code {
+    display: block;
+    font-size: 220px;
+    line-height: 1;
+    font-weight: 800;
+    color: #000;
+    opacity: .06;
+    user-select: none;
+}
+
+.wd-error-page__title {
+    margin: -60px 0 20px;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--luminous-vivid-orange, #ff6900);
+}
+
+.wd-error-page__subtitle {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.wd-error-page__description {
+    margin: 0 0 32px;
+    font-size: 16px;
+    color: #666;
+}
+
+.wd-error-page__search {
+    display: flex;
+    max-width: 420px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.wd-error-page__search input {
+    flex: 1 1 auto;
+    border: 0;
+    padding: 14px 16px;
+    font-size: 15px;
+    outline: none;
+}
+
+.wd-error-page__search button {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    border: 0;
+    background: var(--wp--preset--color--luminous-vivid-orange, #ff6900);
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .wd-error-page {
+        padding: 60px 0;
+    }
+
+    .wd-error-page__code {
+        font-size: 120px;
+    }
+
+    .wd-error-page__title {
+        margin-top: -30px;
+        font-size: 28px;
+    }
+}
