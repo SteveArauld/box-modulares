@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contáctanos | nom domain')
+@section('title', 'Contáctanos | '.config('app.name'))
 
 
 @section('content')
@@ -10,18 +10,16 @@
         <div class="wd-page-title page-title  page-title-default title-size-small title-design-default color-scheme-light"
             style="">
             <div class="wd-page-title-bg wd-fill">
-                <img width="1920" height="410" src="../wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
-                    class="attachment-full size-full" alt="" decoding="async" fetchpriority="high"
-                    srcset="/wp-content/uploads/2026/04/edc-hero-section-bg.jpg 1920w, /wp-content/uploads/2026/04/edc-hero-section-bg-150x32.jpg 150w, /wp-content/uploads/2026/04/edc-hero-section-bg-1200x256.jpg 1200w"
-                    sizes="(max-width: 1920px) 100vw, 1920px" />
+                <img width="1920" height="410" src="/wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
+                    class="attachment-full size-full" alt="" decoding="async" fetchpriority="high" />
             </div>
             <div class="container">
                 <h1 class="entry-title title">
-                    Contáctanos </h1>
+                    {{ __('Contáctanos') }} </h1>
 
 
-                <nav class="wd-breadcrumbs"><a href="../">Inicio</a><span class="wd-delimiter">•</span><span
-                        class="wd-last">Contáctanos</span></nav>
+                <nav class="wd-breadcrumbs"><a href="../">{{ __('Inicio') }}</a><span class="wd-delimiter">•</span><span
+                        class="wd-last">{{ __('Contáctanos') }}</span></nav>
             </div>
         </div>
 
@@ -41,24 +39,19 @@
                                         data-widget_type="wd_title.default">
                                         <div class="elementor-widget-container">
                                             <link rel="stylesheet" id="wd-section-title-css"
-                                                href="../wp-content/themes/woodmart/css/parts/el-section-title8833.css?ver=8.5.2"
+                                                href="/wp-content/themes/woodmart/css/parts/el-section-title8833.css?ver=8.5.2"
                                                 type="text/css" media="all" />
                                             <div
                                                 class="title-wrapper wd-set-mb reset-last-child wd-title-color-default wd-title-style-default wd-title-size-default text-left">
 
 
                                                 <div class="liner-continer">
-                                                    <h4 class="woodmart-title-container title wd-fontsize-l">Estamos
-                                                        aquí para ayudarle</h4>
+                                                    <h4 class="woodmart-title-container title wd-fontsize-l">{{ __('Estamos aquí para ayudarle') }}</h4>
                                                 </div>
 
                                                 <div class="title-after_title reset-last-child wd-fontsize-xs">
-                                                    <p>Si tiene alguna pregunta sobre nuestros productos, un pedido,
-                                                        un envío, una devolución o cualquier otro asunto relacionado
-                                                        con nuestros servicios, nuestro equipo de atención al
-                                                        cliente estará encantado de ayudarle.</p>
-                                                    <p>Puede ponerse en contacto con nosotros a través de los
-                                                        siguientes medios:</p>
+                                                    <p>{{ __('Si tiene alguna pregunta sobre nuestros productos, un pedido, un envío, una devolución o cualquier otro asunto relacionado con nuestros servicios, nuestro equipo de atención al cliente estará encantado de ayudarle.') }}</p>
+                                                    <p>{{ __('Puede ponerse en contacto con nosotros a través de los siguientes medios:') }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,7 +68,7 @@
 
                                                     <div class="liner-continer">
                                                         <h4 class="woodmart-title-container title wd-fontsize-l">
-                                                            Datos de contacto</h4>
+                                                            {{ __('Datos de contacto') }}</h4>
                                                     </div>
 
                                                 </div>
@@ -88,11 +81,11 @@
                                                 data-widget_type="wd_text_block.default">
                                                 <div class="elementor-widget-container">
                                                     <link rel="stylesheet" id="wd-text-block-css"
-                                                        href="../wp-content/themes/woodmart/css/parts/el-text-block8833.css?ver=8.5.2"
+                                                        href="/wp-content/themes/woodmart/css/parts/el-text-block8833.css?ver=8.5.2"
                                                         type="text/css" media="all" />
                                                     <div class="wd-text-block reset-last-child text-left">
 
-                                                        <p>Correo electrónico:</p>
+                                                        <p>{{ __('Correo electrónico:') }}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -105,7 +98,7 @@
                                                         <div class="wd-text-block reset-last-child text-left">
 
                                                             <p><a
-                                                                    href="mailto:contacto@box-modulares.es">contacto@box-modulares.es</a>
+                                                                    href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -120,7 +113,7 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="wd-text-block reset-last-child text-left">
 
-                                                        <p>Teléfono:</p>
+                                                        <p>{{ __('Teléfono:') }}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -146,7 +139,7 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="wd-text-block reset-last-child text-left">
 
-                                                        <p>Dirección:</p>
+                                                        <p>{{ __('Dirección:') }}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,7 +151,7 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="wd-text-block reset-last-child text-left">
 
-                                                            <p>Calle Avenir 8, 08006 Barcelona, España</p>
+                                                            <p>{{ __('Calle Avenir 8, 08006 Barcelona, España') }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -174,20 +167,18 @@
 
 
                                                 <div class="liner-continer">
-                                                    <h4 class="woodmart-title-container title wd-fontsize-l">Horario
-                                                        de atención</h4>
+                                                    <h4 class="woodmart-title-container title wd-fontsize-l">{{ __('Horario de atención') }}</h4>
                                                 </div>
 
                                                 <div class="title-after_title reset-last-child wd-fontsize-xs">
-                                                    <p>Nuestro servicio de atención al cliente está disponible en el
-                                                        siguiente horario:</p>
+                                                    <p>{{ __('Nuestro servicio de atención al cliente está disponible en el siguiente horario:') }}</p>
                                                     <ul>
-                                                        <li><strong>Lunes a viernes:</strong> 09:00 – 18:00</li>
-                                                        <li><strong>Sábados, domingos y festivos:</strong> Cerrado
+                                                        <li><strong>{{ __('Lunes a viernes:') }}</strong> 09:00 – 18:00</li>
+                                                        <li><strong>{{ __('Sábados, domingos y festivos:') }}</strong> {{ __('Cerrado') }}
                                                         </li>
                                                     </ul>
-                                                    <p>Intentamos responder a todas las consultas en un plazo de
-                                                        <strong>24 a 48 horas laborables</strong>.
+                                                    <p>{{ __('Intentamos responder a todas las consultas en un plazo de') }}
+                                                        <strong>{{ __('24 a 48 horas laborables') }}</strong>.
                                                     </p>
                                                 </div>
                                             </div>
@@ -206,7 +197,7 @@
 
                                                 <div class="liner-continer">
                                                     <h4 class="woodmart-title-container title wd-fontsize-l">
-                                                        Formulario de contacto</h4>
+                                                        {{ __('Formulario de contacto') }}</h4>
                                                 </div>
 
                                             </div>
@@ -221,20 +212,27 @@
 
 
                                                 <div class='fluentform ff-default fluentform_wrapper_3 ffs_default_wrap'>
+                                                    @if (session('status'))
+                                                        <div class="ff-message-success">{{ session('status') }}</div>
+                                                    @endif
                                                     <form data-form_id="3" id="fluentform_3"
-                                                        class="frm-fluent-form fluent_form_3 ff-el-form-top ff_form_instance_3_1 ff-form-loading ffs_default"
-                                                        data-form_instance="ff_form_instance_3_1" method="POST">
+                                                        class="frm-fluent-form fluent_form_3 ff-el-form-top ff_form_instance_3_1 ffs_default"
+                                                        data-form_instance="ff_form_instance_3_1" method="POST" action="{{ route('shop.contact.send') }}">
+                                                        @csrf
+                                                        @if ($errors->any())
+                                                            <div class="ff-errors-in-stack">
+                                                                <ul>
+                                                                    @foreach ($errors->all() as $error)
+                                                                        <li>{{ $error }}</li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
+                                                        @endif
                                                         <fieldset
                                                             style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
                                                             <legend class="ff_screen_reader_title"
                                                                 style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">
-                                                                Formulario de Contacto</legend><input type='hidden'
-                                                                name='__fluent_form_embded_post_id'
-                                                                value='73' /><input type="hidden"
-                                                                id="_fluentform_3_fluentformnonce"
-                                                                name="_fluentform_3_fluentformnonce"
-                                                                value="6a6eb286e1" /><input type="hidden"
-                                                                name="_wp_http_referer" value="/contactanos/" />
+                                                                {{ __('Formulario de Contacto') }}</legend>
                                                             <div data-type="name-element" data-name="names"
                                                                 class=" ff-field_container ff-name-field-wrapper">
                                                                 <div class='ff-t-container'>
@@ -243,14 +241,15 @@
                                                                             <div
                                                                                 class="ff-el-input--label ff-el-is-required asterisk-right">
                                                                                 <label for='ff_3_names_first_name_'
-                                                                                    id='label_ff_3_names_first_name_'>Nombre</label>
+                                                                                    id='label_ff_3_names_first_name_'>{{ __('Nombre') }}</label>
                                                                             </div>
                                                                             <div class='ff-el-input--content'><input
                                                                                     type="text"
                                                                                     name="names[first_name]"
                                                                                     id="ff_3_names_first_name_"
                                                                                     class="ff-el-form-control"
-                                                                                    placeholder="Nombre"
+                                                                                    placeholder="{{ __('Nombre') }}"
+                                                                                    value="{{ old('names.first_name') }}"
                                                                                     aria-invalid="false"
                                                                                     aria-required=true></div>
                                                                         </div>
@@ -260,13 +259,14 @@
                                                                             <div
                                                                                 class="ff-el-input--label ff-el-is-required asterisk-right">
                                                                                 <label for='ff_3_names_last_name_'
-                                                                                    id='label_ff_3_names_last_name_'>Apellidos</label>
+                                                                                    id='label_ff_3_names_last_name_'>{{ __('Apellidos') }}</label>
                                                                             </div>
                                                                             <div class='ff-el-input--content'><input
                                                                                     type="text" name="names[last_name]"
                                                                                     id="ff_3_names_last_name_"
                                                                                     class="ff-el-form-control"
-                                                                                    placeholder="Apellidos"
+                                                                                    placeholder="{{ __('Apellidos') }}"
+                                                                                    value="{{ old('names.last_name') }}"
                                                                                     aria-invalid="false"
                                                                                     aria-required=true></div>
                                                                         </div>
@@ -277,25 +277,26 @@
                                                                 <div
                                                                     class="ff-el-input--label ff-el-is-required asterisk-right">
                                                                     <label for='ff_3_email' id='label_ff_3_email'
-                                                                        aria-label="Correo electrónico">Correo
-                                                                        electrónico</label>
+                                                                        aria-label="{{ __('Correo electrónico') }}">{{ __('Correo electrónico') }}</label>
                                                                 </div>
                                                                 <div class='ff-el-input--content'><input type="email"
                                                                         name="email" id="ff_3_email"
                                                                         class="ff-el-form-control"
                                                                         placeholder="correo@ejemplo.com" data-name="email"
+                                                                        value="{{ old('email') }}"
                                                                         aria-invalid="false" aria-required=true></div>
                                                             </div>
                                                             <div class='ff-el-group ff-el-form-top'>
                                                                 <div
                                                                     class="ff-el-input--label ff-el-is-required asterisk-right">
                                                                     <label for='ff_3_subject' id='label_ff_3_subject'
-                                                                        aria-label="Asunto">Asunto</label>
+                                                                        aria-label="{{ __('Asunto') }}">{{ __('Asunto') }}</label>
                                                                 </div>
                                                                 <div class='ff-el-input--content'><input type="text"
                                                                         name="subject" class="ff-el-form-control"
-                                                                        placeholder="¿En qué podemos ayudarte?"
+                                                                        placeholder="{{ __('¿En qué podemos ayudarte?') }}"
                                                                         data-name="subject" id="ff_3_subject"
+                                                                        value="{{ old('subject') }}"
                                                                         aria-invalid="false" aria-required=true>
                                                                 </div>
                                                             </div>
@@ -303,12 +304,12 @@
                                                                 <div
                                                                     class="ff-el-input--label ff-el-is-required asterisk-right">
                                                                     <label for='ff_3_message' id='label_ff_3_message'
-                                                                        aria-label="Mensaje">Mensaje</label>
+                                                                        aria-label="{{ __('Mensaje') }}">{{ __('Mensaje') }}</label>
                                                                 </div>
                                                                 <div class='ff-el-input--content'>
                                                                     <textarea aria-required="true" aria-labelledby="label_ff_3_message" name="message" id="ff_3_message"
-                                                                        class="ff-el-form-control" placeholder="Escribe tu mensaje aquí..." rows="5" cols="2"
-                                                                        data-name="message"></textarea>
+                                                                        class="ff-el-form-control" placeholder="{{ __('Escribe tu mensaje aquí...') }}" rows="5" cols="2"
+                                                                        data-name="message">{{ old('message') }}</textarea>
                                                                 </div>
                                                             </div>
                                                             <div class='ff-el-group    ff-el-input--content'>
@@ -323,16 +324,14 @@
                                                                                 id="gdpr-agreement_3a90edae93adc615272434d5e2740f6d"
                                                                                 value='on' aria-invalid='false'
                                                                                 aria-required=true></span>
-                                                                        <div class='ff_t_c'>Consiento que este sitio
-                                                                            web almacene mi información enviada para
-                                                                            que puedan responder a mi consulta.
+                                                                        <div class='ff_t_c'>{{ __('Consiento que este sitio web almacene mi información enviada para que puedan responder a mi consulta.') }}
                                                                         </div>
                                                                     </label></div>
                                                             </div>
                                                             <div class='ff-el-group ff-text-left ff_submit_btn_wrapper'>
                                                                 <button type="submit"
                                                                     class="ff-btn ff-btn-submit ff-btn-md ff_btn_style"
-                                                                    aria-label="Enviar">Enviar</button>
+                                                                    aria-label="{{ __('Enviar') }}">{{ __('Enviar') }}</button>
                                                             </div>
                                                         </fieldset>
                                                     </form>

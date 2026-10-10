@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Contáctanos | nom domain')
+@section('title', 'Carrito de compra | '.config('app.name'))
+
+@section('body_class', 'woocommerce-cart page')
 
 <style>
     div.quantity {
@@ -858,7 +860,7 @@
         <div class="wd-content-area site-content">
             <div class="woocommerce entry-content">
                 <link rel="stylesheet" id="elementor-post-2646-css"
-                    href="../wp-content/uploads/elementor/css/post-2646a965.css?ver=1790099532" type="text/css"
+                    href="/wp-content/uploads/elementor/css/post-2646a965.css?ver=1790099532" type="text/css"
                     media="all">
                 <div data-elementor-type="wp-post" data-elementor-id="2646" class="elementor elementor-2646">
                     <div class="wd-negative-gap elementor-element elementor-element-d5c10fc e-flex e-con-boxed e-con e-parent"
@@ -872,26 +874,26 @@
                                         style="">
                                         <div class="wd-page-title-bg wd-fill">
                                             <img width="1920" height="410"
-                                                src="../wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
+                                                src="/wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
                                                 class="attachment-full size-full" alt="" decoding="async"
                                                 fetchpriority="high"
-                                                srcset="https://box-modulares.es/wp-content/uploads/2026/04/edc-hero-section-bg.jpg 1920w, https://box-modulares.es/wp-content/uploads/2026/04/edc-hero-section-bg-150x32.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/04/edc-hero-section-bg-1200x256.jpg 1200w"
+                                                srcset="https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg.jpg 1920w, https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg-150x32.jpg 150w, https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg-1200x256.jpg 1200w"
                                                 sizes="(max-width: 1920px) 100vw, 1920px" />
                                         </div>
                                         <div class="container">
                                             <ul class="wd-checkout-steps">
                                                 <li class="step-cart step-active">
                                                     <a href="/">
-                                                        <span>Carrito de compra</span>
+                                                        <span>{{ __('Carrito de compra') }}</span>
                                                     </a>
                                                 </li>
                                                 <li class="step-checkout step-inactive">
                                                     <a href="../finalizar-compra/index.html">
-                                                        <span>Finalizar compra</span>
+                                                        <span>{{ __('Finalizar compra') }}</span>
                                                     </a>
                                                 </li>
                                                 <li class="step-complete step-inactive">
-                                                    <span>Pedido completado</span>
+                                                    <span>{{ __('Pedido completado') }}</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -916,8 +918,10 @@
                                 data-id="b15b650" data-element_type="widget" data-e-type="widget"
                                 data-widget_type="wd_cart_table.default">
                                 <div class="elementor-widget-container">
-                                    <form class="woocommerce-cart-form" action="https://box-modulares.es/carrito/"
-                                        method="post">
+                                    <p id="js-cart-empty" class="cart-empty" style="display:none;">{{ __('Tu carrito está vacío.') }} <a href="{{ route('shop.index') }}">{{ __('Ver productos') }}</a></p>
+
+                                    <form class="woocommerce-cart-form" action="{{ route('shop.carrito') }}"
+                                        method="post" onsubmit="return false;">
 
 
                                         <table
@@ -926,92 +930,13 @@
                                                 <tr>
                                                     <th class="product-remove">&nbsp;</th>
                                                     <th class="product-thumbnail">&nbsp;</th>
-                                                    <th scope="col" class="product-name">Producto</th>
-                                                    <th scope="col" class="product-price">Precio</th>
-                                                    <th scope="col" class="product-quantity">Cantidad</th>
-                                                    <th scope="col" class="product-subtotal">Subtotal</th>
+                                                    <th scope="col" class="product-name">{{ __('Producto') }}</th>
+                                                    <th scope="col" class="product-price">{{ __('Precio') }}</th>
+                                                    <th scope="col" class="product-quantity">{{ __('Cantidad') }}</th>
+                                                    <th scope="col" class="product-subtotal">{{ __('Subtotal') }}</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-
-
-                                                <tr class="woocommerce-cart-form__cart-item cart_item">
-
-                                                    <td class="product-remove">
-                                                        <a role="button"
-                                                            href="index422e.html?remove_item=ab81265d898ef7f38a3e95fc98c2a669&amp;_wpnonce=e8f4a1733e"
-                                                            class="remove"
-                                                            aria-label="Eliminar Cortacésped giro cero Snapper ZTX275 724cc del carrito"
-                                                            data-product_id="5596" data-product_sku="456624">&times;</a>
-                                                    </td>
-
-                                                    <td class="product-thumbnail">
-                                                        <a
-                                                            href="../producto/cortacesped-giro-cero-snapper-ztx275-724cc/index.html"><img
-                                                                width="600" height="600"
-                                                                src="../wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-600x600.jpg"
-                                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                alt="Cortacésped giro cero Snapper ZTX275 724cc"
-                                                                decoding="async"
-                                                                srcset="https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc.jpg 800w"
-                                                                sizes="(max-width: 600px) 100vw, 600px" /></a>
-                                                    </td>
-
-                                                    <td class="product-name" data-title="Producto">
-                                                        <a
-                                                            href="../producto/cortacesped-giro-cero-snapper-ztx275-724cc/index.html">Cortacésped
-                                                            giro cero Snapper ZTX275 724cc</a>
-                                                        <div class="pellets-delivery-badge pellets-delivery-cart">
-                                                            <div class="pellets-del-shipping">✅ Envío gratuito a
-                                                                toda España</div>
-                                                            <div class="pellets-del-dates">📦 Entrega estimada:
-                                                                entre el <strong>viernes 9 de octubre</strong> y
-                                                                el <strong>miércoles 14 de octubre</strong>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-
-                                                    <td class="product-price" data-title="Precio">
-                                                        <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol"
-                                                                    translate="no">&euro;</span>3.663,75</bdi></span>
-                                                    </td>
-
-                                                    <td class="product-quantity" data-title="Cantidad">
-
-                                                        <div class="quantity">
-
-                                                            <input type="button" value="-" class="minus btn"
-                                                                aria-label="Disminuir cantidad" />
-
-                                                            <label class="screen-reader-text"
-                                                                for="quantity_6ac4821be05ea">Cortacésped giro
-                                                                cero Snapper ZTX275 724cc cantidad</label>
-                                                            <input type="number" id="quantity_6ac4821be05ea"
-                                                                class="input-text qty text" value="1"
-                                                                aria-label="Cantidad de productos" min="0"
-                                                                name="cart[ab81265d898ef7f38a3e95fc98c2a669][qty]"
-                                                                step="1" placeholder="" inputmode="numeric"
-                                                                autocomplete="off">
-
-                                                            <input type="button" value="+" class="plus btn"
-                                                                aria-label="Aumentar cantidad" />
-
-                                                        </div>
-                                                    </td>
-
-                                                    <td class="product-subtotal" data-title="Subtotal">
-                                                        <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol"
-                                                                    translate="no">&euro;</span>3.663,75</bdi></span>
-                                                    </td>
-                                                </tr>
-
-
-
-
-
-
+                                            <tbody id="js-cart-items">
                                             </tbody>
                                         </table>
 
@@ -1029,16 +954,16 @@
                                     <div class="cart_totals ">
 
                                         <div class="cart-totals-inner wd-set-mb reset-last-child wd-layout-1">
-                                            <h2>Totales del carrito</h2>
+                                            <h2>{{ __('Totales del carrito') }}</h2>
 
                                             <table cellspacing="0" class="shop_table shop_table_responsive">
 
                                                 <tr class="cart-subtotal">
-                                                    <th>Subtotal</th>
-                                                    <td data-title="Subtotal"><span
+                                                    <th>{{ __('Subtotal') }}</th>
+                                                    <td data-title="{{ __('Subtotal') }}"><span
                                                             class="woocommerce-Price-amount amount"><bdi><span
                                                                     class="woocommerce-Price-currencySymbol"
-                                                                    translate="no">&euro;</span>636.420,44</bdi></span>
+                                                                    translate="no">&euro;</span><span id="js-cart-subtotal-amount">636.420,44</span></bdi></span>
                                                     </td>
                                                 </tr>
 
@@ -1046,43 +971,40 @@
 
 
                                                 <tr class="woocommerce-shipping-totals shipping">
-                                                    <th>Envío</th>
-                                                    <td data-title="Envío">
+                                                    <th>{{ __('Envío') }}</th>
+                                                    <td data-title="{{ __('Envío') }}">
                                                         <ul id="shipping_method" class="woocommerce-shipping-methods">
                                                             <li>
                                                                 <input type="hidden" name="shipping_method[0]"
                                                                     data-index="0" id="shipping_method_0_free_shipping1"
                                                                     value="free_shipping:1"
                                                                     class="shipping_method" /><label
-                                                                    for="shipping_method_0_free_shipping1">Envío
-                                                                    gratuito</label>
+                                                                    for="shipping_method_0_free_shipping1">{{ __('Envío gratuito') }}</label>
                                                             </li>
                                                         </ul>
                                                         <p class="woocommerce-shipping-destination">
-                                                            Enviar a <strong>Barcelona</strong>. </p>
+                                                            {{ __('Enviar a') }} <strong>{{ __('Barcelona') }}</strong>. </p>
 
 
 
                                                         <form class="woocommerce-shipping-calculator"
-                                                            action="https://box-modulares.es/carrito/" method="post">
+                                                            action="{{ route('shop.carrito') }}" method="post" onsubmit="return false;">
 
                                                             <a href="#" class="shipping-calculator-button"
                                                                 aria-expanded="false"
                                                                 aria-controls="shipping-calculator-form"
-                                                                role="button">Cambiar dirección</a>
+                                                                role="button">{{ __('Cambiar dirección') }}</a>
                                                             <section class="shipping-calculator-form"
                                                                 id="shipping-calculator-form" style="display:none;">
 
                                                                 <p class="form-row form-row-wide"
                                                                     id="calc_shipping_country_field">
-                                                                    <label for="calc_shipping_country">País /
-                                                                        Región</label>
+                                                                    <label for="calc_shipping_country">{{ __('País / Región') }}</label>
                                                                     <select name="calc_shipping_country"
                                                                         id="calc_shipping_country"
                                                                         class="country_to_state country_select"
                                                                         rel="calc_shipping_state">
-                                                                        <option value="default">Selecciona un
-                                                                            país/región&hellip;</option>
+                                                                        <option value="default">Selecciona un país/región&hellip;</option>
                                                                         <option value="AF">Afganistán</option>
                                                                         <option value="AL">Albania</option>
                                                                         <option value="DE">Alemania</option>
@@ -1114,8 +1036,7 @@
                                                                         <option value="BY">Bielorrusia</option>
                                                                         <option value="MM">Birmania</option>
                                                                         <option value="BO">Bolivia</option>
-                                                                        <option value="BQ">Bonaire, San
-                                                                            Eustaquio y Saba</option>
+                                                                        <option value="BQ">Bonaire, San Eustaquio y Saba</option>
                                                                         <option value="BA">Bosnia y Herzegovina
                                                                         </option>
                                                                         <option value="BW">Botswana</option>
@@ -1157,13 +1078,12 @@
                                                                         <option value="EC">Ecuador</option>
                                                                         <option value="EG">Egipto</option>
                                                                         <option value="SV">El Salvador</option>
-                                                                        <option value="AE">Emiratos Árabes
-                                                                            Unidos</option>
+                                                                        <option value="AE">Emiratos Árabes Unidos</option>
                                                                         <option value="ER">Eritrea</option>
                                                                         <option value="SK">Eslovaquia</option>
                                                                         <option value="SI">Eslovenia</option>
                                                                         <option value="ES" selected='selected'>
-                                                                            España</option>
+                                                                            {{ __('España') }}</option>
                                                                         <option value="US">Estados Unidos (EEUU)
                                                                         </option>
                                                                         <option value="EE">Estonia</option>
@@ -1213,26 +1133,21 @@
                                                                         <option value="KY">Islas Caimán</option>
                                                                         <option value="CC">Islas Cocos</option>
                                                                         <option value="CK">Islas Cook</option>
-                                                                        <option value="UM">Islas de ultramar
-                                                                            menores de Estados Unidos (EEUU)
+                                                                        <option value="UM">Islas de ultramar menores de Estados Unidos (EEUU)
                                                                         </option>
                                                                         <option value="FO">Islas Feroe</option>
-                                                                        <option value="GS">Islas Georgias y
-                                                                            Sandwich del Sur</option>
-                                                                        <option value="HM">Islas Heard y
-                                                                            McDonald</option>
+                                                                        <option value="GS">Islas Georgias y Sandwich del Sur</option>
+                                                                        <option value="HM">Islas Heard y McDonald</option>
                                                                         <option value="FK">Islas Malvinas
                                                                         </option>
-                                                                        <option value="MP">Islas Marianas del
-                                                                            Norte</option>
+                                                                        <option value="MP">Islas Marianas del Norte</option>
                                                                         <option value="MH">Islas Marshall
                                                                         </option>
                                                                         <option value="SB">Islas Salomón
                                                                         </option>
                                                                         <option value="TC">Islas Turcas y Caicos
                                                                         </option>
-                                                                        <option value="VG">Islas Vírgenes
-                                                                            (Británicas)</option>
+                                                                        <option value="VG">Islas Vírgenes (Británicas)</option>
                                                                         <option value="VI">Islas Vírgenes (EEUU)
                                                                         </option>
                                                                         <option value="IL">Israel</option>
@@ -1308,8 +1223,7 @@
                                                                         <option value="QA">Qatar</option>
                                                                         <option value="GB">Reino Unido (UK)
                                                                         </option>
-                                                                        <option value="CF">República
-                                                                            Centroafricana</option>
+                                                                        <option value="CF">República Centroafricana</option>
                                                                         <option value="CZ">República Checa
                                                                         </option>
                                                                         <option value="DO">República Dominicana
@@ -1325,17 +1239,13 @@
                                                                         </option>
                                                                         <option value="BL">San Bartolomé
                                                                         </option>
-                                                                        <option value="KN">San Cristóbal y
-                                                                            Nieves</option>
+                                                                        <option value="KN">San Cristóbal y Nieves</option>
                                                                         <option value="SM">San Marino</option>
-                                                                        <option value="SX">San Martín (Países
-                                                                            Bajos)</option>
-                                                                        <option value="MF">San Martín (parte de
-                                                                            Francia)</option>
+                                                                        <option value="SX">San Martín (Países Bajos)</option>
+                                                                        <option value="MF">San Martín (parte de Francia)</option>
                                                                         <option value="PM">San Pedro y Miquelón
                                                                         </option>
-                                                                        <option value="VC">San Vicente y las
-                                                                            Granadinas</option>
+                                                                        <option value="VC">San Vicente y las Granadinas</option>
                                                                         <option value="LC">Santa Lucía</option>
                                                                         <option value="ST">Santo Tomé y Príncipe
                                                                         </option>
@@ -1360,12 +1270,9 @@
                                                                         <option value="TW">Taiwán</option>
                                                                         <option value="TZ">Tanzania</option>
                                                                         <option value="TJ">Tayikistán</option>
-                                                                        <option value="IO">Territorio Británico
-                                                                            del Océano Índico</option>
-                                                                        <option value="TF">Territorios australes
-                                                                            franceses</option>
-                                                                        <option value="PS">Territorios
-                                                                            Palestinos</option>
+                                                                        <option value="IO">Territorio Británico del Océano Índico</option>
+                                                                        <option value="TF">Territorios australes franceses</option>
+                                                                        <option value="PS">Territorios Palestinos</option>
                                                                         <option value="TL">Timor Oriental
                                                                         </option>
                                                                         <option value="TG">Togo</option>
@@ -1395,12 +1302,10 @@
                                                                 <p class="form-row form-row-wide"
                                                                     id="calc_shipping_state_field">
                                                                     <span>
-                                                                        <label for="calc_shipping_state">Región
-                                                                            / Provincia</label>
+                                                                        <label for="calc_shipping_state">{{ __('Región / Provincia') }}</label>
                                                                         <select name="calc_shipping_state"
                                                                             class="state_select" id="calc_shipping_state">
-                                                                            <option value="">Elige una
-                                                                                opción&hellip;</option>
+                                                                            <option value="">Elige una opción&hellip;</option>
                                                                             <option value="C">La Coruña</option>
                                                                             <option value="VI">Álava</option>
                                                                             <option value="AB">Albacete</option>
@@ -1411,7 +1316,7 @@
                                                                             <option value="BA">Badajoz</option>
                                                                             <option value="PM">Baleares</option>
                                                                             <option value="B" selected='selected'>
-                                                                                Barcelona
+                                                                                {{ __('Barcelona') }}
                                                                             </option>
                                                                             <option value="BU">Burgos</option>
                                                                             <option value="CC">Cáceres</option>
@@ -1450,8 +1355,7 @@
                                                                             </option>
                                                                             <option value="SA">Salamanca
                                                                             </option>
-                                                                            <option value="TF">Santa Cruz de
-                                                                                Tenerife</option>
+                                                                            <option value="TF">Santa Cruz de Tenerife</option>
                                                                             <option value="SG">Segovia</option>
                                                                             <option value="SE">Sevilla</option>
                                                                             <option value="SO">Soria</option>
@@ -1470,7 +1374,7 @@
 
                                                                 <p class="form-row form-row-wide"
                                                                     id="calc_shipping_city_field">
-                                                                    <label for="calc_shipping_city">Ciudad:</label>
+                                                                    <label for="calc_shipping_city">{{ __('Ciudad:') }}</label>
                                                                     <input type="text" class="input-text"
                                                                         value="" name="calc_shipping_city"
                                                                         id="calc_shipping_city" />
@@ -1478,15 +1382,14 @@
 
                                                                 <p class="form-row form-row-wide"
                                                                     id="calc_shipping_postcode_field">
-                                                                    <label for="calc_shipping_postcode">Código
-                                                                        postal:</label>
+                                                                    <label for="calc_shipping_postcode">{{ __('Código postal:') }}</label>
                                                                     <input type="text" class="input-text"
                                                                         value="" name="calc_shipping_postcode"
                                                                         id="calc_shipping_postcode" />
                                                                 </p>
 
                                                                 <p><button type="submit" name="calc_shipping"
-                                                                        value="1" class="button">Actualizar</button>
+                                                                        value="1" class="button">{{ __('Actualizar') }}</button>
                                                                 </p>
                                                                 <input type="hidden"
                                                                     id="woocommerce-shipping-calculator-nonce"
@@ -1505,11 +1408,11 @@
 
 
                                                 <tr class="order-total">
-                                                    <th>Total</th>
-                                                    <td data-title="Total"><strong><span
+                                                    <th>{{ __('Total') }}</th>
+                                                    <td data-title="{{ __('Total') }}"><strong><span
                                                                 class="woocommerce-Price-amount amount"><bdi><span
                                                                         class="woocommerce-Price-currencySymbol"
-                                                                        translate="no">&euro;</span>636.420,44</bdi></span></strong>
+                                                                        translate="no">&euro;</span><span id="js-cart-total-amount">636.420,44</span></bdi></span></strong>
                                                     </td>
                                                 </tr>
 
@@ -1518,9 +1421,9 @@
 
                                             <div class="wc-proceed-to-checkout">
 
-                                                <a href="../finalizar-compra/index.html"
+                                                <a href="{{ route('shop.checkout') }}" id="js-checkout-button"
                                                     class="checkout-button button alt wc-forward">
-                                                    Finalizar compra</a>
+                                                    {{ __('Finalizar compra') }}</a>
                                             </div>
 
                                         </div>
@@ -1541,8 +1444,7 @@
 
 
                                         <div class="liner-continer">
-                                            <h4 class="woodmart-title-container title wd-fontsize-l">You May Be
-                                                Interested In…</h4>
+                                            <h4 class="woodmart-title-container title wd-fontsize-l">{{ __('You May Be Interested In…') }}</h4>
                                         </div>
 
                                     </div>
@@ -1602,439 +1504,16 @@
                                             <div class=" wd-carousel wd-grid" data-scroll_per_page="yes"
                                                 style="--wd-col-lg:4;--wd-col-md:3;--wd-col-sm:2;--wd-gap-lg:20px;--wd-gap-sm:10px;">
                                                 <div class="wd-carousel-wrap">
+                                                    @foreach ($suggestedProducts as $product)
                                                     <div class="wd-carousel-item">
-                                                        <div class="wd-product wd-loop-item-117 wd-hover-parent product type-product post-3593 status-publish instock product_cat-palet-de-lena has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                                            data-loop="1" data-id="3593">
-                                                            <div class="wd-product-wrapper wd-entry-content">
-
-
-
-
-                                                                <div
-                                                                    class="wd-loop-prod-thumb wd-product-thumb wd-2eee00c3">
-                                                                    <a href="../producto/30-fajos-de-lena-2-mallas-de-encendido-y-1-wood-balls/index.html"
-                                                                        class="wd-product-img-link" tabindex="-1"
-                                                                        aria-label="30 fajos de leña, 2 mallas de encendido y 1 wood balls">
-                                                                        <div
-                                                                            class="wd-product-grid-slider wd-fill wd-hide-lg">
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/media-49-1-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/media-49-1-1.webp 488w, https://box-modulares.es/wp-content/uploads/2026/07/media-49-1-1-150x200.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/media-49-1-1-225x300.webp 225w"
-                                                                                data-image-id="0"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/media-51-1-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/media-51-1-1.webp 488w, https://box-modulares.es/wp-content/uploads/2026/07/media-51-1-1-150x200.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/media-51-1-1-225x300.webp 225w"
-                                                                                data-image-id="1"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/media-50-1-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/media-50-1-1.webp 488w, https://box-modulares.es/wp-content/uploads/2026/07/media-50-1-1-150x200.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/media-50-1-1-225x300.webp 225w"
-                                                                                data-image-id="2"></div>
-                                                                        </div>
-
-                                                                        <div
-                                                                            class="wd-product-grid-slider-nav wd-fill wd-hide-md">
-                                                                            <div class="wd-prev"></div>
-                                                                            <div class="wd-next"></div>
-                                                                        </div>
-
-                                                                        <img width="488" height="650"
-                                                                            src="../wp-content/uploads/2026/07/media-49-1-1.webp"
-                                                                            class="attachment-medium_large size-medium_large"
-                                                                            alt="" decoding="async"
-                                                                            srcset="https://box-modulares.es/wp-content/uploads/2026/07/media-49-1-1.webp 488w, https://box-modulares.es/wp-content/uploads/2026/07/media-49-1-1-150x200.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/media-49-1-1-225x300.webp 225w"
-                                                                            sizes="(max-width: 488px) 100vw, 488px" />
-                                                                    </a>
-
-
-
-
-                                                                    <div
-                                                                        class="wp-block-wd-container wd-dir-col wd-06832d7b">
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-col wd-34a257bd">
-
-                                                                            <h3
-                                                                                class="wd-loop-prod-title wd-entities-title wd-947bcea5 wd-line-clamp">
-                                                                                <a
-                                                                                    href="../producto/30-fajos-de-lena-2-mallas-de-encendido-y-1-wood-balls/index.html">
-                                                                                    30 fajos de leña, 2 mallas
-                                                                                    de encendido y 1 wood balls
-                                                                                </a>
-                                                                            </h3>
-
-
-
-
-
-                                                                        </div>
-
-
-
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-row wd-align-is-lg-center wd-b02becae">
-                                                                            <div class="wd-loop-prod-price wd-2d36d2a1">
-
-                                                                                <span class="price"><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                                translate="no">&euro;</span>148,85</bdi></span></span>
-                                                                            </div>
-
-
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
+                                                        @include('partials.product-card', ['product' => $product])
                                                     </div>
-                                                    <div class="wd-carousel-item">
-                                                        <div class="wd-product wd-loop-item-117 wd-hover-parent product type-product post-3324 status-publish instock product_cat-cenadores has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                                            data-loop="2" data-id="3324">
-                                                            <div class="wd-product-wrapper wd-entry-content">
-
-
-
-
-                                                                <div
-                                                                    class="wd-loop-prod-thumb wd-product-thumb wd-2eee00c3">
-                                                                    <a href="../producto/altana-metalica-martinica-4-x-3-m-palram-canopia-heat-block/index.html"
-                                                                        class="wd-product-img-link" tabindex="-1"
-                                                                        aria-label="Altana metálica Martinica 4 x 3 m Palram – Canopia Heat Block">
-                                                                        <div
-                                                                            class="wd-product-grid-slider wd-fill wd-hide-lg">
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/05-1-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/05-1-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/05-1-1-150x99.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/05-1-1-300x198.webp 300w"
-                                                                                data-image-id="0"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-96024-480x363-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-96024-480x363-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-96024-480x363-nobckgr-1-150x113.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-96024-480x363-nobckgr-1-300x227.webp 300w"
-                                                                                data-image-id="1"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-148935-480x321-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-148935-480x321-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-148935-480x321-nobckgr-1-150x100.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-148935-480x321-nobckgr-1-300x201.webp 300w"
-                                                                                data-image-id="2"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-29832-480x339-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-29832-480x339-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-29832-480x339-nobckgr-1-150x106.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-29832-480x339-nobckgr-1-300x212.webp 300w"
-                                                                                data-image-id="3"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-29833-480x339-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-29833-480x339-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-29833-480x339-nobckgr-1-150x106.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-metal-Martinica-29833-480x339-nobckgr-1-300x212.webp 300w"
-                                                                                data-image-id="4"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-terraza-de-metal-Martinique-Palram-foto-del-cliente-100872-480x384-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-terraza-de-metal-Martinique-Palram-foto-del-cliente-100872-480x384-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-terraza-de-metal-Martinique-Palram-foto-del-cliente-100872-480x384-nobckgr-1-150x120.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Cenador-de-terraza-de-metal-Martinique-Palram-foto-del-cliente-100872-480x384-nobckgr-1-300x240.webp 300w"
-                                                                                data-image-id="5"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197409-480x324-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197409-480x324-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197409-480x324-nobckgr-1-150x101.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197409-480x324-nobckgr-1-300x203.webp 300w"
-                                                                                data-image-id="6"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197408-480x369-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197408-480x369-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197408-480x369-nobckgr-1-150x115.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197408-480x369-nobckgr-1-300x231.webp 300w"
-                                                                                data-image-id="7"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197410-480x349-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197410-480x349-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197410-480x349-nobckgr-1-150x109.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197410-480x349-nobckgr-1-300x218.webp 300w"
-                                                                                data-image-id="8"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197406-480x295-nobckgr-1.webp"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197406-480x295-nobckgr-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197406-480x295-nobckgr-1-150x92.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/Altana-metalica-Martinica-4-x-3-m-Palram-Canopia-197406-480x295-nobckgr-1-300x184.webp 300w"
-                                                                                data-image-id="9"></div>
-                                                                        </div>
-
-                                                                        <div
-                                                                            class="wd-product-grid-slider-nav wd-fill wd-hide-md">
-                                                                            <div class="wd-prev"></div>
-                                                                            <div class="wd-next"></div>
-                                                                        </div>
-
-                                                                        <img width="480" height="316"
-                                                                            src="../wp-content/uploads/2026/07/05-1-1.webp"
-                                                                            class="attachment-medium_large size-medium_large"
-                                                                            alt="" decoding="async"
-                                                                            srcset="https://box-modulares.es/wp-content/uploads/2026/07/05-1-1.webp 480w, https://box-modulares.es/wp-content/uploads/2026/07/05-1-1-150x99.webp 150w, https://box-modulares.es/wp-content/uploads/2026/07/05-1-1-300x198.webp 300w"
-                                                                            sizes="(max-width: 480px) 100vw, 480px" />
-                                                                    </a>
-
-
-
-
-                                                                    <div
-                                                                        class="wp-block-wd-container wd-dir-col wd-06832d7b">
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-col wd-34a257bd">
-
-                                                                            <h3
-                                                                                class="wd-loop-prod-title wd-entities-title wd-947bcea5 wd-line-clamp">
-                                                                                <a
-                                                                                    href="../producto/altana-metalica-martinica-4-x-3-m-palram-canopia-heat-block/index.html">
-                                                                                    Altana metálica Martinica 4
-                                                                                    x 3 m Palram – Canopia Heat
-                                                                                    Block </a>
-                                                                            </h3>
-
-
-
-
-
-                                                                        </div>
-
-
-
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-row wd-align-is-lg-center wd-b02becae">
-                                                                            <div class="wd-loop-prod-price wd-2d36d2a1">
-
-                                                                                <span class="price"><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                                translate="no">&euro;</span>955,50</bdi></span></span>
-                                                                            </div>
-
-
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="wd-carousel-item">
-                                                        <div class="wd-product wd-loop-item-117 wd-hover-parent product type-product post-8038 status-publish last instock product_cat-plataformas-elevadoras has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                                            data-loop="3" data-id="8038">
-                                                            <div class="wd-product-wrapper wd-entry-content">
-
-
-
-
-                                                                <div
-                                                                    class="wd-loop-prod-thumb wd-product-thumb wd-2eee00c3">
-                                                                    <a href="../producto/apilador-electrico-1000-kg-elevacion-3000-mm/index.html"
-                                                                        class="wd-product-img-link" tabindex="-1"
-                                                                        aria-label="Apilador eléctrico 1000 kg &#8211; elevación 3000 mm">
-                                                                        <div
-                                                                            class="wd-product-grid-slider wd-fill wd-hide-lg">
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-768x768.jpg"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4.jpg 800w"
-                                                                                data-image-id="0"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-5-768x768.jpg"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-5-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-5-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-5-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-5-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-5.jpg 800w"
-                                                                                data-image-id="1"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-6-768x768.jpg"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-6-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-6-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-6-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-6-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-6.jpg 800w"
-                                                                                data-image-id="2"></div>
-                                                                            <div class="wd-product-grid-slide"
-                                                                                data-image-url="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-7-768x768.jpg"
-                                                                                data-image-srcset="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-7-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-7-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-7-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-7-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-7.jpg 800w"
-                                                                                data-image-id="3"></div>
-                                                                        </div>
-
-                                                                        <div
-                                                                            class="wd-product-grid-slider-nav wd-fill wd-hide-md">
-                                                                            <div class="wd-prev"></div>
-                                                                            <div class="wd-next"></div>
-                                                                        </div>
-
-                                                                        <img width="768" height="768"
-                                                                            src="../wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-768x768.jpg"
-                                                                            class="attachment-medium_large size-medium_large"
-                                                                            alt="" decoding="async"
-                                                                            srcset="https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/apilador-electrico-1000-kg-elevacion-3000-mm-4.jpg 800w"
-                                                                            sizes="(max-width: 768px) 100vw, 768px" />
-                                                                    </a>
-
-
-
-
-                                                                    <div
-                                                                        class="wp-block-wd-container wd-dir-col wd-06832d7b">
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-col wd-34a257bd">
-
-                                                                            <h3
-                                                                                class="wd-loop-prod-title wd-entities-title wd-947bcea5 wd-line-clamp">
-                                                                                <a
-                                                                                    href="../producto/apilador-electrico-1000-kg-elevacion-3000-mm/index.html">
-                                                                                    Apilador eléctrico 1000 kg
-                                                                                    &#8211; elevación 3000 mm
-                                                                                </a>
-                                                                            </h3>
-
-
-
-
-
-                                                                        </div>
-
-
-
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-row wd-align-is-lg-center wd-b02becae">
-                                                                            <div class="wd-loop-prod-price wd-2d36d2a1">
-
-                                                                                <span class="price"><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                                translate="no">&euro;</span>2.100,00</bdi></span></span>
-                                                                            </div>
-
-
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="wd-carousel-item">
-                                                        <div class="wd-product wd-loop-item-117 wd-hover-parent product type-product post-4102 status-publish first instock product_cat-astilladoras-de-lena has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                                            data-loop="4" data-id="4102">
-                                                            <div class="wd-product-wrapper wd-entry-content">
-
-
-
-
-                                                                <div
-                                                                    class="wd-loop-prod-thumb wd-product-thumb wd-2eee00c3">
-                                                                    <a href="../producto/astilladora-con-motor-de-gasolina-garto-ags-12t-7-hp/index.html"
-                                                                        class="wd-product-img-link" tabindex="-1"
-                                                                        aria-label="Astilladora con motor de Gasolina Garto AGS 12T 7 HP">
-                                                                        <img width="768" height="768"
-                                                                            src="../wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-768x768.jpg"
-                                                                            class="attachment-medium_large size-medium_large"
-                                                                            alt="" decoding="async"
-                                                                            srcset="https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp.jpg 800w"
-                                                                            sizes="(max-width: 768px) 100vw, 768px" />
-                                                                    </a>
-
-
-
-
-                                                                    <div
-                                                                        class="wp-block-wd-container wd-dir-col wd-06832d7b">
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-col wd-34a257bd">
-
-                                                                            <h3
-                                                                                class="wd-loop-prod-title wd-entities-title wd-947bcea5 wd-line-clamp">
-                                                                                <a
-                                                                                    href="../producto/astilladora-con-motor-de-gasolina-garto-ags-12t-7-hp/index.html">
-                                                                                    Astilladora con motor de
-                                                                                    Gasolina Garto AGS 12T 7 HP
-                                                                                </a>
-                                                                            </h3>
-
-
-
-
-
-                                                                        </div>
-
-
-
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-row wd-align-is-lg-center wd-b02becae">
-                                                                            <div class="wd-loop-prod-price wd-2d36d2a1">
-
-                                                                                <span class="price"><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                                translate="no">&euro;</span>783,31</bdi></span></span>
-                                                                            </div>
-
-
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="wd-carousel-item">
-                                                        <div class="wd-product wd-loop-item-117 wd-hover-parent product type-product post-4067 status-publish instock product_cat-astilladoras-de-lena has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                                            data-loop="5" data-id="4067">
-                                                            <div class="wd-product-wrapper wd-entry-content">
-
-
-
-
-                                                                <div
-                                                                    class="wd-loop-prod-thumb wd-product-thumb wd-2eee00c3">
-                                                                    <a href="../producto/astilladora-con-motor-de-gasolina-garto-ags-35t-13-hp/index.html"
-                                                                        class="wd-product-img-link" tabindex="-1"
-                                                                        aria-label="Astilladora con motor de Gasolina Garto AGS 35T 13 HP">
-                                                                        <img width="768" height="768"
-                                                                            src="../wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto-35t-13-hp-768x768.jpg"
-                                                                            class="attachment-medium_large size-medium_large"
-                                                                            alt="" decoding="async"
-                                                                            srcset="https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto-35t-13-hp-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto-35t-13-hp-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto-35t-13-hp-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto-35t-13-hp-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto-35t-13-hp.jpg 800w"
-                                                                            sizes="(max-width: 768px) 100vw, 768px" />
-                                                                    </a>
-
-
-
-
-                                                                    <div
-                                                                        class="wp-block-wd-container wd-dir-col wd-06832d7b">
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-col wd-34a257bd">
-
-                                                                            <h3
-                                                                                class="wd-loop-prod-title wd-entities-title wd-947bcea5 wd-line-clamp">
-                                                                                <a
-                                                                                    href="../producto/astilladora-con-motor-de-gasolina-garto-ags-35t-13-hp/index.html">
-                                                                                    Astilladora con motor de
-                                                                                    Gasolina Garto AGS 35T 13 HP
-                                                                                </a>
-                                                                            </h3>
-
-
-
-
-
-                                                                        </div>
-
-
-
-                                                                        <div
-                                                                            class="wp-block-wd-container wd-dir-row wd-align-is-lg-center wd-b02becae">
-                                                                            <div class="wd-loop-prod-price wd-2d36d2a1">
-
-                                                                                <span class="price"><span
-                                                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                                translate="no">&euro;</span>1.256,82</bdi></span></span>
-                                                                            </div>
-
-
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    @endforeach
                                                 </div>
                                             </div>
 
                                             <div class="wd-nav-arrows wd-pos-sep wd-hover-1 wd-icon-1">
-                                                <div class="wd-btn-arrow wd-prev wd-disabled">
+                                                <div class="wd-btn-arrow wd-prev">
                                                     <div class="wd-arrow-inner"></div>
                                                 </div>
                                                 <div class="wd-btn-arrow wd-next">
@@ -2052,5 +1531,152 @@
             </div>
         </div>
     </main>
+
+@push('scripts')
+<script>
+    (function () {
+        function escapeHtml(value) {
+            var div = document.createElement('div');
+            div.textContent = value == null ? '' : String(value);
+            return div.innerHTML;
+        }
+
+        function cartRowHtml(item) {
+            var lineSubtotal = Shop.formatPrice(item.price * item.qty);
+            var unitPrice = Shop.formatPrice(item.price);
+            var labels = window.mmCartLabels || { price: 'Precio', quantity: 'Cantidad', subtotal: 'Subtotal' };
+
+            return (
+                '<tr class="woocommerce-cart-form__cart-item cart_item">' +
+                '<td class="product-remove">' +
+                '<a role="button" href="#" class="remove" aria-label="Eliminar ' + escapeHtml(item.name) + ' del carrito" data-product_id="' + item.id + '" data-product_sku="' + escapeHtml(item.sku) + '">&times;</a>' +
+                '</td>' +
+                '<td class="product-thumbnail">' +
+                '<a href="' + escapeHtml(item.slug) + '">' +
+                (item.image ? '<img width="600" height="600" src="' + escapeHtml(item.image) + '" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="' + escapeHtml(item.name) + '">' : '') +
+                '</a>' +
+                '</td>' +
+                '<td class="product-name" data-title="Producto">' +
+                '<a href="' + escapeHtml(item.slug) + '">' + escapeHtml(item.name) + '</a>' +
+                Shop.deliveryEstimateHtml('pellets-delivery-cart') +
+                '</td>' +
+                '<td class="product-price" data-title="' + escapeHtml(labels.price) + '">' +
+                '<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">&euro;</span>' + unitPrice + '</bdi></span>' +
+                '</td>' +
+                '<td class="product-quantity" data-title="' + escapeHtml(labels.quantity) + '">' +
+                '<div class="quantity">' +
+                '<input type="button" value="-" class="minus btn" aria-label="Disminuir cantidad" data-product_id="' + item.id + '" />' +
+                '<label class="screen-reader-text" for="quantity_' + item.id + '">' + escapeHtml(item.name) + ' cantidad</label>' +
+                '<input type="number" id="quantity_' + item.id + '" class="input-text qty text" value="' + item.qty + '" aria-label="Cantidad de productos" min="0" step="1" placeholder="" inputmode="numeric" autocomplete="off" data-product_id="' + item.id + '">' +
+                '<input type="button" value="+" class="plus btn" aria-label="Aumentar cantidad" data-product_id="' + item.id + '" />' +
+                '</div>' +
+                '</td>' +
+                '<td class="product-subtotal" data-title="' + escapeHtml(labels.subtotal) + '">' +
+                '<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">&euro;</span>' + lineSubtotal + '</bdi></span>' +
+                '</td>' +
+                '</tr>'
+            );
+        }
+
+        function renderCart() {
+            var items = Shop.readCart();
+            var emptyMessage = document.getElementById('js-cart-empty');
+            var form = document.querySelector('.woocommerce-cart-form');
+            var totalsWidget = document.querySelector('.elementor-widget-wd_cart_totals');
+            var itemsBody = document.getElementById('js-cart-items');
+            var checkoutButton = document.getElementById('js-checkout-button');
+
+            if (!itemsBody) {
+                return;
+            }
+
+            if (!items.length) {
+                if (emptyMessage) {
+                    emptyMessage.style.display = '';
+                }
+                if (form) {
+                    form.style.display = 'none';
+                }
+                if (totalsWidget) {
+                    totalsWidget.style.display = 'none';
+                }
+                itemsBody.innerHTML = '';
+                return;
+            }
+
+            if (emptyMessage) {
+                emptyMessage.style.display = 'none';
+            }
+            if (form) {
+                form.style.display = '';
+            }
+            if (totalsWidget) {
+                totalsWidget.style.display = '';
+            }
+
+            itemsBody.innerHTML = items.map(cartRowHtml).join('');
+
+            var totals = Shop.totals(items);
+            var subtotalEl = document.getElementById('js-cart-subtotal-amount');
+            var totalEl = document.getElementById('js-cart-total-amount');
+
+            if (subtotalEl) {
+                subtotalEl.textContent = Shop.formatPrice(totals.subtotal);
+            }
+            if (totalEl) {
+                totalEl.textContent = Shop.formatPrice(totals.total);
+            }
+
+            if (checkoutButton) {
+                checkoutButton.style.pointerEvents = '';
+                checkoutButton.style.opacity = '';
+            }
+        }
+
+        document.addEventListener('click', function (e) {
+            var removeLink = e.target.closest('#js-cart-items .remove');
+            if (removeLink) {
+                e.preventDefault();
+                var removeId = parseInt(removeLink.getAttribute('data-product_id'), 10);
+                Shop.removeFromCart(removeId);
+                return;
+            }
+
+            var qtyBtn = e.target.closest('#js-cart-items .minus, #js-cart-items .plus');
+            if (qtyBtn) {
+                e.preventDefault();
+                var id = parseInt(qtyBtn.getAttribute('data-product_id'), 10);
+                var row = qtyBtn.closest('tr');
+                var qtyInput = row ? row.querySelector('input.qty') : null;
+                if (!qtyInput) {
+                    return;
+                }
+                var current = parseInt(qtyInput.value, 10) || 1;
+                var next = qtyBtn.classList.contains('plus') ? current + 1 : current - 1;
+
+                if (next < 1) {
+                    Shop.removeFromCart(id);
+                } else {
+                    Shop.updateQuantity(id, next);
+                }
+                return;
+            }
+        });
+
+        document.addEventListener('change', function (e) {
+            var qtyInput = e.target.closest('#js-cart-items input.qty');
+            if (!qtyInput) {
+                return;
+            }
+            var id = parseInt(qtyInput.getAttribute('data-product_id'), 10);
+            var qty = parseInt(qtyInput.value, 10) || 0;
+            Shop.updateQuantity(id, qty);
+        });
+
+        document.addEventListener('DOMContentLoaded', renderCart);
+        document.addEventListener('cart:updated', renderCart);
+    })();
+</script>
+@endpush
 
 @endsection

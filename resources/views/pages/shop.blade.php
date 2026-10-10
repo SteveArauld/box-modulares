@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '')
+@section('title', ($pageTitle ?? 'Tienda').' | '.config('app.name'))
 @section('body_class', 'home page page-id-120 elementor-page elementor-page-120')
 
 @section('content')
@@ -18,7 +18,7 @@
                             data-id="6d97786" data-element_type="widget" data-e-type="widget"
                             data-widget_type="wd_page_heading.default">
                             <div class="elementor-widget-container">
-                                <h2 class="entry-title title">Astilladoras de Leña</h2>
+                                <h2 class="entry-title title">{{ $pageTitle }}</h2>
                             </div>
                         </div>
                         <div class="elementor-element elementor-element-17b463b wd-nowrap-md wd-el-breadcrumbs text-left elementor-widget elementor-widget-wd_wc_breadcrumb"
@@ -26,11 +26,11 @@
                             data-widget_type="wd_wc_breadcrumb.default">
                             <div class="elementor-widget-container">
                              
-                                <nav class="wd-breadcrumbs woocommerce-breadcrumb" aria-label="Breadcrumb"> <a
-                                        href="/" class="wd-last-link">
-                                        Inicio </a>
+                                <nav class="wd-breadcrumbs woocommerce-breadcrumb" aria-label="{{ __('Breadcrumb') }}"> <a
+                                        href="{{ route('home') }}" class="wd-last-link">
+                                        {{ __('Inicio') }} </a>
                                     <span class="wd-delimiter">•</span> <span class="wd-last">
-                                        Astilladoras de Leña </span>
+                                        {{ $pageTitle }} </span>
                                 </nav>
                             </div>
                         </div>
@@ -48,144 +48,41 @@
                         <div class="wd-sticky-container-lg elementor-element elementor-element-2cdcb37 e-con-full wd-col-offcanvas-md-sm wd-col-offcanvas-sm e-flex wd-alignment-left e-con e-child"
                             data-id="2cdcb37" data-element_type="container" data-e-type="container"
                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div class="mm-sidebar-close-bar">
+                                <button type="button" class="close-side-widget mm-sidebar-close-btn" aria-label="{{ __('Cerrar') }}">
+                                    <span>{{ __('Cerrar') }}</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+                                </button>
+                            </div>
                             <div class="elementor-element elementor-element-4bd70f5 elementor-widget elementor-widget-sidebar"
                                 data-id="4bd70f5" data-element_type="widget" data-e-type="widget"
                                 data-widget_type="sidebar.default">
                               
                                 <div id="woocommerce_product_categories-3"
                                     class="wd-widget widget sidebar-widget woocommerce widget_product_categories">
-                                    <h5 class="widget-title">Categorías de productos</h5>
+                                    <h5 class="widget-title">{{ __('Categorías de productos') }}</h5>
                                     <ul class="product-categories">
-                                        <li class="cat-item cat-item-95"><a href="../tractores-cortacesped/">Tractores
-                                                Cortacésped</a> <span class="count">34</span></li>
-                                        <li class="cat-item cat-item-129"><a
-                                                href="../nuestros-remolques/portavehiculos/">Portavehículos</a>
-                                            <span class="count">13</span>
-                                        </li>
-                                        <li class="cat-item cat-item-128"><a
-                                                href="../nuestros-remolques/remolque-publicitario/">Remolque
-                                                Publicitario</a> <span class="count">8</span></li>
-                                        <li class="cat-item cat-item-127"><a
-                                                href="../nuestros-remolques/remolque-para-perros-y-la-caza/">Remolque
-                                                para Perros y La caza</a> <span class="count">7</span></li>
-                                        <li class="cat-item cat-item-126"><a
-                                                href="../nuestros-remolques/remolque-de-equipaje/">Remolque
-                                                de Equipaje</a> <span class="count">10</span></li>
-                                        <li class="cat-item cat-item-125"><a href="../piscina/">Piscina</a> <span
-                                                class="count">11</span></li>
-                                        <li class="cat-item cat-item-124"><a
-                                                href="../nuestros-remolques/remolque-para-moto/">Remolque
-                                                para Moto</a> <span class="count">16</span></li>
-                                        <li class="cat-item cat-item-123"><a
-                                                href="../nuestros-remolques/remolque-venta-ambulante-o-foodtruck/">Remolque
-                                                Venta Ambulante o FoodTruck</a> <span class="count">19</span>
-                                        </li>
-                                        <li class="cat-item cat-item-122"><a
-                                                href="../nuestros-remolques/remolques-bicicleta/">Remolques
-                                                Bicicleta</a> <span class="count">8</span></li>
-                                        <li class="cat-item cat-item-121"><a
-                                                href="../nuestros-remolques/remolque-para-caballos/">Remolque
-                                                para caballos</a> <span class="count">30</span></li>
-                                        <li class="cat-item cat-item-120"><a
-                                                href="../nuestros-remolques/remolques-de-jardin-y-agricultura/">Remolques
-                                                de Jardín y Agricultura</a> <span class="count">24</span></li>
-                                        <li class="cat-item cat-item-108"><a
-                                                href="../maquinaria-y-transporte/plataformas-elevadoras/">Plataformas
-                                                elevadoras</a> <span class="count">14</span></li>
-                                        <li class="cat-item cat-item-100"><a href="../casa-movil-y-prefabricada/">Casas
-                                                Móviles y
-                                                Prefabricadas</a> <span class="count">30</span></li>
-                                        <li class="cat-item cat-item-99"><a
-                                                href="../jardin-y-exterior/pergolas-para-jardines-y-terrazas/">Pérgolas
-                                                para jardines y terrazas</a> <span class="count">11</span></li>
-                                        <li class="cat-item cat-item-98"><a
-                                                href="../jardin-y-exterior/barbacoas/">Barbacoas</a>
-                                            <span class="count">5</span>
-                                        </li>
-                                        <li class="cat-item cat-item-96"><a
-                                                href="../cortacespedes-giro-cero/">Cortacéspedes Giro
-                                                Cero</a> <span class="count">13</span></li>
-                                        <li class="cat-item cat-item-77"><a
-                                                href="../jardin-y-exterior/casetas-de-jardin/">Casetas
-                                                de jardín</a> <span class="count">27</span></li>
-                                        <li class="cat-item cat-item-92"><a
-                                                href="../trituradoras-semiprofesionales/">Trituradoras
-                                                Semiprofesionales</a> <span class="count">14</span></li>
-                                        <li class="cat-item cat-item-91"><a
-                                                href="../generadores-y-energia/generadores-de-apoyo-solar/">Generadores
-                                                de apoyo solar</a> <span class="count">1</span></li>
-                                        <li class="cat-item cat-item-90"><a
-                                                href="../generadores-y-energia/generadores-electricos-inverter/">Generadores
-                                                Eléctricos Inverter</a> <span class="count">19</span></li>
-                                        <li class="cat-item cat-item-89"><a
-                                                href="../generadores-y-energia/grupos/">Grupos</a>
-                                            <span class="count">102</span>
-                                        </li>
-                                        <li class="cat-item cat-item-88"><a
-                                                href="../generadores-y-energia/generadores-electricos/">Generadores
-                                                Eléctricos</a> <span class="count">82</span></li>
-                                        <li class="cat-item cat-item-87"><a
-                                                href="../maquinaria-y-transporte/minidumpers/">Minidumpers</a>
-                                            <span class="count">44</span>
-                                        </li>
-                                        <li class="cat-item cat-item-86 current-cat wd-active"><a
-                                                href="/">Astilladoras de Leña</a> <span class="count">45</span>
-                                        </li>
-                                        <li class="cat-item cat-item-85"><a
-                                                href="../jardin-y-exterior/pergolas-carpas-y-cenadores/">Pergolas-carpas-y-cenadores</a>
-                                            <span class="count">10</span>
-                                        </li>
-                                        <li class="cat-item cat-item-84"><a href="../calefaccion/pellet/">Pellet</a> <span
-                                                class="count">8</span></li>
-                                        <li class="cat-item cat-item-83"><a href="../calefaccion/palet-de-lena/">Palet de
-                                                leña</a>
-                                            <span class="count">16</span>
-                                        </li>
-                                        <li class="cat-item cat-item-82"><a
-                                                href="../jardin-y-exterior/techos-para-terrazas/">Techos
-                                                para terrazas</a> <span class="count">10</span></li>
-                                        <li class="cat-item cat-item-81"><a
-                                                href="../jardin-y-exterior/cenadores/">Cenadores</a>
-                                            <span class="count">13</span>
-                                        </li>
-                                        <li class="cat-item cat-item-79"><a
-                                                href="../jardin-y-exterior/muebles-de-jardin/">Muebles
-                                                de jardín</a> <span class="count">27</span></li>
-                                        <li class="cat-item cat-item-78"><a href="../piscinas-desmontables/">Piscinas
-                                                desmontables</a> <span class="count">17</span></li>
+                                        @foreach ($categories as $cat)
+                                            <li class="cat-item {{ $category && $category->id === $cat->id ? 'current-cat wd-active' : '' }}">
+                                                <a href="{{ route('category', $cat->translatedValue('slug')).(($preservedFilterQuery ?? '') !== '' ? '?'.$preservedFilterQuery : '') }}">{{ $cat->translatedValue('name') }}</a>
+                                                <span class="count">{{ $cat->products_count }}</span>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <div id="woodmart-price-filter-3"
                                     class="wd-widget widget sidebar-widget woodmart-price-filter">
-                                    <h5 class="widget-title">Filtro de precio</h5>
+                                    <h5 class="widget-title">{{ __('Filtro de precio') }}</h5>
                                     <div class="woodmart-price-filter">
                                         <ul>
                                             <li>
-                                                <a rel="nofollow noopener" href="/" class="current-state">Todo</a>
+                                                <a rel="nofollow noopener" href="{{ $allPricesUrl }}" class="{{ $allPricesActive ? 'current-state' : '' }}">{{ __('Todo') }}</a>
                                             </li>
-                                            <li>
-                                                <a rel="nofollow noopener"
-                                                    href="index9644.html?min_price=470&amp;max_price=940"
-                                                    class=""><span class="woocommerce-Price-amount amount"><span
-                                                            class="woocommerce-Price-currencySymbol">&euro;</span>470,00</span>
-                                                    - <span class="woocommerce-Price-amount amount"><span
-                                                            class="woocommerce-Price-currencySymbol">&euro;</span>940,00</span></a>
-                                            </li>
-                                            <li>
-                                                <a rel="nofollow noopener"
-                                                    href="indexaa20.html?min_price=940&amp;max_price=1410"
-                                                    class=""><span class="woocommerce-Price-amount amount"><span
-                                                            class="woocommerce-Price-currencySymbol">&euro;</span>940,00</span>
-                                                    - <span class="woocommerce-Price-amount amount"><span
-                                                            class="woocommerce-Price-currencySymbol">&euro;</span>1.410,00</span></a>
-                                            </li>
-                                            <li>
-                                                <a rel="nofollow noopener"
-                                                    href="index4880.html?min_price=1410&amp;max_price=1870"
-                                                    class=""><span class="woocommerce-Price-amount amount"><span
-                                                            class="woocommerce-Price-currencySymbol">&euro;</span>1.410,00</span>
-                                                    +</a>
-                                            </li>
+                                            @foreach ($priceFilters as $filter)
+                                                <li>
+                                                    <a rel="nofollow noopener" href="{{ $filter['url'] }}" class="{{ $filter['active'] ? 'current-state' : '' }}">{{ $filter['label'] }}</a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -202,7 +99,7 @@
                                         data-widget_type="wd_shop_archive_result_count.default">
                                         <div class="elementor-widget-container">
                                             <p class="woocommerce-result-count" role="status" aria-relevant="all">
-                                                Mostrando 1&ndash;24 de 45 resultados</p>
+                                                Mostrando {{ $products->firstItem() ?? 0 }}&ndash;{{ $products->lastItem() ?? 0 }} de {{ $products->total() }} resultados</p>
                                         </div>
                                     </div>
                                     <div class="elementor-element elementor-element-17b6737 elementor-hidden-desktop elementor-widget elementor-widget-wd_builder_off_canvas_column_btn"
@@ -215,7 +112,7 @@
                                                     <span class="wd-action-icon">
                                                     </span>
                                                     <span class="wd-action-text">
-                                                        Show sidebar </span>
+                                                        {{ __('Show sidebar') }} </span>
                                                 </a>
                                             </div>
 
@@ -228,27 +125,27 @@
                                             
                                             <div class="wd-products-per-page">
                                                 <span class="wd-label per-page-title">
-                                                    Mostrar </span>
+                                                    {{ __('Mostrar') }} </span>
 
-                                                <a rel="nofollow noopener" href="indexca5c.html?per_page=9"
+                                                <a rel="nofollow noopener" href="#"
                                                     class="per-page-variation">
                                                     <span>
                                                         9 </span>
                                                 </a>
                                                 <span class="per-page-border"></span>
-                                                <a rel="nofollow noopener" href="index1c07.html?per_page=12"
+                                                <a rel="nofollow noopener" href="#"
                                                     class="per-page-variation">
                                                     <span>
                                                         12 </span>
                                                 </a>
                                                 <span class="per-page-border"></span>
-                                                <a rel="nofollow noopener" href="index27e6.html?per_page=18"
+                                                <a rel="nofollow noopener" href="#"
                                                     class="per-page-variation">
                                                     <span>
                                                         18 </span>
                                                 </a>
                                                 <span class="per-page-border"></span>
-                                                <a rel="nofollow noopener" href="indexbd2b.html?per_page=24"
+                                                <a rel="nofollow noopener" href="#"
                                                     class="per-page-variation current-variation">
                                                     <span>
                                                         24 </span>
@@ -266,12 +163,12 @@
 
 
                                                 <a rel="nofollow noopener"
-                                                    href="indexcc7b.html?shop_view=grid&amp;per_row=3"
-                                                    class="shop-view per-row-3" aria-label="Vista de cuadrícula 3"></a>
+                                                    href="#"
+                                                    class="shop-view per-row-3" aria-label="{{ __('Vista de cuadrícula 3') }}"></a>
 
                                                 <a rel="nofollow noopener"
-                                                    href="index475d.html?shop_view=grid&amp;per_row=4"
-                                                    class="shop-view per-row-4" aria-label="Vista de cuadrícula 4"></a>
+                                                    href="#"
+                                                    class="shop-view per-row-4" aria-label="{{ __('Vista de cuadrícula 4') }}"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -282,17 +179,29 @@
                                             
                                             <form class="woocommerce-ordering wd-style-underline wd-ordering-mb-icon"
                                                 method="get">
-                                                <select name="orderby" class="orderby" aria-label="Pedido de la tienda">
-                                                    <option value="menu_order" selected='selected'>Orden
-                                                        predeterminado</option>
-                                                    <option value="popularity">Ordenar por popularidad</option>
-                                                    <option value="date">Ordenar por los últimos</option>
-                                                    <option value="price">Ordenar por precio: bajo a alto
+                                                <select name="orderby" class="orderby" aria-label="{{ __('Pedido de la tienda') }}">
+                                                    <option value="menu_order" {{ request('orderby') === null || request('orderby') === 'menu_order' ? 'selected' : '' }}>{{ __('Orden predeterminado') }}</option>
+                                                    <option value="popularity" {{ request('orderby') === 'popularity' ? 'selected' : '' }}>{{ __('Ordenar por popularidad') }}</option>
+                                                    <option value="date" {{ request('orderby') === 'date' ? 'selected' : '' }}>{{ __('Ordenar por los últimos') }}</option>
+                                                    <option value="price" {{ request('orderby') === 'price' ? 'selected' : '' }}>{{ __('Ordenar por precio: bajo a alto') }}
                                                     </option>
-                                                    <option value="price-desc">Ordenar por precio: alto a bajo
+                                                    <option value="price-desc" {{ request('orderby') === 'price-desc' ? 'selected' : '' }}>{{ __('Ordenar por precio: alto a bajo') }}
                                                     </option>
                                                 </select>
-                                                <input type="hidden" name="paged" value="1" />
+                                                {{-- Preserve the other active filters: a plain GET submit would
+                                                     otherwise drop them, since they're not fields in this form. --}}
+                                                @if (request()->filled('min_price'))
+                                                    <input type="hidden" name="min_price" value="{{ request('min_price') }}" />
+                                                @endif
+                                                @if (request()->filled('max_price'))
+                                                    <input type="hidden" name="max_price" value="{{ request('max_price') }}" />
+                                                @endif
+                                                @if (request()->filled('per_page'))
+                                                    <input type="hidden" name="per_page" value="{{ request('per_page') }}" />
+                                                @endif
+                                                @if ($searchTerm)
+                                                    <input type="hidden" name="q" value="{{ $searchTerm }}" />
+                                                @endif
                                             </form>
                                         </div>
                                     </div>
@@ -319,8 +228,8 @@
                                                 </svg>
                                             </span>
                                             <div class="mm-trust-badge-text">
-                                                <strong>Garantía 3 años</strong>
-                                                <span>En todos nuestros productos</span>
+                                                <strong>{{ __('Garantía 3 años') }}</strong>
+                                                <span>{{ __('En todos nuestros productos') }}</span>
                                             </div>
                                         </div>
                                         <div class="mm-trust-badge">
@@ -332,8 +241,8 @@
                                                 </svg>
                                             </span>
                                             <div class="mm-trust-badge-text">
-                                                <strong>Envío a toda España</strong>
-                                                <span>Rápido y con seguimiento</span>
+                                                <strong>{{ __('Envío a toda España') }}</strong>
+                                                <span>{{ __('Rápido y con seguimiento') }}</span>
                                             </div>
                                         </div>
                                         <div class="mm-trust-badge">
@@ -345,8 +254,8 @@
                                                 </svg>
                                             </span>
                                             <div class="mm-trust-badge-text">
-                                                <strong>Soporte técnico propio</strong>
-                                                <span>Asistencia técnica dedicada</span>
+                                                <strong>{{ __('Soporte técnico propio') }}</strong>
+                                                <span>{{ __('Asistencia técnica dedicada') }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -363,72 +272,14 @@
                                     <div class="products wd-products grid-masonry wd-grid-f-col grid-columns-4 elements-grid pagination-pagination wd-loop-builder-off wd-products-with-bg"
                                         data-source="main_loop" data-min_price="" data-max_price="" data-columns="4"
                                         style="--wd-col-lg:4;--wd-col-md:4;--wd-col-sm:2;--wd-gap-lg:30px;--wd-gap-sm:10px;">
-                                        <div class="wd-product wd-col wd-hover-standard product-grid-item product type-product post-4102 status-publish instock product_cat-astilladoras-de-lena has-post-thumbnail shipping-taxable purchasable product-type-simple"
-                                            data-loop="1" data-id="4102">
-
-                                            <div class="wd-product-wrapper product-wrapper">
-                                                <div class="wd-product-thumb product-element-top wd-quick-shop">
-                                                    <a href="../../producto/astilladora-con-motor-de-gasolina-garto-ags-12t-7-hp/"
-                                                        class="wd-product-img-link product-image-link" tabindex="-1"
-                                                        aria-label="Astilladora con motor de Gasolina Garto AGS 12T 7 HP">
-                                                        <img width="800" height="800"
-                                                            src="../../wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp.jpg"
-                                                            class="attachment-large size-large" alt=""
-                                                            decoding="async" fetchpriority="high"
-                                                            srcset="/wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp.jpg 800w, /wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-600x600.jpg 600w, /wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-150x150.jpg 150w, /wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-300x300.jpg 300w, /wp-content/uploads/2026/07/astilladora-con-motor-de-gasolina-garto12t-7-hp-768x768.jpg 768w"
-                                                            sizes="(max-width: 800px) 100vw, 800px" /> </a>
-
-
-                                                    <div class="wd-buttons wd-pos-r-t">
-                                                    </div>
-                                                </div>
-
-
-
-                                                <h3 class="wd-entities-title"><a
-                                                        href="../../producto/astilladora-con-motor-de-gasolina-garto-ags-12t-7-hp/">Astilladora
-                                                        con motor de Gasolina Garto AGS 12T 7 HP</a></h3>
-                                                <div class="wd-product-cats">
-                                                    <a href="/" rel="tag">Astilladoras de Leña</a>
-                                                </div>
-
-
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol"
-                                                                translate="no">&euro;</span>783,31</bdi></span></span>
-
-                                                <div class="wd-add-btn wd-add-btn-replace">
-
-                                                    <a href="index260d.html?add-to-cart=4102" data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart add-to-cart-loop"
-                                                        data-product_id="4102" data-product_sku="845418"
-                                                        aria-label="Añadir al carrito: &ldquo;Astilladora con motor de Gasolina Garto AGS 12T 7 HP&rdquo;"
-                                                        rel="nofollow"
-                                                        data-success_message="«Astilladora con motor de Gasolina Garto AGS 12T 7 HP» se ha añadido a tu carrito"><span
-                                                            class="wd-action-icon"><span
-                                                                class="wd-check-icon"></span></span><span
-                                                            class="wd-action-text">Añadir al carrito</span></a>
-                                                </div>
-
-
-
-                                            </div>
-                                        </div>
+                                        @forelse ($products as $product)
+                                            @include('partials.product-card', ['product' => $product])
+                                        @empty
+                                            <p>{{ __('No se han encontrado productos.') }}</p>
+                                        @endforelse
                                     </div>
 
-                                    <div class="wd-loop-footer products-footer">
-                                        <nav class="woocommerce-pagination wd-pagination"
-                                            aria-label="Paginación de producto">
-                                            <ul class='page-numbers'>
-                                                <li><span aria-label="Página 1" aria-current="page"
-                                                        class="page-numbers current">1</span></li>
-                                                <li><a aria-label="Página 2" class="page-numbers" href="page/2/">2</a>
-                                                </li>
-                                                <li><a class="next page-numbers" href="page/2/">&rarr;</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
+                                    @include('partials.pagination', ['paginator' => $products])
 
                                 </div>
                             </div>

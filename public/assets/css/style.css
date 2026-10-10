@@ -2471,3 +2471,346 @@
         padding: 16px;
         border-radius: 6px;
     }
+
+    /* ── Top language bar ── */
+    .mm-top-bar {
+        background-color: #1a1a1a;
+        color: #cfcfcf;
+        font-size: 12px;
+    }
+
+    .mm-top-bar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 6px 20px;
+        min-height: 30px;
+    }
+
+    .mm-top-bar-label {
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #8a8a8a;
+    }
+
+    .mm-top-bar-langs {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mm-top-bar-langs li {
+        margin: 0;
+    }
+
+    .mm-top-bar-langs a {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 4px;
+        color: #cfcfcf;
+        font-weight: 600;
+        text-decoration: none !important;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .mm-top-bar-langs a:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+    }
+
+    .mm-top-bar-langs li.mm-top-bar-lang-active a {
+        background-color: rgb(249, 82, 40);
+        color: #ffffff;
+    }
+
+    @media (max-width: 480px) {
+        .mm-top-bar-inner {
+            justify-content: center;
+            padding: 6px 12px;
+        }
+
+        .mm-top-bar-label {
+            display: none;
+        }
+    }
+
+    /* ── Main nav: wraps onto as many rows as needed, with even spacing,
+       and is never allowed to grow past the header and spill off the page.
+
+       The header's own CSS gives .wd-header-nav `flex: 1 1 auto`, but flex
+       items default to `min-width: auto` (their content's natural size), so
+       without a min-width override here the nav refuses to shrink below
+       the combined width of all items — it grows past its column and
+       overflows the page instead of wrapping. This keeps it bounded to the
+       available header width at any viewport size or language. ── */
+    .whb-column.whb-col-center {
+        min-width: 0;
+    }
+
+    .wd-header-main-nav {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    #menu-main-menu-edc {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    #menu-main-menu-edc > li {
+        min-width: 0;
+    }
+
+    .mm-nav-more-list {
+        white-space: normal;
+    }
+
+    /* ── Shop sidebar off-canvas close button ── */
+    .mm-sidebar-close-bar {
+        display: none;
+        justify-content: flex-end;
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--brdcolor-gray-200, #ececec);
+    }
+
+    .wd-side-hidden .mm-sidebar-close-bar {
+        display: flex;
+    }
+
+    .mm-sidebar-close-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border: none;
+        background-color: transparent;
+        color: #333;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .mm-sidebar-close-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* The theme's own backdrop has a stray `top: -150px` baked in for its
+       default state that isn't reliably cleared when opened in this
+       context, so it's forced here to guarantee full-viewport coverage
+       (and therefore a working click-outside-to-close) whenever it's
+       active, regardless of which panel triggered it. */
+    .wd-close-side.wd-close-side-opened {
+        top: 0 !important;
+        inset: 0 !important;
+    }
+
+    /* ── Discount percentage badge: black pill, not the site accent orange ── */
+    .product-label.onsale {
+        background-color: #1a1a1a;
+    }
+
+    /* ── Home page hero-category cards: guarantee legible title text over a
+       photo background, regardless of how bright/busy that photo is. The
+       theme's own scrim only applies with a `color-scheme-light` class that
+       isn't present in this markup, and even then is too faint (15% black)
+       to reliably read against some of these product photos. ── */
+    .cat-design-mask-subcat .wd-cat-content {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0) 100%) !important;
+    }
+
+    .cat-design-mask-subcat .wd-cat-header .wd-entities-title,
+    .cat-design-mask-subcat .wd-cat-header .wd-entities-title a {
+        color: #fff !important;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
+    }
+
+    /* ── Product carousels (e.g. "Esto también te puede interesar"): the
+       theme's own arrow positioning depends on a chain of CSS custom
+       properties that, in this context, place the buttons half off the
+       edge of the viewport instead of beside the cards. Pinned here to a
+       simple, self-contained position instead, and the row itself is made
+       into a real horizontal scroller (the JS below drives the buttons by
+       scrolling it — the grid layout underneath never actually panned). ── */
+    .wd-carousel-container .wd-carousel-inner {
+        position: relative;
+    }
+
+    .wd-carousel-container .wd-carousel-wrap {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    .wd-carousel-container .wd-carousel-wrap::-webkit-scrollbar {
+        display: none;
+    }
+
+    .wd-carousel-container .wd-carousel-wrap > .wd-carousel-item {
+        flex: 0 0 calc((100% - (var(--wd-col-lg, 4) - 1) * var(--wd-gap-lg, 20px)) / var(--wd-col-lg, 4));
+        max-width: none;
+    }
+
+    @media (max-width: 1024px) {
+        .wd-carousel-container .wd-carousel-wrap > .wd-carousel-item {
+            flex-basis: calc((100% - (var(--wd-col-md, 3) - 1) * var(--wd-gap-lg, 20px)) / var(--wd-col-md, 3));
+        }
+    }
+
+    @media (max-width: 767px) {
+        .wd-carousel-container .wd-carousel-wrap > .wd-carousel-item {
+            flex-basis: calc((100% - var(--wd-gap-sm, 10px)) / var(--wd-col-sm, 2));
+        }
+    }
+
+    .wd-carousel-container .wd-nav-arrows {
+        position: static !important;
+    }
+
+    .wd-carousel-container .wd-nav-arrows .wd-btn-arrow {
+        position: absolute !important;
+        top: 50% !important;
+        inset-inline: auto !important;
+        transform: translateY(-50%) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .wd-carousel-container .wd-nav-arrows .wd-prev {
+        left: 6px !important;
+    }
+
+    .wd-carousel-container .wd-nav-arrows .wd-next {
+        right: 6px !important;
+    }
+
+    /* ── Mobile cart/checkout table → card layout ──
+       The theme ships a complete, correct responsive transform for these
+       tables (.shop_table_responsive / .shop-table-with-img: hide the
+       header row, stack each <tr> into a card with the image pinned
+       top-left and the remove button top-right), but the stylesheet that
+       defines it was never linked on these pages during the original
+       scrape — so on mobile the table just rendered as a literal,
+       overflowing table instead. Reproduced here directly instead of
+       linking the vendor file wholesale, to avoid pulling in anything
+       else unverified from it. */
+    @media (max-width: 768.98px) {
+        .shop_table_responsive {
+            display: block;
+        }
+
+        .shop_table_responsive :is(thead, th) {
+            display: none;
+        }
+
+        .shop_table_responsive :is(tbody, tfoot) {
+            display: block;
+        }
+
+        .shop_table_responsive tr {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--brdcolor-gray-300, #e5e5e5);
+        }
+
+        .shop_table_responsive tr:last-child {
+            margin-bottom: 0;
+        }
+
+        .shop_table_responsive td {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 5px;
+            padding: 0;
+            border-bottom: none;
+        }
+
+        .shop_table_responsive td:not(:last-child) {
+            padding-bottom: 5px;
+            border-bottom: 1px dashed var(--brdcolor-gray-300, #e5e5e5);
+        }
+
+        .shop_table_responsive td:before {
+            content: attr(data-title);
+            margin-inline-end: auto;
+            font-weight: 600;
+        }
+
+        .shop-table-with-img tr {
+            padding-inline-start: 115px;
+            min-height: 136px;
+        }
+
+        .shop-table-with-img td:is(.product-thumbnail, .product-remove, .product-name):before {
+            content: none;
+        }
+
+        .shop-table-with-img td.product-thumbnail {
+            position: absolute;
+            top: 0;
+            inset-inline-start: 0;
+            overflow: hidden;
+            max-height: 115px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .shop-table-with-img td.product-thumbnail img {
+            min-width: 100px;
+            max-width: 100px;
+        }
+
+        .shop-table-with-img td.product-remove {
+            position: absolute;
+            top: -4px;
+            inset-inline-end: -7px;
+            z-index: 1;
+            border: none;
+        }
+
+        .shop-table-with-img td.product-name {
+            padding-inline-end: 20px;
+            border-bottom: none;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    /* ── Footer accordion toggles ("Atención al Cliente", "Información Legal") ──
+       The vendor CSS hides .wd-el-toggle-content via display:none whenever
+       .wd-state-closed-sm is present, with no rule to show it again when
+       .wd-active-sm is also present (the original theme relied on jQuery
+       writing an inline display:block that beat the class rule). Our JS only
+       toggles classes, so without this override the content stayed hidden
+       no matter how many times it was clicked. */
+    @media (max-width: 768.98px) {
+        .elementor-element .wd-el-toggle.wd-state-closed-sm.wd-active-sm .wd-el-toggle-content {
+            display: block;
+        }
+    }

@@ -2,100 +2,317 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Password;
 
 class ShopController extends Controller
 {
-    public function home()
-    {
+    private const HOME_CATEGORY_ICONS = [
+        'Tractores Cortacésped' => 'wp-content/uploads/2026/07/autorportes-150x150.png',
+        'Piscinas desmontables' => 'wp-content/uploads/2026/07/piscina-150x150.png',
+        'Pergolas-carpas-y-cenadores' => 'wp-content/uploads/2026/07/pergola-150x150.png',
+        'Generadores Eléctricos' => 'wp-content/uploads/2026/07/groupo-150x150.png',
+        'Casetas de jardín' => 'wp-content/uploads/2026/07/caseta-150x150.png',
+        'Astilladoras de Leña' => 'wp-content/uploads/2026/07/Astilladoras-de-Lena-150x150.png',
+    ];
 
-        return view('pages.home');
+    public function home(Request $request): View
+    {
+        $allCategories = Category::query()->get()->keyBy(fn (Category $category) => $category->translatedValue('name'));
+
+        $heroCategories = collect(self::HOME_CATEGORY_ICONS)
+            ->map(fn (string $icon, string $name) => $allCategories->has($name)
+                ? ['category' => $allCategories->get($name), 'icon' => $icon]
+                : null)
+            ->filter()
+            ->values();
+
+        $featuredProducts = Product::query()
+            ->with('category')
+            ->orderByRaw('featured_position IS NULL')
+            ->orderBy('featured_position')
+            ->orderBy('id')
+            ->paginate(24, ['*'], 'product-page')
+            ->withQueryString();
+
+        return view('pages.home', compact('heroCategories', 'featuredProducts'));
     }
 
+    public function shopIndex(Request $request): View
+    {
+        return $this->renderCatalog($request, null);
+    }
 
     public function shop(string $slug): View
     {
+        $product = Product::query()->where('slug->es', $slug)->firstOrFail();
+        $product->load('category');
 
-        return view('pages.product');
+        $relatedProducts = Product::query()
+            ->where('category_id', $product->category_id)
+            ->where('id', '!=', $product->id)
+            ->inRandomOrder()
+            ->limit(4)
+            ->get();
+
+        $previousProduct = Product::query()->where('id', '<', $product->id)->orderByDesc('id')->first();
+        $nextProduct = Product::query()->where('id', '>', $product->id)->orderBy('id')->first();
+
+        return view('pages.product', compact('product', 'relatedProducts', 'previousProduct', 'nextProduct'));
     }
 
-
-
-    public function category(string $slug): View
+    public function category(Request $request, string $slug): View
     {
+        $category = Category::query()->where('slug->es', $slug)->firstOrFail();
 
-        return view('pages.shop');
+        return $this->renderCatalog($request, $category);
     }
 
-
-    public function myAccount()
+    public function search(Request $request): View
     {
+        $term = trim((string) $request->query('q', ''));
+
+        $query = Product::query()
+            ->with('category')
+            ->when($term !== '', fn ($query) => $query->where('name->es', 'like', '%'.$term.'%'))
+            ->orderBy('name->es');
+
+        $this->applyPriceFilter($query, $request);
+
+        $products = $query->paginate(24)->withQueryString();
+
+        $categories = Category::query()->withCount('products')->orderBy('name->es')->get();
+
+        $priceFilters = $this->buildPriceFilters($request);
+
+        return view('pages.shop', [
+            'category' => null,
+            'products' => $products,
+            'categories' => $categories,
+            'searchTerm' => $term,
+            'priceFilters' => $priceFilters['filters'],
+            'allPricesUrl' => $priceFilters['allUrl'],
+            'allPricesActive' => $priceFilters['allActive'],
+            'preservedFilterQuery' => $this->preservedFilterQuery($request),
+            'pageTitle' => $term !== '' ? __('Resultados para «:term»', ['term' => $term]) : __('Buscar productos'),
+        ]);
+    }
+
+    /**
+     * Price brackets for the sidebar filter, in whole euros. A null max
+     * means "no upper limit" (used for the last bracket).
+     *
+     * @var array<int, array{min: int, max: ?int}>
+     */
+    private const PRICE_BRACKETS = [
+        ['min' => 0, 'max' => 3000],
+        ['min' => 3000, 'max' => 6000],
+        ['min' => 6000, 'max' => 9000],
+        ['min' => 9000, 'max' => null],
+    ];
+
+    /**
+     * The current price/sort/display filters as a query string, so that
+     * switching category from the sidebar doesn't silently drop them —
+     * picking a category and a price range should combine, not replace
+     * each other.
+     */
+    private function preservedFilterQuery(Request $request): string
+    {
+        return http_build_query(array_filter([
+            'min_price' => $request->query('min_price'),
+            'max_price' => $request->query('max_price'),
+            'orderby' => $request->query('orderby'),
+            'per_page' => $request->query('per_page'),
+        ], fn ($value) => $value !== null && $value !== ''));
+    }
+
+    /**
+     * Scope a product query to the min_price/max_price query string, if present.
+     */
+    private function applyPriceFilter(Builder $query, Request $request): void
+    {
+        $minPrice = $request->query('min_price');
+        $maxPrice = $request->query('max_price');
+
+        if (is_numeric($minPrice)) {
+            $query->whereRaw("CAST(json_extract(prices, '$.price') AS INTEGER) >= ?", [((int) $minPrice) * 100]);
+        }
+
+        if (is_numeric($maxPrice)) {
+            $query->whereRaw("CAST(json_extract(prices, '$.price') AS INTEGER) <= ?", [((int) $maxPrice) * 100]);
+        }
+    }
+
+    /**
+     * Build the sidebar price-filter links (brackets + the "Todo" reset link)
+     * for the current request, preserving every other active query param.
+     *
+     * @return array{filters: Collection, allUrl: string, allActive: bool}
+     */
+    private function buildPriceFilters(Request $request): array
+    {
+        $filters = collect(self::PRICE_BRACKETS)->map(function (array $bracket) use ($request) {
+            $label = $bracket['max'] === null
+                ? '€'.number_format($bracket['min'], 2, ',', '.').' +'
+                : '€'.number_format($bracket['min'], 2, ',', '.').' - €'.number_format($bracket['max'], 2, ',', '.');
+
+            $isActive = (string) $request->query('min_price') === (string) $bracket['min']
+                && (string) $request->query('max_price') === (string) ($bracket['max'] ?? '');
+
+            return [
+                'label' => $label,
+                'url' => $request->fullUrlWithQuery([
+                    'min_price' => $bracket['min'],
+                    'max_price' => $bracket['max'],
+                    'page' => null,
+                ]),
+                'active' => $isActive,
+            ];
+        });
+
+        return [
+            'filters' => $filters,
+            'allUrl' => $request->fullUrlWithQuery(['min_price' => null, 'max_price' => null, 'page' => null]),
+            'allActive' => ! is_numeric($request->query('min_price')) && ! is_numeric($request->query('max_price')),
+        ];
+    }
+
+    private function renderCatalog(Request $request, ?Category $category): View
+    {
+        $query = Product::query()->with('category');
+
+        if ($category) {
+            $query->where('category_id', $category->id);
+        }
+
+        $this->applyPriceFilter($query, $request);
+
+        match ($request->query('orderby')) {
+            'price' => $query->orderByRaw("CAST(json_extract(prices, '$.price') AS INTEGER) asc"),
+            'price-desc' => $query->orderByRaw("CAST(json_extract(prices, '$.price') AS INTEGER) desc"),
+            'date' => $query->latest(),
+            default => $query->orderBy('name->es'),
+        };
+
+        $perPage = (int) $request->query('per_page', 24);
+        $perPage = in_array($perPage, [9, 12, 18, 24], true) ? $perPage : 24;
+
+        $products = $query->paginate($perPage)->withQueryString();
+
+        $categories = Category::query()->withCount('products')->orderBy('name->es')->get();
+
+        $priceFilters = $this->buildPriceFilters($request);
+
+        return view('pages.shop', [
+            'category' => $category,
+            'products' => $products,
+            'categories' => $categories,
+            'searchTerm' => null,
+            'priceFilters' => $priceFilters['filters'],
+            'allPricesUrl' => $priceFilters['allUrl'],
+            'allPricesActive' => $priceFilters['allActive'],
+            'preservedFilterQuery' => $this->preservedFilterQuery($request),
+            'pageTitle' => $category?->translatedValue('name') ?? 'Tienda',
+        ]);
+    }
+
+    public function myAccount(): View
+    {
+        if (Auth::check()) {
+            $orders = Auth::user()->orders()->with('items')->get();
+
+            return view('pages.account', compact('orders'));
+        }
+
         return view('pages.my-account');
     }
 
-    public function lostPassword()
+    public function lostPassword(): View
     {
         return view('pages.lost-password');
     }
 
-
-      public function carrito()
+    public function sendLostPassword(Request $request): RedirectResponse
     {
-        return view('pages.carrito');
+        $request->validate(['user_login' => ['required', 'string']]);
+
+        $email = $request->string('user_login')->toString();
+
+        Password::sendResetLink(['email' => $email]);
+
+        return back()->with('status', 'Si ese correo existe en nuestro sistema, recibirás un enlace para restablecer tu contraseña.');
     }
 
+    public function carrito(): View
+    {
+        $suggestedProducts = Product::query()->with('category')->inRandomOrder()->limit(4)->get();
 
-          public function checkout()
+        return view('pages.carrito', compact('suggestedProducts'));
+    }
+
+    public function checkout(): View
     {
         return view('pages.checkout');
     }
 
+    public function orderConfirmation(string $orderNumber): View
+    {
+        $order = Order::query()->where('order_number', $orderNumber)->with('items')->firstOrFail();
 
+        return view('pages.order-confirmation', compact('order'));
+    }
 
-
-    public function contact()
+    public function contact(): View
     {
         return view('pages.contact');
     }
 
-    public function shippingPolicy()
+    public function shippingPolicy(): View
     {
         return view('pages.shipping-policy');
     }
 
-    public function returnPolicy()
+    public function returnPolicy(): View
     {
         return view('pages.return-policy');
     }
 
-    public function paymentPolicy()
+    public function paymentPolicy(): View
     {
         return view('pages.payment-policy');
     }
 
     // --- Legal Information ---
-    public function legalNotice()
+    public function legalNotice(): View
     {
         return view('pages.legal-notice');
     }
 
-    public function termsOfUse()
+    public function termsOfUse(): View
     {
         return view('pages.terms-of-use');
     }
 
-    public function termsOfSale()
+    public function termsOfSale(): View
     {
         return view('pages.terms-of-sale');
     }
 
-    public function privacyPolicy()
+    public function privacyPolicy(): View
     {
         return view('pages.privacy-policy');
     }
 
-    public function cookiePolicy()
+    public function cookiePolicy(): View
     {
         return view('pages.cookie-policy');
     }

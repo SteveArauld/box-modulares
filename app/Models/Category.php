@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasLocalizedContent;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Spatie\Translatable\HasTranslations;
 
 class Category extends Model
 {
-    use HasTranslations;
+    use HasLocalizedContent, HasTranslations;
 
     protected $fillable = [
         'name',

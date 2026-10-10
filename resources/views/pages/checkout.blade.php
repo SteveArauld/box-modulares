@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Finalizar compra | nom domain')
+@section('title', 'Finalizar compra | '.config('app.name'))
+@section('body_class', 'woocommerce-checkout page')
 <style>
     .wd-page-title-el .wd-page-title {
   border-radius:inherit
@@ -169,13 +170,13 @@
   align-self:var(--wd-btn-align, start)
 }
 
-/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-page-checkout-builder.css */
+/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-page-checkout-builder.css */
 
-/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/page-title.css */
+/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/page-title.css */
 
-/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/page-title.css */
+/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/page-title.css */
 
-/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/el-page-title-builder.css */
+/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/el-page-title-builder.css */
 
 </style>
 
@@ -186,21 +187,21 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="pingback" href="../xmlrpc.php">
 
-	<title>Finalizar compra &#8211; nom domain | Materiales de Construcción, Jardín, Pérgolas, Piscinas y
+	<title>Finalizar compra &#8211; {{ config('app.name') }} | Materiales de Construcción, Jardín, Pérgolas, Piscinas y
 		Equipamiento</title>
 	<meta name='robots' content='max-image-preview:large, noindex, follow' />
 	<link rel='dns-prefetch' href='http://cdn-reach.hostinger.com/' />
 	<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
 	<link rel="alternate" type="application/rss+xml"
-		title="nom domain | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento &raquo; Feed"
+		title="{{ config('app.name') }} | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento &raquo; Feed"
 		href="../feed/index.html" />
 	<link rel="alternate" type="application/rss+xml"
-		title="nom domain | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento &raquo; Feed de los comentarios"
+		title="{{ config('app.name') }} | Materiales de Construcción, Jardín, Pérgolas, Piscinas y Equipamiento &raquo; Feed de los comentarios"
 		href="../comments/feed/index.html" />
-	<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-		href="../wp-json/oembed/1.0/embedccb1.html?url=https%3A%2F%2Fbox-modulares.es%2Ffinalizar-compra%2F" />
-	<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-		href="../wp-json/oembed/1.0/embed6f28.html?url=https%3A%2F%2Fbox-modulares.es%2Ffinalizar-compra%2F&amp;format=xml" />
+	<link rel="alternate" title="{{ __('oEmbed (JSON)') }}" type="application/json+oembed"
+		href="../wp-json/oembed/1.0/embedccb1.html?url=https%3A%2F%2Fnovaterra.es%2Ffinalizar-compra%2F" />
+	<link rel="alternate" title="{{ __('oEmbed (XML)') }}" type="text/xml+oembed"
+		href="../wp-json/oembed/1.0/embed6f28.html?url=https%3A%2F%2Fnovaterra.es%2Ffinalizar-compra%2F&amp;format=xml" />
 	<style id="wp-img-auto-sizes-contain-inline-css">
 		img:is([sizes=auto i], [sizes^="auto," i]) {
 			contain-intrinsic-size: 3000px 1500px
@@ -1074,10 +1075,9 @@
 		/*# sourceURL=global-styles-inline-css */
 	</style>
 	<link rel='stylesheet' id='fluentform-elementor-widget-css'
-		href='../wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widgetd7df.css?ver=6.2.14'
+		href='/wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widgetd7df.css?ver=6.2.14'
 		media='all' />
-	<link rel='stylesheet' id='wp-block-library-css'
-		href='../wp-includes/css/dist/block-library/style.mind833.css?ver=7.1.2' media='all' />
+
 	<style id="wp-block-library-inline-css">
 		.pellets-delivery-badge {
 			display: inline-block;
@@ -1237,13 +1237,13 @@
 			width: 100%
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/plugins/safe-svg/dist/safe-svg-block-frontend.css */
+		/*# sourceURL=https://novaterra.es/wp-content/plugins/safe-svg/dist/safe-svg-block-frontend.css */
 	</style>
 	<link rel='stylesheet' id='hostinger-reach-subscription-block-css'
-		href='../wp-content/plugins/hostinger-reach/frontend/dist/blocks/subscription29b3.css?ver=1789777875'
+		href='/wp-content/plugins/hostinger-reach/frontend/dist/blocks/subscription29b3.css?ver=1789777875'
 		media='all' />
 	<link rel='stylesheet' id='select2-css'
-		href='../wp-content/plugins/woocommerce/assets/css/select2345d.css?ver=11.1.1' media='all' />
+		href='/wp-content/plugins/woocommerce/assets/css/select2345d.css?ver=11.1.1' media='all' />
 	<style id="woocommerce-inline-inline-css">
 		.woocommerce form .form-row .required {
 			visibility: visible;
@@ -1252,16 +1252,16 @@
 		/*# sourceURL=woocommerce-inline-inline-css */
 	</style>
 	<link rel='stylesheet' id='hero_styles-css'
-		href='../wp-content/plugins/woocommerce-gateway-hero/assets/css/hero-stylesb95e.css?ver=2.0.3' media='all' />
-	<link rel="preload" href="../wp-content/plugins/disco/assets/build/plugin-publicf896.css?ver=1.4.18" as="style"
+		href='/wp-content/plugins/woocommerce-gateway-hero/assets/css/hero-stylesb95e.css?ver=2.0.3' media='all' />
+	<link rel="preload" href="/wp-content/plugins/disco/assets/build/plugin-publicf896.css?ver=1.4.18" as="style"
 		onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
 		<link rel='stylesheet' id='disco-plugin-styles-css'
-			href='../wp-content/plugins/disco/assets/build/plugin-publicf896.css?ver=1.4.18' media='all' />
+			href='/wp-content/plugins/disco/assets/build/plugin-publicf896.css?ver=1.4.18' media='all' />
 	</noscript>
 	<script>!function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);</script>
 	<link rel='stylesheet' id='elementor-frontend-css'
-		href='../wp-content/uploads/elementor/css/custom-frontend.min05b2.css?ver=1790099160' media='all' />
+		href='/wp-content/uploads/elementor/css/custom-frontend.min05b2.css?ver=1790099160' media='all' />
 	<style id="elementor-frontend-inline-css">
 		.e-heading-base a,
 		.e-paragraph-base a {
@@ -1277,40 +1277,40 @@
 		/*# sourceURL=elementor-frontend-inline-css */
 	</style>
 	<link rel='stylesheet' id='elementor-post-6-css'
-		href='../wp-content/uploads/elementor/css/post-605b2.css?ver=1790099160' media='all' />
+		href='/wp-content/uploads/elementor/css/post-605b2.css?ver=1790099160' media='all' />
 	<link rel='stylesheet' id='base-desktop-css'
-		href='../wp-content/uploads/elementor/css/base-desktopa49e.css?ver=6ab2bed939598' media='all' />
+		href='/wp-content/uploads/elementor/css/base-desktopa49e.css?ver=6ab2bed939598' media='all' />
 	<link rel='stylesheet' id='base-mobile-css'
-		href='../wp-content/uploads/elementor/css/base-mobilea49e.css?ver=6ab2bed939598' media='(max-width:768px)' />
-	<link rel='stylesheet' id='wd-style-base-css' href='../wp-content/themes/woodmart/css/parts/base8833.css?ver=8.5.2'
+		href='/wp-content/uploads/elementor/css/base-mobilea49e.css?ver=6ab2bed939598' media='(max-width:768px)' />
+	<link rel='stylesheet' id='wd-style-base-css' href='/wp-content/themes/woodmart/css/parts/base8833.css?ver=8.5.2'
 		media='all' />
 	<style id="wd-style-base-inline-css">
 		@font-face {
 			font-weight: normal;
 			font-style: normal;
 			font-family: "woodmart-font";
-			src: url("../wp-content/themes/woodmart/fonts/woodmart-font-1-400c9dd.woff2?v=8.5.2") format("woff2");
+			src: url("/wp-content/themes/woodmart/fonts/woodmart-font-1-400c9dd.woff2?v=8.5.2") format("woff2");
 		}
 
 		@font-face {
 			font-family: "star";
 			font-weight: 400;
 			font-style: normal;
-			src: url("../wp-content/plugins/woocommerce/assets/fonts/stard41d.html?#iefix") format("embedded-opentype"), url("../wp-content/plugins/woocommerce/assets/fonts/star.woff") format("woff"), url("../wp-content/plugins/woocommerce/assets/fonts/star.ttf") format("truetype"), url("../wp-content/plugins/woocommerce/assets/fonts/star.svg#star") format("svg");
+			src: url("/wp-content/plugins/woocommerce/assets/fonts/stard41d.html?#iefix") format("embedded-opentype"), url("/wp-content/plugins/woocommerce/assets/fonts/star.woff") format("woff"), url("/wp-content/plugins/woocommerce/assets/fonts/star.ttf") format("truetype"), url("/wp-content/plugins/woocommerce/assets/fonts/star.svg#star") format("svg");
 		}
 
 		@font-face {
 			font-family: "WooCommerce";
 			font-weight: 400;
 			font-style: normal;
-			src: url("../wp-content/plugins/woocommerce/assets/fonts/WooCommerced41d.html?#iefix") format("embedded-opentype"), url("../wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff") format("woff"), url("../wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf") format("truetype"), url("../wp-content/plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce") format("svg");
+			src: url("/wp-content/plugins/woocommerce/assets/fonts/WooCommerced41d.html?#iefix") format("embedded-opentype"), url("/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff") format("woff"), url("/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf") format("truetype"), url("/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce") format("svg");
 		}
 
 
 		/*# sourceURL=wd-style-base-inline-css */
 	</style>
 	<link rel='stylesheet' id='wd-header-base-css'
-		href='../wp-content/themes/woodmart/css/parts/header-base8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/header-base8833.css?ver=8.5.2' media='all' />
 	<style id="wd-helpers-wpb-elem-inline-css">
 		.wd-z-index {
 			position: relative;
@@ -1411,10 +1411,10 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/helpers-wpb-elem.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/helpers-wpb-elem.css */
 	</style>
 	<link rel='stylesheet' id='wd-woo-stripe-css'
-		href='../wp-content/themes/woodmart/css/parts/int-woo-stripe8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/int-woo-stripe8833.css?ver=8.5.2' media='all' />
 	<style id="wd-woo-payments-inline-css">
 		.wd-sticky-btn #wcpay-payment-request-wrapper,
 		.wd-sticky-btn #wcpay-payment-request-button-separator,
@@ -1550,12 +1550,12 @@
 			padding: 0 !important
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/int-woo-payments.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/int-woo-payments.css */
 	</style>
 	<link rel='stylesheet' id='wd-elementor-base-css'
-		href='../wp-content/themes/woodmart/css/parts/int-elem-base8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/int-elem-base8833.css?ver=8.5.2' media='all' />
 	<link rel='stylesheet' id='wd-woocommerce-base-css'
-		href='../wp-content/themes/woodmart/css/parts/woocommerce-base8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/woocommerce-base8833.css?ver=8.5.2' media='all' />
 	<style id="wd-mod-star-rating-inline-css">
 		.star-rating {
 			position: relative;
@@ -1591,12 +1591,12 @@
 			text-indent: 0
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/mod-star-rating.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/mod-star-rating.css */
 	</style>
 	<link rel='stylesheet' id='wd-select2-css'
-		href='../wp-content/themes/woodmart/css/parts/woo-lib-select28833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/woo-lib-select28833.css?ver=8.5.2' media='all' />
 	<link rel='stylesheet' id='wd-woo-mod-shop-table-css'
-		href='../wp-content/themes/woodmart/css/parts/woo-mod-shop-table8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/woo-mod-shop-table8833.css?ver=8.5.2' media='all' />
 	<style id="wd-woo-mod-grid-inline-css">
 		.col2-set {
 			display: flex;
@@ -1635,10 +1635,10 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-mod-grid.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-mod-grid.css */
 	</style>
 	<link rel='stylesheet' id='wd-page-checkout-css'
-		href='../wp-content/themes/woodmart/css/parts/woo-page-checkout8833.html?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/woo-page-checkout8833.html?ver=8.5.2' media='all' />
 	<style id="wd-page-checkout-payment-methods-inline-css">
 		.payment_methods {
 			--li-mb: 15px;
@@ -1747,7 +1747,7 @@
 			bottom: var(--btn-accented-bottom-active, 0)
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-page-checkout-el-payment-methods.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-page-checkout-el-payment-methods.css */
 	</style>
 	<style id="wd-woo-page-checkout-builder-inline-css">
 		.wd-checkout-form {
@@ -1834,7 +1834,7 @@
 			align-self: var(--wd-btn-align, start)
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-page-checkout-builder.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-page-checkout-builder.css */
 	</style>
 	<style id="wd-woo-opt-manage-checkout-prod-inline-css">
 		.wd-checkout-prod {
@@ -1942,7 +1942,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-opt-manage-checkout-prod.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-opt-manage-checkout-prod.css */
 	</style>
 	<style id="wd-woo-opt-fbt-cart-inline-css">
 		.product_list_widget li[class*=wd-fbt-item]:not(.wd-fbt-item-last) {
@@ -1994,7 +1994,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-opt-fbt-cart.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-opt-fbt-cart.css */
 	</style>
 	<style id="wd-woo-mod-cart-labels-inline-css">
 		.wd-cart-label {
@@ -2031,10 +2031,10 @@
 			margin-inline-end: 3px
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-mod-cart-labels.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-mod-cart-labels.css */
 	</style>
 	<link rel='stylesheet' id='wd-wp-blocks-css'
-		href='../wp-content/themes/woodmart/css/parts/wp-blocks8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/wp-blocks8833.css?ver=8.5.2' media='all' />
 	<style id="wd-header-logo-opt-swap-inline-css">
 		.wd-switch-logo .wd-sticky-logo {
 			display: none;
@@ -2049,7 +2049,7 @@
 			display: block
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/header-el-logo-opt-swap.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/header-el-logo-opt-swap.css */
 	</style>
 	<style id="wd-header-search-inline-css">
 		.wd-header-search {
@@ -2118,7 +2118,7 @@
 			padding-left: 15px
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/header-el-search.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/header-el-search.css */
 	</style>
 	<style id="wd-woo-mod-login-form-inline-css">
 		.woocommerce-form-login>*:last-child {
@@ -2217,7 +2217,7 @@
 			border-bottom: 1px solid var(--brdcolor-gray-300)
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-mod-login-form.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-mod-login-form.css */
 	</style>
 	<style id="wd-header-divider-inline-css">
 		.wd-header-divider:before {
@@ -2256,7 +2256,7 @@
 			padding-inline-end: 10px
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/header-el-divider.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/header-el-divider.css */
 	</style>
 	<style id="wd-header-cart-inline-css">
 		.wd-header-cart {
@@ -2346,7 +2346,7 @@
 			padding-inline: 10px
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/header-el-cart.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/header-el-cart.css */
 	</style>
 	<style id="wd-el-page-title-builder-inline-css">
 		.wd-page-title-el .wd-page-title {
@@ -2359,7 +2359,7 @@
 			inset-inline-start: calc(50% - 50vw + var(--wd-scroll-w)/2 + var(--wd-sticky-nav-w)/2)
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/el-page-title-builder.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/el-page-title-builder.css */
 	</style>
 	<style id="wd-page-title-inline-css">
 		.wd-page-title {
@@ -2412,7 +2412,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/page-title.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/page-title.css */
 	</style>
 	<style id="wd-woo-mod-checkout-steps-inline-css">
 		.wd-checkout-steps {
@@ -2472,7 +2472,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-mod-checkout-steps.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-mod-checkout-steps.css */
 	</style>
 	<style id="wd-woo-el-notices-builder-inline-css">
 		.wd-wc-notices .woocommerce-notices-wrapper {
@@ -2489,7 +2489,7 @@
 			display: none
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-el-notices-builder.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-el-notices-builder.css */
 	</style>
 	<style id="wd-int-elem-opt-sticky-column-inline-css">
 		[class*=wd-sticky-container] {
@@ -2520,7 +2520,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/int-elem-opt-sticky-column.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/int-elem-opt-sticky-column.css */
 	</style>
 	<style id="wd-section-title-inline-css">
 		.title-wrapper {
@@ -2636,7 +2636,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/el-section-title.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/el-section-title.css */
 	</style>
 	<style id="wd-woo-mod-quantity-inline-css">
 		div.quantity {
@@ -2715,7 +2715,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-mod-quantity.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-mod-quantity.css */
 	</style>
 	<style id="wd-widget-collapse-inline-css">
 		.wd-widget-collapse .widget-title {
@@ -2770,7 +2770,7 @@
 			color: #333
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/opt-widget-collapse.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/opt-widget-collapse.css */
 	</style>
 	<style id="wd-footer-base-inline-css">
 		.footer-sidebar {
@@ -2829,7 +2829,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/footer-base.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/footer-base.css */
 	</style>
 	<style id="wd-text-block-inline-css">
 		.wd-text-block:not(.inline-element) {
@@ -2849,7 +2849,7 @@
 			margin-left: auto
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/el-text-block.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/el-text-block.css */
 	</style>
 	<style id="wd-mod-nav-menu-label-inline-css">
 		.menu-label {
@@ -2921,7 +2921,7 @@
 			--wd-label-color: #65B32E
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/mod-nav-menu-label.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/mod-nav-menu-label.css */
 	</style>
 	<style id="wd-el-menu-inline-css">
 		@media(max-width: 1024px) {
@@ -2930,7 +2930,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/el-menu.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/el-menu.css */
 	</style>
 	<style id="wd-el-menu-wpb-elem-inline-css">
 		.wd-menu>.widget-title {
@@ -2964,7 +2964,7 @@
 			margin-inline-end: 7px
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/el-menu-wpb-elem.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/el-menu-wpb-elem.css */
 	</style>
 	<style id="wd-scroll-top-inline-css">
 		.scrollToTop {
@@ -3019,7 +3019,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/opt-scrolltotop.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/opt-scrolltotop.css */
 	</style>
 	<style id="wd-header-search-fullscreen-inline-css">
 		[class*=wd-search-full-screen] {
@@ -3135,10 +3135,10 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/header-el-search-fullscreen-general.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/header-el-search-fullscreen-general.css */
 	</style>
 	<link rel='stylesheet' id='wd-header-search-fullscreen-1-css'
-		href='../wp-content/themes/woodmart/css/parts/header-el-search-fullscreen-18833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/header-el-search-fullscreen-18833.css?ver=8.5.2' media='all' />
 	<style id="wd-wd-search-form-inline-css">
 		.searchform {
 			position: relative;
@@ -3250,10 +3250,10 @@
 			opacity: .7
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/wd-search-form.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/wd-search-form.css */
 	</style>
 	<link rel='stylesheet' id='wd-wd-search-results-css'
-		href='../wp-content/themes/woodmart/css/parts/wd-search-results8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/wd-search-results8833.css?ver=8.5.2' media='all' />
 	<style id="wd-search-style-default-inline-css">
 		@media(min-width: 769px) {
 			.searchform.wd-style-default:not(.wd-with-cat) .wd-clear-search {
@@ -3273,10 +3273,10 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/el-search-style-default.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/el-search-style-default.css */
 	</style>
 	<link rel='stylesheet' id='wd-wd-search-dropdown-css'
-		href='../wp-content/themes/woodmart/css/parts/wd-search-dropdown8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/wd-search-dropdown8833.css?ver=8.5.2' media='all' />
 	<style id="wd-widget-general-inline-css">
 		:is(.widget, .wd-widget, div[class^=vc_wp]) {
 			line-height: 1.4;
@@ -3324,10 +3324,10 @@
 			border-bottom: none
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/widget-general.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/widget-general.css */
 	</style>
 	<link rel='stylesheet' id='wd-widget-shopping-cart-css'
-		href='../wp-content/themes/woodmart/css/parts/woo-widget-shopping-cart8833.css?ver=8.5.2' media='all' />
+		href='/wp-content/themes/woodmart/css/parts/woo-widget-shopping-cart8833.css?ver=8.5.2' media='all' />
 	<style id="wd-widget-product-list-inline-css">
 		.product_list_widget>li {
 			margin-bottom: 15px;
@@ -3398,7 +3398,7 @@
 			clear: both
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/woo-widget-product-list.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-widget-product-list.css */
 	</style>
 	<style id="wd-bottom-toolbar-inline-css">
 		.wd-toolbar {
@@ -3541,7 +3541,7 @@
 			}
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/themes/woodmart/css/parts/opt-bottom-toolbar.css */
+		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/opt-bottom-toolbar.css */
 	</style>
 	<style id="xts-style-header_423087-inline-css">
 		:root {
@@ -3600,7 +3600,7 @@
 			background-color: rgba(18, 18, 18, 1);
 		}
 
-		/*# sourceURL=https://box-modulares.es/wp-content/uploads/2026/07/xts-header_423087-1783445091.css */
+		/*# sourceURL=https://novaterra.es/wp-content/uploads/2026/07/xts-header_423087-1783445091.css */
 	</style>
 	
 	
@@ -3789,7 +3789,7 @@
 				<div class="wd-content-area site-content">
 					<div class="woocommerce entry-content">
 						<link rel="stylesheet" id="elementor-post-2668-css"
-							href="../wp-content/uploads/elementor/css/post-2668673e.html?ver=1790104283" type="text/css"
+							href="/wp-content/uploads/elementor/css/post-2668673e.html?ver=1790104283" type="text/css"
 							media="all">
 						<div data-elementor-type="wp-post" data-elementor-id="2668" class="elementor elementor-2668">
 							<div class="wd-negative-gap elementor-element elementor-element-39ca2a2 e-flex e-con-boxed e-con e-parent"
@@ -3803,26 +3803,26 @@
 												style="">
 												<div class="wd-page-title-bg wd-fill">
 													<img width="1920" height="410"
-														src="../wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
+														src="/wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
 														class="attachment-full size-full" alt="" decoding="async"
 														fetchpriority="high"
-														srcset="https://box-modulares.es/wp-content/uploads/2026/04/edc-hero-section-bg.jpg 1920w, https://box-modulares.es/wp-content/uploads/2026/04/edc-hero-section-bg-150x32.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/04/edc-hero-section-bg-1200x256.jpg 1200w"
+														srcset="https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg.jpg 1920w, https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg-150x32.jpg 150w, https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg-1200x256.jpg 1200w"
 														sizes="(max-width: 1920px) 100vw, 1920px" />
 												</div>
 												<div class="container">
 													<ul class="wd-checkout-steps">
 														<li class="step-cart step-inactive">
 															<a href="../carrito/index.html">
-																<span>Carrito de compra</span>
+																<span>{{ __('Carrito de compra') }}</span>
 															</a>
 														</li>
 														<li class="step-checkout step-active">
 															<a href="/">
-																<span>Finalizar compra</span>
+																<span>{{ __('Finalizar compra') }}</span>
 															</a>
 														</li>
 														<li class="step-complete step-inactive">
-															<span>Pedido completado</span>
+															<span>{{ __('Pedido completado') }}</span>
 														</li>
 													</ul>
 												</div>
@@ -3834,24 +3834,20 @@
 										data-widget_type="wd_wc_notices.default">
 										<div class="elementor-widget-container">
 											<div class="woocommerce-notices-wrapper">
-												<div class="woocommerce-message" role="alert">
-													&ldquo;Piscina tubular rectangular 404 x 201 x 100 cm Bestway
-													PowerSteel 6 478 litros + bomba, filtro y escala&rdquo; se ha
-													añadido a tu carrito. <a
-														href="../categoria-producto/piscinas-desmontables/index.html"
-														class="button wc-forward">Seguir comprando</a> </div>
-											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<form name="checkout" method="post" class="checkout woocommerce-checkout wd-checkout-form"
-							action="https://box-modulares.es/finalizar-compra/" enctype="multipart/form-data"
-							aria-label="Finalizar compra">
+						<p id="js-checkout-empty" class="woocommerce-info" style="display:none;">{{ __('Tu carrito está vacío.') }} <a href="{{ route('shop.index') }}">{{ __('Ver productos') }}</a></p>
+
+						<form name="checkout" method="POST" class="checkout woocommerce-checkout wd-checkout-form"
+							action="{{ route('shop.checkout.store') }}" enctype="multipart/form-data"
+							aria-label="{{ __('Finalizar compra') }}">
+							@csrf
 							<link rel="stylesheet" id="elementor-post-2665-css"
-								href="../wp-content/uploads/elementor/css/post-26657cd3.html?ver=1790104284"
+								href="/wp-content/uploads/elementor/css/post-26657cd3.html?ver=1790104284"
 								type="text/css" media="all">
 							<div data-elementor-type="wp-post" data-elementor-id="2665"
 								class="elementor elementor-2665">
@@ -3870,54 +3866,60 @@
 													<div class="elementor-widget-container">
 														<div class="woocommerce-billing-fields">
 
-															<h3>Detalles de facturación</h3>
+															<h3>{{ __('Detalles de facturación') }}</h3>
 
 
 
+@php
+    $wdCheckoutFirstName = '';
+    $wdCheckoutLastName = '';
+    if (auth()->check()) {
+        $wdCheckoutNameParts = explode(' ', auth()->user()->name, 2);
+        $wdCheckoutFirstName = $wdCheckoutNameParts[0] ?? '';
+        $wdCheckoutLastName = $wdCheckoutNameParts[1] ?? '';
+    }
+@endphp
 															<div class="woocommerce-billing-fields__field-wrapper">
 																<p class="form-row form-row-wide stripe-gateway-checkout-email-field validate-required validate-email"
 																	id="billing_email_field" data-priority="1"><label
 																		for="billing_email"
-																		class="required_field">Dirección de correo
-																		electrónico&nbsp;<span class="required"
+																		class="required_field">{{ __('Dirección de correo electrónico&nbsp;') }}<span class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><input
 																			type="email" class="input-text "
 																			name="billing_email" id="billing_email"
-																			placeholder="" value="" aria-required="true"
-																			autocomplete="section-billing billing email" /></span>
+																			placeholder="" value="{{ old('billing_email', auth()->user()->email ?? '') }}" aria-required="true" autocomplete="section-billing billing email" /></span>
 																</p>
 																<p class="form-row form-row-first validate-required"
 																	id="billing_first_name_field" data-priority="10">
 																	<label for="billing_first_name"
-																		class="required_field">Nombre&nbsp;<span
+																		class="required_field">{{ __('Nombre&nbsp;') }}<span
 																			class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><input
 																			type="text" class="input-text "
 																			name="billing_first_name"
 																			id="billing_first_name" placeholder=""
-																			value="" aria-required="true"
+																			value="{{ old('billing_first_name', $wdCheckoutFirstName) }}" aria-required="true"
 																			autocomplete="section-billing billing given-name" /></span>
 																</p>
 																<p class="form-row form-row-last validate-required"
 																	id="billing_last_name_field" data-priority="20">
 																	<label for="billing_last_name"
-																		class="required_field">Apellidos&nbsp;<span
+																		class="required_field">{{ __('Apellidos&nbsp;') }}<span
 																			class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><input
 																			type="text" class="input-text "
 																			name="billing_last_name"
 																			id="billing_last_name" placeholder=""
-																			value="" aria-required="true"
+																			value="{{ old('billing_last_name', $wdCheckoutLastName) }}" aria-required="true"
 																			autocomplete="section-billing billing family-name" /></span>
 																</p>
 																<p class="form-row form-row-wide"
 																	id="billing_company_field" data-priority="30"><label
-																		for="billing_company" class="">Nombre de la
-																		empresa&nbsp;<span
-																			class="optional">(opcional)</span></label><span
+																		for="billing_company" class="">{{ __('Nombre de la empresa&nbsp;') }}<span
+																			class="optional">{{ __('(opcional)') }}</span></label><span
 																		class="woocommerce-input-wrapper"><input
 																			type="text" class="input-text "
 																			name="billing_company" id="billing_company"
@@ -3927,7 +3929,7 @@
 																<p class="form-row form-row-wide address-field update_totals_on_change validate-required"
 																	id="billing_country_field" data-priority="40"><label
 																		for="billing_country"
-																		class="required_field">País / Región&nbsp;<span
+																		class="required_field">{{ __('País / Región&nbsp;') }}<span
 																			class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><select
@@ -3935,10 +3937,9 @@
 																			class="country_to_state country_select "
 																			aria-required="true"
 																			autocomplete="section-billing billing country"
-																			data-placeholder="Selecciona un país/región&hellip;"
+																			data-placeholder="{{ __('Selecciona un país/región&hellip;') }}"
 																			data-label="País / Región">
-																			<option value="">Selecciona un
-																				país/región&hellip;</option>
+																			<option value="">Selecciona un país/región&hellip;</option>
 																			<option value="AF">Afganistán</option>
 																			<option value="AL">Albania</option>
 																			<option value="DE">Alemania</option>
@@ -3969,8 +3970,7 @@
 																			<option value="BY">Bielorrusia</option>
 																			<option value="MM">Birmania</option>
 																			<option value="BO">Bolivia</option>
-																			<option value="BQ">Bonaire, San Eustaquio y
-																				Saba</option>
+																			<option value="BQ">Bonaire, San Eustaquio y Saba</option>
 																			<option value="BA">Bosnia y Herzegovina
 																			</option>
 																			<option value="BW">Botswana</option>
@@ -4013,7 +4013,7 @@
 																			<option value="SK">Eslovaquia</option>
 																			<option value="SI">Eslovenia</option>
 																			<option value="ES" selected='selected'>
-																				España</option>
+																				{{ __('España') }}</option>
 																			<option value="US">Estados Unidos (EEUU)
 																			</option>
 																			<option value="EE">Estonia</option>
@@ -4060,11 +4060,9 @@
 																			<option value="KY">Islas Caimán</option>
 																			<option value="CC">Islas Cocos</option>
 																			<option value="CK">Islas Cook</option>
-																			<option value="UM">Islas de ultramar menores
-																				de Estados Unidos (EEUU)</option>
+																			<option value="UM">Islas de ultramar menores de Estados Unidos (EEUU)</option>
 																			<option value="FO">Islas Feroe</option>
-																			<option value="GS">Islas Georgias y Sandwich
-																				del Sur</option>
+																			<option value="GS">Islas Georgias y Sandwich del Sur</option>
 																			<option value="HM">Islas Heard y McDonald
 																			</option>
 																			<option value="FK">Islas Malvinas</option>
@@ -4074,8 +4072,7 @@
 																			<option value="SB">Islas Salomón</option>
 																			<option value="TC">Islas Turcas y Caicos
 																			</option>
-																			<option value="VG">Islas Vírgenes
-																				(Británicas)</option>
+																			<option value="VG">Islas Vírgenes (Británicas)</option>
 																			<option value="VI">Islas Vírgenes (EEUU)
 																			</option>
 																			<option value="IL">Israel</option>
@@ -4166,12 +4163,10 @@
 																			<option value="SM">San Marino</option>
 																			<option value="SX">San Martín (Países Bajos)
 																			</option>
-																			<option value="MF">San Martín (parte de
-																				Francia)</option>
+																			<option value="MF">San Martín (parte de Francia)</option>
 																			<option value="PM">San Pedro y Miquelón
 																			</option>
-																			<option value="VC">San Vicente y las
-																				Granadinas</option>
+																			<option value="VC">San Vicente y las Granadinas</option>
 																			<option value="LC">Santa Lucía</option>
 																			<option value="ST">Santo Tomé y Príncipe
 																			</option>
@@ -4195,10 +4190,8 @@
 																			<option value="TW">Taiwán</option>
 																			<option value="TZ">Tanzania</option>
 																			<option value="TJ">Tayikistán</option>
-																			<option value="IO">Territorio Británico del
-																				Océano Índico</option>
-																			<option value="TF">Territorios australes
-																				franceses</option>
+																			<option value="IO">Territorio Británico del Océano Índico</option>
+																			<option value="TF">Territorios australes franceses</option>
 																			<option value="PS">Territorios Palestinos
 																			</option>
 																			<option value="TL">Timor Oriental</option>
@@ -4224,42 +4217,38 @@
 																			<option value="ZW">Zimbabue</option>
 																		</select><noscript><button type="submit"
 																				name="woocommerce_checkout_update_totals"
-																				value="Actualizar país/región">Actualizar
-																				país/región</button></noscript></span>
+																				value="Actualizar país/región">{{ __('Actualizar país/región') }}</button></noscript></span>
 																</p>
 																<p class="form-row form-row-wide address-field validate-required"
 																	id="billing_address_1_field" data-priority="50">
 																	<label for="billing_address_1"
-																		class="required_field">Dirección de la
-																		calle&nbsp;<span class="required"
+																		class="required_field">{{ __('Dirección de la calle&nbsp;') }}<span class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><input
 																			type="text" class="input-text "
 																			name="billing_address_1"
 																			id="billing_address_1"
-																			placeholder="Nombre de la calle y número de la casa"
+																			placeholder="{{ __('Nombre de la calle y número de la casa') }}"
 																			value="" aria-required="true"
 																			autocomplete="section-billing billing address-line1" /></span>
 																</p>
 																<p class="form-row form-row-wide address-field"
 																	id="billing_address_2_field" data-priority="60">
 																	<label for="billing_address_2"
-																		class="screen-reader-text">Apartamento,
-																		habitación, escalera, etc.&nbsp;<span
-																			class="optional">(opcional)</span></label><span
+																		class="screen-reader-text">{{ __('Apartamento, habitación, escalera, etc.&nbsp;') }}<span
+																			class="optional">{{ __('(opcional)') }}</span></label><span
 																		class="woocommerce-input-wrapper"><input
 																			type="text" class="input-text "
 																			name="billing_address_2"
 																			id="billing_address_2"
-																			placeholder="Apartamento, habitación, etc. (opcional)"
+																			placeholder="{{ __('Apartamento, habitación, etc. (opcional)') }}"
 																			value=""
 																			autocomplete="section-billing billing address-line2" /></span>
 																</p>
 																<p class="form-row form-row-wide address-field validate-required validate-postcode"
 																	id="billing_postcode_field" data-priority="65">
 																	<label for="billing_postcode"
-																		class="required_field">Código postal /
-																		ZIP&nbsp;<span class="required"
+																		class="required_field">{{ __('Código postal / ZIP&nbsp;') }}<span class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><input
 																			type="text" class="input-text "
@@ -4271,7 +4260,7 @@
 																<p class="form-row form-row-wide address-field validate-required"
 																	id="billing_city_field" data-priority="70"><label
 																		for="billing_city"
-																		class="required_field">Población&nbsp;<span
+																		class="required_field">{{ __('Población&nbsp;') }}<span
 																			class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><input
@@ -4283,14 +4272,14 @@
 																<p class="form-row form-row-wide address-field validate-required validate-state"
 																	id="billing_state_field" data-priority="80"><label
 																		for="billing_state"
-																		class="required_field">Provincia&nbsp;<span
+																		class="required_field">{{ __('Provincia&nbsp;') }}<span
 																			class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><select
 																			name="billing_state" id="billing_state"
 																			class="state_select " aria-required="true"
 																			autocomplete="section-billing billing address-level1"
-																			data-placeholder="Elige una opción&hellip;"
+																			data-placeholder="{{ __('Elige una opción&hellip;') }}"
 																			data-input-classes=""
 																			data-label="Provincia">
 																			<option value="">Elige una opción&hellip;
@@ -4305,7 +4294,7 @@
 																			<option value="BA">Badajoz</option>
 																			<option value="PM">Baleares</option>
 																			<option value="B" selected='selected'>
-																				Barcelona</option>
+																				{{ __('Barcelona') }}</option>
 																			<option value="BU">Burgos</option>
 																			<option value="CC">Cáceres</option>
 																			<option value="CA">Cádiz</option>
@@ -4353,7 +4342,7 @@
 																<p class="form-row form-row-wide validate-required validate-phone"
 																	id="billing_phone_field" data-priority="100"><label
 																		for="billing_phone"
-																		class="required_field">Teléfono&nbsp;<span
+																		class="required_field">{{ __('Teléfono&nbsp;') }}<span
 																			class="required"
 																			aria-hidden="true">*</span></label><span
 																		class="woocommerce-input-wrapper"><input
@@ -4381,8 +4370,7 @@
 																	<input id="ship-to-different-address-checkbox"
 																		class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
 																		type="checkbox" name="ship_to_different_address"
-																		value="1" /> <span>¿Enviar a una dirección
-																		diferente?</span>
+																		value="1" /> <span>{{ __('¿Enviar a una dirección diferente?') }}</span>
 																</label>
 															</h3>
 
@@ -4394,7 +4382,7 @@
 																		id="shipping_first_name_field"
 																		data-priority="10"><label
 																			for="shipping_first_name"
-																			class="required_field">Nombre&nbsp;<span
+																			class="required_field">{{ __('Nombre&nbsp;') }}<span
 																				class="required"
 																				aria-hidden="true">*</span></label><span
 																			class="woocommerce-input-wrapper"><input
@@ -4408,7 +4396,7 @@
 																		id="shipping_last_name_field"
 																		data-priority="20"><label
 																			for="shipping_last_name"
-																			class="required_field">Apellidos&nbsp;<span
+																			class="required_field">{{ __('Apellidos&nbsp;') }}<span
 																				class="required"
 																				aria-hidden="true">*</span></label><span
 																			class="woocommerce-input-wrapper"><input
@@ -4420,9 +4408,8 @@
 																	</p>
 																	<p class="form-row form-row-wide"
 																		id="shipping_company_field" data-priority="30">
-																		<label for="shipping_company" class="">Nombre de
-																			la empresa&nbsp;<span
-																				class="optional">(opcional)</span></label><span
+																		<label for="shipping_company" class="">{{ __('Nombre de la empresa&nbsp;') }}<span
+																				class="optional">{{ __('(opcional)') }}</span></label><span
 																			class="woocommerce-input-wrapper"><input
 																				type="text" class="input-text "
 																				name="shipping_company"
@@ -4433,8 +4420,7 @@
 																	<p class="form-row form-row-wide address-field update_totals_on_change validate-required"
 																		id="shipping_country_field" data-priority="40">
 																		<label for="shipping_country"
-																			class="required_field">País /
-																			Región&nbsp;<span class="required"
+																			class="required_field">{{ __('País / Región&nbsp;') }}<span class="required"
 																				aria-hidden="true">*</span></label><span
 																			class="woocommerce-input-wrapper"><select
 																				name="shipping_country"
@@ -4442,10 +4428,9 @@
 																				class="country_to_state country_select "
 																				aria-required="true"
 																				autocomplete="section-shipping shipping country"
-																				data-placeholder="Selecciona un país/región&hellip;"
+																				data-placeholder="{{ __('Selecciona un país/región&hellip;') }}"
 																				data-label="País / Región">
-																				<option value="">Selecciona un
-																					país/región&hellip;</option>
+																				<option value="">Selecciona un país/región&hellip;</option>
 																				<option value="AF">Afganistán</option>
 																				<option value="AL">Albania</option>
 																				<option value="DE">Alemania</option>
@@ -4477,8 +4462,7 @@
 																				<option value="BY">Bielorrusia</option>
 																				<option value="MM">Birmania</option>
 																				<option value="BO">Bolivia</option>
-																				<option value="BQ">Bonaire, San
-																					Eustaquio y Saba</option>
+																				<option value="BQ">Bonaire, San Eustaquio y Saba</option>
 																				<option value="BA">Bosnia y Herzegovina
 																				</option>
 																				<option value="BW">Botswana</option>
@@ -4520,13 +4504,12 @@
 																				<option value="EC">Ecuador</option>
 																				<option value="EG">Egipto</option>
 																				<option value="SV">El Salvador</option>
-																				<option value="AE">Emiratos Árabes
-																					Unidos</option>
+																				<option value="AE">Emiratos Árabes Unidos</option>
 																				<option value="ER">Eritrea</option>
 																				<option value="SK">Eslovaquia</option>
 																				<option value="SI">Eslovenia</option>
 																				<option value="ES" selected='selected'>
-																					España</option>
+																					{{ __('España') }}</option>
 																				<option value="US">Estados Unidos (EEUU)
 																				</option>
 																				<option value="EE">Estonia</option>
@@ -4576,26 +4559,21 @@
 																				<option value="KY">Islas Caimán</option>
 																				<option value="CC">Islas Cocos</option>
 																				<option value="CK">Islas Cook</option>
-																				<option value="UM">Islas de ultramar
-																					menores de Estados Unidos (EEUU)
+																				<option value="UM">Islas de ultramar menores de Estados Unidos (EEUU)
 																				</option>
 																				<option value="FO">Islas Feroe</option>
-																				<option value="GS">Islas Georgias y
-																					Sandwich del Sur</option>
-																				<option value="HM">Islas Heard y
-																					McDonald</option>
+																				<option value="GS">Islas Georgias y Sandwich del Sur</option>
+																				<option value="HM">Islas Heard y McDonald</option>
 																				<option value="FK">Islas Malvinas
 																				</option>
-																				<option value="MP">Islas Marianas del
-																					Norte</option>
+																				<option value="MP">Islas Marianas del Norte</option>
 																				<option value="MH">Islas Marshall
 																				</option>
 																				<option value="SB">Islas Salomón
 																				</option>
 																				<option value="TC">Islas Turcas y Caicos
 																				</option>
-																				<option value="VG">Islas Vírgenes
-																					(Británicas)</option>
+																				<option value="VG">Islas Vírgenes (Británicas)</option>
 																				<option value="VI">Islas Vírgenes (EEUU)
 																				</option>
 																				<option value="IL">Israel</option>
@@ -4671,8 +4649,7 @@
 																				<option value="QA">Qatar</option>
 																				<option value="GB">Reino Unido (UK)
 																				</option>
-																				<option value="CF">República
-																					Centroafricana</option>
+																				<option value="CF">República Centroafricana</option>
 																				<option value="CZ">República Checa
 																				</option>
 																				<option value="DO">República Dominicana
@@ -4688,17 +4665,13 @@
 																				</option>
 																				<option value="BL">San Bartolomé
 																				</option>
-																				<option value="KN">San Cristóbal y
-																					Nieves</option>
+																				<option value="KN">San Cristóbal y Nieves</option>
 																				<option value="SM">San Marino</option>
-																				<option value="SX">San Martín (Países
-																					Bajos)</option>
-																				<option value="MF">San Martín (parte de
-																					Francia)</option>
+																				<option value="SX">San Martín (Países Bajos)</option>
+																				<option value="MF">San Martín (parte de Francia)</option>
 																				<option value="PM">San Pedro y Miquelón
 																				</option>
-																				<option value="VC">San Vicente y las
-																					Granadinas</option>
+																				<option value="VC">San Vicente y las Granadinas</option>
 																				<option value="LC">Santa Lucía</option>
 																				<option value="ST">Santo Tomé y Príncipe
 																				</option>
@@ -4723,12 +4696,9 @@
 																				<option value="TW">Taiwán</option>
 																				<option value="TZ">Tanzania</option>
 																				<option value="TJ">Tayikistán</option>
-																				<option value="IO">Territorio Británico
-																					del Océano Índico</option>
-																				<option value="TF">Territorios australes
-																					franceses</option>
-																				<option value="PS">Territorios
-																					Palestinos</option>
+																				<option value="IO">Territorio Británico del Océano Índico</option>
+																				<option value="TF">Territorios australes franceses</option>
+																				<option value="PS">Territorios Palestinos</option>
 																				<option value="TL">Timor Oriental
 																				</option>
 																				<option value="TG">Togo</option>
@@ -4754,21 +4724,19 @@
 																				<option value="ZW">Zimbabue</option>
 																			</select><noscript><button type="submit"
 																					name="woocommerce_checkout_update_totals"
-																					value="Actualizar país/región">Actualizar
-																					país/región</button></noscript></span>
+																					value="Actualizar país/región">{{ __('Actualizar país/región') }}</button></noscript></span>
 																	</p>
 																	<p class="form-row form-row-wide address-field validate-required"
 																		id="shipping_address_1_field"
 																		data-priority="50"><label
 																			for="shipping_address_1"
-																			class="required_field">Dirección de la
-																			calle&nbsp;<span class="required"
+																			class="required_field">{{ __('Dirección de la calle&nbsp;') }}<span class="required"
 																				aria-hidden="true">*</span></label><span
 																			class="woocommerce-input-wrapper"><input
 																				type="text" class="input-text "
 																				name="shipping_address_1"
 																				id="shipping_address_1"
-																				placeholder="Nombre de la calle y número de la casa"
+																				placeholder="{{ __('Nombre de la calle y número de la casa') }}"
 																				value="" aria-required="true"
 																				autocomplete="section-shipping shipping address-line1" /></span>
 																	</p>
@@ -4776,22 +4744,20 @@
 																		id="shipping_address_2_field"
 																		data-priority="60"><label
 																			for="shipping_address_2"
-																			class="screen-reader-text">Apartamento,
-																			habitación, escalera, etc.&nbsp;<span
-																				class="optional">(opcional)</span></label><span
+																			class="screen-reader-text">{{ __('Apartamento, habitación, escalera, etc.&nbsp;') }}<span
+																				class="optional">{{ __('(opcional)') }}</span></label><span
 																			class="woocommerce-input-wrapper"><input
 																				type="text" class="input-text "
 																				name="shipping_address_2"
 																				id="shipping_address_2"
-																				placeholder="Apartamento, habitación, etc. (opcional)"
+																				placeholder="{{ __('Apartamento, habitación, etc. (opcional)') }}"
 																				value=""
 																				autocomplete="section-shipping shipping address-line2" /></span>
 																	</p>
 																	<p class="form-row form-row-wide address-field validate-required validate-postcode"
 																		id="shipping_postcode_field" data-priority="65">
 																		<label for="shipping_postcode"
-																			class="required_field">Código postal /
-																			ZIP&nbsp;<span class="required"
+																			class="required_field">{{ __('Código postal / ZIP&nbsp;') }}<span class="required"
 																				aria-hidden="true">*</span></label><span
 																			class="woocommerce-input-wrapper"><input
 																				type="text" class="input-text "
@@ -4803,7 +4769,7 @@
 																	<p class="form-row form-row-wide address-field validate-required"
 																		id="shipping_city_field" data-priority="70">
 																		<label for="shipping_city"
-																			class="required_field">Población&nbsp;<span
+																			class="required_field">{{ __('Población&nbsp;') }}<span
 																				class="required"
 																				aria-hidden="true">*</span></label><span
 																			class="woocommerce-input-wrapper"><input
@@ -4816,7 +4782,7 @@
 																	<p class="form-row form-row-wide address-field validate-required validate-state"
 																		id="shipping_state_field" data-priority="80">
 																		<label for="shipping_state"
-																			class="required_field">Provincia&nbsp;<span
+																			class="required_field">{{ __('Provincia&nbsp;') }}<span
 																				class="required"
 																				aria-hidden="true">*</span></label><span
 																			class="woocommerce-input-wrapper"><select
@@ -4825,11 +4791,10 @@
 																				class="state_select "
 																				aria-required="true"
 																				autocomplete="section-shipping shipping address-level1"
-																				data-placeholder="Elige una opción&hellip;"
+																				data-placeholder="{{ __('Elige una opción&hellip;') }}"
 																				data-input-classes=""
 																				data-label="Provincia">
-																				<option value="">Elige una
-																					opción&hellip;</option>
+																				<option value="">Elige una opción&hellip;</option>
 																				<option value="C">La Coruña</option>
 																				<option value="VI">Álava</option>
 																				<option value="AB">Albacete</option>
@@ -4840,7 +4805,7 @@
 																				<option value="BA">Badajoz</option>
 																				<option value="PM">Baleares</option>
 																				<option value="B" selected='selected'>
-																					Barcelona</option>
+																					{{ __('Barcelona') }}</option>
 																				<option value="BU">Burgos</option>
 																				<option value="CC">Cáceres</option>
 																				<option value="CA">Cádiz</option>
@@ -4871,8 +4836,7 @@
 																				<option value="P">Palencia</option>
 																				<option value="PO">Pontevedra</option>
 																				<option value="SA">Salamanca</option>
-																				<option value="TF">Santa Cruz de
-																					Tenerife</option>
+																				<option value="TF">Santa Cruz de Tenerife</option>
 																				<option value="SG">Segovia</option>
 																				<option value="SE">Sevilla</option>
 																				<option value="SO">Soria</option>
@@ -4888,7 +4852,7 @@
 																	<p class="form-row form-row-wide validate-required validate-phone"
 																		id="shipping_phone_field" data-priority="100">
 																		<label for="shipping_phone"
-																			class="required_field">Teléfono&nbsp;<span
+																			class="required_field">{{ __('Teléfono&nbsp;') }}<span
 																				class="required"
 																				aria-hidden="true">*</span></label><span
 																			class="woocommerce-input-wrapper"><input
@@ -4911,12 +4875,12 @@
 															<div class="woocommerce-additional-fields__field-wrapper">
 																<p class="form-row notes" id="order_comments_field"
 																	data-priority=""><label for="order_comments"
-																		class="">Notas del pedido&nbsp;<span
-																			class="optional">(opcional)</span></label><span
+																		class="">{{ __('Notas del pedido&nbsp;') }}<span
+																			class="optional">{{ __('(opcional)') }}</span></label><span
 																		class="woocommerce-input-wrapper"><textarea
-																			name="order_comments" class="input-text "
+																			name="customer_note" class="input-text "
 																			id="order_comments"
-																			placeholder="Notas sobre tu pedido, por ejemplo, notas especiales para la entrega."
+																			placeholder="{{ __('Notas sobre tu pedido, por ejemplo, notas especiales para la entrega.') }}"
 																			rows="2" cols="5"></textarea></span></p>
 															</div>
 
@@ -4940,7 +4904,7 @@
 															<div class="liner-continer">
 																<h4
 																	class="woodmart-title-container title wd-fontsize-l">
-																	Payment information</h4>
+																	{{ __('Payment information') }}</h4>
 															</div>
 
 														</div>
@@ -4950,16 +4914,10 @@
 													data-id="6a74495" data-element_type="widget" data-e-type="widget"
 													data-widget_type="wd_checkout_payment_methods.default">
 													<div class="elementor-widget-container">
-														<div class="pellets-delivery-badge pellets-delivery-checkout">
-															<div class="pellets-del-shipping">✅ Envío gratuito a toda
-																España</div>
-															<div class="pellets-del-dates">📦 Entrega estimada: entre el
-																<strong>viernes 9 de octubre</strong> y el
-																<strong>miércoles 14 de octubre</strong></div>
-														</div>
+														<div id="js-checkout-delivery-estimate"></div>
 														<div id="payment" class="woocommerce-checkout-payment">
 															<ul class="wc_payment_methods payment_methods methods"
-																aria-label="Métodos de pago">
+																aria-label="{{ __('Métodos de pago') }}">
 																<li class="wc_payment_method payment_method_bacs">
 																	<input id="payment_method_bacs" type="radio"
 																		class="input-radio" name="payment_method"
@@ -4967,35 +4925,19 @@
 																		data-order_button_text="" />
 
 																	<label for="payment_method_bacs">
-																		Transferencia bancaria directa </label>
+																		{{ __('Transferencia bancaria directa') }} </label>
 																	<div class="payment_box payment_method_bacs">
-																		<p>Realiza tu pago mediante transferencia
-																			bancaria. Usa el número de tu pedido como
-																			concepto o referencia. Tu pedido se
-																			preparará y enviará una vez confirmemos la
-																			recepción del importe. Recibirás un email
-																			con todos los datos bancarios al finalizar
-																			la compra.<br />
-																			⚠️ IMPORTANTE: debes indicar el NÚMERO DE TU
-																			PEDIDO como concepto o referencia de la
-																			transferencia. Sin esta referencia no
-																			podremos identificar tu pago y tu pedido se
-																			retrasará</p>
+																		<p>{{ __('Realiza tu pago mediante transferencia bancaria. Usa el número de tu pedido como concepto o referencia. Tu pedido se preparará y enviará una vez confirmemos la recepción del importe. Recibirás un email con todos los datos bancarios al finalizar la compra.') }}<br />
+																			{{ __('⚠️ IMPORTANTE: debes indicar el NÚMERO DE TU PEDIDO como concepto o referencia de la transferencia. Sin esta referencia no podremos identificar tu pago y tu pedido se retrasará') }}</p>
 																	</div>
 																</li>
 															</ul>
 															<div class="form-row place-order">
 																<noscript>
-																	Debido a que tu navegador no es compatible con
-																	JavaScript o lo tiene desactivado, por favor,
-																	asegúrate de hacer clic en el botón <em>Actualizar
-																		totales</em> antes de realizar tu pedido. De no
-																	hacerlo, se te podría cobrar más de la cantidad
-																	indicada arriba. <br /><button type="submit"
+																	{{ __('Debido a que tu navegador no es compatible con JavaScript o lo tiene desactivado, por favor, asegúrate de hacer clic en el botón') }} <em>{{ __('Actualizar totales') }}</em> {{ __('antes de realizar tu pedido. De no hacerlo, se te podría cobrar más de la cantidad indicada arriba.') }} <br /><button type="submit"
 																		class="button alt"
 																		name="woocommerce_checkout_update_totals"
-																		value="Actualizar totales">Actualizar
-																		totales</button>
+																		value="Actualizar totales">{{ __('Actualizar totales') }}</button>
 																</noscript>
 
 																<div class="woocommerce-terms-and-conditions-wrapper">
@@ -5006,8 +4948,7 @@
 																<button type="submit" class="button alt"
 																	name="woocommerce_checkout_place_order"
 																	id="place_order" value="Realizar el pedido"
-																	data-value="Realizar el pedido">Realizar el
-																	pedido</button>
+																	data-value="Realizar el pedido">{{ __('Realizar el pedido') }}</button>
 
 																<input type="hidden"
 																	id="woocommerce-process-checkout-nonce"
@@ -5037,7 +4978,7 @@
 
 														<div class="liner-continer">
 															<h4 class="woodmart-title-container title wd-fontsize-l">
-																Your order</h4>
+																{{ __('Your order') }}</h4>
 														</div>
 
 													</div>
@@ -5050,381 +4991,19 @@
 													<table class="shop_table woocommerce-checkout-review-order-table">
 														<thead>
 															<tr>
-																<th class="product-name">Producto</th>
-																<th class="product-total">Subtotal</th>
+																<th class="product-name">{{ __('Producto') }}</th>
+																<th class="product-total">{{ __('Subtotal') }}</th>
 															</tr>
 														</thead>
-														<tbody>
-															<tr class="cart_item">
-																<td class="wd-checkout-prod">
-																	<div class="wd-checkout-remove-btn-wrapp">
-																		<a href="../carrito/index422e.html?remove_item=ab81265d898ef7f38a3e95fc98c2a669&amp;_wpnonce=e8f4a1733e"
-																			class="remove wd-checkout-remove-btn"
-																			aria-label="Remove this item"
-																			data-product_id="5596"
-																			data-cart_item_key="ab81265d898ef7f38a3e95fc98c2a669"
-																			data-product_sku="456624"></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-img">
-																		<a
-																			href="../producto/cortacesped-giro-cero-snapper-ztx275-724cc/index.html"><img
-																				width="600" height="600"
-																				src="../wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-600x600.jpg"
-																				class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																				alt="Cortacésped giro cero Snapper ZTX275 724cc"
-																				decoding="async"
-																				srcset="https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/cortacesped-giro-cero-snapper-ztx275-724cc.jpg 800w"
-																				sizes="(max-width: 600px) 100vw, 600px" /></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-cont">
-																		<div class="wd-checkout-prod-title">
-																			<a class="cart-product-label-link"
-																				href="../producto/cortacesped-giro-cero-snapper-ztx275-724cc/index.html"><span
-																					class="cart-product-label">Cortacésped
-																					giro cero Snapper ZTX275
-																					724cc</span></a>
-
-																			<div class="quantity">
-
-																				<input type="button" value="-"
-																					class="minus btn"
-																					aria-label="Disminuir cantidad" />
-
-																				<label class="screen-reader-text"
-																					for="quantity_6ac49398c2d55">Cortacésped
-																					giro cero Snapper ZTX275 724cc
-																					cantidad</label>
-																				<input type="number"
-																					id="quantity_6ac49398c2d55"
-																					class="input-text qty text"
-																					value="2"
-																					aria-label="Cantidad de productos"
-																					min="0"
-																					name="cart[ab81265d898ef7f38a3e95fc98c2a669][qty]"
-																					step="1" placeholder=""
-																					inputmode="numeric"
-																					autocomplete="off">
-
-																				<input type="button" value="+"
-																					class="plus btn"
-																					aria-label="Aumentar cantidad" />
-
-																			</div>
-
-
-																		</div>
-
-																		<div
-																			class="wd-checkout-prod-total product-total">
-																			<span
-																				class="woocommerce-Price-amount amount"><bdi><span
-																						class="woocommerce-Price-currencySymbol"
-																						translate="no">&euro;</span>7.327,50</bdi></span>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-															<tr class="cart_item">
-																<td class="wd-checkout-prod">
-																	<div class="wd-checkout-remove-btn-wrapp">
-																		<a href="../carrito/index4ecf.html?remove_item=6de0f2761a44ff1e2ca60131058d8297&amp;_wpnonce=e8f4a1733e"
-																			class="remove wd-checkout-remove-btn"
-																			aria-label="Remove this item"
-																			data-product_id="9765"
-																			data-cart_item_key="6de0f2761a44ff1e2ca60131058d8297"
-																			data-product_sku="71207"></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-img">
-																		<a
-																			href="../producto/remolque-publicitario-caja-de-poliester-de-2-30-largo-por-1-80-alto-y-1-28/index.html"><img
-																				width="600" height="600"
-																				src="../wp-content/uploads/2026/07/i6321502086-600x600.jpg"
-																				class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																				alt="Remolque Publicitario – Caja de poliester de 2.30 largo por 1.80 alto y 1.28"
-																				decoding="async"
-																				srcset="https://box-modulares.es/wp-content/uploads/2026/07/i6321502086-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/i6321502086-150x150.jpg 150w"
-																				sizes="(max-width: 600px) 100vw, 600px" /></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-cont">
-																		<div class="wd-checkout-prod-title">
-																			<a class="cart-product-label-link"
-																				href="../producto/remolque-publicitario-caja-de-poliester-de-2-30-largo-por-1-80-alto-y-1-28/index.html"><span
-																					class="cart-product-label">Remolque
-																					Publicitario – Caja de poliester de
-																					2.30 largo por 1.80 alto y
-																					1.28</span></a>
-
-																			<div class="quantity">
-
-																				<input type="button" value="-"
-																					class="minus btn"
-																					aria-label="Disminuir cantidad" />
-
-																				<label class="screen-reader-text"
-																					for="quantity_6ac49398c3469">Remolque
-																					Publicitario – Caja de poliester de
-																					2.30 largo por 1.80 alto y 1.28
-																					cantidad</label>
-																				<input type="number"
-																					id="quantity_6ac49398c3469"
-																					class="input-text qty text"
-																					value="1"
-																					aria-label="Cantidad de productos"
-																					min="0"
-																					name="cart[6de0f2761a44ff1e2ca60131058d8297][qty]"
-																					step="1" placeholder=""
-																					inputmode="numeric"
-																					autocomplete="off">
-
-																				<input type="button" value="+"
-																					class="plus btn"
-																					aria-label="Aumentar cantidad" />
-
-																			</div>
-
-
-																		</div>
-
-																		<div
-																			class="wd-checkout-prod-total product-total">
-																			<span
-																				class="woocommerce-Price-amount amount"><bdi><span
-																						class="woocommerce-Price-currencySymbol"
-																						translate="no">&euro;</span>520,00</bdi></span>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-															<tr class="cart_item">
-																<td class="wd-checkout-prod">
-																	<div class="wd-checkout-remove-btn-wrapp">
-																		<a href="../carrito/indexae95.html?remove_item=be16d5d77fc088f250f94227280ec528&amp;_wpnonce=e8f4a1733e"
-																			class="remove wd-checkout-remove-btn"
-																			aria-label="Remove this item"
-																			data-product_id="9645"
-																			data-cart_item_key="be16d5d77fc088f250f94227280ec528"
-																			data-product_sku="11309"></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-img">
-																		<a
-																			href="../producto/remolque-para-caballos-pferdeanhanger-bockmann-portax-l-ska-wcf-100km-h-11309/index.html"><img
-																				width="600" height="600"
-																				src="../wp-content/uploads/2026/07/Bockmann-Pferdeanhanger-Grand-Master-SR-WCF-100-km-h-Alemania_44171_1186280595875-600x600.jpg"
-																				class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																				alt="Remolque para caballos Pferdeanhänger Böckmann Portax L SKA WCF 100km/h (11309)"
-																				decoding="async"
-																				srcset="https://box-modulares.es/wp-content/uploads/2026/07/Bockmann-Pferdeanhanger-Grand-Master-SR-WCF-100-km-h-Alemania_44171_1186280595875-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/Bockmann-Pferdeanhanger-Grand-Master-SR-WCF-100-km-h-Alemania_44171_1186280595875-150x150.jpg 150w"
-																				sizes="(max-width: 600px) 100vw, 600px" /></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-cont">
-																		<div class="wd-checkout-prod-title">
-																			<a class="cart-product-label-link"
-																				href="../producto/remolque-para-caballos-pferdeanhanger-bockmann-portax-l-ska-wcf-100km-h-11309/index.html"><span
-																					class="cart-product-label">Remolque
-																					para caballos Pferdeanhänger
-																					Böckmann Portax L SKA WCF 100km/h
-																					(11309)</span></a>
-
-																			<div class="quantity">
-
-																				<input type="button" value="-"
-																					class="minus btn"
-																					aria-label="Disminuir cantidad" />
-
-																				<label class="screen-reader-text"
-																					for="quantity_6ac49398c3946">Remolque
-																					para caballos Pferdeanhänger
-																					Böckmann Portax L SKA WCF 100km/h
-																					(11309) cantidad</label>
-																				<input type="number"
-																					id="quantity_6ac49398c3946"
-																					class="input-text qty text"
-																					value="1"
-																					aria-label="Cantidad de productos"
-																					min="0"
-																					name="cart[be16d5d77fc088f250f94227280ec528][qty]"
-																					step="1" placeholder=""
-																					inputmode="numeric"
-																					autocomplete="off">
-
-																				<input type="button" value="+"
-																					class="plus btn"
-																					aria-label="Aumentar cantidad" />
-
-																			</div>
-
-
-																		</div>
-
-																		<div
-																			class="wd-checkout-prod-total product-total">
-																			<span
-																				class="woocommerce-Price-amount amount"><bdi><span
-																						class="woocommerce-Price-currencySymbol"
-																						translate="no">&euro;</span>9.950,00</bdi></span>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-															<tr class="cart_item">
-																<td class="wd-checkout-prod">
-																	<div class="wd-checkout-remove-btn-wrapp">
-																		<a href="../carrito/index3070.html?remove_item=2297607a5db8576d5ad6bbd83696ff60&amp;_wpnonce=e8f4a1733e"
-																			class="remove wd-checkout-remove-btn"
-																			aria-label="Remove this item"
-																			data-product_id="4107"
-																			data-cart_item_key="2297607a5db8576d5ad6bbd83696ff60"
-																			data-product_sku="373331"></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-img">
-																		<a
-																			href="../producto/astilladora-de-lena-zeppelin-esasttr11z-12-tn/index.html"><img
-																				width="600" height="600"
-																				src="../wp-content/uploads/2026/07/astilladora-de-lena-zeppelin-esasttr11z-12-tn-600x600.jpg"
-																				class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																				alt="Astilladora de leña Zeppelin ESASTTR11Z 12 Tn"
-																				decoding="async"
-																				srcset="https://box-modulares.es/wp-content/uploads/2026/07/astilladora-de-lena-zeppelin-esasttr11z-12-tn-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-de-lena-zeppelin-esasttr11z-12-tn-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-de-lena-zeppelin-esasttr11z-12-tn-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-de-lena-zeppelin-esasttr11z-12-tn-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/astilladora-de-lena-zeppelin-esasttr11z-12-tn.jpg 800w"
-																				sizes="(max-width: 600px) 100vw, 600px" /></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-cont">
-																		<div class="wd-checkout-prod-title">
-																			<a class="cart-product-label-link"
-																				href="../producto/astilladora-de-lena-zeppelin-esasttr11z-12-tn/index.html"><span
-																					class="cart-product-label">Astilladora
-																					de leña Zeppelin ESASTTR11Z 12
-																					Tn</span></a>
-
-																			<div class="quantity">
-
-																				<input type="button" value="-"
-																					class="minus btn"
-																					aria-label="Disminuir cantidad" />
-
-																				<label class="screen-reader-text"
-																					for="quantity_6ac49398c3d4b">Astilladora
-																					de leña Zeppelin ESASTTR11Z 12 Tn
-																					cantidad</label>
-																				<input type="number"
-																					id="quantity_6ac49398c3d4b"
-																					class="input-text qty text"
-																					value="1"
-																					aria-label="Cantidad de productos"
-																					min="0"
-																					name="cart[2297607a5db8576d5ad6bbd83696ff60][qty]"
-																					step="1" placeholder=""
-																					inputmode="numeric"
-																					autocomplete="off">
-
-																				<input type="button" value="+"
-																					class="plus btn"
-																					aria-label="Aumentar cantidad" />
-
-																			</div>
-
-
-																		</div>
-
-																		<div
-																			class="wd-checkout-prod-total product-total">
-																			<span
-																				class="woocommerce-Price-amount amount"><bdi><span
-																						class="woocommerce-Price-currencySymbol"
-																						translate="no">&euro;</span>728,17</bdi></span>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-															<tr class="cart_item">
-																<td class="wd-checkout-prod">
-																	<div class="wd-checkout-remove-btn-wrapp">
-																		<a href="../carrito/indexe9ba.html?remove_item=d74a214501c1c40b2c77e995082f3587&amp;_wpnonce=e8f4a1733e"
-																			class="remove wd-checkout-remove-btn"
-																			aria-label="Remove this item"
-																			data-product_id="4563"
-																			data-cart_item_key="d74a214501c1c40b2c77e995082f3587"
-																			data-product_sku="436927"></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-img">
-																		<a
-																			href="../producto/generador-diesel-full-power-kompak-kd8000set-camo-7900-w/index.html"><img
-																				width="600" height="600"
-																				src="../wp-content/uploads/2026/07/generador-diesel-full-power-kompak-kd8000set-camo-7900-w-600x600.jpg"
-																				class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-																				alt="Generador diésel Full Power Kompak KD8000SET-CAMO 7900 W"
-																				decoding="async"
-																				srcset="https://box-modulares.es/wp-content/uploads/2026/07/generador-diesel-full-power-kompak-kd8000set-camo-7900-w-600x600.jpg 600w, https://box-modulares.es/wp-content/uploads/2026/07/generador-diesel-full-power-kompak-kd8000set-camo-7900-w-150x150.jpg 150w, https://box-modulares.es/wp-content/uploads/2026/07/generador-diesel-full-power-kompak-kd8000set-camo-7900-w-300x300.jpg 300w, https://box-modulares.es/wp-content/uploads/2026/07/generador-diesel-full-power-kompak-kd8000set-camo-7900-w-768x768.jpg 768w, https://box-modulares.es/wp-content/uploads/2026/07/generador-diesel-full-power-kompak-kd8000set-camo-7900-w.jpg 800w"
-																				sizes="(max-width: 600px) 100vw, 600px" /></a>
-																	</div>
-
-																	<div class="wd-checkout-prod-cont">
-																		<div class="wd-checkout-prod-title">
-																			<a class="cart-product-label-link"
-																				href="../producto/generador-diesel-full-power-kompak-kd8000set-camo-7900-w/index.html"><span
-																					class="cart-product-label">Generador
-																					diésel Full Power Kompak
-																					KD8000SET-CAMO 7900 W</span></a>
-
-																			<div class="quantity">
-
-																				<input type="button" value="-"
-																					class="minus btn"
-																					aria-label="Disminuir cantidad" />
-
-																				<label class="screen-reader-text"
-																					for="quantity_6ac49398c4148">Generador
-																					diésel Full Power Kompak
-																					KD8000SET-CAMO 7900 W
-																					cantidad</label>
-																				<input type="number"
-																					id="quantity_6ac49398c4148"
-																					class="input-text qty text"
-																					value="6"
-																					aria-label="Cantidad de productos"
-																					min="0"
-																					name="cart[d74a214501c1c40b2c77e995082f3587][qty]"
-																					step="1" placeholder=""
-																					inputmode="numeric"
-																					autocomplete="off">
-
-																				<input type="button" value="+"
-																					class="plus btn"
-																					aria-label="Aumentar cantidad" />
-
-																			</div>
-
-
-																		</div>
-
-																		<div
-																			class="wd-checkout-prod-total product-total">
-																			<span
-																				class="woocommerce-Price-amount amount"><bdi><span
-																						class="woocommerce-Price-currencySymbol"
-																						translate="no">&euro;</span>6.208,14</bdi></span>
-																		</div>
-																	</div>
-																</td>
-															</tr>
-															
-                                                        
+														<tbody id="js-checkout-items">
 														</tbody>
 														<tfoot>
 
 															<tr class="cart-subtotal">
-																<th>Subtotal</th>
+																<th>{{ __('Subtotal') }}</th>
 																<td><span class="woocommerce-Price-amount amount"><bdi><span
 																				class="woocommerce-Price-currencySymbol"
-																				translate="no">&euro;</span>1.439.867,58</bdi></span>
+																				translate="no">&euro;</span><span id="js-checkout-subtotal-amount">1.439.867,58</span></bdi></span>
 																</td>
 															</tr>
 
@@ -5432,8 +5011,8 @@
 
 
 															<tr class="woocommerce-shipping-totals shipping">
-																<th>Envío</th>
-																<td data-title="Envío">
+																<th>{{ __('Envío') }}</th>
+																<td data-title="{{ __('Envío') }}">
 																	<ul id="shipping_method"
 																		class="woocommerce-shipping-methods">
 																		<li>
@@ -5442,8 +5021,7 @@
 																				id="shipping_method_0_free_shipping1"
 																				value="free_shipping:1"
 																				class="shipping_method" /><label
-																				for="shipping_method_0_free_shipping1">Envío
-																				gratuito</label>
+																				for="shipping_method_0_free_shipping1">{{ __('Envío gratuito') }}</label>
 																		</li>
 																	</ul>
 
@@ -5457,11 +5035,11 @@
 
 
 															<tr class="order-total">
-																<th>Total</th>
+																<th>{{ __('Total') }}</th>
 																<td><strong><span
 																			class="woocommerce-Price-amount amount"><bdi><span
 																					class="woocommerce-Price-currencySymbol"
-																					translate="no">&euro;</span>1.439.867,58</bdi></span></strong>
+																					translate="no">&euro;</span><span id="js-checkout-total-amount">1.439.867,58</span></bdi></span></strong>
 																</td>
 															</tr>
 
@@ -5479,4 +5057,158 @@
 					</div>
 				</div>
 			</main>
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.querySelector('form.woocommerce-checkout');
+    var itemsBody = document.getElementById('js-checkout-items');
+    var emptyNotice = document.getElementById('js-checkout-empty');
+
+    var deliveryEstimateEl = document.getElementById('js-checkout-delivery-estimate');
+    if (deliveryEstimateEl && window.Shop) {
+        deliveryEstimateEl.innerHTML = window.Shop.deliveryEstimateHtml('pellets-delivery-checkout');
+    }
+
+    function renderCheckoutReview() {
+        var items = window.Shop.readCart();
+
+        if (emptyNotice) {
+            emptyNotice.style.display = items.length ? 'none' : '';
+        }
+        if (form) {
+            form.style.display = items.length ? '' : 'none';
+        }
+
+        if (!items.length) {
+            return;
+        }
+
+        if (itemsBody) {
+            itemsBody.innerHTML = items.map(function (item) {
+                var lineTotal = window.Shop.formatPrice(item.price * item.qty);
+                return '<tr class="cart_item">' +
+                    '<td class="product-name">' + window.Shop.escapeHtml(item.name) + ' <strong class="product-quantity">&times; ' + item.qty + '</strong></td>' +
+                    '<td class="product-total"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">&euro;</span>' + lineTotal + '</bdi></span></td>' +
+                    '</tr>';
+            }).join('');
+        }
+
+        var totals = window.Shop.totals(items);
+        var subtotalEl = document.getElementById('js-checkout-subtotal-amount');
+        var totalEl = document.getElementById('js-checkout-total-amount');
+        if (subtotalEl) {
+            subtotalEl.textContent = window.Shop.formatPrice(totals.subtotal);
+        }
+        if (totalEl) {
+            totalEl.textContent = window.Shop.formatPrice(totals.total);
+        }
+    }
+
+    renderCheckoutReview();
+    document.addEventListener('cart:updated', renderCheckoutReview);
+
+    if (!form) {
+        return;
+    }
+
+    function showCheckoutError(html) {
+        var box = document.getElementById('js-checkout-errors');
+        if (!box) {
+            box = document.createElement('div');
+            box.id = 'js-checkout-errors';
+            box.className = 'woocommerce-error';
+            form.insertBefore(box, form.firstChild);
+        }
+        box.innerHTML = html;
+    }
+
+    function clearCheckoutError() {
+        var box = document.getElementById('js-checkout-errors');
+        if (box) {
+            box.parentNode.removeChild(box);
+        }
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearCheckoutError();
+
+        var submitBtn = document.getElementById('place_order');
+        var originalText = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Procesando...';
+        }
+
+        var stateField = form.elements['billing_state'];
+        var noteField = document.getElementById('order_comments');
+        var paymentField = form.querySelector('input[name="payment_method"]:checked');
+
+        var payload = {
+            billing_first_name: form.elements['billing_first_name'].value,
+            billing_last_name: form.elements['billing_last_name'].value,
+            billing_email: form.elements['billing_email'].value,
+            billing_phone: form.elements['billing_phone'].value,
+            billing_company: form.elements['billing_company'].value,
+            billing_country: form.elements['billing_country'].value,
+            billing_address_1: form.elements['billing_address_1'].value,
+            billing_address_2: form.elements['billing_address_2'].value,
+            billing_postcode: form.elements['billing_postcode'].value,
+            billing_city: form.elements['billing_city'].value,
+            billing_state: stateField ? stateField.value : '',
+            customer_note: noteField ? noteField.value : '',
+            payment_method: paymentField ? paymentField.value : 'bacs',
+            items: window.Shop.readCart().map(function (item) {
+                return { id: item.id, quantity: item.qty };
+            }),
+        };
+
+        function restoreButton() {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        }
+
+        fetch(form.action, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+            },
+            body: JSON.stringify(payload),
+        }).then(function (res) {
+            return res.json().then(function (data) {
+                return { ok: res.ok, data: data };
+            });
+        }).then(function (result) {
+            if (result.ok && result.data && result.data.success) {
+                window.Shop.clearCart();
+                window.location.href = result.data.redirect;
+                return;
+            }
+
+            restoreButton();
+
+            if (result.data && result.data.errors) {
+                var messages = [];
+                Object.keys(result.data.errors).forEach(function (field) {
+                    result.data.errors[field].forEach(function (msg) {
+                        messages.push('<p>' + window.Shop.escapeHtml(msg) + '</p>');
+                    });
+                });
+                showCheckoutError(messages.join(''));
+            } else {
+                showCheckoutError('<p>Ha ocurrido un error. Inténtalo de nuevo.</p>');
+            }
+        }).catch(function () {
+            restoreButton();
+            showCheckoutError('<p>Ha ocurrido un error. Inténtalo de nuevo.</p>');
+        });
+    });
+});
+</script>
+@endpush
+
 @endsection

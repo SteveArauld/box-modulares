@@ -724,3 +724,196 @@
                 max-height: none !important
             }
         }
+
+        /* ── Buy now button (matches the add-to-cart button's accent styling) ── */
+        .wd-buy-now-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--btn-accented-padding, var(--btn-padding, 5px 20px));
+            min-height: var(--btn-accented-height, var(--btn-height, 42px));
+            font-size: var(--btn-accented-font-size, var(--btn-font-size, 13px));
+            border-radius: var(--btn-accented-brd-radius);
+            color: var(--btn-accented-color);
+            box-shadow: var(--btn-accented-box-shadow);
+            background-color: var(--btn-accented-bgcolor);
+            text-transform: var(--btn-accented-transform, var(--btn-transform, uppercase));
+            font-weight: var(--btn-accented-font-weight, var(--btn-font-weight, 600));
+        }
+
+        .wd-buy-now-btn:hover {
+            color: var(--btn-accented-color-hover);
+            box-shadow: var(--btn-accented-box-shadow-hover);
+            background-color: var(--btn-accented-bgcolor-hover);
+        }
+
+        .mm-product-actions-row {
+            display: flex !important;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px !important;
+            margin-top: 14px;
+        }
+
+        .mm-product-actions-row > * {
+            flex: 0 0 auto;
+            margin: 0 !important;
+        }
+
+        .mm-product-actions-row .quantity {
+            margin-inline-end: 0;
+        }
+
+        .mm-wishlist-btn {
+            /* form.cart > * (vendor CSS) stretches every direct child to
+               flex: 1 1 100% and only exempts its own known buttons by name,
+               so it doesn't know about this one — beat it explicitly here,
+               since form.cart's extra element-type selector outweighs our
+               .mm-product-actions-row > * override on specificity alone. */
+            flex: 0 0 auto !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            border: 1px solid var(--color-gray-200, #e0e0e0);
+            border-radius: var(--btn-accented-brd-radius, 6px);
+            color: var(--color-gray-700, #666);
+            background-color: #fff;
+            transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .mm-wishlist-btn svg {
+            width: 19px;
+            height: 19px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+        }
+
+        .mm-wishlist-btn:hover,
+        .mm-wishlist-btn.is-active {
+            color: rgb(249, 82, 40);
+            border-color: rgb(249, 82, 40);
+        }
+
+        .mm-wishlist-btn.is-active svg {
+            fill: rgb(249, 82, 40);
+        }
+
+        /* ── Product gallery lightbox ── */
+        html.mm-lightbox-locked,
+        html.mm-lightbox-locked body {
+            overflow: hidden;
+        }
+
+        .mm-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        .mm-lightbox.mm-lightbox-open {
+            display: block;
+        }
+
+        .mm-lightbox-stage {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 90px;
+            box-sizing: border-box;
+        }
+
+        .mm-lightbox-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+
+        .mm-lightbox-counter {
+            position: absolute;
+            top: 20px;
+            left: 24px;
+            color: #fff;
+            font-size: 14px;
+            opacity: 0.85;
+            z-index: 1;
+        }
+
+        .mm-lightbox-actions {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            display: flex;
+            gap: 6px;
+            z-index: 1;
+        }
+
+        .mm-lightbox-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            border: none;
+            border-radius: 50%;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+        }
+
+        .mm-lightbox-btn:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .mm-lightbox-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .mm-lightbox-prev,
+        .mm-lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 52px;
+            height: 52px;
+            background-color: rgba(255, 255, 255, 0.08);
+            z-index: 1;
+        }
+
+        .mm-lightbox-prev {
+            left: 18px;
+        }
+
+        .mm-lightbox-next {
+            right: 18px;
+        }
+
+        .mm-lightbox-prev svg,
+        .mm-lightbox-next svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 640px) {
+            .mm-lightbox-stage {
+                padding: 60px 16px;
+            }
+
+            .mm-lightbox-prev,
+            .mm-lightbox-next {
+                width: 42px;
+                height: 42px;
+            }
+        }

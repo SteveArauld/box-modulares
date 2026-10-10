@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
@@ -8,7 +8,9 @@
     <meta charset="UTF-8">
     <base href="{{ url('/') }}/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title></title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>@yield('title', config('app.name'))</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/images/logo/favicon.svg') }}">
 
 
     <link rel='stylesheet' id='fluentform-elementor-widget-css'
@@ -38,7 +40,20 @@
     <link rel='stylesheet' id='base-mobile-css' href='/wp-content/uploads/elementor/css/base-mobilea49e.css'
         media='(max-width:768px)' />
     <link rel='stylesheet' href='/wp-content/themes/woodmart/css/parts/base8833.css' media='all' />
-
+    <style id="wd-style-base-inline-css">
+        @font-face {
+            font-weight: normal;
+            font-style: normal;
+            font-family: "woodmart-font";
+            src: url("/wp-content/themes/woodmart/fonts/woodmart-font-1-400c9dd.woff2?v=8.5.2") format("woff2");
+        }
+    </style>
+    <link rel='stylesheet' id='wd-header-base-css'
+        href='/wp-content/themes/woodmart/css/parts/header-base8833.css?ver=8.5.2' media='all' />
+    <link rel='stylesheet' id='wd-header-el-search-css'
+        href='/wp-content/themes/woodmart/css/parts/header-el-search8833.css?ver=8.5.2' media='all' />
+    <link rel='stylesheet' id='wd-header-my-account-dropdown-css'
+        href='/wp-content/themes/woodmart/css/parts/header-el-my-account-dropdown8833.css?ver=8.5.2' media='all' />
 
 
 
@@ -130,14 +145,63 @@
 
 
   <link rel="stylesheet" id="wd-page-title-css"
-            href="../wp-content/themes/woodmart/css/parts/page-title8833.css?ver=8.5.2" type="text/css" media="all" />
+            href="/wp-content/themes/woodmart/css/parts/page-title8833.css?ver=8.5.2" type="text/css" media="all" />
 
  <link rel="stylesheet" id="wd-widget-collapse-css"
-                href="../wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css?ver=8.5.2" type="text/css"
+                href="/wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css?ver=8.5.2" type="text/css"
                 media="all" />
 
     <script id="jquery-core-js" src="wp-includes/js/jquery/jquery.minf43b.js"></script>
     <script id="jquery-migrate-js" src="wp-includes/js/jquery/jquery-migrate.min5589.js"></script>
+    <script id="woodmart-settings-js">
+        var woodmart_settings = {
+            elementor_no_gap: "no",
+            zoom_enable: "yes",
+            product_images_captions: "no",
+            photoswipe_close_on_scroll: "yes",
+            download_image: "Descargar imagen",
+            pin_it: "Pinear",
+            share_fb: "Compartir en Facebook",
+            tweet: "Twittear",
+            mobile_navigation_drilldown_back_to_categories: "Volver a categorías",
+            mobile_navigation_drilldown_back_to_main_menu: "Volver al menú principal",
+            mobile_navigation_drilldown_back_to: "Volver a %s",
+            photoswipe_template: `<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Cerrar (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Compartir"></button>
+                <button class="pswp__button pswp__button--fs" title="Pantalla completa"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Anterior"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Siguiente"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>`,
+        };
+    </script>
 
 
     <script data-wp-strategy="defer" defer src="/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min345d.js">
@@ -145,7 +209,7 @@
 
     <link rel='stylesheet' href='/wp-content/uploads/2026/07/xts-theme_settings_default-17835068198833.css'
         media='all' />
-    <link rel='stylesheet' href='{{ asset('assets/css/style.css') }}' media='all' />
+    <link rel='stylesheet' href='{{ asset('assets/css/style.css') }}?v={{ filemtime(public_path('assets/css/style.css')) }}' media='all' />
 
     @stack('styles')
 
@@ -154,9 +218,9 @@
 
 
 <body
-    class="home wp-singular page-template-default page page-id-120 wp-theme-woodmart
- theme-woodmart woocommerce-no-js wd wrapper-custom categories-accordion-on woodmart-ajax-shop-on 
- sticky-toolbar-on elementor-default elementor-kit-6 elementor-page elementor-page-120">
+    class="wp-singular page-template-default wp-theme-woodmart
+ theme-woodmart woocommerce-no-js wd wrapper-custom categories-accordion-on woodmart-ajax-shop-on
+ sticky-toolbar-on elementor-default elementor-kit-6 elementor-page @yield('body_class', 'page page-id-120 elementor-page-120')">
 
 
     <div class="wd-page-wrapper website-wrapper">
@@ -173,6 +237,21 @@
 
 
     </div>
+
+    <script>
+        window.mmDeliveryLabels = {
+            shipping: @json(__('✅ Envío gratuito a toda España')),
+            estimate: @json(__('📦 Entrega estimada: entre el')),
+            and: @json(__('y el')),
+        };
+        window.mmCartLabels = {
+            price: @json(__('Precio')),
+            quantity: @json(__('Cantidad')),
+            subtotal: @json(__('Subtotal')),
+        };
+    </script>
+    <script src="{{ asset('assets/js/shop.js') }}?v={{ filemtime(public_path('assets/js/shop.js')) }}"></script>
+    @stack('scripts')
 
 </body>
 

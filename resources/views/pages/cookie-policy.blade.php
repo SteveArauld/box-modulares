@@ -1,29 +1,27 @@
 @extends('layouts.app')
 
-@section('title', 'Contáctanos | nom domain')
+@section('title', 'Política de cookies | '.config('app.name'))
 
 
 @section('content')
 	<div class="wd-page-content main-page-wrapper">
 
 			<link rel="stylesheet" id="wd-page-title-css"
-				href="../wp-content/themes/woodmart/css/parts/page-title8833.css?ver=8.5.2" type="text/css"
+				href="/wp-content/themes/woodmart/css/parts/page-title8833.css?ver=8.5.2" type="text/css"
 				media="all" />
 			<div class="wd-page-title page-title  page-title-default title-size-small title-design-default color-scheme-light"
 				style="">
 				<div class="wd-page-title-bg wd-fill">
-					<img width="1920" height="410" src="../wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
-						class="attachment-full size-full" alt="" decoding="async" fetchpriority="high"
-						srcset="/wp-content/uploads/2026/04/edc-hero-section-bg.jpg 1920w, /wp-content/uploads/2026/04/edc-hero-section-bg-150x32.jpg 150w, /wp-content/uploads/2026/04/edc-hero-section-bg-1200x256.jpg 1200w"
-						sizes="(max-width: 1920px) 100vw, 1920px" />
+					<img width="1920" height="410" src="/wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
+						class="attachment-full size-full" alt="" decoding="async" fetchpriority="high" />
 				</div>
 				<div class="container">
 					<h1 class="entry-title title">
-						Política de Cookies </h1>
+						{{ __('Política de Cookies') }} </h1>
 
 
-					<nav class="wd-breadcrumbs"><a href="../">Inicio</a><span
-							class="wd-delimiter">•</span><span class="wd-last">Política de Cookies</span></nav>
+					<nav class="wd-breadcrumbs"><a href="../">{{ __('Inicio') }}</a><span
+							class="wd-delimiter">•</span><span class="wd-last">{{ __('Política de Cookies') }}</span></nav>
 				</div>
 			</div>
 
@@ -39,196 +37,169 @@
 									<div class="elementor-element elementor-element-42c0de7 color-scheme-inherit text-left elementor-widget elementor-widget-text-editor"
 										data-id="42c0de7" data-element_type="widget" data-e-type="widget"
 										data-widget_type="text-editor.default">
-										<h2>1. ¿Qué son las cookies?</h2>
-										<p>Las cookies son pequeños archivos de texto que se almacenan en el dispositivo
-											del usuario (ordenador, teléfono móvil, tableta u otro dispositivo) cuando
-											visita un sitio web.</p>
-										<p>Su finalidad es permitir el correcto funcionamiento del sitio, recordar
-											determinadas preferencias, mejorar la experiencia de navegación, analizar el
-											uso del sitio web y, en algunos casos, mostrar publicidad personalizada.</p>
-										<h2>2. Responsable</h2>
-										<p><strong>Responsable del sitio web:</strong></p>
-										<p><strong>Arquisset de Construccio S.L.</strong></p>
-										<p><strong>CIF:</strong> B63714778</p>
-										<p><strong>Domicilio social:</strong> Calle Avenir 8, 08006 Barcelona, España.
+										<h2>{{ __('1. ¿Qué son las cookies?') }}</h2>
+										<p>{{ __('Las cookies son pequeños archivos de texto que se almacenan en el dispositivo del usuario (ordenador, teléfono móvil, tableta u otro dispositivo) cuando visita un sitio web.') }}</p>
+										<p>{{ __('Su finalidad es permitir el correcto funcionamiento del sitio, recordar determinadas preferencias, mejorar la experiencia de navegación, analizar el uso del sitio web y, en algunos casos, mostrar publicidad personalizada.') }}</p>
+										<h2>{{ __('2. Responsable') }}</h2>
+										<p><strong>{{ __('Responsable del sitio web:') }}</strong></p>
+										<p><strong>{{ __('Arquisset de Construccio S.L.') }}</strong></p>
+										<p><strong>{{ __('CIF:') }}</strong> {{ __('B63714778') }}</p>
+										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Calle Avenir 8, 08006 Barcelona, España.') }}
 										</p>
-										<p><strong>Correo electrónico:</strong> <a
-												href="mailto:contacto@box-modulares.es">contacto@box-modulares.es</a>
+										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
+												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
 										</p>
-										<p><strong>Sitio web:</strong> <a
-												href="../">https://domaine.it</a></p>
-										<h2>3. Tipos de cookies utilizadas</h2>
-										<p>Este sitio web puede utilizar las siguientes categorías de cookies:</p>
-										<h3>Cookies técnicas</h3>
-										<p>Son necesarias para el funcionamiento del sitio web y permiten funciones
-											esenciales como:</p>
+										<p><strong>{{ __('Sitio web:') }}</strong> <a
+												href="../">{{ __('https://domaine.it') }}</a></p>
+										<h2>{{ __('3. Tipos de cookies utilizadas') }}</h2>
+										<p>{{ __('Este sitio web puede utilizar las siguientes categorías de cookies:') }}</p>
+										<h3>{{ __('Cookies técnicas') }}</h3>
+										<p>{{ __('Son necesarias para el funcionamiento del sitio web y permiten funciones esenciales como:') }}</p>
 										<ul>
 											<li>
-												<p>Navegación entre páginas.</p>
+												<p>{{ __('Navegación entre páginas.') }}</p>
 											</li>
 											<li>
-												<p>Acceso al área de cliente.</p>
+												<p>{{ __('Acceso al área de cliente.') }}</p>
 											</li>
 											<li>
-												<p>Gestión del carrito de compra.</p>
+												<p>{{ __('Gestión del carrito de compra.') }}</p>
 											</li>
 											<li>
-												<p>Proceso de compra.</p>
+												<p>{{ __('Proceso de compra.') }}</p>
 											</li>
 											<li>
-												<p>Seguridad del sitio web.</p>
+												<p>{{ __('Seguridad del sitio web.') }}</p>
 											</li>
 										</ul>
-										<p>Estas cookies no requieren el consentimiento del usuario.</p>
-										<h3>Cookies de preferencias</h3>
-										<p>Permiten recordar determinadas configuraciones elegidas por el usuario, como:
+										<p>{{ __('Estas cookies no requieren el consentimiento del usuario.') }}</p>
+										<h3>{{ __('Cookies de preferencias') }}</h3>
+										<p>{{ __('Permiten recordar determinadas configuraciones elegidas por el usuario, como:') }}
 										</p>
 										<ul>
 											<li>
-												<p>Idioma.</p>
+												<p>{{ __('Idioma.') }}</p>
 											</li>
 											<li>
-												<p>Moneda.</p>
+												<p>{{ __('Moneda.') }}</p>
 											</li>
 											<li>
-												<p>Preferencias de navegación.</p>
+												<p>{{ __('Preferencias de navegación.') }}</p>
 											</li>
 										</ul>
-										<h3>Cookies analíticas</h3>
-										<p>Permiten conocer cómo interactúan los visitantes con el sitio web mediante la
-											recopilación de información estadística anónima.</p>
-										<p>Estas cookies ayudan a mejorar continuamente el funcionamiento del sitio.</p>
-										<p>Ejemplos:</p>
+										<h3>{{ __('Cookies analíticas') }}</h3>
+										<p>{{ __('Permiten conocer cómo interactúan los visitantes con el sitio web mediante la recopilación de información estadística anónima.') }}</p>
+										<p>{{ __('Estas cookies ayudan a mejorar continuamente el funcionamiento del sitio.') }}</p>
+										<p>{{ __('Ejemplos:') }}</p>
 										<ul>
 											<li>
-												<p>Número de visitas.</p>
+												<p>{{ __('Número de visitas.') }}</p>
 											</li>
 											<li>
-												<p>Páginas más consultadas.</p>
+												<p>{{ __('Páginas más consultadas.') }}</p>
 											</li>
 											<li>
-												<p>Tiempo de navegación.</p>
+												<p>{{ __('Tiempo de navegación.') }}</p>
 											</li>
 											<li>
-												<p>Dispositivo utilizado.</p>
+												<p>{{ __('Dispositivo utilizado.') }}</p>
 											</li>
 										</ul>
-										<p>Estas cookies solo se instalarán si el usuario presta su consentimiento.</p>
-										<h3>Cookies de publicidad</h3>
-										<p>Permiten mostrar anuncios relacionados con los intereses del usuario.</p>
-										<p>Pueden utilizarse para limitar el número de veces que se muestra un anuncio y
-											medir la eficacia de las campañas publicitarias.</p>
-										<p>Solo se instalarán previo consentimiento del usuario.</p>
-										<h3>Cookies de terceros</h3>
-										<p>Este sitio web puede utilizar servicios proporcionados por terceros que
-											instalan sus propias cookies para ofrecer funcionalidades o realizar
-											análisis estadísticos.</p>
-										<p>Entre estos servicios pueden encontrarse:</p>
+										<p>{{ __('Estas cookies solo se instalarán si el usuario presta su consentimiento.') }}</p>
+										<h3>{{ __('Cookies de publicidad') }}</h3>
+										<p>{{ __('Permiten mostrar anuncios relacionados con los intereses del usuario.') }}</p>
+										<p>{{ __('Pueden utilizarse para limitar el número de veces que se muestra un anuncio y medir la eficacia de las campañas publicitarias.') }}</p>
+										<p>{{ __('Solo se instalarán previo consentimiento del usuario.') }}</p>
+										<h3>{{ __('Cookies de terceros') }}</h3>
+										<p>{{ __('Este sitio web puede utilizar servicios proporcionados por terceros que instalan sus propias cookies para ofrecer funcionalidades o realizar análisis estadísticos.') }}</p>
+										<p>{{ __('Entre estos servicios pueden encontrarse:') }}</p>
 										<ul>
 											<li>
-												<p>Google Analytics.</p>
+												<p>{{ __('Google Analytics.') }}</p>
 											</li>
 											<li>
-												<p>Google Ads.</p>
+												<p>{{ __('Google Ads.') }}</p>
 											</li>
 											<li>
-												<p>Google Tag Manager.</p>
+												<p>{{ __('Google Tag Manager.') }}</p>
 											</li>
 											<li>
-												<p>Meta (Facebook).</p>
+												<p>{{ __('Meta (Facebook).') }}</p>
 											</li>
 											<li>
-												<p>YouTube.</p>
+												<p>{{ __('YouTube.') }}</p>
 											</li>
 											<li>
-												<p>Stripe o plataformas de pago.</p>
+												<p>{{ __('Stripe o plataformas de pago.') }}</p>
 											</li>
 											<li>
-												<p>Empresas de chat en línea.</p>
+												<p>{{ __('Empresas de chat en línea.') }}</p>
 											</li>
 										</ul>
-										<p>Cada proveedor dispone de su propia política de privacidad y de cookies.</p>
-										<h2>4. Base jurídica</h2>
-										<p>La utilización de cookies técnicas se basa en el interés legítimo y en la
-											necesidad de prestar el servicio solicitado.</p>
-										<p>Las cookies analíticas, publicitarias y de personalización únicamente se
-											instalarán cuando el usuario haya otorgado su consentimiento mediante el
-											banner de cookies.</p>
-										<p>El usuario podrá retirar dicho consentimiento en cualquier momento.</p>
-										<h2>5. Gestión del consentimiento</h2>
-										<p>Al acceder por primera vez al sitio web, el usuario visualizará un panel de
-											configuración de cookies que le permitirá:</p>
+										<p>{{ __('Cada proveedor dispone de su propia política de privacidad y de cookies.') }}</p>
+										<h2>{{ __('4. Base jurídica') }}</h2>
+										<p>{{ __('La utilización de cookies técnicas se basa en el interés legítimo y en la necesidad de prestar el servicio solicitado.') }}</p>
+										<p>{{ __('Las cookies analíticas, publicitarias y de personalización únicamente se instalarán cuando el usuario haya otorgado su consentimiento mediante el banner de cookies.') }}</p>
+										<p>{{ __('El usuario podrá retirar dicho consentimiento en cualquier momento.') }}</p>
+										<h2>{{ __('5. Gestión del consentimiento') }}</h2>
+										<p>{{ __('Al acceder por primera vez al sitio web, el usuario visualizará un panel de configuración de cookies que le permitirá:') }}</p>
 										<ul>
 											<li>
-												<p>Aceptar todas las cookies.</p>
+												<p>{{ __('Aceptar todas las cookies.') }}</p>
 											</li>
 											<li>
-												<p>Rechazar todas las cookies no esenciales.</p>
+												<p>{{ __('Rechazar todas las cookies no esenciales.') }}</p>
 											</li>
 											<li>
-												<p>Configurar sus preferencias por categorías.</p>
+												<p>{{ __('Configurar sus preferencias por categorías.') }}</p>
 											</li>
 										</ul>
-										<p>La elección realizada podrá modificarse en cualquier momento mediante el
-											enlace «Configuración de Cookies» disponible en el sitio web.</p>
-										<h2>6. Cómo desactivar las cookies desde el navegador</h2>
-										<p>El usuario puede eliminar o bloquear las cookies desde la configuración de su
-											navegador.</p>
-										<p>Los principales navegadores ofrecen esta posibilidad en sus opciones de
-											privacidad y seguridad.</p>
-										<p>La desactivación de determinadas cookies puede afectar al correcto
-											funcionamiento del sitio web o impedir el uso de algunas funcionalidades.
+										<p>{{ __('La elección realizada podrá modificarse en cualquier momento mediante el enlace «Configuración de Cookies» disponible en el sitio web.') }}</p>
+										<h2>{{ __('6. Cómo desactivar las cookies desde el navegador') }}</h2>
+										<p>{{ __('El usuario puede eliminar o bloquear las cookies desde la configuración de su navegador.') }}</p>
+										<p>{{ __('Los principales navegadores ofrecen esta posibilidad en sus opciones de privacidad y seguridad.') }}</p>
+										<p>{{ __('La desactivación de determinadas cookies puede afectar al correcto funcionamiento del sitio web o impedir el uso de algunas funcionalidades.') }}
 										</p>
-										<h2>7. Conservación de las cookies</h2>
-										<p>Las cookies permanecerán almacenadas únicamente durante el tiempo necesario
-											para cumplir su finalidad.</p>
-										<p>Las cookies de sesión se eliminan automáticamente al cerrar el navegador.</p>
-										<p>Las cookies persistentes permanecerán activas durante el período definido por
-											cada proveedor o hasta que el usuario las elimine manualmente.</p>
-										<h2>8. Transferencias internacionales</h2>
-										<p>Algunos proveedores de servicios pueden tratar datos fuera del Espacio
-											Económico Europeo.</p>
-										<p>Cuando esto ocurra, dichas transferencias se realizarán únicamente con las
-											garantías exigidas por el Reglamento (UE) 2016/679.</p>
-										<h2>9. Derechos de los usuarios</h2>
-										<p>El usuario podrá ejercer los derechos reconocidos por la normativa de
-											protección de datos:</p>
+										<h2>{{ __('7. Conservación de las cookies') }}</h2>
+										<p>{{ __('Las cookies permanecerán almacenadas únicamente durante el tiempo necesario para cumplir su finalidad.') }}</p>
+										<p>{{ __('Las cookies de sesión se eliminan automáticamente al cerrar el navegador.') }}</p>
+										<p>{{ __('Las cookies persistentes permanecerán activas durante el período definido por cada proveedor o hasta que el usuario las elimine manualmente.') }}</p>
+										<h2>{{ __('8. Transferencias internacionales') }}</h2>
+										<p>{{ __('Algunos proveedores de servicios pueden tratar datos fuera del Espacio Económico Europeo.') }}</p>
+										<p>{{ __('Cuando esto ocurra, dichas transferencias se realizarán únicamente con las garantías exigidas por el Reglamento (UE) 2016/679.') }}</p>
+										<h2>{{ __('9. Derechos de los usuarios') }}</h2>
+										<p>{{ __('El usuario podrá ejercer los derechos reconocidos por la normativa de protección de datos:') }}</p>
 										<ul>
 											<li>
-												<p>Derecho de acceso.</p>
+												<p>{{ __('Derecho de acceso.') }}</p>
 											</li>
 											<li>
-												<p>Derecho de rectificación.</p>
+												<p>{{ __('Derecho de rectificación.') }}</p>
 											</li>
 											<li>
-												<p>Derecho de supresión.</p>
+												<p>{{ __('Derecho de supresión.') }}</p>
 											</li>
 											<li>
-												<p>Derecho de oposición.</p>
+												<p>{{ __('Derecho de oposición.') }}</p>
 											</li>
 											<li>
-												<p>Derecho a la limitación del tratamiento.</p>
+												<p>{{ __('Derecho a la limitación del tratamiento.') }}</p>
 											</li>
 											<li>
-												<p>Derecho a la portabilidad.</p>
+												<p>{{ __('Derecho a la portabilidad.') }}</p>
 											</li>
 											<li>
-												<p>Derecho a retirar el consentimiento.</p>
+												<p>{{ __('Derecho a retirar el consentimiento.') }}</p>
 											</li>
 										</ul>
-										<p>Las solicitudes podrán dirigirse a:</p>
-										<p><strong>Correo electrónico:</strong> <a
-												href="mailto:contacto@box-modulares.es">contacto@box-modulares.es</a>
+										<p>{{ __('Las solicitudes podrán dirigirse a:') }}</p>
+										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
+												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
 										</p>
-										<p>Asimismo, si considera que sus derechos no han sido respetados, podrá
-											presentar una reclamación ante la Agencia Española de Protección de Datos
-											(AEPD).</p>
-										<h2>10. Modificaciones de la Política de Cookies</h2>
-										<p>Arquisset de Construccio S.L. podrá actualizar esta Política de Cookies para
-											adaptarla a cambios legislativos, tecnológicos o a la incorporación de
-											nuevos servicios.</p>
-										<p>Las modificaciones serán publicadas en esta misma página y entrarán en vigor
-											desde su publicación.</p>
+										<p>{{ __('Asimismo, si considera que sus derechos no han sido respetados, podrá presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD).') }}</p>
+										<h2>{{ __('10. Modificaciones de la Política de Cookies') }}</h2>
+										<p>{{ __('Arquisset de Construccio S.L. podrá actualizar esta Política de Cookies para adaptarla a cambios legislativos, tecnológicos o a la incorporación de nuevos servicios.') }}</p>
+										<p>{{ __('Las modificaciones serán publicadas en esta misma página y entrarán en vigor desde su publicación.') }}</p>
 									</div>
 								</div>
 							</div>
