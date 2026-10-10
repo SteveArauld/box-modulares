@@ -278,7 +278,7 @@
 								<div
 									class="wd-header-cart wd-tools-element wd-design-7 cart-widget-opener wd-style-text wd-with-wrap whb-8buyjktpo4jp6c7oimzq">
 									<link rel="stylesheet" id="wd-header-cart-css"
-										href="/wp-content/themes/woodmart/css/parts/header-el-cart8833.css?ver=8.5.2"
+										href={{ asset('/wp-content/themes/woodmart/css/parts/header-el-cart8833.css') }}
 										type="text/css" media="all" /> <a href="carrito/"
 										title="{{ __('Carrito de compra') }}">
 										<span class="wd-tools-inner">

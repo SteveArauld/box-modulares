@@ -137,16 +137,16 @@
                                 data-widget_type="wd_product_categories.default">
                                 <div class="elementor-widget-container">
                                     <link rel="stylesheet" id="wd-woo-opt-products-bg-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-opt-products-bg8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-opt-products-bg8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-categories-loop-mask-subcat-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-categories-loop-mask-subcat8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-categories-loop-mask-subcat8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-woo-categories-loop-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-categories-loop8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-categories-loop8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-swiper-css"
-                                        href="/wp-content/themes/woodmart/css/parts/lib-swiper8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/lib-swiper8833.css') }}
                                         type="text/css" media="all" />
                                     <div class="wd-cats products columns-6 wd-products-with-bg wd-cats-element wd-carousel-container"
                                         id="carousel-6ac47ee6db0b1">
@@ -208,25 +208,25 @@
                                 data-widget_type="wd_products.default">
                                 <div class="elementor-widget-container">
                                     <link rel="stylesheet" id="wd-product-loop-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-product-loop8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-product-loop8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-woo-loop-prod-el-base-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-loop-prod-el-base8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-loop-prod-el-base8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-woo-loop-prod-predefined-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-loop-prod-predefined8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-loop-prod-predefined8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-product-loop-standard-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-product-loop-standard8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-product-loop-standard8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-woo-mod-loop-prod-add-btn-replace-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-mod-loop-prod-add-btn-replace8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-mod-loop-prod-add-btn-replace8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-woo-opt-stretch-cont-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-opt-stretch-cont8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-opt-stretch-cont8833.css') }}
                                         type="text/css" media="all" />
                                     <link rel="stylesheet" id="wd-woo-opt-stretch-cont-predefined-css"
-                                        href="/wp-content/themes/woodmart/css/parts/woo-opt-stretch-cont-predefined8833.css?ver=8.5.2"
+                                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-opt-stretch-cont-predefined8833.css') }}
                                         type="text/css" media="all" />
                                     <div class="wd-products-element">
 
@@ -657,7 +657,7 @@
 
 
         <link rel="stylesheet" id="wd-widget-collapse-css"
-            href="/wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css?ver=8.5.2" type="text/css"
+            href={{ asset('/wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css') }} type="text/css"
             media="all" />
     </main>
 @endsection

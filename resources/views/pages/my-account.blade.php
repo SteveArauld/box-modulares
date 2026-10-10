@@ -81,7 +81,7 @@
 <div class="wd-page-content main-page-wrapper">
 
     <link rel="stylesheet" id="wd-page-title-css"
-        href="/wp-content/themes/woodmart/css/parts/page-title8833.css?ver=8.5.2" type="text/css"
+        href={{ asset('/wp-content/themes/woodmart/css/parts/page-title8833.css') }} type="text/css"
         media="all" />
     <div class="wd-page-title page-title  page-title-default title-size-small title-design-default color-scheme-light"
         style="">
@@ -107,7 +107,7 @@
             <article id="post-11" class="entry-content post-11 page type-page status-publish hentry">
                 <div class="woocommerce">
                     <link rel="stylesheet" id="wd-woo-mod-login-form-css"
-                        href="/wp-content/themes/woodmart/css/parts/woo-mod-login-form8833.css?ver=8.5.2"
+                        href={{ asset('/wp-content/themes/woodmart/css/parts/woo-mod-login-form8833.css') }}
                         type="text/css" media="all" />
                     <div class="woocommerce-notices-wrapper">
                         @if (session('status'))
@@ -271,7 +271,7 @@
 
 
         <link rel="stylesheet" id="wd-widget-collapse-css"
-            href="/wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css?ver=8.5.2" type="text/css"
+            href={{ asset('/wp-content/themes/woodmart/css/parts/opt-widget-collapse8833.css') }} type="text/css"
             media="all" />
     </main>
 

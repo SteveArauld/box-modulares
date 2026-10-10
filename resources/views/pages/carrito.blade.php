@@ -860,7 +860,7 @@
         <div class="wd-content-area site-content">
             <div class="woocommerce entry-content">
                 <link rel="stylesheet" id="elementor-post-2646-css"
-                    href="/wp-content/uploads/elementor/css/post-2646a965.css?ver=1790099532" type="text/css"
+                    href={{ asset('/wp-content/uploads/elementor/css/post-2646a965.css') }} type="text/css"
                     media="all">
                 <div data-elementor-type="wp-post" data-elementor-id="2646" class="elementor elementor-2646">
                     <div class="wd-negative-gap elementor-element elementor-element-d5c10fc e-flex e-con-boxed e-con e-parent"

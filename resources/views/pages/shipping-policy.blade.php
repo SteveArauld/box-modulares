@@ -7,7 +7,7 @@
 <div class="wd-page-content main-page-wrapper">
 
 			<link rel="stylesheet" id="wd-page-title-css"
-				href="" type="text/css"
+				href="{{ asset('/wp-content/themes/woodmart/css/parts/page-title8833.css') }} type="text/css"
 				media="all" />
 			<div class="wd-page-title page-title  page-title-default title-size-small title-design-default color-scheme-light"
 				style="">

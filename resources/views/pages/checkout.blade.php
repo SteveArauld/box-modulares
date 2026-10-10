@@ -1075,7 +1075,7 @@
 		/*# sourceURL=global-styles-inline-css */
 	</style>
 	<link rel='stylesheet' id='fluentform-elementor-widget-css'
-		href='/wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widgetd7df.css?ver=6.2.14'
+		href={{ asset('/wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widgetd7df.css') }}
 		media='all' />
 
 	<style id="wp-block-library-inline-css">
@@ -1240,10 +1240,10 @@
 		/*# sourceURL=https://novaterra.es/wp-content/plugins/safe-svg/dist/safe-svg-block-frontend.css */
 	</style>
 	<link rel='stylesheet' id='hostinger-reach-subscription-block-css'
-		href='/wp-content/plugins/hostinger-reach/frontend/dist/blocks/subscription29b3.css?ver=1789777875'
+		href={{ asset('/wp-content/plugins/hostinger-reach/frontend/dist/blocks/subscription29b3.css') }}
 		media='all' />
 	<link rel='stylesheet' id='select2-css'
-		href='/wp-content/plugins/woocommerce/assets/css/select2345d.css?ver=11.1.1' media='all' />
+		href={{ asset('/wp-content/plugins/woocommerce/assets/css/select2345d.css') }} media='all' />
 	<style id="woocommerce-inline-inline-css">
 		.woocommerce form .form-row .required {
 			visibility: visible;
@@ -1252,16 +1252,16 @@
 		/*# sourceURL=woocommerce-inline-inline-css */
 	</style>
 	<link rel='stylesheet' id='hero_styles-css'
-		href='/wp-content/plugins/woocommerce-gateway-hero/assets/css/hero-stylesb95e.css?ver=2.0.3' media='all' />
-	<link rel="preload" href="/wp-content/plugins/disco/assets/build/plugin-publicf896.css?ver=1.4.18" as="style"
+		href={{ asset('/wp-content/plugins/woocommerce-gateway-hero/assets/css/hero-stylesb95e.css') }} media='all' />
+	<link rel="preload" href={{ asset('/wp-content/plugins/disco/assets/build/plugin-publicf896.css') }} as="style"
 		onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
 		<link rel='stylesheet' id='disco-plugin-styles-css'
-			href='/wp-content/plugins/disco/assets/build/plugin-publicf896.css?ver=1.4.18' media='all' />
+			href={{ asset('/wp-content/plugins/disco/assets/build/plugin-publicf896.css') }} media='all' />
 	</noscript>
 	<script>!function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);</script>
 	<link rel='stylesheet' id='elementor-frontend-css'
-		href='/wp-content/uploads/elementor/css/custom-frontend.min05b2.css?ver=1790099160' media='all' />
+		href={{ asset('/wp-content/uploads/elementor/css/custom-frontend.min05b2.css') }} media='all' />
 	<style id="elementor-frontend-inline-css">
 		.e-heading-base a,
 		.e-paragraph-base a {
@@ -1277,19 +1277,19 @@
 		/*# sourceURL=elementor-frontend-inline-css */
 	</style>
 	<link rel='stylesheet' id='elementor-post-6-css'
-		href='/wp-content/uploads/elementor/css/post-605b2.css?ver=1790099160' media='all' />
+		href={{ asset('/wp-content/uploads/elementor/css/post-605b2.css') }} media='all' />
 	<link rel='stylesheet' id='base-desktop-css'
-		href='/wp-content/uploads/elementor/css/base-desktopa49e.css?ver=6ab2bed939598' media='all' />
+		href={{ asset('/wp-content/uploads/elementor/css/base-desktopa49e.css') }} media='all' />
 	<link rel='stylesheet' id='base-mobile-css'
-		href='/wp-content/uploads/elementor/css/base-mobilea49e.css?ver=6ab2bed939598' media='(max-width:768px)' />
-	<link rel='stylesheet' id='wd-style-base-css' href='/wp-content/themes/woodmart/css/parts/base8833.css?ver=8.5.2'
+		href={{ asset('/wp-content/uploads/elementor/css/base-mobilea49e.css') }} media='(max-width:768px)' />
+	<link rel='stylesheet' id='wd-style-base-css' href={{ asset('/wp-content/themes/woodmart/css/parts/base8833.css') }}
 		media='all' />
 	<style id="wd-style-base-inline-css">
 		@font-face {
 			font-weight: normal;
 			font-style: normal;
 			font-family: "woodmart-font";
-			src: url("/wp-content/themes/woodmart/fonts/woodmart-font-1-400c9dd.woff2?v=8.5.2") format("woff2");
+			src: url({{ asset('/wp-content/themes/woodmart/fonts/woodmart-font-1-400c9dd.woff2?v=8.5.2') }}) format("woff2");
 		}
 
 		@font-face {
@@ -1310,7 +1310,7 @@
 		/*# sourceURL=wd-style-base-inline-css */
 	</style>
 	<link rel='stylesheet' id='wd-header-base-css'
-		href='/wp-content/themes/woodmart/css/parts/header-base8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/header-base8833.css') }} media='all' />
 	<style id="wd-helpers-wpb-elem-inline-css">
 		.wd-z-index {
 			position: relative;
@@ -1414,7 +1414,7 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/helpers-wpb-elem.css */
 	</style>
 	<link rel='stylesheet' id='wd-woo-stripe-css'
-		href='/wp-content/themes/woodmart/css/parts/int-woo-stripe8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/int-woo-stripe8833.css') }} media='all' />
 	<style id="wd-woo-payments-inline-css">
 		.wd-sticky-btn #wcpay-payment-request-wrapper,
 		.wd-sticky-btn #wcpay-payment-request-button-separator,
@@ -1553,9 +1553,9 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/int-woo-payments.css */
 	</style>
 	<link rel='stylesheet' id='wd-elementor-base-css'
-		href='/wp-content/themes/woodmart/css/parts/int-elem-base8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/int-elem-base8833.css') }} media='all' />
 	<link rel='stylesheet' id='wd-woocommerce-base-css'
-		href='/wp-content/themes/woodmart/css/parts/woocommerce-base8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/woocommerce-base8833.css') }} media='all' />
 	<style id="wd-mod-star-rating-inline-css">
 		.star-rating {
 			position: relative;
@@ -1594,9 +1594,9 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/mod-star-rating.css */
 	</style>
 	<link rel='stylesheet' id='wd-select2-css'
-		href='/wp-content/themes/woodmart/css/parts/woo-lib-select28833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/woo-lib-select28833.css') }} media='all' />
 	<link rel='stylesheet' id='wd-woo-mod-shop-table-css'
-		href='/wp-content/themes/woodmart/css/parts/woo-mod-shop-table8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/woo-mod-shop-table8833.css') }} media='all' />
 	<style id="wd-woo-mod-grid-inline-css">
 		.col2-set {
 			display: flex;
@@ -1638,7 +1638,7 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-mod-grid.css */
 	</style>
 	<link rel='stylesheet' id='wd-page-checkout-css'
-		href='/wp-content/themes/woodmart/css/parts/woo-page-checkout8833.html?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/woo-page-checkout8833.html') }} media='all' />
 	<style id="wd-page-checkout-payment-methods-inline-css">
 		.payment_methods {
 			--li-mb: 15px;
@@ -2034,7 +2034,7 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/woo-mod-cart-labels.css */
 	</style>
 	<link rel='stylesheet' id='wd-wp-blocks-css'
-		href='/wp-content/themes/woodmart/css/parts/wp-blocks8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/wp-blocks8833.css') }} media='all' />
 	<style id="wd-header-logo-opt-swap-inline-css">
 		.wd-switch-logo .wd-sticky-logo {
 			display: none;
@@ -3138,7 +3138,7 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/header-el-search-fullscreen-general.css */
 	</style>
 	<link rel='stylesheet' id='wd-header-search-fullscreen-1-css'
-		href='/wp-content/themes/woodmart/css/parts/header-el-search-fullscreen-18833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/header-el-search-fullscreen-18833.css') }} media='all' />
 	<style id="wd-wd-search-form-inline-css">
 		.searchform {
 			position: relative;
@@ -3253,7 +3253,7 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/wd-search-form.css */
 	</style>
 	<link rel='stylesheet' id='wd-wd-search-results-css'
-		href='/wp-content/themes/woodmart/css/parts/wd-search-results8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/wd-search-results8833.css') }} media='all' />
 	<style id="wd-search-style-default-inline-css">
 		@media(min-width: 769px) {
 			.searchform.wd-style-default:not(.wd-with-cat) .wd-clear-search {
@@ -3276,7 +3276,7 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/el-search-style-default.css */
 	</style>
 	<link rel='stylesheet' id='wd-wd-search-dropdown-css'
-		href='/wp-content/themes/woodmart/css/parts/wd-search-dropdown8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/wd-search-dropdown8833.css') }} media='all' />
 	<style id="wd-widget-general-inline-css">
 		:is(.widget, .wd-widget, div[class^=vc_wp]) {
 			line-height: 1.4;
@@ -3327,7 +3327,7 @@
 		/*# sourceURL=https://novaterra.es/wp-content/themes/woodmart/css/parts/widget-general.css */
 	</style>
 	<link rel='stylesheet' id='wd-widget-shopping-cart-css'
-		href='/wp-content/themes/woodmart/css/parts/woo-widget-shopping-cart8833.css?ver=8.5.2' media='all' />
+		href={{ asset('/wp-content/themes/woodmart/css/parts/woo-widget-shopping-cart8833.css') }} media='all' />
 	<style id="wd-widget-product-list-inline-css">
 		.product_list_widget>li {
 			margin-bottom: 15px;
@@ -3789,7 +3789,7 @@
 				<div class="wd-content-area site-content">
 					<div class="woocommerce entry-content">
 						<link rel="stylesheet" id="elementor-post-2668-css"
-							href="/wp-content/uploads/elementor/css/post-2668673e.html?ver=1790104283" type="text/css"
+							href="/wp-content/uploads/elementor/css/post-2668673e.html" type="text/css"
 							media="all">
 						<div data-elementor-type="wp-post" data-elementor-id="2668" class="elementor elementor-2668">
 							<div class="wd-negative-gap elementor-element elementor-element-39ca2a2 e-flex e-con-boxed e-con e-parent"
@@ -3847,7 +3847,7 @@
 							aria-label="{{ __('Finalizar compra') }}">
 							@csrf
 							<link rel="stylesheet" id="elementor-post-2665-css"
-								href="/wp-content/uploads/elementor/css/post-26657cd3.html?ver=1790104284"
+								href="/wp-content/uploads/elementor/css/post-26657cd3.html"
 								type="text/css" media="all">
 							<div data-elementor-type="wp-post" data-elementor-id="2665"
 								class="elementor elementor-2665">

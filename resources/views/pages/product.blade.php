@@ -5,7 +5,8 @@
 
 @push('styles')
     <link rel='stylesheet' href='{{ asset('assets/css/product.css') }}?v={{ filemtime(public_path('assets/css/product.css')) }}' media='all' />
-    <link rel='stylesheet' href='/wp-content/themes/woodmart/css/parts/lib-photoswipe8833.css' media='all' />
+    {{-- CORRECTION ICI : Ajout des guillemets autour de asset() --}}
+    <link rel='stylesheet' href="{{ asset('/wp-content/themes/woodmart/css/parts/lib-photoswipe8833.css') }}" media='all' />
     
     <style>
         /* =========================================================

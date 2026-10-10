@@ -39,7 +39,7 @@
                                         data-widget_type="wd_title.default">
                                         <div class="elementor-widget-container">
                                             <link rel="stylesheet" id="wd-section-title-css"
-                                                href="/wp-content/themes/woodmart/css/parts/el-section-title8833.css?ver=8.5.2"
+                                                href={{ asset('/wp-content/themes/woodmart/css/parts/el-section-title8833.css') }}
                                                 type="text/css" media="all" />
                                             <div
                                                 class="title-wrapper wd-set-mb reset-last-child wd-title-color-default wd-title-style-default wd-title-size-default text-left">
@@ -81,7 +81,7 @@
                                                 data-widget_type="wd_text_block.default">
                                                 <div class="elementor-widget-container">
                                                     <link rel="stylesheet" id="wd-text-block-css"
-                                                        href="/wp-content/themes/woodmart/css/parts/el-text-block8833.css?ver=8.5.2"
+                                                        href={{ asset('/wp-content/themes/woodmart/css/parts/el-text-block8833.css') }}
                                                         type="text/css" media="all" />
                                                     <div class="wd-text-block reset-last-child text-left">
 
