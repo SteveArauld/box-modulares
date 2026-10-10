@@ -15,36 +15,52 @@ use Illuminate\Support\Facades\Password;
 
 class ShopController extends Controller
 {
-    private const HOME_CATEGORY_ICONS = [
-        'Tractores Cortacésped' => 'wp-content/uploads/2026/07/autorportes-150x150.png',
-        'Piscinas desmontables' => 'wp-content/uploads/2026/07/piscina-150x150.png',
-        'Pergolas-carpas-y-cenadores' => 'wp-content/uploads/2026/07/pergola-150x150.png',
-        'Generadores Eléctricos' => 'wp-content/uploads/2026/07/groupo-150x150.png',
-        'Casetas de jardín' => 'wp-content/uploads/2026/07/caseta-150x150.png',
-        'Astilladoras de Leña' => 'wp-content/uploads/2026/07/Astilladoras-de-Lena-150x150.png',
-    ];
+/**
+ * Catégories à afficher sur la page d'accueil.
+ * 
+ * On utilise les SLUGS comme clés (identiques dans toutes les langues),
+ * ce qui garantit que la bonne image est toujours associée à la bonne catégorie,
+ * peu importe la langue active (es, it, de, pt, en, fr).
+ */
+private const HOME_CATEGORY_ICONS = [
+    'tractores-cortac-sped'         => 'wp-content/uploads/2026/07/autorportes-150x150.png',
+    'piscinas-desmontables'         => 'wp-content/uploads/2026/07/piscina-150x150.png',
+    'pergolas-carpas-y-cenadores'   => 'wp-content/uploads/2026/07/pergola-150x150.png',
+    'generadores-el-ctricos'        => 'wp-content/uploads/2026/07/groupo-150x150.png',
+    'casetas-de-jard-n'             => 'wp-content/uploads/2026/07/caseta-150x150.png',
+    'astilladoras-de-le-a'          => 'wp-content/uploads/2026/07/Astilladoras-de-Lena-150x150.png',
+];
 
-    public function home(Request $request): View
-    {
-        $allCategories = Category::query()->get()->keyBy(fn (Category $category) => $category->translatedValue('name'));
+public function home(Request $request): View
+{
+    // On récupère TOUTES les catégories, indexées par leur slug espagnol (référence)
+    $categoriesBySlug = Category::query()
+        ->get()
+        ->keyBy(fn (Category $category) => $category->translatedValue('slug', 'es'));
 
-        $heroCategories = collect(self::HOME_CATEGORY_ICONS)
-            ->map(fn (string $icon, string $name) => $allCategories->has($name)
-                ? ['category' => $allCategories->get($name), 'icon' => $icon]
-                : null)
-            ->filter()
-            ->values();
-
-        $featuredProducts = Product::query()
-            ->with('category')
-            ->orderByRaw('featured_position IS NULL')
-            ->orderBy('featured_position')
-            ->orderBy('id')
-            ->paginate(24, ['*'], 'product-page')
-            ->withQueryString();
-
-        return view('pages.home', compact('heroCategories', 'featuredProducts'));
+    // On construit la collection DANS L'ORDRE EXACT de HOME_CATEGORY_ICONS
+    // pour éviter tout décalage entre l'image et le nom de la catégorie
+    $heroCategories = collect();
+    
+    foreach (self::HOME_CATEGORY_ICONS as $slug => $iconPath) {
+        if ($categoriesBySlug->has($slug)) {
+            $heroCategories->push([
+                'category' => $categoriesBySlug->get($slug),
+                'icon' => $iconPath,
+            ]);
+        }
     }
+
+    $featuredProducts = Product::query()
+        ->with('category')
+        ->orderByRaw('featured_position IS NULL')
+        ->orderBy('featured_position')
+        ->orderBy('id')
+        ->paginate(24, ['*'], 'product-page')
+        ->withQueryString();
+
+    return view('pages.home', compact('heroCategories', 'featuredProducts'));
+}
 
     public function shopIndex(Request $request): View
     {
