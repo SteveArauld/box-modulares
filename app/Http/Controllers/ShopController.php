@@ -21,14 +21,17 @@ class ShopController extends Controller
      * On utilise les SLUGS comme clés (identiques dans toutes les langues),
      * ce qui garantit que la bonne image est toujours associée à la bonne catégorie,
      * peu importe la langue active (es, it, de, pt, en, fr).
+     *
+     * Une valeur `null` signifie qu'il n'existe pas d'icône statique pour
+     * cette catégorie : on retombe alors sur l'image du premier produit.
      */
     private const HOME_CATEGORY_ICONS = [
-        'tractores-cortac-sped' => 'wp-content/uploads/2026/07/autorportes-150x150.png',
         'piscinas-desmontables' => 'wp-content/uploads/2026/07/piscina-150x150.png',
-        'pergolas-carpas-y-cenadores' => 'wp-content/uploads/2026/07/pergola-150x150.png',
-        'generadores-el-ctricos' => 'wp-content/uploads/2026/07/groupo-150x150.png',
-        'casetas-de-jard-n' => 'wp-content/uploads/2026/07/caseta-150x150.png',
-        'astilladoras-de-le-a' => 'wp-content/uploads/2026/07/Astilladoras-de-Lena-150x150.png',
+        'piscina' => null,
+        'contenedore-modificado' => 'assets/images/products/contenedore-modificado/casa-habitable-de-24-m2/2.webp',
+        'contenedore-sanitario' => 'assets/images/products/contenedore-sanitario/bloque-de-bano-portatile-pmr/1.webp',
+        'generadores-el-ctricos' => null,
+        'generadores-el-ctricos-inverter' => null,
     ];
 
     public function home(Request $request): View
@@ -44,12 +47,25 @@ class ShopController extends Controller
         $heroCategories = collect();
 
         foreach (self::HOME_CATEGORY_ICONS as $slug => $iconPath) {
-            if ($categoriesBySlug->has($slug)) {
-                $heroCategories->push([
-                    'category' => $categoriesBySlug->get($slug),
-                    'icon' => $iconPath,
-                ]);
+            if (! $categoriesBySlug->has($slug)) {
+                continue;
             }
+
+            $category = $categoriesBySlug->get($slug);
+
+            if ($iconPath === null) {
+                $firstProductImage = $category->products()->orderBy('id')->first()?->coverImage;
+                $iconPath = $firstProductImage ? ltrim($firstProductImage, '/') : null;
+            }
+
+            if ($iconPath === null) {
+                continue;
+            }
+
+            $heroCategories->push([
+                'category' => $category,
+                'icon' => $iconPath,
+            ]);
         }
 
         $featuredProducts = Product::query()

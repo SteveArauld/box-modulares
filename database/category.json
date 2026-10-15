@@ -15,7 +15,8 @@
       "de": "astilladoras-de-le-a",
       "pt": "astilladoras-de-le-a",
       "en": "astilladoras-de-le-a"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -33,7 +34,8 @@
       "de": "barbacoas",
       "pt": "barbacoas",
       "en": "barbacoas"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -51,7 +53,8 @@
       "de": "casas-m-viles-y-prefabricadas",
       "pt": "casas-m-viles-y-prefabricadas",
       "en": "casas-m-viles-y-prefabricadas"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -69,7 +72,8 @@
       "de": "casetas-de-jard-n",
       "pt": "casetas-de-jard-n",
       "en": "casetas-de-jard-n"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -87,7 +91,8 @@
       "de": "cenadores",
       "pt": "cenadores",
       "en": "cenadores"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -105,7 +110,8 @@
       "de": "cortac-spedes-giro-cero",
       "pt": "cortac-spedes-giro-cero",
       "en": "cortac-spedes-giro-cero"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -123,7 +129,8 @@
       "de": "generadores-de-apoyo-solar",
       "pt": "generadores-de-apoyo-solar",
       "en": "generadores-de-apoyo-solar"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -141,7 +148,8 @@
       "de": "generadores-el-ctricos",
       "pt": "generadores-el-ctricos",
       "en": "generadores-el-ctricos"
-    }
+    },
+    "visible": true
   },
   {
     "name": {
@@ -159,7 +167,8 @@
       "de": "generadores-el-ctricos-inverter",
       "pt": "generadores-el-ctricos-inverter",
       "en": "generadores-el-ctricos-inverter"
-    }
+    },
+    "visible": true
   },
   {
     "name": {
@@ -177,7 +186,8 @@
       "de": "minidumpers",
       "pt": "minidumpers",
       "en": "minidumpers"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -195,7 +205,8 @@
       "de": "muebles-de-jard-n",
       "pt": "muebles-de-jard-n",
       "en": "muebles-de-jard-n"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -213,7 +224,8 @@
       "de": "p-rgolas-para-jardines-y-terrazas",
       "pt": "p-rgolas-para-jardines-y-terrazas",
       "en": "p-rgolas-para-jardines-y-terrazas"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -250,7 +262,8 @@
       "de": "pellet",
       "pt": "pellet",
       "en": "pellet"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -268,7 +281,8 @@
       "de": "pergolas-carpas-y-cenadores",
       "pt": "pergolas-carpas-y-cenadores",
       "en": "pergolas-carpas-y-cenadores"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -304,7 +318,8 @@
       "de": "piscinas-desmontables",
       "pt": "piscinas-desmontables",
       "en": "piscinas-desmontables"
-    }
+    },
+    "visible": true
   },
   {
     "name": {
@@ -322,7 +337,8 @@
       "de": "plataformas-elevadoras",
       "pt": "plataformas-elevadoras",
       "en": "plataformas-elevadoras"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -340,7 +356,8 @@
       "de": "portaveh-culos",
       "pt": "portaveh-culos",
       "en": "portaveh-culos"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -358,7 +375,8 @@
       "de": "remolque-de-equipaje",
       "pt": "remolque-de-equipaje",
       "en": "remolque-de-equipaje"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -376,7 +394,8 @@
       "de": "remolque-para-caballos",
       "pt": "remolque-para-caballos",
       "en": "remolque-para-caballos"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -394,7 +413,8 @@
       "de": "remolque-para-moto",
       "pt": "remolque-para-moto",
       "en": "remolque-para-moto"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -412,7 +432,8 @@
       "de": "remolque-para-perros-y-la-caza",
       "pt": "remolque-para-perros-y-la-caza",
       "en": "remolque-para-perros-y-la-caza"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -430,7 +451,8 @@
       "de": "remolque-publicitario",
       "pt": "remolque-publicitario",
       "en": "remolque-publicitario"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -448,7 +470,8 @@
       "de": "remolque-venta-ambulante-o-foodtruck",
       "pt": "remolque-venta-ambulante-o-foodtruck",
       "en": "remolque-venta-ambulante-o-foodtruck"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -466,7 +489,8 @@
       "de": "remolques-bicicleta",
       "pt": "remolques-bicicleta",
       "en": "remolques-bicicleta"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -484,7 +508,8 @@
       "de": "remolques-de-jard-n-y-agricultura",
       "pt": "remolques-de-jard-n-y-agricultura",
       "en": "remolques-de-jard-n-y-agricultura"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -502,7 +527,8 @@
       "de": "techos-para-terrazas",
       "pt": "techos-para-terrazas",
       "en": "techos-para-terrazas"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -520,7 +546,8 @@
       "de": "tractores-cortac-sped",
       "pt": "tractores-cortac-sped",
       "en": "tractores-cortac-sped"
-    }
+    },
+    "visible": false
   },
   {
     "name": {
@@ -538,7 +565,64 @@
       "de": "trituradoras-semiprofesionales",
       "pt": "trituradoras-semiprofesionales",
       "en": "trituradoras-semiprofesionales"
-    }
-
+    },
+    "visible": false
+  },
+  {
+    "name": {
+      "fr": "Conteneur modifié",
+      "it": "Container modificato",
+      "es": "Contenedore modificado",
+      "de": "Modifizierter Container",
+      "pt": "Contentor modificado",
+      "en": "Modified container"
+    },
+    "slug": {
+      "fr": "contenedore-modificado",
+      "it": "contenedore-modificado",
+      "es": "contenedore-modificado",
+      "de": "contenedore-modificado",
+      "pt": "contenedore-modificado",
+      "en": "contenedore-modificado"
+    },
+    "visible": true
+  },
+  {
+    "name": {
+      "fr": "Conteneur sanitaire",
+      "it": "Container sanitario",
+      "es": "Contenedore sanitario",
+      "de": "Sanitärcontainer",
+      "pt": "Contentor sanitário",
+      "en": "Sanitary container"
+    },
+    "slug": {
+      "fr": "contenedore-sanitario",
+      "it": "contenedore-sanitario",
+      "es": "contenedore-sanitario",
+      "de": "contenedore-sanitario",
+      "pt": "contenedore-sanitario",
+      "en": "contenedore-sanitario"
+    },
+    "visible": true
+  },
+  {
+    "name": {
+      "fr": "Générateurs et énergie",
+      "it": "Generatori ed energia",
+      "es": "Generadores y Energía",
+      "de": "Generatoren und Energie",
+      "pt": "Geradores e energia",
+      "en": "Generators and energy"
+    },
+    "slug": {
+      "fr": "generadores-y-energia",
+      "it": "generadores-y-energia",
+      "es": "generadores-y-energia",
+      "de": "generadores-y-energia",
+      "pt": "generadores-y-energia",
+      "en": "generadores-y-energia"
+    },
+    "visible": false
   }
 ]

@@ -148,6 +148,9 @@
                                     <link rel="stylesheet" id="wd-swiper-css"
                                         href={{ asset('/wp-content/themes/woodmart/css/parts/lib-swiper8833.css') }}
                                         type="text/css" media="all" />
+                                        <style>
+                                            
+                                        </style>
                                     <div class="wd-cats products columns-6 wd-products-with-bg wd-cats-element wd-carousel-container"
                                         id="carousel-6ac47ee6db0b1">
                                         <div class="wd-carousel-inner">
@@ -163,7 +166,7 @@
                                                     <div class="wd-carousel-item">
                                                         <div class="wd-cat cat-design-mask-subcat without-product-count wd-with-subcat product-category product {{ $index === 0 ? 'first' : '' }} {{ $index === $heroCategories->count() - 1 ? 'last' : '' }}"
                                                             data-loop="{{ $index + 1 }}">
-                                                            <div class="wd-cat-wrap">
+                                                            <div class="wd-cat-wrap" style="height: 180px;">
                                                                 <div class="wd-cat-inner">
                                                                     <div class="wd-cat-thumb">
                                                                         <div class="wd-cat-image">
