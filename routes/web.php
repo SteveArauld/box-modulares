@@ -2,12 +2,21 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FeedController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ShopController::class, 'home'])->name('home');
+
+// --- Google Merchant Center product feed ---
+// "flujo-productos.xml": URL stable à coller dans Merchant Center
+// (Produits > Flux > Ajouter un flux > Planification > "Récupérer maintenant/plus tard"),
+// Google revient la chercher tout seul selon la fréquence choisie.
+Route::get('/flujo-productos.xml', [FeedController::class, 'googleShopping'])->name('feed.google-shopping');
+// Même contenu, mais forcé en téléchargement (pour l'import manuel "Charger un fichier").
+Route::get('/flujo-productos/descargar', [FeedController::class, 'googleShoppingDownload'])->name('feed.google-shopping.download');
 
 Route::get('/idioma/{locale}', [LocaleController::class, 'switch'])->name('locale.switch');
 

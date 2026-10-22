@@ -253,7 +253,7 @@
             "pt": "palet-de-le-a",
             "en": "palet-de-le-a"
         },
-        "visible": true,
+        "visible": false,
         "parent": "calefaccion"
     },
     {
@@ -273,7 +273,7 @@
             "pt": "pellet",
             "en": "pellet"
         },
-        "visible": true,
+        "visible": false,
         "parent": "calefaccion"
     },
     {
@@ -684,7 +684,7 @@
             "pt": "calefaccion",
             "en": "calefaccion"
         },
-        "visible": true
+        "visible": false
     },
     {
         "name": {

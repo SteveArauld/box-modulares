@@ -47,6 +47,7 @@ class CatalogSetFeaturedOrder extends Command
     {
         $matched = 0;
         $unmatched = [];
+        $matchedIds = [];
 
         foreach (self::ORDERED_NAMES as $position => $name) {
             $product = Product::query()->where('name->es', $name)->first();
@@ -62,16 +63,15 @@ class CatalogSetFeaturedOrder extends Command
             }
 
             $product->update(['featured_position' => $position + 1]);
+            $matchedIds[] = $product->id;
             $matched++;
         }
 
         Product::query()
-            ->whereNotIn('id', Product::query()
-                ->whereIn('name->es', self::ORDERED_NAMES)
-                ->pluck('id'))
+            ->whereNotIn('id', $matchedIds)
             ->update(['featured_position' => null]);
 
-        $this->info("Matched {$matched}/" . count(self::ORDERED_NAMES) . ' product(s).');
+        $this->info("Matched {$matched}/".count(self::ORDERED_NAMES).' product(s).');
 
         foreach ($unmatched as $name) {
             $this->warn("No match found for: {$name}");
