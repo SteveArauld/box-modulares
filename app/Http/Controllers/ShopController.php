@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\SetLocale;
 use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
@@ -16,22 +17,22 @@ use Illuminate\Support\Facades\Password;
 class ShopController extends Controller
 {
     /**
-     * Catégories à afficher sur la page d'accueil.
+     * Catégories à afficher sur la page d'accueil, dans l'ordre exact de la
+     * section "Nuestras categorías" du site de référence (box-modulares.es).
      *
      * On utilise les SLUGS comme clés (identiques dans toutes les langues),
      * ce qui garantit que la bonne image est toujours associée à la bonne catégorie,
      * peu importe la langue active (es, it, de, pt, en, fr).
      *
-     * Une valeur `null` signifie qu'il n'existe pas d'icône statique pour
-     * cette catégorie : on retombe alors sur l'image du premier produit.
+     * Les icônes sont des copies locales des images du site de référence.
      */
     private const HOME_CATEGORY_ICONS = [
-        'piscinas-desmontables' => 'wp-content/uploads/2026/07/piscina-150x150.png',
-        'piscina' => null,
-        'contenedore-modificado' => 'assets/images/products/contenedore-modificado/casa-habitable-de-24-m2/2.webp',
-        'contenedore-sanitario' => 'assets/images/products/contenedore-sanitario/bloque-de-bano-portatile-pmr/1.webp',
-        'generadores-el-ctricos' => null,
-        'generadores-el-ctricos-inverter' => null,
+        'tractores-cortac-sped' => 'assets/images/categories/autorportes-150x150.png',
+        'piscinas-desmontables' => 'assets/images/categories/piscina-150x150.png',
+        'pergolas-carpas-y-cenadores' => 'assets/images/categories/pergola-150x150.png',
+        'generadores-el-ctricos' => 'assets/images/categories/groupo-150x150.png',
+        'casetas-de-jard-n' => 'assets/images/categories/caseta-150x150.png',
+        'astilladoras-de-le-a' => 'assets/images/categories/Astilladoras-de-Lena-150x150.png',
     ];
 
     public function home(Request $request): View
@@ -68,6 +69,14 @@ class ShopController extends Controller
             ]);
         }
 
+        // Matches the reference site's "Nuestros productos destacados" widget:
+        // its underlying query is orderby=rand (verified live — bypassing its
+        // page cache gives a different sequence each time), but server-side
+        // caching makes it look stable to an ordinary visitor refreshing the
+        // page. We reproduce the visible behavior (a fixed, cross-category
+        // shuffle that doesn't change on refresh) rather than the literal
+        // mechanism: featured_position holds a one-time random shuffle
+        // (see catalog:shuffle-featured) instead of re-randomizing per request.
         $featuredProducts = Product::query()
             ->with('category')
             ->whereHas('category', fn ($query) => $query->where('is_visible', true))
@@ -105,7 +114,7 @@ class ShopController extends Controller
 
     public function category(Request $request, string $slug): View
     {
-        $category = Category::query()->where('slug->es', $slug)->where('is_visible', true)->firstOrFail();
+        $category = Category::query()->where('slug->es', $slug)->where('is_visible', true)->with('children')->firstOrFail();
 
         return $this->renderCatalog($request, $category);
     }
@@ -118,7 +127,8 @@ class ShopController extends Controller
             ->with('category')
             ->whereHas('category', fn ($query) => $query->where('is_visible', true))
             ->when($term !== '', fn ($query) => $query->where('name->es', 'like', '%'.$term.'%'))
-            ->orderBy('name->es');
+            ->orderByRaw($this->nameOrderExpression().' asc')
+            ->orderBy('id');
 
         $this->applyPriceFilter($query, $request);
 
@@ -168,6 +178,33 @@ class ShopController extends Controller
             'orderby' => $request->query('orderby'),
             'per_page' => $request->query('per_page'),
         ], fn ($value) => $value !== null && $value !== ''));
+    }
+
+    /**
+     * SQL fragment that sorts products by their name in the active locale
+     * (falling back to Spanish when that translation is empty, matching
+     * Category/Product::translatedValue()'s own fallback), so the listed
+     * order follows whichever language the visitor is browsing in instead
+     * of always following the Spanish alphabetical order.
+     *
+     * Wrapped in UNACCENT_LOWER (registered in AppServiceProvider) rather
+     * than plain LOWER(): SQLite's LOWER() only folds ASCII A-Z, so an
+     * ALL-CAPS product name like "CASA MÓVIL..." wouldn't sort next to
+     * "Casa móvil..." — the accented capital Ó is left untouched.
+     *
+     * The locale is re-validated against the same whitelist SetLocale uses
+     * before being interpolated into raw SQL, even though app()->getLocale()
+     * is already set from a value SetLocale validated.
+     */
+    private function nameOrderExpression(): string
+    {
+        $locale = app()->getLocale();
+
+        if (! in_array($locale, SetLocale::SUPPORTED_LOCALES, true)) {
+            $locale = 'es';
+        }
+
+        return "UNACCENT_LOWER(COALESCE(NULLIF(json_extract(name, '$.{$locale}'), ''), json_extract(name, '$.es')))";
     }
 
     /**
@@ -226,7 +263,11 @@ class ShopController extends Controller
         $query = Product::query()->with('category');
 
         if ($category) {
-            $query->where('category_id', $category->id);
+            // A parent category's archive page aggregates its children's
+            // products too (matching the reference site, e.g. "Nuestros
+            // remolques" shows every trailer sub-category's products).
+            $categoryIds = [$category->id, ...$category->children->pluck('id')];
+            $query->whereIn('category_id', $categoryIds);
         } else {
             $query->whereHas('category', fn ($query) => $query->where('is_visible', true));
         }
@@ -237,8 +278,17 @@ class ShopController extends Controller
             'price' => $query->orderByRaw("CAST(json_extract(prices, '$.price') AS INTEGER) asc"),
             'price-desc' => $query->orderByRaw("CAST(json_extract(prices, '$.price') AS INTEGER) desc"),
             'date' => $query->latest(),
-            default => $query->orderBy('name->es'),
+            // SQLite's default collation is case-sensitive (ASCII uppercase
+            // sorts before lowercase), which would put e.g. "Piscina
+            // desmontable Ovalada..." before "Piscina desmontable de
+            // acero..." — wrap in LOWER() to match the reference site's
+            // case-insensitive alphabetical order.
+            default => $query->orderByRaw($this->nameOrderExpression().' asc'),
         };
+
+        // Several products share the exact same name; without a secondary
+        // key, ties have no stable order and can shuffle between requests.
+        $query->orderBy('id');
 
         $perPage = (int) $request->query('per_page', 24);
         $perPage = in_array($perPage, [9, 12, 18, 24], true) ? $perPage : 24;

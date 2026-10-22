@@ -42,12 +42,12 @@
 										<p>{{ __('Su finalidad es permitir el correcto funcionamiento del sitio, recordar determinadas preferencias, mejorar la experiencia de navegación, analizar el uso del sitio web y, en algunos casos, mostrar publicidad personalizada.') }}</p>
 										<h2>{{ __('2. Responsable') }}</h2>
 										<p><strong>{{ __('Responsable del sitio web:') }}</strong></p>
-										<p><strong>{{ __('Arquisset de Construccio S.L.') }}</strong></p>
-										<p><strong>{{ __('CIF:') }}</strong> {{ __('B63714778') }}</p>
-										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Calle Avenir 8, 08006 Barcelona, España.') }}
+										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
+										<p><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>
@@ -194,11 +194,11 @@
 										</ul>
 										<p>{{ __('Las solicitudes podrán dirigirse a:') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<p>{{ __('Asimismo, si considera que sus derechos no han sido respetados, podrá presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD).') }}</p>
 										<h2>{{ __('10. Modificaciones de la Política de Cookies') }}</h2>
-										<p>{{ __('Arquisset de Construccio S.L. podrá actualizar esta Política de Cookies para adaptarla a cambios legislativos, tecnológicos o a la incorporación de nuevos servicios.') }}</p>
+										<p>{{ __('Tec Container Srl podrá actualizar esta Política de Cookies para adaptarla a cambios legislativos, tecnológicos o a la incorporación de nuevos servicios.') }}</p>
 										<p>{{ __('Las modificaciones serán publicadas en esta misma página y entrarán en vigor desde su publicación.') }}</p>
 									</div>
 								</div>

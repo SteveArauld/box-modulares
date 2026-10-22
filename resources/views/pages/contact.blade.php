@@ -98,7 +98,7 @@
                                                         <div class="wd-text-block reset-last-child text-left">
 
                                                             <p><a
-                                                                    href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+                                                                    href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -151,7 +151,7 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="wd-text-block reset-last-child text-left">
 
-                                                            <p>{{ __('Calle Avenir 8, 08006 Barcelona, España') }}</p>
+                                                            <p>{{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia') }}</p>
                                                         </div>
                                                     </div>
                                                 </div>

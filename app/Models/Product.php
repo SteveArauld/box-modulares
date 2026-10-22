@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use App\Models\Concerns\HasLocalizedContent;
+use Database\Factories\ProductFactory;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Collection;
@@ -11,7 +13,8 @@ use Spatie\Translatable\HasTranslations;
 
 class Product extends Model
 {
-    use HasLocalizedContent, HasTranslations;
+    /** @use HasFactory<ProductFactory> */
+    use HasFactory, HasLocalizedContent, HasTranslations;
 
     protected $fillable = [
         'category_id',

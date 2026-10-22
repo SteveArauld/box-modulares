@@ -39,12 +39,12 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Datos identificativos') }}</h2>
 										<p>{{ __('En cumplimiento de lo dispuesto en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa a los usuarios de los siguientes datos del titular del sitio web:') }}</p>
-										<p><strong>{{ __('Titular:') }}</strong> {{ __('Arquisset de Construccio S.L.') }}</p>
-										<p><strong>{{ __('CIF:') }}</strong> {{ __('B63714778') }}</p>
-										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Calle Avenir 8, 08006 Barcelona, España.') }}
+										<p><strong>{{ __('Titular:') }}</strong> {{ __('Tec Container Srl') }}</p>
+										<p><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

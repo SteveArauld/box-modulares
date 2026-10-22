@@ -17,13 +17,21 @@ class ScrapeWooCommerceCatalog extends Command
      * The 4 category archives to import, with whether the resulting
      * category should be visible on the public site.
      *
+     * Deliberately excludes the parent "generadores-y-energia" archive
+     * itself: that page's listing aggregates all of its children's
+     * products, and scraping it directly produced ~100 duplicate product
+     * rows (same SKU, different id) under that parent category. The
+     * parent now exists purely as a navigation node (see
+     * database/category.json "parent" links); only its real leaf
+     * categories are scraped.
+     *
      * @var list<array{url: string, visible: bool}>
      */
     private const TARGETS = [
         ['url' => 'https://contenedores-modulares.es/categor%C3%ADa-de-producto/contenedore-modificado/', 'visible' => true],
         ['url' => 'https://contenedores-modulares.es/categor%C3%ADa-de-producto/contenedore-sanitario/', 'visible' => true],
         ['url' => 'https://box-modulares.es/categoria-producto/piscinas-desmontables/', 'visible' => true],
-        ['url' => 'https://box-modulares.es/categoria-producto/generadores-y-energia/', 'visible' => false],
+        ['url' => 'https://box-modulares.es/categoria-producto/generadores-y-energia/grupos/', 'visible' => true],
     ];
 
     /**

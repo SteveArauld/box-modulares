@@ -10,7 +10,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', config('app.name'))</title>
-    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/images/logo/favicon.svg') }}">
+    <meta name="description" content="@yield('meta_description', __('Tec Container Srl: casetas de jardín, módulos prefabricados, generadores y equipamiento de obra y jardín.'))">
+
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('assets/images/logo/favicon-48x48.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/logo/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/logo/favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/logo/apple-touch-icon.png') }}">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+    <meta name="theme-color" content="#F95228">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+    <meta property="og:title" content="@yield('title', config('app.name'))">
+    <meta property="og:description" content="@yield('meta_description', __('Tec Container Srl: casetas de jardín, módulos prefabricados, generadores y equipamiento de obra y jardín.'))">
+    <meta property="og:image" content="{{ asset('assets/images/logo/social/og-image.png') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title', config('app.name'))">
+    <meta name="twitter:description" content="@yield('meta_description', __('Tec Container Srl: casetas de jardín, módulos prefabricados, generadores y equipamiento de obra y jardín.'))">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo/social/og-image.png') }}">
 
 
     <link rel='stylesheet' id='fluentform-elementor-widget-css'

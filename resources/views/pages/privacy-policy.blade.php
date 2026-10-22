@@ -39,12 +39,12 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Responsable del tratamiento') }}</h2>
 										<p>{{ __('De conformidad con el Reglamento (UE) 2016/679 (RGPD), la Ley Orgánica 3/2018 (LOPDGDD) y demás normativa aplicable, se informa a los usuarios de que los datos personales facilitados a través del sitio web serán tratados por:') }}</p>
-										<p><strong>{{ __('Responsable:') }}</strong> {{ __('Arquisset de Construccio S.L.') }}</p>
-										<p><strong>{{ __('CIF:') }}</strong> {{ __('B63714778') }}</p>
-										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Calle Avenir 8, 08006 Barcelona, España.') }}
+										<p><strong>{{ __('Responsable:') }}</strong> {{ __('Tec Container Srl') }}</p>
+										<p><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico de contacto:') }}</strong> <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>
@@ -177,12 +177,12 @@
 										</ul>
 										<p>{{ __('Para ejercer estos derechos deberá enviarse una solicitud, indicando claramente el derecho que desea ejercer, a:') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<p>{{ __('El Responsable podrá solicitar información adicional para verificar la identidad del solicitante cuando resulte necesario.') }}</p>
 										<p>{{ __('Si el usuario considera que sus derechos no han sido respetados, podrá presentar una reclamación ante la') }} <strong>{{ __('Agencia Española de Protección de Datos (AEPD)') }}</strong>.</p>
 										<h2>{{ __('9. Seguridad de la información') }}</h2>
-										<p>{{ __('Arquisset de Construccio S.L. aplica medidas técnicas y organizativas apropiadas para proteger los datos personales frente a pérdida, destrucción, alteración, acceso no autorizado o cualquier otro tratamiento ilícito, teniendo en cuenta el estado de la técnica, la naturaleza de los datos y los riesgos existentes.') }}</p>
+										<p>{{ __('Tec Container Srl aplica medidas técnicas y organizativas apropiadas para proteger los datos personales frente a pérdida, destrucción, alteración, acceso no autorizado o cualquier otro tratamiento ilícito, teniendo en cuenta el estado de la técnica, la naturaleza de los datos y los riesgos existentes.') }}</p>
 										<p>{{ __('No obstante, ningún sistema de transmisión o almacenamiento de información puede garantizar una seguridad absoluta.') }}</p>
 										<h2>{{ __('10. Cookies') }}</h2>
 										<p>{{ __('Este sitio web utiliza cookies técnicas, analíticas y, en su caso, publicitarias.') }}</p>
@@ -195,11 +195,11 @@
 										<p>{{ __('Las modificaciones serán publicadas en esta misma página y producirán efectos desde su publicación.') }}</p>
 										<h2>{{ __('13. Contacto') }}</h2>
 										<p>{{ __('Para cualquier consulta relacionada con la protección de datos personales puede contactar con:') }}</p>
-										<p><strong>{{ __('Arquisset de Construccio S.L.') }}</strong></p>
-										<p>{{ __('Calle Avenir 8') }}</p>
+										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
+										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p>{{ __('Correo electrónico:') }} <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<p>{{ __('Sitio web:') }} <a href="../">{{ __('https://domaine.it') }}</a></p>
 									</div>

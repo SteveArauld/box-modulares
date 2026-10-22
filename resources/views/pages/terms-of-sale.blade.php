@@ -40,15 +40,15 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Objeto') }}</h2>
 										<p class="isSelectedEnd">{{ __('Las presentes Condiciones Generales de Venta regulan la compra de productos realizada a través del sitio web') }} <a
-												href="../"><strong>{{ __('https://domaine.it') }}</strong></a>{{ __(', titularidad de') }} <strong>{{ __('Arquisset de Construccio S.L.') }}</strong></p>
+												href="../"><strong>{{ __('https://domaine.it') }}</strong></a>{{ __(', titularidad de') }} <strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p class="isSelectedEnd">{{ __('La realización de un pedido implica la aceptación plena de las presentes condiciones.') }}</p>
 										<h2>{{ __('2. Identificación del vendedor') }}</h2>
-										<p class="isSelectedEnd"><strong>{{ __('Titular:') }}</strong> {{ __('Arquisset de Construccio S.L.') }}
+										<p class="isSelectedEnd"><strong>{{ __('Titular:') }}</strong> {{ __('Tec Container Srl') }}
 										</p>
-										<p class="isSelectedEnd"><strong>{{ __('CIF:') }}</strong> {{ __('B63714778') }}</p>
-										<p class="isSelectedEnd"><strong>{{ __('Domicilio social:') }}</strong> {{ __('Calle Avenir 8, 08006 Barcelona, España.') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}</p>
 										<p class="isSelectedEnd"><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<p class="isSelectedEnd"><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>
@@ -87,7 +87,7 @@
 										<p class="isSelectedEnd">{{ __('Todos los precios se muestran en euros (€).') }}</p>
 										<p class="isSelectedEnd">{{ __('Salvo indicación expresa en contrario, los precios incluyen el IVA aplicable conforme a la legislación española.') }}</p>
 										<p class="isSelectedEnd">{{ __('Los gastos de transporte, montaje, instalación, seguros u otros servicios adicionales se indicarán claramente antes de finalizar el pedido.') }}</p>
-										<p class="isSelectedEnd">{{ __('Arquisset de Construccio S.L. podrá modificar los precios en cualquier momento, sin que ello afecte a los pedidos ya confirmados.') }}</p>
+										<p class="isSelectedEnd">{{ __('Tec Container Srl podrá modificar los precios en cualquier momento, sin que ello afecte a los pedidos ya confirmados.') }}</p>
 										<h2>{{ __('6. Proceso de compra') }}</h2>
 										<p class="isSelectedEnd">{{ __('Para realizar una compra el cliente deberá:') }}</p>
 										<ol start="1" data-spread="false">
@@ -127,7 +127,7 @@
 											{{ __('desde la recepción del pedido para desistir del contrato sin necesidad de justificar su decisión.') }}</p>
 										<p class="isSelectedEnd">{{ __('Para ejercer este derecho deberá comunicarlo por escrito a:') }}</p>
 										<p class="isSelectedEnd"><a
-												href="mailto:contacto@novaterra.es"><strong>contacto@novaterra.es</strong></a>
+												href="mailto:contacto@teccontainersrl.com"><strong>contacto@teccontainersrl.com</strong></a>
 										</p>
 										<p class="isSelectedEnd">{{ __('El producto deberá devolverse:') }}</p>
 										<ul data-spread="false">
@@ -153,14 +153,14 @@
 										<p class="isSelectedEnd">{{ __('En caso de falta de conformidad, el consumidor tendrá derecho, según corresponda, a la reparación, sustitución, rebaja del precio o resolución del contrato, de acuerdo con la legislación aplicable.') }}</p>
 										<p class="isSelectedEnd">{{ __('La garantía no cubre daños derivados del uso indebido, accidentes, desgaste normal o manipulaciones no autorizadas.') }}</p>
 										<h2>{{ __('13. Responsabilidad') }}</h2>
-										<p class="isSelectedEnd">{{ __('Arquisset de Construccio S.L. no será responsable de los retrasos o incumplimientos debidos a causas de fuerza mayor, caso fortuito o circunstancias ajenas a su control.') }}</p>
+										<p class="isSelectedEnd">{{ __('Tec Container Srl no será responsable de los retrasos o incumplimientos debidos a causas de fuerza mayor, caso fortuito o circunstancias ajenas a su control.') }}</p>
 										<p class="isSelectedEnd">{{ __('La responsabilidad del vendedor quedará limitada al importe efectivamente abonado por el cliente, salvo disposición legal en contrario.') }}</p>
 										<h2>{{ __('14. Protección de datos') }}</h2>
 										<p class="isSelectedEnd">{{ __('Los datos personales facilitados durante el proceso de compra serán tratados conforme al Reglamento (UE) 2016/679 (RGPD), la Ley Orgánica 3/2018 (LOPDGDD) y la Política de Privacidad del sitio web.') }}</p>
 										<h2>{{ __('15. Atención al cliente') }}</h2>
 										<p class="isSelectedEnd">{{ __('Para cualquier consulta relacionada con pedidos, devoluciones, garantías o reclamaciones, el cliente podrá contactar con:') }}</p>
 										<p class="isSelectedEnd"><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<h2>{{ __('16. Resolución de litigios') }}</h2>
 										<p class="isSelectedEnd">{{ __('En caso de conflicto, las partes intentarán resolverlo de forma amistosa.') }}</p>

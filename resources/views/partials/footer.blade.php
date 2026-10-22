@@ -23,8 +23,8 @@
 
                                         <div class="wd-image text-left">
                                             <a href="{{ url('/') }}" aria-label="{{ __('Enlace de imagen') }}">
-                                                <img width="150" height="40"
-                                                    src="{{ asset('assets/images/logo/nova-terra-logo.svg') }}"
+                                                <img width="150" height="38"
+                                                    src="{{ asset('assets/images/logo/tec-container-logo-white.png') }}"
                                                     class="attachment-167x24 size-167x24" alt="{{ config('app.name') }}"
                                                     decoding="async" loading="lazy" /> </a>
                                         </div>
@@ -284,15 +284,15 @@
                             data-id="b553f7d" data-element_type="widget" data-e-type="widget"
                             data-widget_type="html.default">
                             <div class="mm-footer-company">
-                                <strong class="mm-footer-company-name">{{ __('Arquisset de Construcció S.L.') }}</strong>
-                                <p class="mm-footer-address">{{ __('Calle Avenir 8') }}<br>{{ __('08006 Barcelona, España') }}</p>
+                                <strong class="mm-footer-company-name">{{ __('Tec Container Srl') }}</strong>
+                                <p class="mm-footer-address">{{ __('Via Fieschi 1/7') }}<br>{{ __('08006 Barcelona, España') }}</p>
                                 <p class="mm-footer-contact">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
                                         stroke="currentColor" stroke-width="1.5">
                                         <path
                                             d="M3 6l9 7 9-7M3 6v12a1 1 0 001 1h16a1 1 0 001-1V6a1 1 0 00-1-1H4a1 1 0 00-1 1z" />
                                     </svg>
-                                    <a href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+                                    <a href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
                                 </p>
                                 <p class="mm-footer-contact">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
@@ -300,7 +300,7 @@
                                         <circle cx="12" cy="12" r="9" />
                                         <path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18" />
                                     </svg>
-                                    <a href="{{ url('/') }}">{{ __('novaterra.es') }}</a>
+                                    <a href="{{ url('/') }}">{{ __('teccontainersrl.com') }}</a>
                                 </p>
                                 <p class="mm-footer-contact">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
@@ -324,7 +324,7 @@
                         <div class="elementor-widget-container">
                             <div class="wd-text-block reset-last-child text-left">
 
-                                <p>{{ __('© 2026 Arquisset de Construccio S.L. Todos los derechos reservados.') }}</p>
+                                <p>{{ __('© 2026 Tec Container Srl Todos los derechos reservados.') }}</p>
                             </div>
                         </div>
                     </div>
@@ -334,9 +334,32 @@
                         <div class="elementor-widget-container">
 
                             <div class="wd-image text-left">
-                                <img width="250" height="32"
-                                    src="/wp-content/uploads/2026/04/edc-footer-payments.png"
-                                    class="attachment-full size-full" alt="" decoding="async" loading="lazy" />
+                                @if ($currentLocale === 'it')
+                                    @php
+                                        $italianPaymentLogos = [
+                                            'visa.png', 'mastercard.png', 'paypal.svg',
+                                            'klarna.png', 'satispay.webp', 'scalapay.png',
+                                        ];
+                                    @endphp
+                                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                                        @foreach ($italianPaymentLogos as $logo)
+                                            @php
+                                                // scalapay.png is solid black on a transparent
+                                                // background, invisible on the dark footer —
+                                                // invert it to white; the other logos already
+                                                // have enough contrast in their own colors.
+                                                $needsWhiteInvert = $logo === 'scalapay.png';
+                                            @endphp
+                                            <img height="18" src="{{ asset('assets/images/payments/it/'.$logo) }}"
+                                                alt="{{ pathinfo($logo, PATHINFO_FILENAME) }}" decoding="async" loading="lazy"
+                                                style="height:18px;width:auto;{{ $needsWhiteInvert ? ' filter:brightness(0) invert(1);' : '' }}" />
+                                        @endforeach
+                                    </div>
+                                @else
+                                    <img width="250" height="32"
+                                        src="/wp-content/uploads/2026/04/edc-footer-payments.png"
+                                        class="attachment-full size-full" alt="" decoding="async" loading="lazy" />
+                                @endif
                             </div>
 
                         </div>

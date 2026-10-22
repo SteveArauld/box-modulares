@@ -2903,3 +2903,19 @@
         font-size: 28px;
     }
 }
+
+/* The main nav can wrap to several lines (many top-level categories, or
+   longer translated labels). --wd-header-general-h is a fixed snapshot
+   value, so letting height/max-height clamp to it makes wrapped lines
+   overflow and overlap the logo. Keep that value as a floor, not a cap. */
+.whb-general-header-inner {
+    height: auto !important;
+    min-height: var(--wd-header-general-h);
+    max-height: none !important;
+}
+
+@media(max-width: 1024px) {
+    .whb-general-header-inner {
+        min-height: var(--wd-header-general-sm-h);
+    }
+}

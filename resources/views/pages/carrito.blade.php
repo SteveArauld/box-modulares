@@ -877,7 +877,7 @@
                                                 src="/wp-content/uploads/2026/04/edc-hero-section-bg.jpg"
                                                 class="attachment-full size-full" alt="" decoding="async"
                                                 fetchpriority="high"
-                                                srcset="https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg.jpg 1920w, https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg-150x32.jpg 150w, https://novaterra.es/wp-content/uploads/2026/04/edc-hero-section-bg-1200x256.jpg 1200w"
+                                                srcset="https://teccontainersrl.com/wp-content/uploads/2026/04/edc-hero-section-bg.jpg 1920w, https://teccontainersrl.com/wp-content/uploads/2026/04/edc-hero-section-bg-150x32.jpg 150w, https://teccontainersrl.com/wp-content/uploads/2026/04/edc-hero-section-bg-1200x256.jpg 1200w"
                                                 sizes="(max-width: 1920px) 100vw, 1920px" />
                                         </div>
                                         <div class="container">

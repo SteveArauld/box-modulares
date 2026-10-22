@@ -44,7 +44,7 @@
 										<p>{{ __('De acuerdo con el') }} <strong>{{ __('Real Decreto Legislativo 1/2007') }}</strong>{{ __(', el consumidor dispone de un plazo de') }} <strong>{{ __('14 días naturales') }}</strong> {{ __('desde la recepción del pedido para ejercer su derecho de desistimiento sin necesidad de justificar su decisión.') }}</p>
 										<p>{{ __('Para ejercer este derecho, deberá comunicar su decisión mediante un correo electrónico a:') }}</p>
 										<p><strong><a
-													href="mailto:contacto@novaterra.es">contacto@novaterra.es</a></strong>
+													href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a></strong>
 										</p>
 										<p>{{ __('indicando:') }}</p>
 										<ul>
@@ -82,7 +82,7 @@
 												</p>
 											</li>
 										</ul>
-										<p>{{ __('Arquisset de Construccio S.L. se reserva el derecho de rechazar devoluciones que no cumplan estas condiciones cuando la pérdida de valor del producto sea consecuencia de una manipulación distinta de la necesaria para comprobar su naturaleza, características o funcionamiento.') }}</p>
+										<p>{{ __('Tec Container Srl se reserva el derecho de rechazar devoluciones que no cumplan estas condiciones cuando la pérdida de valor del producto sea consecuencia de una manipulación distinta de la necesaria para comprobar su naturaleza, características o funcionamiento.') }}</p>
 										<h2>{{ __('4. Productos excluidos del derecho de desistimiento') }}</h2>
 										<p>{{ __('De conformidad con la legislación vigente, no podrán devolverse, entre otros:') }}
 										</p>
@@ -105,7 +105,7 @@
 										</ul>
 										<h2>{{ __('5. Productos dañados o defectuosos') }}</h2>
 										<p>{{ __('Si el cliente recibe un producto dañado durante el transporte, defectuoso o diferente al solicitado, deberá comunicar la incidencia en el menor plazo posible enviando un correo electrónico a') }} <strong><a
-													href="mailto:contacto@novaterra.es">contacto@novaterra.es</a></strong>.
+													href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a></strong>.
 										</p>
 										<p>{{ __('La comunicación deberá incluir:') }}</p>
 										<ul>
@@ -119,15 +119,15 @@
 												<p>{{ __('Fotografías del producto y del embalaje.') }}</p>
 											</li>
 										</ul>
-										<p>{{ __('Una vez comprobada la incidencia, Arquisset de Construccio S.L. ofrecerá la reparación, sustitución, devolución del importe o cualquier otra solución prevista por la legislación vigente.') }}</p>
+										<p>{{ __('Una vez comprobada la incidencia, Tec Container Srl ofrecerá la reparación, sustitución, devolución del importe o cualquier otra solución prevista por la legislación vigente.') }}</p>
 										<h2>{{ __('6. Procedimiento de devolución') }}</h2>
 										<p>{{ __('Una vez autorizada la devolución, el cliente recibirá las instrucciones necesarias para realizar el envío del producto.') }}</p>
 										<p>{{ __('Se recomienda conservar el justificante del envío hasta la finalización del proceso.') }}</p>
 										<h2>{{ __('7. Gastos de devolución') }}</h2>
 										<p>{{ __('Cuando la devolución se deba al ejercicio del derecho de desistimiento,') }}
-											<strong>{{ __('los gastos directos del envío de devolución serán asumidos por el cliente') }}</strong>{{ __(', salvo que la legislación aplicable disponga otra cosa o que Arquisset de Construccio S.L. indique expresamente lo contrario.') }}</p>
+											<strong>{{ __('los gastos directos del envío de devolución serán asumidos por el cliente') }}</strong>{{ __(', salvo que la legislación aplicable disponga otra cosa o que Tec Container Srl indique expresamente lo contrario.') }}</p>
 										<p>{{ __('En caso de error en el envío, producto defectuoso o falta de conformidad,') }}
-											<strong>{{ __('Arquisset de Construccio S.L. asumirá los gastos de devolución y, en su caso, de un nuevo envío') }}</strong>.</p>
+											<strong>{{ __('Tec Container Srl asumirá los gastos de devolución y, en su caso, de un nuevo envío') }}</strong>.</p>
 										<h2>{{ __('8. Reembolsos') }}</h2>
 										<p>{{ __('Una vez recibidos los productos y comprobado su estado, el reembolso se efectuará utilizando el mismo medio de pago empleado por el cliente, salvo acuerdo expreso en contrario.') }}</p>
 										<p>{{ __('El reembolso se realizará') }} <strong>{{ __('en un plazo máximo de 14 días naturales') }}</strong> {{ __('desde la recepción de la comunicación del desistimiento, pudiendo ser retenido hasta recibir los productos o hasta que el cliente aporte una prueba suficiente de su devolución, conforme a la legislación vigente.') }}</p>
@@ -155,11 +155,11 @@
 										</ul>
 										<h2>{{ __('11. Atención al cliente') }}</h2>
 										<p>{{ __('Para cualquier consulta relacionada con devoluciones, cambios o reembolsos, puede contactar con:') }}</p>
-										<p><strong>{{ __('Arquisset de Construccio S.L.') }}</strong></p>
-										<p>{{ __('Calle Avenir 8') }}</p>
+										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
+										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@novaterra.es">contacto@novaterra.es</a>
+												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

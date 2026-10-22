@@ -51,6 +51,30 @@ class CatalogSeeder extends Seeder
                 $categoriesBySpanishSlug[$spanishSlug] = $category;
             }
 
+            // Second pass: resolve each category's parent now that every
+            // category row exists, since a child can appear before its
+            // parent in the JSON file.
+            foreach ($categories as $categoryData) {
+                $spanishSlug = $categoryData['slug']['es'] ?? null;
+                $parentSlug = $categoryData['parent'] ?? null;
+
+                if ($parentSlug === null) {
+                    continue;
+                }
+
+                $category = $categoriesBySpanishSlug[$spanishSlug] ?? null;
+                $parent = $categoriesBySpanishSlug[$parentSlug] ?? null;
+
+                if (! $category instanceof Category || ! $parent instanceof Category) {
+                    throw new UnexpectedValueException("Catégorie parente introuvable pour le slug: {$parentSlug}");
+                }
+
+                if ($category->parent_id !== $parent->id) {
+                    $category->parent_id = $parent->id;
+                    $category->save();
+                }
+            }
+
             $existingProductsByIdentity = [];
 
             foreach (Product::query()->get() as $product) {
