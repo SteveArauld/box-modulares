@@ -51,7 +51,7 @@
 
                                                 <div class="title-after_title reset-last-child wd-fontsize-xs">
                                                     <p>{{ __('Si tiene alguna pregunta sobre nuestros productos, un pedido, un envío, una devolución o cualquier otro asunto relacionado con nuestros servicios, nuestro equipo de atención al cliente estará encantado de ayudarle.') }}</p>
-                                                    <p>{{ __('Puede ponerse en contacto con nosotros a través de los siguientes medios:') }}</p>
+                                                    <p>{{ __('Puede ponerse en contatto con nosotros a través de los siguientes medios:') }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,7 +68,7 @@
 
                                                     <div class="liner-continer">
                                                         <h4 class="woodmart-title-container title wd-fontsize-l">
-                                                            {{ __('Datos de contacto') }}</h4>
+                                                            {{ __('Datos de contatto') }}</h4>
                                                     </div>
 
                                                 </div>
@@ -98,7 +98,7 @@
                                                         <div class="wd-text-block reset-last-child text-left">
 
                                                             <p><a
-                                                                    href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+                                                                    href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -197,7 +197,7 @@
 
                                                 <div class="liner-continer">
                                                     <h4 class="woodmart-title-container title wd-fontsize-l">
-                                                        {{ __('Formulario de contacto') }}</h4>
+                                                        {{ __('Formulario de contatto') }}</h4>
                                                 </div>
 
                                             </div>
@@ -232,7 +232,7 @@
                                                             style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
                                                             <legend class="ff_screen_reader_title"
                                                                 style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">
-                                                                {{ __('Formulario de Contacto') }}</legend>
+                                                                {{ __('Formulario de contatto') }}</legend>
                                                             <div data-type="name-element" data-name="names"
                                                                 class=" ff-field_container ff-name-field-wrapper">
                                                                 <div class='ff-t-container'>

@@ -43,8 +43,8 @@
 										<p><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
 										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
 										</p>
-										<p><strong>{{ __('Correo electrónico de contacto:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+										<p><strong>{{ __('Correo electrónico de contatto:') }}</strong> <a
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>
@@ -177,7 +177,7 @@
 										</ul>
 										<p>{{ __('Para ejercer estos derechos deberá enviarse una solicitud, indicando claramente el derecho que desea ejercer, a:') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p>{{ __('El Responsable podrá solicitar información adicional para verificar la identidad del solicitante cuando resulte necesario.') }}</p>
 										<p>{{ __('Si el usuario considera que sus derechos no han sido respetados, podrá presentar una reclamación ante la') }} <strong>{{ __('Agencia Española de Protección de Datos (AEPD)') }}</strong>.</p>
@@ -193,13 +193,13 @@
 										<h2>{{ __('12. Modificaciones de la Política de Privacidad') }}</h2>
 										<p>{{ __('El Responsable podrá actualizar la presente Política de Privacidad para adaptarla a cambios legislativos, tecnológicos o en la actividad del sitio web.') }}</p>
 										<p>{{ __('Las modificaciones serán publicadas en esta misma página y producirán efectos desde su publicación.') }}</p>
-										<h2>{{ __('13. Contacto') }}</h2>
+										<h2>{{ __('13. contatto') }}</h2>
 										<p>{{ __('Para cualquier consulta relacionada con la protección de datos personales puede contactar con:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p>{{ __('Correo electrónico:') }} <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p>{{ __('Sitio web:') }} <a href="../">{{ __('https://domaine.it') }}</a></p>
 									</div>

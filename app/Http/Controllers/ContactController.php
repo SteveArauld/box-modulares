@@ -28,7 +28,7 @@ class ContactController extends Controller
                 messageBody: $data['message'],
             ));
         } catch (\Throwable $e) {
-            Log::error('No se pudo enviar el mensaje de contacto: '.$e->getMessage());
+            Log::error('No se pudo enviar el mensaje de contatto: '.$e->getMessage());
         }
 
         return back()->with('status', 'Gracias por tu mensaje, te responderemos lo antes posible.');

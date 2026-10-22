@@ -87,7 +87,7 @@
                                                                                 <a
                                                                                     href="{{ route('shop.contact') }}">
 
-                                                                                    {{ __('Contacto') }}
+                                                                                    {{ __('contatto') }}
                                                                                 </a>
                                                                             </li>
 
@@ -274,7 +274,7 @@
 
 
                                     <div class="liner-continer">
-                                        <h4 class="woodmart-title-container title wd-fontsize-l">{{ __('Contacto') }}</h4>
+                                        <h4 class="woodmart-title-container title wd-fontsize-l">{{ __('contatto') }}</h4>
                                     </div>
 
                                 </div>
@@ -292,7 +292,7 @@
                                         <path
                                             d="M3 6l9 7 9-7M3 6v12a1 1 0 001 1h16a1 1 0 001-1V6a1 1 0 00-1-1H4a1 1 0 00-1 1z" />
                                     </svg>
-                                    <a href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+                                    <a href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
                                 </p>
                                 <p class="mm-footer-contact">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none"

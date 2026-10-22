@@ -101,13 +101,13 @@
 										<h2>{{ __('12. Modificaciones') }}</h2>
 										<p>{{ __('Tec Container Srl podrá modificar la presente Política de Pago para adaptarla a cambios legislativos, tecnológicos o comerciales.') }}</p>
 										<p>{{ __('Las modificaciones serán publicadas en esta página y serán aplicables desde su fecha de publicación.') }}</p>
-										<h2>{{ __('13. Contacto') }}</h2>
-										<p>{{ __('Para cualquier consulta relacionada con los pagos, puede ponerse en contacto con nosotros:') }}</p>
+										<h2>{{ __('13. contatto') }}</h2>
+										<p>{{ __('Para cualquier consulta relacionada con los pagos, puede ponerse en contatto con nosotros:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

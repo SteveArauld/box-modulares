@@ -48,7 +48,7 @@
 										<p class="isSelectedEnd"><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
 										<p class="isSelectedEnd"><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}</p>
 										<p class="isSelectedEnd"><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p class="isSelectedEnd"><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>
@@ -127,7 +127,7 @@
 											{{ __('desde la recepción del pedido para desistir del contrato sin necesidad de justificar su decisión.') }}</p>
 										<p class="isSelectedEnd">{{ __('Para ejercer este derecho deberá comunicarlo por escrito a:') }}</p>
 										<p class="isSelectedEnd"><a
-												href="mailto:contacto@teccontainer.eu"><strong>contacto@teccontainer.eu</strong></a>
+												href="mailto:contatto@teccontainer.eu"><strong>contatto@teccontainer.eu</strong></a>
 										</p>
 										<p class="isSelectedEnd">{{ __('El producto deberá devolverse:') }}</p>
 										<ul data-spread="false">
@@ -160,7 +160,7 @@
 										<h2>{{ __('15. Atención al cliente') }}</h2>
 										<p class="isSelectedEnd">{{ __('Para cualquier consulta relacionada con pedidos, devoluciones, garantías o reclamaciones, el cliente podrá contactar con:') }}</p>
 										<p class="isSelectedEnd"><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<h2>{{ __('16. Resolución de litigios') }}</h2>
 										<p class="isSelectedEnd">{{ __('En caso de conflicto, las partes intentarán resolverlo de forma amistosa.') }}</p>

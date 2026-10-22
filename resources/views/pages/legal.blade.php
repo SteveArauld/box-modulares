@@ -44,7 +44,7 @@
 										<p>{{ __('De acuerdo con el') }} <strong>{{ __('Real Decreto Legislativo 1/2007') }}</strong>{{ __(', el consumidor dispone de un plazo de') }} <strong>{{ __('14 días naturales') }}</strong> {{ __('desde la recepción del pedido para ejercer su derecho de desistimiento sin necesidad de justificar su decisión.') }}</p>
 										<p>{{ __('Para ejercer este derecho, deberá comunicar su decisión mediante un correo electrónico a:') }}</p>
 										<p><strong><a
-													href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a></strong>
+													href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></strong>
 										</p>
 										<p>{{ __('indicando:') }}</p>
 										<ul>
@@ -105,7 +105,7 @@
 										</ul>
 										<h2>{{ __('5. Productos dañados o defectuosos') }}</h2>
 										<p>{{ __('Si el cliente recibe un producto dañado durante el transporte, defectuoso o diferente al solicitado, deberá comunicar la incidencia en el menor plazo posible enviando un correo electrónico a') }} <strong><a
-													href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a></strong>.
+													href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></strong>.
 										</p>
 										<p>{{ __('La comunicación deberá incluir:') }}</p>
 										<ul>
@@ -132,7 +132,7 @@
 										<p>{{ __('Una vez recibidos los productos y comprobado su estado, el reembolso se efectuará utilizando el mismo medio de pago empleado por el cliente, salvo acuerdo expreso en contrario.') }}</p>
 										<p>{{ __('El reembolso se realizará') }} <strong>{{ __('en un plazo máximo de 14 días naturales') }}</strong> {{ __('desde la recepción de la comunicación del desistimiento, pudiendo ser retenido hasta recibir los productos o hasta que el cliente aporte una prueba suficiente de su devolución, conforme a la legislación vigente.') }}</p>
 										<h2>{{ __('9. Cambios de productos') }}</h2>
-										<p>{{ __('Si el cliente desea cambiar un producto por otro diferente, deberá ponerse en contacto con nuestro servicio de atención al cliente.') }}</p>
+										<p>{{ __('Si el cliente desea cambiar un producto por otro diferente, deberá ponerse en contatto con nuestro servicio de atención al cliente.') }}</p>
 										<p>{{ __('Los cambios estarán sujetos a la disponibilidad del nuevo producto solicitado.') }}</p>
 										<p>{{ __('En caso de diferencia de precio, se realizará el correspondiente abono o cargo.') }}</p>
 										<h2>{{ __('10. Garantía legal') }}</h2>
@@ -159,7 +159,7 @@
 										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

@@ -49,7 +49,7 @@
 										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>
@@ -83,7 +83,7 @@
 										</p>
 										<p>{{ __('El usuario será responsable de todas las actividades realizadas desde su cuenta.') }}</p>
 										<p>{{ __('En caso de uso no autorizado, deberá comunicarlo inmediatamente a') }} <strong><a
-													href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a></strong>.
+													href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></strong>.
 										</p>
 										<h2>{{ __('6. Disponibilidad del servicio') }}</h2>
 										<p>{{ __('Tec Container Srl realizará los esfuerzos razonables para mantener el Sitio Web disponible de forma continua.') }}</p>
@@ -126,13 +126,13 @@
 										<h2>{{ __('14. Legislación aplicable y jurisdicción') }}</h2>
 										<p>{{ __('Las presentes Condiciones Generales de Uso se rigen por la legislación española.') }}</p>
 										<p>{{ __('En caso de conflicto o controversia, las partes se someterán a los Juzgados y Tribunales competentes conforme a la normativa española sobre consumidores y usuarios, sin perjuicio de los derechos que correspondan al consumidor según la legislación aplicable.') }}</p>
-										<h2>{{ __('15. Contacto') }}</h2>
+										<h2>{{ __('15. contatto') }}</h2>
 										<p>{{ __('Para cualquier consulta relacionada con estas Condiciones Generales de Uso, puede contactar con:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

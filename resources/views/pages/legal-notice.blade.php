@@ -44,7 +44,7 @@
 										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
+												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

@@ -22,7 +22,7 @@ class ContactMessageMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "Nuevo mensaje de contacto: {$this->contactSubject}",
+            subject: "Nuevo mensaje de contatto: {$this->contactSubject}",
             replyTo: [$this->email],
         );
     }
