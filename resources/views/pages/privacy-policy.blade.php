@@ -40,14 +40,22 @@
 										<h2>{{ __('1. Responsable del tratamiento') }}</h2>
 										<p>{{ __('De conformidad con el Reglamento (UE) 2016/679 (RGPD), la Ley Orgánica 3/2018 (LOPDGDD) y demás normativa aplicable, se informa a los usuarios de que los datos personales facilitados a través del sitio web serán tratados por:') }}</p>
 										<p><strong>{{ __('Responsable:') }}</strong> {{ __('Tec Container Srl') }}</p>
-										<p><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Forma jurídica:') }}</strong> {{ __('Società a Responsabilità Limitata (Srl)') }}</p>
+										<p><strong>{{ __('Partita IVA / Codice Fiscale:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Fecha de inscripción:') }}</strong> {{ __('26 de febrero de 1987') }}</p>
+										<p><strong>{{ __('Registro Mercantil:') }}</strong> {{ __('CCIAA di Genova') }}</p>
+										<p><strong>{{ __('PEC:') }}</strong> {{ __('teccontainer@pec.teccontainer.it') }}</p>
+										<p><strong>{{ __('Código SDI:') }}</strong> {{ __('SUBM70N') }}</p>
+										<p><strong>{{ __('Capital social:') }}</strong> {{ __('10.400 €') }}</p>
 										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
+										</p>
+										<p><strong>{{ __('Centro de producción:') }}</strong> {{ __('Via Rocca dei Corvi 7, 16161 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico de contatto:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 										<h2>{{ __('2. Finalidad del tratamiento') }}</h2>
 										<p>{{ __('Los datos personales serán tratados para las siguientes finalidades:') }}</p>
 										<ul>
@@ -197,11 +205,11 @@
 										<p>{{ __('Para cualquier consulta relacionada con la protección de datos personales puede contactar con:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>
-										<p>{{ __('08006 Barcelona, España') }}</p>
+										<p>{{ __('16121 Genova (GE), Italia') }}</p>
 										<p>{{ __('Correo electrónico:') }} <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
-										<p>{{ __('Sitio web:') }} <a href="../">{{ __('https://domaine.it') }}</a></p>
+										<p>{{ __('Sitio web:') }} <a href="../">{{ __('https://teccontainer.eu') }}</a></p>
 									</div>
 								</div>
 							</div>

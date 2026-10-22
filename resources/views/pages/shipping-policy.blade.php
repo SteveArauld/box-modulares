@@ -39,7 +39,7 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Ámbito de aplicación') }}</h2>
 										<p>{{ __('La presente Política de Envíos regula las condiciones de preparación, expedición y entrega de los productos adquiridos a través del sitio web') }}
-											<strong><a href="../">{{ __('https://domaine.it') }}</a></strong>.</p>
+											<strong><a href="../">{{ __('https://teccontainer.eu') }}</a></strong>.</p>
 										<h2>{{ __('2. Zonas de envío') }}</h2>
 										<p>{{ __('Tec Container Srl realiza envíos a los territorios indicados durante el proceso de compra.') }}</p>
 										<p>{{ __('Si desea realizar un envío a un destino no disponible en la tienda online, puede ponerse en contatto con nuestro servicio de atención al cliente en:') }}
@@ -49,7 +49,7 @@
 										</p>
 										<h2>{{ __('3. Gastos de envío') }}</h2>
 										<p><strong>{{ __('Todos los pedidos realizados en') }} <a
-													href="../">{{ __('https://domaine.it') }}</a> {{ __('disfrutan de envío gratuito.') }}</strong></p>
+													href="../">{{ __('https://teccontainer.eu') }}</a> {{ __('disfrutan de envío gratuito.') }}</strong></p>
 										<p>{{ __('No se aplican gastos de envío adicionales durante el proceso de compra, salvo que se indique expresamente para servicios especiales solicitados por el cliente, como entregas urgentes, montajes o servicios personalizados.') }}</p>
 										<h2>{{ __('4. Preparación del pedido') }}</h2>
 										<p>{{ __('Los pedidos se preparan una vez confirmado el pago.') }}</p>
@@ -77,12 +77,12 @@
 										<p>{{ __('Para cualquier consulta relacionada con los envíos, puede contactar con nuestro servicio de atención al cliente:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>
-										<p>{{ __('08006 Barcelona, España') }}</p>
+										<p>{{ __('16121 Genova (GE), Italia') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 									</div>
 								</div>
 							</div>

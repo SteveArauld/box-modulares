@@ -43,14 +43,22 @@
 										<h2>{{ __('2. Responsable') }}</h2>
 										<p><strong>{{ __('Responsable del sitio web:') }}</strong></p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
-										<p><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Forma jurídica:') }}</strong> {{ __('Società a Responsabilità Limitata (Srl)') }}</p>
+										<p><strong>{{ __('Partita IVA / Codice Fiscale:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Fecha de inscripción:') }}</strong> {{ __('26 de febrero de 1987') }}</p>
+										<p><strong>{{ __('Registro Mercantil:') }}</strong> {{ __('CCIAA di Genova') }}</p>
+										<p><strong>{{ __('PEC:') }}</strong> {{ __('teccontainer@pec.teccontainer.it') }}</p>
+										<p><strong>{{ __('Código SDI:') }}</strong> {{ __('SUBM70N') }}</p>
+										<p><strong>{{ __('Capital social:') }}</strong> {{ __('10.400 €') }}</p>
 										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
+										</p>
+										<p><strong>{{ __('Centro de producción:') }}</strong> {{ __('Via Rocca dei Corvi 7, 16161 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 										<h2>{{ __('3. Tipos de cookies utilizadas') }}</h2>
 										<p>{{ __('Este sitio web puede utilizar las siguientes categorías de cookies:') }}</p>
 										<h3>{{ __('Cookies técnicas') }}</h3>

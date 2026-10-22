@@ -6,6 +6,7 @@ use App\Http\Controllers\FeedController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ShopController;
+use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ShopController::class, 'home'])->name('home');
@@ -17,6 +18,10 @@ Route::get('/', [ShopController::class, 'home'])->name('home');
 Route::get('/flujo-productos.xml', [FeedController::class, 'googleShopping'])->name('feed.google-shopping');
 // Même contenu, mais forcé en téléchargement (pour l'import manuel "Charger un fichier").
 Route::get('/flujo-productos/descargar', [FeedController::class, 'googleShoppingDownload'])->name('feed.google-shopping.download');
+// Un flux par langue (es/it/de/pt), pour les marchés Merchant Center séparés par pays/langue.
+Route::get('/feeds/google-{locale}.xml', [FeedController::class, 'google'])
+    ->where('locale', implode('|', SetLocale::SUPPORTED_LOCALES))
+    ->name('feed.google.locale');
 
 Route::get('/idioma/{locale}', [LocaleController::class, 'switch'])->name('locale.switch');
 

@@ -40,18 +40,25 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Objeto') }}</h2>
 										<p class="isSelectedEnd">{{ __('Las presentes Condiciones Generales de Venta regulan la compra de productos realizada a través del sitio web') }} <a
-												href="../"><strong>{{ __('https://domaine.it') }}</strong></a>{{ __(', titularidad de') }} <strong>{{ __('Tec Container Srl') }}</strong></p>
+												href="../"><strong>{{ __('https://teccontainer.eu') }}</strong></a>{{ __(', titularidad de') }} <strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p class="isSelectedEnd">{{ __('La realización de un pedido implica la aceptación plena de las presentes condiciones.') }}</p>
 										<h2>{{ __('2. Identificación del vendedor') }}</h2>
 										<p class="isSelectedEnd"><strong>{{ __('Titular:') }}</strong> {{ __('Tec Container Srl') }}
 										</p>
-										<p class="isSelectedEnd"><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('Forma jurídica:') }}</strong> {{ __('Società a Responsabilità Limitata (Srl)') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('Partita IVA / Codice Fiscale:') }}</strong> {{ __('02877170106') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('Fecha de inscripción:') }}</strong> {{ __('26 de febrero de 1987') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('Registro Mercantil:') }}</strong> {{ __('CCIAA di Genova') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('PEC:') }}</strong> {{ __('teccontainer@pec.teccontainer.it') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('Código SDI:') }}</strong> {{ __('SUBM70N') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('Capital social:') }}</strong> {{ __('10.400 €') }}</p>
 										<p class="isSelectedEnd"><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}</p>
+										<p class="isSelectedEnd"><strong>{{ __('Centro de producción:') }}</strong> {{ __('Via Rocca dei Corvi 7, 16161 Genova (GE), Italia.') }}</p>
 										<p class="isSelectedEnd"><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p class="isSelectedEnd"><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 										<h2>{{ __('3. Productos') }}</h2>
 										<p class="isSelectedEnd">{{ __('Los productos comercializados incluyen, entre otros:') }}
 										</p>

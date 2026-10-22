@@ -39,7 +39,7 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Objeto') }}</h2>
 										<p>{{ __('La presente Política de Devoluciones y Reembolsos regula las condiciones aplicables a las devoluciones, cambios y reembolsos de los productos adquiridos a través del sitio web') }} <strong><a
-													href="../">{{ __('https://domaine.it') }}</a></strong>{{ __(', de conformidad con la normativa española y europea en materia de protección de los consumidores.') }}</p>
+													href="../">{{ __('https://teccontainer.eu') }}</a></strong>{{ __(', de conformidad con la normativa española y europea en materia de protección de los consumidores.') }}</p>
 										<h2>{{ __('2. Derecho de desistimiento') }}</h2>
 										<p>{{ __('De acuerdo con el') }} <strong>{{ __('Real Decreto Legislativo 1/2007') }}</strong>{{ __(', el consumidor dispone de un plazo de') }} <strong>{{ __('14 días naturales') }}</strong> {{ __('desde la recepción del pedido para ejercer su derecho de desistimiento sin necesidad de justificar su decisión.') }}</p>
 										<p>{{ __('Para ejercer este derecho, deberá comunicar su decisión mediante un correo electrónico a:') }}</p>
@@ -157,12 +157,12 @@
 										<p>{{ __('Para cualquier consulta relacionada con devoluciones, cambios o reembolsos, puede contactar con:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>
-										<p>{{ __('08006 Barcelona, España') }}</p>
+										<p>{{ __('16121 Genova (GE), Italia') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 										<h2>{{ __('12. Legislación aplicable') }}</h2>
 										<p>{{ __('La presente Política de Devoluciones y Reembolsos se rige por la legislación española y, en particular, por el') }} <strong>{{ __('Real Decreto Legislativo 1/2007') }}</strong>{{ __(', la') }} <strong>{{ __('Ley 34/2002 (LSSI-CE)') }}</strong> {{ __('y el') }}
 											<strong>{{ __('Reglamento (UE) 2016/679 (RGPD)') }}</strong>{{ __(', sin perjuicio de los derechos que correspondan a los consumidores conforme a la normativa de la Unión Europea.') }}</p>

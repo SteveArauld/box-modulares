@@ -40,19 +40,27 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Objeto') }}</h2>
 										<p>{{ __('Las presentes Condiciones Generales de Uso regulan el acceso, la navegación y la utilización del sitio web') }} <strong><a
-													href="../">{{ __('https://domaine.it') }}</a></strong> {{ __('(en adelante, el «Sitio Web»), titularidad de') }} <strong>{{ __('Tec Container Srl') }}</strong></p>
+													href="../">{{ __('https://teccontainer.eu') }}</a></strong> {{ __('(en adelante, el «Sitio Web»), titularidad de') }} <strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('El acceso y uso del Sitio Web implica la aceptación plena y sin reservas de las presentes Condiciones Generales de Uso.') }}</p>
 										<p>{{ __('Si el usuario no está de acuerdo con estas condiciones, deberá abstenerse de utilizar el Sitio Web.') }}</p>
 										<h2>{{ __('2. Identificación del titular') }}</h2>
 										<p><strong>{{ __('Titular:') }}</strong> {{ __('Tec Container Srl') }}</p>
-										<p><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Forma jurídica:') }}</strong> {{ __('Società a Responsabilità Limitata (Srl)') }}</p>
+										<p><strong>{{ __('Partita IVA / Codice Fiscale:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Fecha de inscripción:') }}</strong> {{ __('26 de febrero de 1987') }}</p>
+										<p><strong>{{ __('Registro Mercantil:') }}</strong> {{ __('CCIAA di Genova') }}</p>
+										<p><strong>{{ __('PEC:') }}</strong> {{ __('teccontainer@pec.teccontainer.it') }}</p>
+										<p><strong>{{ __('Código SDI:') }}</strong> {{ __('SUBM70N') }}</p>
+										<p><strong>{{ __('Capital social:') }}</strong> {{ __('10.400 €') }}</p>
 										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
+										</p>
+										<p><strong>{{ __('Centro de producción:') }}</strong> {{ __('Via Rocca dei Corvi 7, 16161 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 										<h2>{{ __('3. Acceso al sitio web') }}</h2>
 										<p>{{ __('El acceso al Sitio Web es gratuito, sin perjuicio de que la contratación de determinados productos o servicios esté sujeta al pago del precio correspondiente.') }}</p>
 										<p>{{ __('El usuario declara ser mayor de edad y disponer de capacidad legal suficiente para utilizar este Sitio Web y realizar compras.') }}</p>
@@ -130,12 +138,12 @@
 										<p>{{ __('Para cualquier consulta relacionada con estas Condiciones Generales de Uso, puede contactar con:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>
-										<p>{{ __('08006 Barcelona, España') }}</p>
+										<p>{{ __('16121 Genova (GE), Italia') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 									</div>
 								</div>
 							</div>

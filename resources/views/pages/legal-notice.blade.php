@@ -40,17 +40,25 @@
 										<h2>{{ __('1. Datos identificativos') }}</h2>
 										<p>{{ __('En cumplimiento de lo dispuesto en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa a los usuarios de los siguientes datos del titular del sitio web:') }}</p>
 										<p><strong>{{ __('Titular:') }}</strong> {{ __('Tec Container Srl') }}</p>
-										<p><strong>{{ __('CIF:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Forma jurídica:') }}</strong> {{ __('Società a Responsabilità Limitata (Srl)') }}</p>
+										<p><strong>{{ __('Partita IVA / Codice Fiscale:') }}</strong> {{ __('02877170106') }}</p>
+										<p><strong>{{ __('Fecha de inscripción:') }}</strong> {{ __('26 de febrero de 1987') }}</p>
+										<p><strong>{{ __('Registro Mercantil:') }}</strong> {{ __('CCIAA di Genova') }}</p>
+										<p><strong>{{ __('PEC:') }}</strong> {{ __('teccontainer@pec.teccontainer.it') }}</p>
+										<p><strong>{{ __('Código SDI:') }}</strong> {{ __('SUBM70N') }}</p>
+										<p><strong>{{ __('Capital social:') }}</strong> {{ __('10.400 €') }}</p>
 										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
+										</p>
+										<p><strong>{{ __('Centro de producción:') }}</strong> {{ __('Via Rocca dei Corvi 7, 16161 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 										<p>{{ __('En adelante, el «Titular».') }}</p>
 										<h2>{{ __('2. Objeto') }}</h2>
-										<p>{{ __('El presente Aviso Legal regula el acceso, navegación y utilización del sitio web') }} <a href="../">{{ __('https://domaine.it') }}</a>{{ __(', así como las responsabilidades derivadas de la utilización de sus contenidos, incluyendo textos, imágenes, diseños, logotipos, productos, servicios, bases de datos, software y cualquier otro material protegido por la legislación vigente.') }}</p>
+										<p>{{ __('El presente Aviso Legal regula el acceso, navegación y utilización del sitio web') }} <a href="../">{{ __('https://teccontainer.eu') }}</a>{{ __(', así como las responsabilidades derivadas de la utilización de sus contenidos, incluyendo textos, imágenes, diseños, logotipos, productos, servicios, bases de datos, software y cualquier otro material protegido por la legislación vigente.') }}</p>
 										<p>{{ __('El acceso al sitio web implica la aceptación plena y sin reservas de las presentes condiciones.') }}</p>
 										<h2>{{ __('3. Condiciones de uso') }}</h2>
 										<p>{{ __('El usuario se compromete a utilizar el sitio web de forma lícita, diligente y conforme a la legislación vigente, la buena fe, el orden público y el presente Aviso Legal.') }}</p>

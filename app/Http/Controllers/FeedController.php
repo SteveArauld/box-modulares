@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\SetLocale;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class FeedController extends Controller
 {
@@ -21,8 +23,32 @@ class FeedController extends Controller
      */
     public function googleShopping(Request $request): Response
     {
-        $locale = $request->query('locale', config('app.locale'));
+        return $this->buildFeed(
+            $request->query('locale', config('app.locale')),
+            $request->boolean('download'),
+        );
+    }
 
+    public function googleShoppingDownload(Request $request): Response
+    {
+        return $this->buildFeed($request->query('locale', config('app.locale')), true);
+    }
+
+    /**
+     * One feed per locale, for markets that want a dedicated Merchant Center
+     * feed per language instead of the single default-locale feed above.
+     */
+    public function google(Request $request, string $locale): Response
+    {
+        if (! in_array($locale, SetLocale::SUPPORTED_LOCALES, true)) {
+            throw new NotFoundHttpException;
+        }
+
+        return $this->buildFeed($locale, $request->boolean('download'));
+    }
+
+    private function buildFeed(string $locale, bool $download): Response
+    {
         $products = Product::query()
             ->with('category')
             ->whereHas('category', fn ($query) => $query->where('is_visible', true))
@@ -35,17 +61,10 @@ class FeedController extends Controller
 
         $headers = ['Content-Type' => 'application/xml; charset=UTF-8'];
 
-        if ($request->boolean('download')) {
-            $headers['Content-Disposition'] = 'attachment; filename="'.Str::slug(config('app.name')).'-google-shopping-feed.xml"';
+        if ($download) {
+            $headers['Content-Disposition'] = 'attachment; filename="'.Str::slug(config('app.name')).'-google-shopping-feed-'.$locale.'.xml"';
         }
 
         return response($xml, 200, $headers);
-    }
-
-    public function googleShoppingDownload(Request $request): Response
-    {
-        $request->merge(['download' => true]);
-
-        return $this->googleShopping($request);
     }
 }

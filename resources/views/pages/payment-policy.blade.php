@@ -39,7 +39,7 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Objeto') }}</h2>
 										<p>{{ __('La presente Política de Pago regula las condiciones aplicables a los pagos realizados en el sitio web') }} <strong><a
-													href="../">{{ __('https://domaine.it') }}</a></strong>{{ __(', titularidad de') }} <strong>{{ __('Tec Container Srl') }}</strong></p>
+													href="../">{{ __('https://teccontainer.eu') }}</a></strong>{{ __(', titularidad de') }} <strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Al realizar un pedido, el cliente acepta las condiciones establecidas en esta Política de Pago.') }}</p>
 										<h2>{{ __('2. Moneda') }}</h2>
 										<p>{{ __('Todos los precios publicados en el Sitio Web se expresan en') }} <strong>{{ __('euros (€)') }}</strong>.</p>
@@ -105,12 +105,12 @@
 										<p>{{ __('Para cualquier consulta relacionada con los pagos, puede ponerse en contatto con nosotros:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>
-										<p>{{ __('08006 Barcelona, España') }}</p>
+										<p>{{ __('16121 Genova (GE), Italia') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://domaine.it') }}</a></p>
+												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 									</div>
 								</div>
 							</div>

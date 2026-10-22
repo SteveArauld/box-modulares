@@ -285,7 +285,7 @@
                             data-widget_type="html.default">
                             <div class="mm-footer-company">
                                 <strong class="mm-footer-company-name">{{ __('Tec Container Srl') }}</strong>
-                                <p class="mm-footer-address">{{ __('Via Fieschi 1/7') }}<br>{{ __('08006 Barcelona, España') }}</p>
+                                <p class="mm-footer-address">{{ __('Via Fieschi 1/7') }}<br>{{ __('16121 Genova (GE), Italia') }}</p>
                                 <p class="mm-footer-contact">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
                                         stroke="currentColor" stroke-width="1.5">
