@@ -16,7 +16,7 @@
       "pt": "astilladoras-de-le-a",
       "en": "astilladoras-de-le-a"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -35,7 +35,7 @@
       "pt": "barbacoas",
       "en": "barbacoas"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -54,7 +54,7 @@
       "pt": "casas-m-viles-y-prefabricadas",
       "en": "casas-m-viles-y-prefabricadas"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -73,7 +73,7 @@
       "pt": "casetas-de-jard-n",
       "en": "casetas-de-jard-n"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -92,7 +92,7 @@
       "pt": "cenadores",
       "en": "cenadores"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -111,7 +111,7 @@
       "pt": "cortac-spedes-giro-cero",
       "en": "cortac-spedes-giro-cero"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -130,7 +130,7 @@
       "pt": "generadores-de-apoyo-solar",
       "en": "generadores-de-apoyo-solar"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -187,7 +187,7 @@
       "pt": "minidumpers",
       "en": "minidumpers"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -206,7 +206,7 @@
       "pt": "muebles-de-jard-n",
       "en": "muebles-de-jard-n"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -225,7 +225,7 @@
       "pt": "p-rgolas-para-jardines-y-terrazas",
       "en": "p-rgolas-para-jardines-y-terrazas"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -244,7 +244,7 @@
       "pt": "palet-de-le-a",
       "en": "palet-de-le-a"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -263,7 +263,7 @@
       "pt": "pellet",
       "en": "pellet"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -282,7 +282,7 @@
       "pt": "pergolas-carpas-y-cenadores",
       "en": "pergolas-carpas-y-cenadores"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -338,7 +338,7 @@
       "pt": "plataformas-elevadoras",
       "en": "plataformas-elevadoras"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -357,7 +357,7 @@
       "pt": "portaveh-culos",
       "en": "portaveh-culos"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -376,7 +376,7 @@
       "pt": "remolque-de-equipaje",
       "en": "remolque-de-equipaje"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -395,7 +395,7 @@
       "pt": "remolque-para-caballos",
       "en": "remolque-para-caballos"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -414,7 +414,7 @@
       "pt": "remolque-para-moto",
       "en": "remolque-para-moto"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -433,7 +433,7 @@
       "pt": "remolque-para-perros-y-la-caza",
       "en": "remolque-para-perros-y-la-caza"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -452,7 +452,7 @@
       "pt": "remolque-publicitario",
       "en": "remolque-publicitario"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -471,7 +471,7 @@
       "pt": "remolque-venta-ambulante-o-foodtruck",
       "en": "remolque-venta-ambulante-o-foodtruck"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -490,7 +490,7 @@
       "pt": "remolques-bicicleta",
       "en": "remolques-bicicleta"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -509,7 +509,7 @@
       "pt": "remolques-de-jard-n-y-agricultura",
       "en": "remolques-de-jard-n-y-agricultura"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -528,7 +528,7 @@
       "pt": "techos-para-terrazas",
       "en": "techos-para-terrazas"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -547,7 +547,7 @@
       "pt": "tractores-cortac-sped",
       "en": "tractores-cortac-sped"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -566,7 +566,7 @@
       "pt": "trituradoras-semiprofesionales",
       "en": "trituradoras-semiprofesionales"
     },
-    "visible": false
+    "visible": true
   },
   {
     "name": {
@@ -623,6 +623,6 @@
       "pt": "generadores-y-energia",
       "en": "generadores-y-energia"
     },
-    "visible": false
+    "visible": true
   }
 ]
