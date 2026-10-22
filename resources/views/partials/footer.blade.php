@@ -292,7 +292,7 @@
                                         <path
                                             d="M3 6l9 7 9-7M3 6v12a1 1 0 001 1h16a1 1 0 001-1V6a1 1 0 00-1-1H4a1 1 0 00-1 1z" />
                                     </svg>
-                                    <a href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
+                                    <a href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
                                 </p>
                                 <p class="mm-footer-contact">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
@@ -300,7 +300,7 @@
                                         <circle cx="12" cy="12" r="9" />
                                         <path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18" />
                                     </svg>
-                                    <a href="{{ url('/') }}">{{ __('teccontainersrl.com') }}</a>
+                                    <a href="{{ url('/') }}">{{ __('teccontainer.eu') }}</a>
                                 </p>
                                 <p class="mm-footer-contact">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none"

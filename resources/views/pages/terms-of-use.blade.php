@@ -49,7 +49,7 @@
 										<p><strong>{{ __('Domicilio social:') }}</strong> {{ __('Via Fieschi 1/7, 16121 Genova (GE), Italia.') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
+												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>
@@ -83,7 +83,7 @@
 										</p>
 										<p>{{ __('El usuario será responsable de todas las actividades realizadas desde su cuenta.') }}</p>
 										<p>{{ __('En caso de uso no autorizado, deberá comunicarlo inmediatamente a') }} <strong><a
-													href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a></strong>.
+													href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a></strong>.
 										</p>
 										<h2>{{ __('6. Disponibilidad del servicio') }}</h2>
 										<p>{{ __('Tec Container Srl realizará los esfuerzos razonables para mantener el Sitio Web disponible de forma continua.') }}</p>
@@ -132,7 +132,7 @@
 										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
+												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

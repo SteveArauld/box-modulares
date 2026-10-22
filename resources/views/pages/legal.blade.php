@@ -44,7 +44,7 @@
 										<p>{{ __('De acuerdo con el') }} <strong>{{ __('Real Decreto Legislativo 1/2007') }}</strong>{{ __(', el consumidor dispone de un plazo de') }} <strong>{{ __('14 días naturales') }}</strong> {{ __('desde la recepción del pedido para ejercer su derecho de desistimiento sin necesidad de justificar su decisión.') }}</p>
 										<p>{{ __('Para ejercer este derecho, deberá comunicar su decisión mediante un correo electrónico a:') }}</p>
 										<p><strong><a
-													href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a></strong>
+													href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a></strong>
 										</p>
 										<p>{{ __('indicando:') }}</p>
 										<ul>
@@ -105,7 +105,7 @@
 										</ul>
 										<h2>{{ __('5. Productos dañados o defectuosos') }}</h2>
 										<p>{{ __('Si el cliente recibe un producto dañado durante el transporte, defectuoso o diferente al solicitado, deberá comunicar la incidencia en el menor plazo posible enviando un correo electrónico a') }} <strong><a
-													href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a></strong>.
+													href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a></strong>.
 										</p>
 										<p>{{ __('La comunicación deberá incluir:') }}</p>
 										<ul>
@@ -159,7 +159,7 @@
 										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
+												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

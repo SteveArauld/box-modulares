@@ -45,7 +45,7 @@
 										<p>{{ __('Si desea realizar un envío a un destino no disponible en la tienda online, puede ponerse en contacto con nuestro servicio de atención al cliente en:') }}
 										</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
+												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
 										</p>
 										<h2>{{ __('3. Gastos de envío') }}</h2>
 										<p><strong>{{ __('Todos los pedidos realizados en') }} <a
@@ -64,14 +64,14 @@
 										<p>{{ __('Se recomienda comprobar el estado del paquete en el momento de la entrega.') }}
 										</p>
 										<p>{{ __('Si el embalaje presenta daños visibles o el pedido llega incompleto, el cliente deberá indicarlo en el justificante del transportista y comunicar la incidencia a') }} <strong><a
-													href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a></strong>
+													href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a></strong>
 											{{ __('en un plazo máximo de 48 horas desde la recepción.') }}</p>
 										<h2>{{ __('8. Imposibilidad de entrega') }}</h2>
 										<p>{{ __('Si la entrega no pudiera efectuarse por causas imputables al cliente (dirección incorrecta, ausencia reiterada u otros motivos similares), el transportista podrá realizar nuevos intentos o depositar el envío según sus procedimientos.') }}</p>
 										<p>{{ __('En caso de devolución del pedido al remitente, Tec Container Srl se pondrá en contacto con el cliente para acordar una nueva entrega.') }}</p>
 										<h2>{{ __('9. Productos dañados o incidencias') }}</h2>
 										<p>{{ __('Si el cliente recibe un producto dañado, defectuoso o diferente al solicitado, deberá comunicarlo lo antes posible enviando un correo electrónico a') }} <strong><a
-													href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a></strong>{{ __(', indicando el número de pedido y adjuntando fotografías de la incidencia.') }}</p>
+													href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a></strong>{{ __(', indicando el número de pedido y adjuntando fotografías de la incidencia.') }}</p>
 										<p>{{ __('Una vez verificada la reclamación, se ofrecerá la solución que corresponda conforme a la legislación vigente.') }}</p>
 										<h2>{{ __('10. Contacto') }}</h2>
 										<p>{{ __('Para cualquier consulta relacionada con los envíos, puede contactar con nuestro servicio de atención al cliente:') }}</p>
@@ -79,7 +79,7 @@
 										<p>{{ __('Via Fieschi 1/7') }}</p>
 										<p>{{ __('08006 Barcelona, España') }}</p>
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
+												href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://domaine.it') }}</a></p>

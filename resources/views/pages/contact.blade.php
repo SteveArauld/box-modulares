@@ -98,7 +98,7 @@
                                                         <div class="wd-text-block reset-last-child text-left">
 
                                                             <p><a
-                                                                    href="mailto:contacto@teccontainersrl.com">contacto@teccontainersrl.com</a>
+                                                                    href="mailto:contacto@teccontainer.eu">contacto@teccontainer.eu</a>
                                                             </p>
                                                         </div>
                                                     </div>
