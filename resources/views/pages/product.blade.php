@@ -3,6 +3,56 @@
 @section('title', ($product->translatedValue('name') ?? 'Producto').' | '.config('app.name'))
 @section('body_class', 'single-product single product page')
 
+@push('scripts')
+    @php
+        $jsonLdImages = $product->gallery->map(fn ($image) => asset($image->path))->values();
+        $jsonLdAttribute = fn (string $name) => collect($product->attributes ?? [])
+            ->firstWhere('name', $name);
+        $jsonLdBrandAttribute = $jsonLdAttribute('Marca') ?? $jsonLdAttribute('Brand');
+        $jsonLdBrandName = collect($jsonLdBrandAttribute['terms'] ?? [])->pluck('name')->first() ?: config('app.name');
+        $jsonLdMpnAttribute = $jsonLdAttribute('MPN') ?? $jsonLdAttribute('Modelo');
+        $jsonLdMpn = collect($jsonLdMpnAttribute['terms'] ?? [])->pluck('name')->first();
+    @endphp
+    <script type="application/ld+json">
+        {!! json_encode([
+            '@@context' => 'https://schema.org/',
+            '@type' => 'Product',
+            'name' => $product->translatedValue('name'),
+            'description' => trim(strip_tags($product->translatedValue('description') ?: $product->translatedValue('short_description') ?: $product->translatedValue('name'))),
+            'sku' => $product->sku,
+            'image' => $jsonLdImages,
+            'brand' => [
+                '@type' => 'Brand',
+                'name' => $jsonLdBrandName,
+            ],
+            ...($jsonLdMpn ? ['mpn' => $jsonLdMpn] : ['identifier_exists' => false]),
+            'offers' => [
+                '@type' => 'Offer',
+                'url' => route('product', $product->translatedValue('slug')),
+                'priceCurrency' => $product->prices['currency_code'] ?? 'EUR',
+                'price' => number_format($product->price, 2, '.', ''),
+                'priceValidUntil' => now()->addMonths(3)->toDateString(),
+                'availability' => $product->is_in_stock
+                    ? 'https://schema.org/InStock'
+                    : 'https://schema.org/OutOfStock',
+                'itemCondition' => 'https://schema.org/NewCondition',
+                'shippingDetails' => [
+                    '@type' => 'OfferShippingDetails',
+                    'shippingRate' => [
+                        '@type' => 'MonetaryAmount',
+                        'value' => '0',
+                        'currency' => $product->prices['currency_code'] ?? 'EUR',
+                    ],
+                    'shippingDestination' => [
+                        '@type' => 'DefinedRegion',
+                        'addressCountry' => 'ES',
+                    ],
+                ],
+            ],
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
+@endpush
+
 @push('styles')
     <link rel='stylesheet' href='{{ asset('assets/css/product.css') }}?v={{ filemtime(public_path('assets/css/product.css')) }}' media='all' />
     {{-- CORRECTION ICI : Ajout des guillemets autour de asset() --}}
