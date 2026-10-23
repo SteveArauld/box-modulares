@@ -1,15 +1,15 @@
-{{-- <div class="mm-top-bar">
+<div class="mm-top-bar">
 	<div class="container mm-top-bar-inner">
 		<span class="mm-top-bar-label">{{ __('Idioma') }}:</span>
 		<ul class="mm-top-bar-langs">
 			@foreach ($availableLocales as $code => $label)
 				<li class="{{ $code === $currentLocale ? 'mm-top-bar-lang-active' : '' }}">
-					<a href="{{ route('locale.switch', $code) }}">{{ $label }}</a>
+					<a href="{{ route('locale.switch', $code) }}" rel="nofollow">{{ $label }}</a>
 				</li>
 			@endforeach
 		</ul>
 	</div>
-</div> --}}
+</div>
 <header class="whb-header whb-header_423087 whb-sticky-shadow whb-scroll-stick whb-sticky-real">
 			<div class="whb-main-header">
 

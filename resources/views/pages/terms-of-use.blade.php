@@ -123,7 +123,7 @@
 										</ul>
 										<p>{{ __('El usuario utiliza el Sitio Web bajo su propia responsabilidad.') }}</p>
 										<h2>{{ __('10. Protección de datos') }}</h2>
-										<p>{{ __('El tratamiento de los datos personales se realiza conforme al Reglamento (UE) 2016/679 (RGPD), la Ley Orgánica 3/2018 (LOPDGDD) y la Política de Privacidad publicada en el Sitio Web.') }}</p>
+										<p>{{ __('El tratamiento de los datos personales se realiza conforme al Reglamento (UE) 2016/679 (RGPD), al Decreto Legislativo 196/2003 (Codice Privacy) y la Política de Privacidad publicada en el Sitio Web.') }}</p>
 										<h2>{{ __('11. Cookies') }}</h2>
 										<p>{{ __('El Sitio Web utiliza cookies propias y de terceros conforme a la Política de Cookies, donde el usuario puede obtener información detallada y gestionar sus preferencias.') }}</p>
 										<h2>{{ __('12. Modificaciones') }}</h2>
@@ -132,8 +132,8 @@
 										<h2>{{ __('13. Suspensión del acceso') }}</h2>
 										<p>{{ __('Tec Container Srl podrá suspender o bloquear el acceso al Sitio Web, de forma temporal o definitiva, cuando detecte un uso contrario a la legislación vigente, a estas Condiciones Generales de Uso o que pueda perjudicar al propio Sitio Web o a terceros.') }}</p>
 										<h2>{{ __('14. Legislación aplicable y jurisdicción') }}</h2>
-										<p>{{ __('Las presentes Condiciones Generales de Uso se rigen por la legislación española.') }}</p>
-										<p>{{ __('En caso de conflicto o controversia, las partes se someterán a los Juzgados y Tribunales competentes conforme a la normativa española sobre consumidores y usuarios, sin perjuicio de los derechos que correspondan al consumidor según la legislación aplicable.') }}</p>
+										<p>{{ __('Las presentes Condiciones Generales de Uso se rigen por la legislación italiana.') }}</p>
+										<p>{{ __('En caso de conflicto o controversia, las partes se someterán a los Juzgados y Tribunales de Génova (Italia), sin perjuicio de los derechos que correspondan al consumidor según la legislación imperativa de protección de los consumidores de su país de residencia.') }}</p>
 										<h2>{{ __('15. contatto') }}</h2>
 										<p>{{ __('Para cualquier consulta relacionada con estas Condiciones Generales de Uso, puede contactar con:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>

@@ -43,7 +43,7 @@
 										<p>{{ __('Al realizar un pedido, el cliente acepta las condiciones establecidas en esta Política de Pago.') }}</p>
 										<h2>{{ __('2. Moneda') }}</h2>
 										<p>{{ __('Todos los precios publicados en el Sitio Web se expresan en') }} <strong>{{ __('euros (€)') }}</strong>.</p>
-										<p>{{ __('Salvo indicación expresa en contrario, los precios incluyen el Impuesto sobre el Valor Añadido (IVA) aplicable conforme a la legislación española.') }}</p>
+										<p>{{ __('Salvo indicación expresa en contrario, los precios incluyen el Impuesto sobre el Valor Añadido (IVA) aplicable conforme a la legislación italiana.') }}</p>
 										<h2>{{ __('3. Formas de pago aceptadas') }}</h2>
 										<p>{{ __('Para facilitar las compras, el Sitio Web podrá ofrecer uno o varios de los siguientes métodos de pago:') }}</p>
 										<ul>
@@ -86,7 +86,7 @@
 										<p>{{ __('Si una entidad financiera rechaza el pago, el pedido no será aceptado y el cliente será informado para que pueda utilizar otro método de pago.') }}</p>
 										<p>{{ __('Tec Container Srl no será responsable de los costes o comisiones que pueda aplicar la entidad emisora del medio de pago.') }}</p>
 										<h2>{{ __('8. Facturación') }}</h2>
-										<p>{{ __('Una vez confirmado el pedido, el cliente recibirá la correspondiente factura conforme a la legislación fiscal española.') }}</p>
+										<p>{{ __('Una vez confirmado el pedido, el cliente recibirá la correspondiente factura conforme a la legislación fiscal italiana.') }}</p>
 										<p>{{ __('La factura podrá emitirse en formato electrónico, salvo que el cliente solicite expresamente otro formato cuando la normativa lo permita.') }}</p>
 										<p>{{ __('Es responsabilidad del cliente facilitar datos de facturación correctos y completos.') }}</p>
 										<h2>{{ __('9. Reembolsos') }}</h2>

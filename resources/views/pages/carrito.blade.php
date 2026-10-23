@@ -975,15 +975,15 @@
                                                     <td data-title="{{ __('Envío') }}">
                                                         <ul id="shipping_method" class="woocommerce-shipping-methods">
                                                             <li>
-                                                                <input type="hidden" name="shipping_method[0]"
-                                                                    data-index="0" id="shipping_method_0_free_shipping1"
-                                                                    value="free_shipping:1"
-                                                                    class="shipping_method" /><label
-                                                                    for="shipping_method_0_free_shipping1">{{ __('Envío gratuito') }}</label>
+                                                                {{ __('Envío estándar') }}: <span
+                                                                    class="woocommerce-Price-amount amount"><bdi><span
+                                                                            class="woocommerce-Price-currencySymbol"
+                                                                            translate="no">&euro;</span><span id="js-cart-shipping-amount">400,00</span></bdi></span>
                                                             </li>
                                                         </ul>
                                                         <p class="woocommerce-shipping-destination">
-                                                            {{ __('Enviar a') }} <strong>{{ __('Barcelona') }}</strong>. </p>
+                                                            {{ __('Para Italia, Alemania y España. La entrega con grúa o la instalación se presupuestan aparte: consulte la') }}
+                                                            <a href="{{ route('shop.shipping-policy') }}">{{ __('Política de Envíos') }}</a>. </p>
 
 
 
@@ -1004,7 +1004,7 @@
                                                                         id="calc_shipping_country"
                                                                         class="country_to_state country_select"
                                                                         rel="calc_shipping_state">
-                                                                        <option value="default">Selecciona un país/región&hellip;</option>
+                                                                        <option value="default">{{ __('Selecciona un país/región&hellip;') }}</option>
                                                                         <option value="AF">Afganistán</option>
                                                                         <option value="AL">Albania</option>
                                                                         <option value="DE">Alemania</option>
@@ -1305,7 +1305,7 @@
                                                                         <label for="calc_shipping_state">{{ __('Región / Provincia') }}</label>
                                                                         <select name="calc_shipping_state"
                                                                             class="state_select" id="calc_shipping_state">
-                                                                            <option value="">Elige una opción&hellip;</option>
+                                                                            <option value="">{{ __('Elige una opción&hellip;') }}</option>
                                                                             <option value="C">La Coruña</option>
                                                                             <option value="VI">Álava</option>
                                                                             <option value="AB">Albacete</option>
@@ -1618,10 +1618,14 @@
 
             var totals = Shop.totals(items);
             var subtotalEl = document.getElementById('js-cart-subtotal-amount');
+            var shippingEl = document.getElementById('js-cart-shipping-amount');
             var totalEl = document.getElementById('js-cart-total-amount');
 
             if (subtotalEl) {
                 subtotalEl.textContent = Shop.formatPrice(totals.subtotal);
+            }
+            if (shippingEl) {
+                shippingEl.textContent = Shop.formatPrice(totals.shipping);
             }
             if (totalEl) {
                 totalEl.textContent = Shop.formatPrice(totals.total);

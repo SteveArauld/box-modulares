@@ -341,32 +341,45 @@
                         <div class="elementor-widget-container">
 
                             <div class="wd-image text-left">
-                                @if ($currentLocale === 'it')
-                                    @php
-                                        $italianPaymentLogos = [
+                                @php
+                                    // Payment logos shown per country/language, matching what
+                                    // each market's checkout actually accepts. These assets are a
+                                    // mix: some already ship their own white card background
+                                    // (Apple Pay, Google Pay, Maestro...), others are bare marks
+                                    // with no background at all, in colors ranging from solid
+                                    // black (Scalapay) to near-black (Multibanco) — all unreadable
+                                    // directly on this dark footer. Wrapping every logo in the
+                                    // same small white card (instead of trying to invert only
+                                    // some of them) makes all of them readable without any asset
+                                    // ever going invisible against its own built-in background.
+                                    $paymentLogosByLocale = [
+                                        'it' => [
                                             'visa.png', 'mastercard.png', 'paypal.svg',
                                             'klarna.png', 'satispay.webp', 'scalapay.png',
-                                        ];
-                                    @endphp
-                                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                                        @foreach ($italianPaymentLogos as $logo)
-                                            @php
-                                                // scalapay.png is solid black on a transparent
-                                                // background, invisible on the dark footer —
-                                                // invert it to white; the other logos already
-                                                // have enough contrast in their own colors.
-                                                $needsWhiteInvert = $logo === 'scalapay.png';
-                                            @endphp
-                                            <img height="18" src="{{ asset('assets/images/payments/it/'.$logo) }}"
+                                        ],
+                                        'de' => [
+                                            'klarna.png', 'giropay.png', 'sepa-lastschrift.png', 'paypal.svg',
+                                        ],
+                                        'es' => [
+                                            'visa.svg', 'master.svg', 'maestro.svg', 'american_express.svg',
+                                            'paypal.svg', 'apple_pay.svg', 'google_pay.svg', 'unionpay.svg',
+                                        ],
+                                        'pt' => [
+                                            'visa.svg', 'master.svg', 'multibanco.svg', 'mb-way.png',
+                                            'paypal.svg', 'apple_pay.svg', 'google_pay.svg',
+                                        ],
+                                    ];
+                                    $paymentLogos = $paymentLogosByLocale[$currentLocale] ?? $paymentLogosByLocale['es'];
+                                @endphp
+                                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                                    @foreach ($paymentLogos as $logo)
+                                        <span style="display:inline-flex;align-items:center;justify-content:center;height:26px;padding:0 6px;background:#fff;border-radius:4px;">
+                                            <img height="16" src="{{ asset('assets/images/payments/'.$currentLocale.'/'.$logo) }}"
                                                 alt="{{ pathinfo($logo, PATHINFO_FILENAME) }}" decoding="async" loading="lazy"
-                                                style="height:18px;width:auto;{{ $needsWhiteInvert ? ' filter:brightness(0) invert(1);' : '' }}" />
-                                        @endforeach
-                                    </div>
-                                @else
-                                    <img width="250" height="32"
-                                        src="/wp-content/uploads/2026/04/edc-footer-payments.png"
-                                        class="attachment-full size-full" alt="" decoding="async" loading="lazy" />
-                                @endif
+                                                style="height:16px;width:auto;display:block;" />
+                                        </span>
+                                    @endforeach
+                                </div>
                             </div>
 
                         </div>

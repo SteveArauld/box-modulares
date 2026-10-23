@@ -39,7 +39,7 @@
                                     </h1>
 
                                     <p class="mm-hero-stat">
-                                        {{ __('Desde') }} <strong>149 €</strong> {{ __('· Entrega en') }} <strong>{{ __('4-9 días laborables') }}</strong> {{ __('en España, Portugal, Italia y Alemania') }}
+                                        {{ __('Desde') }} <strong>149 €</strong> {{ __('· Entrega en') }} <strong>{{ __('4-10 días laborables') }}</strong> {{ __('en Italia, Alemania y España') }}
                                     </p>
 
                                     <div class="mm-badges-row">
@@ -55,7 +55,7 @@
                                     </div>
 
                                     <div class="mm-trust-row">
-                                        <span>{{ __('✔ Envío a España, Portugal, Italia y Alemania') }}</span>
+                                        <span>{{ __('✔ Envío a Italia, Alemania y España') }}</span>
                                         <span>{{ __('✔ Soporte técnico propio') }}</span>
                                     </div>
 
@@ -102,7 +102,7 @@
                                                 </svg>
                                             </span>
                                             <div class="mm-trust-badge-text">
-                                                <strong>{{ __('Envío a España, Portugal, Italia y Alemania') }}</strong>
+                                                <strong>{{ __('Envío a Italia, Alemania y España') }}</strong>
                                                 <span>{{ __('Rápido y con seguimiento') }}</span>
                                             </div>
                                         </div>
@@ -290,8 +290,8 @@
                                                         d="M3 16V6a1 1 0 011-1h9v11M3 16h10M3 16v0a2 2 0 104 0M13 16a2 2 0 104 0m-4 0h4m0 0h3v-5l-3-4h-3v9z" />
                                                 </svg>
                                             </div>
-                                            <h3>{{ __('Envío gratuito') }}</h3>
-                                            <p>{{ __('Todos los pedidos realizados en la tienda disfrutan de envío gratuito.') }}</p>
+                                            <h3>{{ __('Envío a Italia, Alemania y España') }}</h3>
+                                            <p>{{ __('Envío estándar a 400 € a estos tres países. Entrega con grúa e instalación disponibles mediante presupuesto personalizado.') }}</p>
                                         </div>
 
                                         <div class="mm-why-card">
@@ -448,7 +448,7 @@
                                             <div class="mm-stars" style="--rating:100%"><span
                                                     class="mm-stars-bg">★★★★★</span><span
                                                     class="mm-stars-fg">★★★★★</span></div>
-                                            <p class="mm-review-text">{{ __('"Buscábamos una solución resistente para nuestra terraza y este producto ha cumplido todas nuestras expectativas. Muy buena calidad y envío gratuito, un punto muy positivo."') }}</p>
+                                            <p class="mm-review-text">{{ __('"Buscábamos una solución resistente para nuestra terraza y este producto ha cumplido todas nuestras expectativas. Muy buena calidad y entrega cuidada."') }}</p>
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Cristina T.') }}</strong> {{ __('– Barcelona') }}
                                                 <span class="mm-review-product">{{ __('Techo para terraza') }}</span>
@@ -598,10 +598,8 @@
                                         </details>
 
                                         <details class="mm-faq-item">
-                                            <summary>{{ __('¿Los gastos de envío son gratuitos?') }}</summary>
-                                            <p>Sí. Todos los pedidos realizados en {{ config('app.name') }} incluyen envío
-                                                gratuito, sin costes adicionales de transporte, salvo que se
-                                                indique expresamente para servicios especiales.</p>
+                                            <summary>{{ __('¿Cuánto cuesta el envío?') }}</summary>
+                                            <p>{{ __('El envío estándar a Italia, Alemania y España tiene un coste de 400 €, salvo que se indique una condición comercial distinta en la ficha del producto. Este coste se muestra siempre en el carrito antes de confirmar el pedido. La entrega con grúa y la instalación no están incluidas en el envío estándar: contáctenos para recibir un presupuesto personalizado según la ciudad, la dirección y las condiciones de acceso.') }}</p>
                                         </details>
 
                                         <details class="mm-faq-item">
@@ -638,7 +636,7 @@
                                 data-widget_type="html.default">
                                 <div class="mm-final-cta">
                                     <h2>{{ __('¿Listo para equipar tu jardín y tu taller?') }}</h2>
-                                    <p>{{ __('Envío gratuito · Garantía 3 años · Soporte técnico propio') }}</p>
+                                    <p>{{ __('Envío a Italia, Alemania y España · Garantía 3 años · Soporte técnico propio') }}</p>
                                     <div class="mm-final-cta-buttons">
                                         <a href="https://wa.me/34603547522" class="mm-btn mm-btn-primary">{{ __('Contactar por WhatsApp') }}</a>
                                         <a href="mailto:contatto@teccontainer.eu"

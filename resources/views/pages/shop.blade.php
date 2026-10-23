@@ -241,7 +241,7 @@
                                                 </svg>
                                             </span>
                                             <div class="mm-trust-badge-text">
-                                                <strong>{{ __('Envío a España, Portugal, Italia y Alemania') }}</strong>
+                                                <strong>{{ __('Envío a Italia, Alemania y España') }}</strong>
                                                 <span>{{ __('Rápido y con seguimiento') }}</span>
                                             </div>
                                         </div>

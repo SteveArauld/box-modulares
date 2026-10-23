@@ -204,7 +204,7 @@
 										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
-										<p>{{ __('Asimismo, si considera que sus derechos no han sido respetados, podrá presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD).') }}</p>
+										<p>{{ __('Asimismo, si considera que sus derechos no han sido respetados, podrá presentar una reclamación ante el Garante per la protezione dei dati personali o ante la autoridad de control de su país de residencia.') }}</p>
 										<h2>{{ __('10. Modificaciones de la Política de Cookies') }}</h2>
 										<p>{{ __('Tec Container Srl podrá actualizar esta Política de Cookies para adaptarla a cambios legislativos, tecnológicos o a la incorporación de nuevos servicios.') }}</p>
 										<p>{{ __('Las modificaciones serán publicadas en esta misma página y entrarán en vigor desde su publicación.') }}</p>

@@ -97,6 +97,13 @@
         writeCart([]);
     }
 
+    /* Flat standard-shipping rate for the three countries currently served
+       (Italy, Germany, Spain) — see resources/views/pages/shipping-policy.blade.php.
+       Crane delivery / installation are quoted separately and are not part
+       of this estimate. The server recomputes this independently in
+       OrderController and does not trust any client-supplied total. */
+    var STANDARD_SHIPPING_RATE = 400;
+
     function totals(items) {
         items = items || readCart();
         var count = 0;
@@ -108,12 +115,13 @@
         });
 
         subtotal = Math.round(subtotal * 100) / 100;
+        var shipping = count > 0 ? STANDARD_SHIPPING_RATE : 0;
 
         return {
             count: count,
             subtotal: subtotal,
-            shipping: 0,
-            total: subtotal,
+            shipping: shipping,
+            total: Math.round((subtotal + shipping) * 100) / 100,
         };
     }
 
@@ -352,7 +360,7 @@
 
     function deliveryEstimateHtml(modifierClass) {
         var labels = window.mmDeliveryLabels || {
-            shipping: '✅ Envío gratuito a España, Portugal, Italia y Alemania',
+            shipping: '✅ Envío a Italia, Alemania y España · 400 €',
             estimate: '📦 Entrega estimada: entre el',
             and: 'y el',
         };
@@ -360,7 +368,7 @@
         var minDate = new Date();
         minDate.setDate(minDate.getDate() + 4);
         var maxDate = new Date();
-        maxDate.setDate(maxDate.getDate() + 9);
+        maxDate.setDate(maxDate.getDate() + 10);
 
         return (
             '<div class="pellets-delivery-badge' + (modifierClass ? ' ' + modifierClass : '') + '">' +

@@ -42,7 +42,11 @@ class OrderController extends Controller
         });
 
         $subtotal = round((float) $lines->sum('line_total'), 2);
-        $shipping = 0.0;
+        // Flat standard-shipping rate for Italy, Germany and Spain — the only
+        // destinations StoreOrderRequest currently allows at checkout. Crane
+        // delivery and installation are quoted separately by customer service
+        // and are not part of this total.
+        $shipping = 400.0;
         $total = round($subtotal + $shipping, 2);
 
         $order = DB::transaction(function () use ($data, $lines, $subtotal, $shipping, $total) {

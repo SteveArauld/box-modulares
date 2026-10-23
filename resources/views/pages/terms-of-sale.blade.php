@@ -92,7 +92,7 @@
 										</ul>
 										<h2>{{ __('5. Precios') }}</h2>
 										<p class="isSelectedEnd">{{ __('Todos los precios se muestran en euros (€).') }}</p>
-										<p class="isSelectedEnd">{{ __('Salvo indicación expresa en contrario, los precios incluyen el IVA aplicable conforme a la legislación española.') }}</p>
+										<p class="isSelectedEnd">{{ __('Salvo indicación expresa en contrario, los precios incluyen el IVA aplicable conforme a la legislación italiana.') }}</p>
 										<p class="isSelectedEnd">{{ __('Los gastos de transporte, montaje, instalación, seguros u otros servicios adicionales se indicarán claramente antes de finalizar el pedido.') }}</p>
 										<p class="isSelectedEnd">{{ __('Tec Container Srl podrá modificar los precios en cualquier momento, sin que ello afecte a los pedidos ya confirmados.') }}</p>
 										<h2>{{ __('6. Proceso de compra') }}</h2>
@@ -130,7 +130,7 @@
 										<p class="isSelectedEnd">{{ __('El cliente deberá comprobar el estado del pedido en el momento de la entrega.') }}</p>
 										<p class="isSelectedEnd">{{ __('Si detecta daños visibles o incidencias en el embalaje, deberá hacerlo constar en el albarán del transportista y comunicarlo al vendedor en un plazo máximo de 48 horas.') }}</p>
 										<h2>{{ __('10. Derecho de desistimiento') }}</h2>
-										<p class="isSelectedEnd">{{ __('De conformidad con el Real Decreto Legislativo 1/2007, el consumidor dispone de un plazo de') }} <strong>{{ __('14 días naturales') }}</strong>
+										<p class="isSelectedEnd">{{ __('De conformidad con el Decreto Legislativo 206/2005 (Codice del Consumo), el consumidor dispone de un plazo de') }} <strong>{{ __('14 días naturales') }}</strong>
 											{{ __('desde la recepción del pedido para desistir del contrato sin necesidad de justificar su decisión.') }}</p>
 										<p class="isSelectedEnd">{{ __('Para ejercer este derecho deberá comunicarlo por escrito a:') }}</p>
 										<p class="isSelectedEnd"><a
@@ -153,17 +153,17 @@
 											<li>{{ __('Productos claramente personalizados.') }}</li>
 											<li>{{ __('Productos precintados que no sean aptos para ser devueltos por razones de protección de la salud o higiene y cuyo precinto haya sido retirado.') }}
 											</li>
-											<li>{{ __('Otros supuestos previstos en el artículo 103 del Real Decreto Legislativo 1/2007.') }}</li>
+											<li>{{ __('Otros supuestos previstos en el artículo 59 del Decreto Legislativo 206/2005 (Codice del Consumo).') }}</li>
 										</ul>
 										<h2>{{ __('12. Garantía legal') }}</h2>
-										<p class="isSelectedEnd">{{ __('Todos los productos vendidos a consumidores cuentan con la garantía legal prevista en la normativa española vigente.') }}</p>
+										<p class="isSelectedEnd">{{ __('Todos los productos vendidos a consumidores cuentan con la garantía legal prevista en la normativa italiana vigente.') }}</p>
 										<p class="isSelectedEnd">{{ __('En caso de falta de conformidad, el consumidor tendrá derecho, según corresponda, a la reparación, sustitución, rebaja del precio o resolución del contrato, de acuerdo con la legislación aplicable.') }}</p>
 										<p class="isSelectedEnd">{{ __('La garantía no cubre daños derivados del uso indebido, accidentes, desgaste normal o manipulaciones no autorizadas.') }}</p>
 										<h2>{{ __('13. Responsabilidad') }}</h2>
 										<p class="isSelectedEnd">{{ __('Tec Container Srl no será responsable de los retrasos o incumplimientos debidos a causas de fuerza mayor, caso fortuito o circunstancias ajenas a su control.') }}</p>
 										<p class="isSelectedEnd">{{ __('La responsabilidad del vendedor quedará limitada al importe efectivamente abonado por el cliente, salvo disposición legal en contrario.') }}</p>
 										<h2>{{ __('14. Protección de datos') }}</h2>
-										<p class="isSelectedEnd">{{ __('Los datos personales facilitados durante el proceso de compra serán tratados conforme al Reglamento (UE) 2016/679 (RGPD), la Ley Orgánica 3/2018 (LOPDGDD) y la Política de Privacidad del sitio web.') }}</p>
+										<p class="isSelectedEnd">{{ __('Los datos personales facilitados durante el proceso de compra serán tratados conforme al Reglamento (UE) 2016/679 (RGPD), al Decreto Legislativo 196/2003 (Codice Privacy) y la Política de Privacidad del sitio web.') }}</p>
 										<h2>{{ __('15. Atención al cliente') }}</h2>
 										<p class="isSelectedEnd">{{ __('Para cualquier consulta relacionada con pedidos, devoluciones, garantías o reclamaciones, el cliente podrá contactar con:') }}</p>
 										<p class="isSelectedEnd"><strong>{{ __('Correo electrónico:') }}</strong> <a
@@ -171,19 +171,19 @@
 										</p>
 										<h2>{{ __('16. Resolución de litigios') }}</h2>
 										<p class="isSelectedEnd">{{ __('En caso de conflicto, las partes intentarán resolverlo de forma amistosa.') }}</p>
-										<p class="isSelectedEnd">{{ __('Si no fuera posible, serán competentes los Juzgados y Tribunales que correspondan conforme a la legislación española en materia de consumidores y usuarios.') }}</p>
+										<p class="isSelectedEnd">{{ __('Si no fuera posible, serán competentes los Juzgados y Tribunales de Génova (Italia), sin perjuicio de los derechos imperativos del consumidor según la legislación de su país de residencia.') }}</p>
 										<p class="isSelectedEnd">{{ __('Asimismo, los consumidores residentes en la Unión Europea pueden utilizar la Plataforma Europea de Resolución de Litigios en Línea (ODR), disponible en:') }}</p>
 										<p class="isSelectedEnd"><a
 												href="https://ec.europa.eu/consumers/odr">{{ __('https://ec.europa.eu/consumers/odr') }}</a>
 										</p>
 										<h2>{{ __('17. Legislación aplicable') }}</h2>
-										<p class="isSelectedEnd">{{ __('Las presentes Condiciones Generales de Venta se rigen por la legislación española y, en particular, por:') }}</p>
+										<p class="isSelectedEnd">{{ __('Las presentes Condiciones Generales de Venta se rigen por la legislación italiana y, en particular, por:') }}</p>
 										<ul data-spread="false">
 											<li>{{ __('Reglamento (UE) 2016/679 (RGPD).') }}</li>
-											<li>{{ __('Ley Orgánica 3/2018 (LOPDGDD).') }}</li>
-											<li>{{ __('Ley 34/2002, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE).') }}</li>
-											<li>{{ __('Real Decreto Legislativo 1/2007, por el que se aprueba el texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios.') }}</li>
-											<li>{{ __('Demás normativa española y europea aplicable.') }}</li>
+											<li>{{ __('Decreto Legislativo 196/2003 (Codice Privacy).') }}</li>
+											<li>{{ __('Decreto Legislativo 70/2003, sobre comercio electrónico.') }}</li>
+											<li>{{ __('Decreto Legislativo 206/2005, Codice del Consumo (Código del Consumo italiano).') }}</li>
+											<li>{{ __('Demás normativa italiana y europea aplicable.') }}</li>
 										</ul>
 									</div>
 								</div>

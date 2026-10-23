@@ -38,7 +38,7 @@
 										data-id="3b326c8" data-element_type="widget" data-e-type="widget"
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Responsable del tratamiento') }}</h2>
-										<p>{{ __('De conformidad con el Reglamento (UE) 2016/679 (RGPD), la Ley Orgánica 3/2018 (LOPDGDD) y demás normativa aplicable, se informa a los usuarios de que los datos personales facilitados a través del sitio web serán tratados por:') }}</p>
+										<p>{{ __('De conformidad con el Reglamento (UE) 2016/679 (RGPD) y el Decreto Legislativo 196/2003 (Codice in materia di protezione dei dati personali), modificado por el Decreto Legislativo 101/2018, se informa a los usuarios de que los datos personales facilitados a través del sitio web serán tratados por:') }}</p>
 										<p><strong>{{ __('Responsable:') }}</strong> {{ __('Tec Container Srl') }}</p>
 										<p><strong>{{ __('Forma jurídica:') }}</strong> {{ __('Società a Responsabilità Limitata (Srl)') }}</p>
 										<p><strong>{{ __('Partita IVA / Codice Fiscale:') }}</strong> {{ __('02877170106') }}</p>
@@ -188,7 +188,7 @@
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p>{{ __('El Responsable podrá solicitar información adicional para verificar la identidad del solicitante cuando resulte necesario.') }}</p>
-										<p>{{ __('Si el usuario considera que sus derechos no han sido respetados, podrá presentar una reclamación ante la') }} <strong>{{ __('Agencia Española de Protección de Datos (AEPD)') }}</strong>.</p>
+										<p>{{ __('Si el usuario considera que sus derechos no han sido respetados, podrá presentar una reclamación ante el') }} <strong>{{ __('Garante per la protezione dei dati personali (autoridad italiana de protección de datos)') }}</strong>.</p>
 										<h2>{{ __('9. Seguridad de la información') }}</h2>
 										<p>{{ __('Tec Container Srl aplica medidas técnicas y organizativas apropiadas para proteger los datos personales frente a pérdida, destrucción, alteración, acceso no autorizado o cualquier otro tratamiento ilícito, teniendo en cuenta el estado de la técnica, la naturaleza de los datos y los riesgos existentes.') }}</p>
 										<p>{{ __('No obstante, ningún sistema de transmisión o almacenamiento de información puede garantizar una seguridad absoluta.') }}</p>

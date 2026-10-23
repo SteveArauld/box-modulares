@@ -20,6 +20,26 @@
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
     <meta name="theme-color" content="#F95228">
 
+    @php
+        // The locale switcher normally works through a session cookie, which
+        // Googlebot does not carry between crawls — so every hreflang
+        // alternate would otherwise resolve to the same (session-default)
+        // language and the tags would be useless. SetLocale also accepts a
+        // stateless "?lang=" query parameter for exactly this case: each
+        // alternate below is a URL Google can fetch on its own and actually
+        // get that language's content from, independent of any cookie.
+        $hreflangBaseQuery = collect(request()->query())->except('lang')->all();
+        $hreflangUrl = fn (string $locale) => url()->current().'?'.http_build_query([...$hreflangBaseQuery, 'lang' => $locale]);
+        $canonicalUrl = request()->has('lang')
+            ? url()->current().'?'.http_build_query(request()->query())
+            : url()->current().(count($hreflangBaseQuery) ? '?'.http_build_query($hreflangBaseQuery) : '');
+    @endphp
+    <link rel="canonical" href="{{ $canonicalUrl }}">
+    @foreach (\App\Http\Middleware\SetLocale::SUPPORTED_LOCALES as $hreflangLocale)
+        <link rel="alternate" hreflang="{{ $hreflangLocale }}" href="{{ $hreflangUrl($hreflangLocale) }}">
+    @endforeach
+    <link rel="alternate" hreflang="x-default" href="{{ $hreflangUrl(\App\Http\Middleware\SetLocale::DEFAULT_LOCALE) }}">
+
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ config('app.name') }}">
     <meta property="og:title" content="@yield('title', config('app.name'))">
@@ -263,7 +283,7 @@
 
     <script>
         window.mmDeliveryLabels = {
-            shipping: @json(__('✅ Envío gratuito a España, Portugal, Italia y Alemania')),
+            shipping: @json(__('✅ Envío a Italia, Alemania y España · 400 €')),
             estimate: @json(__('📦 Entrega estimada: entre el')),
             and: @json(__('y el')),
         };

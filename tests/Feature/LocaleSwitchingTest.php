@@ -41,4 +41,23 @@ class LocaleSwitchingTest extends TestCase
                 ->assertStatus(200);
         }
     }
+
+    public function test_switching_locale_without_a_referer_redirects_home_instead_of_looping(): void
+    {
+        $this->get('/idioma/it')->assertRedirect(route('home'));
+    }
+
+    public function test_switching_locale_twice_in_a_row_does_not_loop_between_switch_urls(): void
+    {
+        $this->withHeaders(['referer' => url('/idioma/es')])
+            ->get('/idioma/it')
+            ->assertRedirect(route('home'));
+    }
+
+    public function test_switching_locale_with_a_real_page_referer_returns_to_that_page(): void
+    {
+        $this->withHeaders(['referer' => url('/contactanos')])
+            ->get('/idioma/de')
+            ->assertRedirect(url('/contactanos'));
+    }
 }

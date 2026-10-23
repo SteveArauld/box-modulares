@@ -33,36 +33,45 @@
 
 									<h2>Politica di Spedizione – Tec Container Srl</h2>
 
-									<h3>Tempi di preparazione e consegna</h3>
+									<h3>Paesi serviti</h3>
+									<p>Tec Container Srl spedisce attualmente solo nei seguenti paesi:</p>
 									<ul>
-										<li><strong>Tempo di preparazione dell'ordine:</strong> da 1 a 3 giorni lavorativi</li>
-										<li><strong>Tempo di consegna:</strong> da 3 a 6 giorni lavorativi</li>
-										<li><strong>Tempo totale stimato</strong> (dalla conferma dell'ordine alla consegna): da 4 a 9 giorni lavorativi</li>
-									</ul>
-
-									<p>Questi tempi si applicano alle seguenti destinazioni:</p>
-									<ul>
-										<li>Spagna (penisola e isole maggiori)</li>
-										<li>Portogallo (continente)</li>
 										<li>Italia (penisola e isole maggiori)</li>
 										<li>Germania</li>
+										<li>Spagna (penisola e isole maggiori)</li>
 									</ul>
+									<p>Nessun altro paese è attualmente servito. Per qualsiasi altra destinazione, contattaci prima dell'acquisto: verificheremo se è possibile organizzare una spedizione speciale su preventivo.</p>
 
-									<p>I tempi indicati sono orientativi e possono variare in base a:</p>
+									<h3>Tempi di consegna</h3>
+									<ul>
+										<li><strong>Tempo di preparazione dell'ordine:</strong> da 1 a 3 giorni lavorativi, a decorrere dalla conferma del pagamento.</li>
+										<li><strong>Tempo di trasporto:</strong> da 3 a 7 giorni lavorativi dopo l'affidamento al corriere.</li>
+										<li><strong>Tempo totale stimato:</strong> da 4 a 10 giorni lavorativi, somma della preparazione e del trasporto.</li>
+									</ul>
+									<p>Questi tempi sono stime e non costituiscono una garanzia assoluta: possono variare in base a:</p>
 									<ul>
 										<li>Disponibilità del prodotto</li>
+										<li>Paese e zona di destinazione (isole minori, zone remote o di difficile accesso)</li>
 										<li>Volume e peso dell'ordine</li>
 										<li>Condizioni meteorologiche o logistiche eccezionali</li>
-										<li>Zone remote o isole minori</li>
 									</ul>
 
-									<h3>Spedizione</h3>
-									<p>La spedizione è gratuita per tutti gli ordini destinati a Spagna, Portogallo, Italia e Germania (salvo diversa indicazione esplicita per prodotti di dimensioni eccezionali o servizi speciali).</p>
+									<h3>Costi di spedizione</h3>
+									<p>La spedizione standard ha un costo di <strong>400 €</strong> per gli ordini destinati a Italia, Germania e Spagna, salvo condizioni commerciali specifiche espressamente indicate sulla scheda del prodotto. Il costo di spedizione applicabile viene sempre mostrato chiaramente nel carrello, prima della conferma dell'ordine, e non viene mai aggiunto a sorpresa in un passaggio successivo.</p>
 									<p>Riceverai il numero di tracking non appena il pacco sarà affidato al corriere.</p>
-									<p>La consegna avviene all'indirizzo indicato al momento dell'ordine. È responsabilità del cliente assicurarsi che qualcuno sia presente per il ritiro (soprattutto per colli voluminosi).</p>
+									<p>La consegna avviene all'indirizzo indicato al momento dell'ordine. È responsabilità del cliente assicurarsi che qualcuno sia presente per il ritiro, in particolare per colli voluminosi o pesanti.</p>
+
+									<h3>Consegna con gru e installazione</h3>
+									<p>Il tariffario di spedizione standard indicato sopra <strong>non comprende</strong> l'eventuale consegna con gru né l'installazione del prodotto. Questi due servizi sono distinti dalla spedizione standard:</p>
+									<ul>
+										<li><strong>Spedizione standard:</strong> consegna del prodotto imballato all'indirizzo indicato, al costo fisso sopra indicato.</li>
+										<li><strong>Consegna con gru:</strong> necessaria per alcuni prodotti voluminosi o per accessi difficili; disponibile su preventivo personalizzato, calcolato in base a città, indirizzo e condizioni di accesso.</li>
+										<li><strong>Installazione:</strong> servizio opzionale, disponibile su preventivo personalizzato in base al prodotto e al luogo di installazione.</li>
+									</ul>
+									<p>Per richiedere un preventivo per la consegna con gru o l'installazione, contatta il nostro servizio clienti prima di confermare l'ordine, indicando città, indirizzo e condizioni di accesso. Riceverai le informazioni tariffarie applicabili prima di impegnarti definitivamente all'acquisto.</p>
 
 									<h3>Zone escluse o con tempi diversi</h3>
-									<p>Per destinazioni al di fuori di Spagna, Portogallo, Italia e Germania, o per zone particolarmente remote, contattaci prima dell'acquisto. Ti forniremo un preventivo personalizzato con tempi e costi aggiornati.</p>
+									<p>Per zone particolarmente remote o di difficile accesso all'interno di Italia, Germania e Spagna, contattaci prima dell'acquisto. Ti forniremo un preventivo personalizzato con tempi e costi aggiornati.</p>
 
 									<h3>Ritardi</h3>
 									<p>In caso di ritardo superiore ai tempi indicati, il nostro servizio clienti ti contatterà proattivamente.</p>

@@ -38,7 +38,7 @@
 										data-id="2f65f0b" data-element_type="widget" data-e-type="widget"
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Datos identificativos') }}</h2>
-										<p>{{ __('En cumplimiento de lo dispuesto en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa a los usuarios de los siguientes datos del titular del sitio web:') }}</p>
+										<p>{{ __('En cumplimiento de lo dispuesto en el Decreto Legislativo 70/2003, de 9 de abril, sobre comercio electrónico, se informa a los usuarios de los siguientes datos del titular del sitio web:') }}</p>
 										<p><strong>{{ __('Titular:') }}</strong> {{ __('Tec Container Srl') }}</p>
 										<p><strong>{{ __('Forma jurídica:') }}</strong> {{ __('Società a Responsabilità Limitata (Srl)') }}</p>
 										<p><strong>{{ __('Partita IVA / Codice Fiscale:') }}</strong> {{ __('02877170106') }}</p>
@@ -79,7 +79,7 @@
 										</ul>
 										<p>{{ __('El Titular podrá suspender o cancelar el acceso a los usuarios que incumplan estas condiciones.') }}</p>
 										<h2>{{ __('4. Propiedad intelectual e industrial') }}</h2>
-										<p>{{ __('Todos los contenidos del sitio web, incluyendo, entre otros, textos, fotografías, imágenes, logotipos, marcas, nombres comerciales, diseños, vídeos, código fuente y software, son propiedad del Titular o de terceros que han autorizado su utilización y están protegidos por la normativa española, europea e internacional sobre propiedad intelectual e industrial.') }}
+										<p>{{ __('Todos los contenidos del sitio web, incluyendo, entre otros, textos, fotografías, imágenes, logotipos, marcas, nombres comerciales, diseños, vídeos, código fuente y software, son propiedad del Titular o de terceros que han autorizado su utilización y están protegidos por la normativa italiana, europea e internacional sobre propiedad intelectual e industrial.') }}
 										</p>
 										<p>{{ __('Queda prohibida la reproducción, distribución, transformación, comunicación pública o cualquier otra forma de explotación sin autorización previa y por escrito del Titular.') }}</p>
 										<h2>{{ __('5. Responsabilidad') }}</h2>
@@ -104,17 +104,17 @@
 										<p>{{ __('El sitio web puede contener enlaces a páginas de terceros.') }}</p>
 										<p>{{ __('El Titular no controla ni asume responsabilidad alguna sobre los contenidos, servicios, políticas o prácticas de privacidad de dichos sitios web.') }}</p>
 										<h2>{{ __('7. Protección de datos personales') }}</h2>
-										<p>{{ __('El tratamiento de los datos personales se realiza conforme al Reglamento (UE) 2016/679 (RGPD), la Ley Orgánica 3/2018 (LOPDGDD) y demás normativa aplicable.') }}</p>
+										<p>{{ __('El tratamiento de los datos personales se realiza conforme al Reglamento (UE) 2016/679 (RGPD), al Decreto Legislativo 196/2003 (Codice Privacy) y demás normativa aplicable.') }}</p>
 										<p>{{ __('Toda la información relativa al tratamiento de datos personales se encuentra disponible en la Política de Privacidad del sitio web.') }}</p>
 										<h2>{{ __('8. Cookies') }}</h2>
 										<p>{{ __('Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia del usuario, analizar la navegación y ofrecer determinados servicios.') }}</p>
 										<p>{{ __('Puede consultar toda la información en la Política de Cookies.') }}</p>
 										<h2>{{ __('9. Comercio electrónico') }}</h2>
-										<p>{{ __('Los productos comercializados a través del sitio web están sujetos a la legislación española sobre consumidores y usuarios, incluyendo el Real Decreto Legislativo 1/2007 y demás normativa aplicable.') }}</p>
+										<p>{{ __('Los productos comercializados a través del sitio web están sujetos a la legislación italiana sobre consumidores y usuarios, incluyendo el Decreto Legislativo 206/2005 (Codice del Consumo) y demás normativa aplicable.') }}</p>
 										<p>{{ __('Las condiciones de compra, precios, formas de pago, entrega, devoluciones y derecho de desistimiento se regulan en las Condiciones Generales de Venta.') }}
 										</p>
 										<h2>{{ __('10. Legislación aplicable') }}</h2>
-										<p>{{ __('El presente Aviso Legal se rige por la legislación española.') }}</p>
+										<p>{{ __('El presente Aviso Legal se rige por la legislación italiana, sin perjuicio de las disposiciones imperativas de protección del consumidor que puedan resultar aplicables en el país de residencia del cliente.') }}</p>
 										<p>{{ __('En caso de conflicto o controversia relacionada con el sitio web, las partes se someterán a los Juzgados y Tribunales que correspondan conforme a la normativa vigente en materia de consumidores y usuarios.') }}</p>
 										<h2>{{ __('11. Modificaciones') }}</h2>
 										<p>{{ __('El Titular se reserva el derecho de modificar en cualquier momento el presente Aviso Legal con el fin de adaptarlo a cambios legislativos, jurisprudenciales o de funcionamiento del sitio web.') }}</p>

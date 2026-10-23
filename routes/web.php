@@ -6,6 +6,7 @@ use App\Http\Controllers\FeedController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,8 @@ Route::get('/feeds/google-{locale}.xml', [FeedController::class, 'google'])
     ->name('feed.google.locale');
 
 Route::get('/idioma/{locale}', [LocaleController::class, 'switch'])->name('locale.switch');
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 Route::get('/tienda', [ShopController::class, 'shopIndex'])->name('shop.index');
 Route::get('/buscar', [ShopController::class, 'search'])->name('shop.search');

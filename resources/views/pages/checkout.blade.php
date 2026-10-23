@@ -3939,7 +3939,7 @@
 																			autocomplete="section-billing billing country"
 																			data-placeholder="{{ __('Selecciona un país/región&hellip;') }}"
 																			data-label="País / Región">
-																			<option value="">Selecciona un país/región&hellip;</option>
+																			<option value="">{{ __('Selecciona un país/región&hellip;') }}</option>
 																			<option value="AF">Afganistán</option>
 																			<option value="AL">Albania</option>
 																			<option value="DE">Alemania</option>
@@ -4282,7 +4282,7 @@
 																			data-placeholder="{{ __('Elige una opción&hellip;') }}"
 																			data-input-classes=""
 																			data-label="Provincia">
-																			<option value="">Elige una opción&hellip;
+																			<option value="">{{ __('Elige una opción&hellip;') }}
 																			</option>
 																			<option value="C">La Coruña</option>
 																			<option value="VI">Álava</option>
@@ -4430,7 +4430,7 @@
 																				autocomplete="section-shipping shipping country"
 																				data-placeholder="{{ __('Selecciona un país/región&hellip;') }}"
 																				data-label="País / Región">
-																				<option value="">Selecciona un país/región&hellip;</option>
+																				<option value="">{{ __('Selecciona un país/región&hellip;') }}</option>
 																				<option value="AF">Afganistán</option>
 																				<option value="AL">Albania</option>
 																				<option value="DE">Alemania</option>
@@ -4794,7 +4794,7 @@
 																				data-placeholder="{{ __('Elige una opción&hellip;') }}"
 																				data-input-classes=""
 																				data-label="Provincia">
-																				<option value="">Elige una opción&hellip;</option>
+																				<option value="">{{ __('Elige una opción&hellip;') }}</option>
 																				<option value="C">La Coruña</option>
 																				<option value="VI">Álava</option>
 																				<option value="AB">Albacete</option>
@@ -5016,16 +5016,12 @@
 																	<ul id="shipping_method"
 																		class="woocommerce-shipping-methods">
 																		<li>
-																			<input type="hidden"
-																				name="shipping_method[0]" data-index="0"
-																				id="shipping_method_0_free_shipping1"
-																				value="free_shipping:1"
-																				class="shipping_method" /><label
-																				for="shipping_method_0_free_shipping1">{{ __('Envío gratuito') }}</label>
+																			{{ __('Envío estándar (Italia, Alemania, España)') }}: <span
+																				class="woocommerce-Price-amount amount"><bdi><span
+																						class="woocommerce-Price-currencySymbol"
+																						translate="no">&euro;</span><span id="js-checkout-shipping-amount">400,00</span></bdi></span>
 																		</li>
 																	</ul>
-
-
 																</td>
 															</tr>
 
@@ -5059,6 +5055,9 @@
 			</main>
 @push('scripts')
 <script>
+window.mmCheckoutLabels = {
+    genericError: @json(__('Ha ocurrido un error. Inténtalo de nuevo.')),
+};
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.querySelector('form.woocommerce-checkout');
     var itemsBody = document.getElementById('js-checkout-items');
@@ -5095,9 +5094,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var totals = window.Shop.totals(items);
         var subtotalEl = document.getElementById('js-checkout-subtotal-amount');
+        var shippingEl = document.getElementById('js-checkout-shipping-amount');
         var totalEl = document.getElementById('js-checkout-total-amount');
         if (subtotalEl) {
             subtotalEl.textContent = window.Shop.formatPrice(totals.subtotal);
+        }
+        if (shippingEl) {
+            shippingEl.textContent = window.Shop.formatPrice(totals.shipping);
         }
         if (totalEl) {
             totalEl.textContent = window.Shop.formatPrice(totals.total);
@@ -5200,11 +5203,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
                 showCheckoutError(messages.join(''));
             } else {
-                showCheckoutError('<p>Ha ocurrido un error. Inténtalo de nuevo.</p>');
+                showCheckoutError('<p>' + window.Shop.escapeHtml(window.mmCheckoutLabels.genericError) + '</p>');
             }
         }).catch(function () {
             restoreButton();
-            showCheckoutError('<p>Ha ocurrido un error. Inténtalo de nuevo.</p>');
+            showCheckoutError('<p>' + window.Shop.escapeHtml(window.mmCheckoutLabels.genericError) + '</p>');
         });
     });
 });

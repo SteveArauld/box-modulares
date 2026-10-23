@@ -36,18 +36,18 @@
                     ? 'https://schema.org/InStock'
                     : 'https://schema.org/OutOfStock',
                 'itemCondition' => 'https://schema.org/NewCondition',
-                'shippingDetails' => [
+                'shippingDetails' => collect(['IT', 'DE', 'ES'])->map(fn ($country) => [
                     '@type' => 'OfferShippingDetails',
                     'shippingRate' => [
                         '@type' => 'MonetaryAmount',
-                        'value' => '0',
+                        'value' => '400',
                         'currency' => $product->prices['currency_code'] ?? 'EUR',
                     ],
                     'shippingDestination' => [
                         '@type' => 'DefinedRegion',
-                        'addressCountry' => 'ES',
+                        'addressCountry' => $country,
                     ],
-                ],
+                ])->all(),
             ],
         ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
@@ -841,13 +841,13 @@
                                                         tabindex="0">
                                                         <div class="wd-accordion-title-text">
                                                             <span>
-                                                                {{ __('Envío gratuito y devoluciones sencillas') }} </span>
+                                                                {{ __('Envío e información de devoluciones') }} </span>
                                                         </div>
                                                         <span class="wd-accordion-opener"></span>
                                                     </div>
                                                     <div class="wd-accordion-content wd-entry-content"
                                                         data-accordion-index="1">
-                                                        <p>{{ __('Ofrecemos') }} <strong>{{ __('envío gratuito') }}</strong> {{ __('en todos los pedidos. Si desea devolver un producto, dispone de') }} <strong>{{ __('14 días naturales') }}</strong> {{ __('desde su recepción para ejercer su derecho de desistimiento, siempre que el artículo se encuentre en su estado original y cumpla las condiciones de devolución.') }}
+                                                        <p>{{ __('Envío estándar a') }} <strong>{{ __('400 €') }}</strong> {{ __('para Italia, Alemania y España (consulte la Política de Envíos para la entrega con grúa o instalación). Si desea devolver un producto, dispone de') }} <strong>{{ __('14 días naturales') }}</strong> {{ __('desde su recepción para ejercer su derecho de desistimiento, siempre que el artículo se encuentre en su estado original y cumpla las condiciones de devolución.') }}
                                                         </p>
                                                     </div>
                                                 </div>

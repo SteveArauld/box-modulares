@@ -1,4 +1,7 @@
 {
+    "Hace 4 meses": "Hace 4 meses",
+    "Hace 5 meses": "Hace 5 meses",
+    "Hace 6 meses": "Hace 6 meses",
     "Login": "Iniciar sesión",
     "Payment information": "Información de pago",
     "Register": "Registrarse",
@@ -6,13 +9,6 @@
     "Show sidebar": "Mostrar barra lateral",
     "You May Be Interested In…": "Esto también te puede interesar…",
     "Your order": "Tu pedido",
-    "· Entrega en": "· Entrega en",
-    "4-9 días laborables": "4-9 días laborables",
-    "en España, Portugal, Italia y Alemania": "en España, Portugal, Italia y Alemania",
-    "✔ Envío a España, Portugal, Italia y Alemania": "✔ Envío a España, Portugal, Italia y Alemania",
-    "Envío a España, Portugal, Italia y Alemania": "Envío a España, Portugal, Italia y Alemania",
-    "✅ Envío gratuito a España, Portugal, Italia y Alemania": "✅ Envío gratuito a España, Portugal, Italia y Alemania",
-    "Hace 4 meses": "Hace 4 meses",
-    "Hace 5 meses": "Hace 5 meses",
-    "Hace 6 meses": "Hace 6 meses"
+    "contatto": "Contacto",
+    "· Entrega en": "· Entrega en"
 }

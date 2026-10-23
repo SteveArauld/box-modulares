@@ -39,9 +39,9 @@
 										data-widget_type="text-editor.default">
 										<h2>{{ __('1. Objeto') }}</h2>
 										<p>{{ __('La presente Política de Devoluciones y Reembolsos regula las condiciones aplicables a las devoluciones, cambios y reembolsos de los productos adquiridos a través del sitio web') }} <strong><a
-													href="../">{{ __('https://teccontainer.eu') }}</a></strong>{{ __(', de conformidad con la normativa española y europea en materia de protección de los consumidores.') }}</p>
+													href="../">{{ __('https://teccontainer.eu') }}</a></strong>{{ __(', de conformidad con la normativa italiana y europea en materia de protección de los consumidores.') }}</p>
 										<h2>{{ __('2. Derecho de desistimiento') }}</h2>
-										<p>{{ __('De acuerdo con el') }} <strong>{{ __('Real Decreto Legislativo 1/2007') }}</strong>{{ __(', el consumidor dispone de un plazo de') }} <strong>{{ __('14 días naturales') }}</strong> {{ __('desde la recepción del pedido para ejercer su derecho de desistimiento sin necesidad de justificar su decisión.') }}</p>
+										<p>{{ __('De acuerdo con el') }} <strong>{{ __('Decreto Legislativo 206/2005 (Codice del Consumo)') }}</strong>{{ __(', el consumidor dispone de un plazo de') }} <strong>{{ __('14 días naturales') }}</strong> {{ __('desde la recepción del pedido para ejercer su derecho de desistimiento sin necesidad de justificar su decisión.') }}</p>
 										<p>{{ __('Para ejercer este derecho, deberá comunicar su decisión mediante un correo electrónico a:') }}</p>
 										<p><strong><a
 													href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></strong>
@@ -100,7 +100,7 @@
 												<p>{{ __('Productos precintados que no sean aptos para su devolución por razones de protección de la salud o higiene y cuyo precinto haya sido retirado.') }}</p>
 											</li>
 											<li>
-												<p>{{ __('Otros productos excluidos por el artículo 103 del Real Decreto Legislativo 1/2007.') }}</p>
+												<p>{{ __('Otros productos excluidos por el artículo 59 del Decreto Legislativo 206/2005 (Codice del Consumo).') }}</p>
 											</li>
 										</ul>
 										<h2>{{ __('5. Productos dañados o defectuosos') }}</h2>
@@ -136,7 +136,7 @@
 										<p>{{ __('Los cambios estarán sujetos a la disponibilidad del nuevo producto solicitado.') }}</p>
 										<p>{{ __('En caso de diferencia de precio, se realizará el correspondiente abono o cargo.') }}</p>
 										<h2>{{ __('10. Garantía legal') }}</h2>
-										<p>{{ __('Todos los productos vendidos a consumidores cuentan con la garantía legal prevista por la normativa española.') }}</p>
+										<p>{{ __('Todos los productos vendidos a consumidores cuentan con la garantía legal prevista por la normativa italiana.') }}</p>
 										<p>{{ __('En caso de falta de conformidad, el consumidor podrá solicitar la reparación, sustitución, reducción del precio o resolución del contrato, en los términos establecidos por la legislación aplicable.') }}</p>
 										<p>{{ __('La garantía no cubrirá los daños derivados de:') }}</p>
 										<ul>
@@ -164,7 +164,7 @@
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
 												href="../">{{ __('https://teccontainer.eu') }}</a></p>
 										<h2>{{ __('12. Legislación aplicable') }}</h2>
-										<p>{{ __('La presente Política de Devoluciones y Reembolsos se rige por la legislación española y, en particular, por el') }} <strong>{{ __('Real Decreto Legislativo 1/2007') }}</strong>{{ __(', la') }} <strong>{{ __('Ley 34/2002 (LSSI-CE)') }}</strong> {{ __('y el') }}
+										<p>{{ __('La presente Política de Devoluciones y Reembolsos se rige por la legislación italiana y, en particular, por el') }} <strong>{{ __('Decreto Legislativo 206/2005 (Codice del Consumo)') }}</strong>{{ __(', la') }} <strong>{{ __('Decreto Legislativo 70/2003 (comercio electrónico)') }}</strong> {{ __('y el') }}
 											<strong>{{ __('Reglamento (UE) 2016/679 (RGPD)') }}</strong>{{ __(', sin perjuicio de los derechos que correspondan a los consumidores conforme a la normativa de la Unión Europea.') }}</p>
 									</div>
 								</div>

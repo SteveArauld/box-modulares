@@ -24,14 +24,14 @@ class FeedController extends Controller
     public function googleShopping(Request $request): Response
     {
         return $this->buildFeed(
-            $request->query('locale', config('app.locale')),
+            $request->query('locale', SetLocale::DEFAULT_LOCALE),
             $request->boolean('download'),
         );
     }
 
     public function googleShoppingDownload(Request $request): Response
     {
-        return $this->buildFeed($request->query('locale', config('app.locale')), true);
+        return $this->buildFeed($request->query('locale', SetLocale::DEFAULT_LOCALE), true);
     }
 
     /**
