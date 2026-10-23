@@ -352,13 +352,13 @@
 
     function deliveryEstimateHtml(modifierClass) {
         var labels = window.mmDeliveryLabels || {
-            shipping: '✅ Envío gratuito a toda España',
+            shipping: '✅ Envío gratuito a España, Portugal, Italia y Alemania',
             estimate: '📦 Entrega estimada: entre el',
             and: 'y el',
         };
 
         var minDate = new Date();
-        minDate.setDate(minDate.getDate() + 5);
+        minDate.setDate(minDate.getDate() + 4);
         var maxDate = new Date();
         maxDate.setDate(maxDate.getDate() + 9);
 

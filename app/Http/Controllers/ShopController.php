@@ -96,7 +96,13 @@ class ShopController extends Controller
 
     public function shop(string $slug): View
     {
-        $product = Product::query()->where('slug->es', $slug)->firstOrFail();
+        $product = Product::query()
+            ->where(function (Builder $query) use ($slug) {
+                foreach (SetLocale::SUPPORTED_LOCALES as $locale) {
+                    $query->orWhere("slug->{$locale}", $slug);
+                }
+            })
+            ->firstOrFail();
         $product->load('category');
 
         $relatedProducts = Product::query()
@@ -114,7 +120,15 @@ class ShopController extends Controller
 
     public function category(Request $request, string $slug): View
     {
-        $category = Category::query()->where('slug->es', $slug)->where('is_visible', true)->with('children')->firstOrFail();
+        $category = Category::query()
+            ->where(function (Builder $query) use ($slug) {
+                foreach (SetLocale::SUPPORTED_LOCALES as $locale) {
+                    $query->orWhere("slug->{$locale}", $slug);
+                }
+            })
+            ->where('is_visible', true)
+            ->with('children')
+            ->firstOrFail();
 
         return $this->renderCatalog($request, $category);
     }

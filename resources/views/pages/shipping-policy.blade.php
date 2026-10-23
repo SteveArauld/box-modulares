@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Política de envíos | '.config('app.name'))
+@section('title', 'Politica di Spedizione | '.config('app.name'))
 
 
 @section('content')
@@ -16,88 +16,70 @@
 						class="attachment-full size-full" alt="" decoding="async" fetchpriority="high" />
 				</div>
 				<div class="container">
-					<h1 class="entry-title title">
-						{{ __('Política de Envíos') }} </h1>
+					<h1 class="entry-title title">Politica di Spedizione</h1>
 
-
-					<nav class="wd-breadcrumbs"><a href="../">{{ __('Inicio') }}</a><span
-							class="wd-delimiter">•</span><span class="wd-last">{{ __('Política de Envíos') }}</span></nav>
+					<nav class="wd-breadcrumbs"><a href="../">Home</a><span
+							class="wd-delimiter">•</span><span class="wd-last">Politica di Spedizione</span></nav>
 				</div>
 			</div>
 
 			<main id="main-content" class="wd-content-layout content-layout-wrapper container" role="main">
 
-
 				<div class="wd-content-area site-content">
-					<article id="post-4371" class="entry-content post-4371 page type-page status-publish hentry">
-						<div data-elementor-type="wp-page" data-elementor-id="4371" class="elementor elementor-4371">
-							<div class="wd-negative-gap elementor-element elementor-element-4f15bf8 e-flex e-con-boxed e-con e-parent"
-								data-id="4f15bf8" data-element_type="container" data-e-type="container">
-								<div class="e-con-inner">
-									<div class="elementor-element elementor-element-6722c8a color-scheme-inherit text-left elementor-widget elementor-widget-text-editor"
-										data-id="6722c8a" data-element_type="widget" data-e-type="widget"
-										data-widget_type="text-editor.default">
-										<h2>{{ __('1. Ámbito de aplicación') }}</h2>
-										<p>{{ __('La presente Política de Envíos regula las condiciones de preparación, expedición y entrega de los productos adquiridos a través del sitio web') }}
-											<strong><a href="../">{{ __('https://teccontainer.eu') }}</a></strong>.</p>
-										<h2>{{ __('2. Zonas de envío') }}</h2>
-										<p>{{ __('Tec Container Srl realiza envíos a los territorios indicados durante el proceso de compra.') }}</p>
-										<p>{{ __('Si desea realizar un envío a un destino no disponible en la tienda online, puede ponerse en contatto con nuestro servicio de atención al cliente en:') }}
-										</p>
-										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
-										</p>
-										<h2>{{ __('3. Gastos de envío') }}</h2>
-										<p><strong>{{ __('Todos los pedidos realizados en') }} <a
-													href="../">{{ __('https://teccontainer.eu') }}</a> {{ __('disfrutan de envío gratuito.') }}</strong></p>
-										<p>{{ __('No se aplican gastos de envío adicionales durante el proceso de compra, salvo que se indique expresamente para servicios especiales solicitados por el cliente, como entregas urgentes, montajes o servicios personalizados.') }}</p>
-										<h2>{{ __('4. Preparación del pedido') }}</h2>
-										<p>{{ __('Los pedidos se preparan una vez confirmado el pago.') }}</p>
-										<p>{{ __('Nuestro equipo trabaja para preparar y expedir los pedidos en el menor tiempo posible, respetando los controles de calidad y seguridad.') }}</p>
-										<h2>{{ __('5. Plazos de entrega') }}</h2>
-										<p>{{ __('El plazo de entrega dependerá del tipo de producto, la disponibilidad y la dirección de destino.') }}</p>
-										<p>{{ __('En circunstancias excepcionales, como campañas promocionales, periodos de alta demanda, condiciones meteorológicas adversas o causas de fuerza mayor, los plazos podrán verse ampliados.') }}</p>
-										<p>{{ __('Si se produjera un retraso significativo, el cliente será informado a la mayor brevedad posible.') }}</p>
-										<h2>{{ __('6. Seguimiento del envío') }}</h2>
-										<p>{{ __('Cuando el transportista lo permita, el cliente recibirá la información necesaria para realizar el seguimiento de su pedido.') }}</p>
-										<h2>{{ __('7. Recepción del pedido') }}</h2>
-										<p>{{ __('Se recomienda comprobar el estado del paquete en el momento de la entrega.') }}
-										</p>
-										<p>{{ __('Si el embalaje presenta daños visibles o el pedido llega incompleto, el cliente deberá indicarlo en el justificante del transportista y comunicar la incidencia a') }} <strong><a
-													href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></strong>
-											{{ __('en un plazo máximo de 48 horas desde la recepción.') }}</p>
-										<h2>{{ __('8. Imposibilidad de entrega') }}</h2>
-										<p>{{ __('Si la entrega no pudiera efectuarse por causas imputables al cliente (dirección incorrecta, ausencia reiterada u otros motivos similares), el transportista podrá realizar nuevos intentos o depositar el envío según sus procedimientos.') }}</p>
-										<p>{{ __('En caso de devolución del pedido al remitente, Tec Container Srl se pondrá en contatto con el cliente para acordar una nueva entrega.') }}</p>
-										<h2>{{ __('9. Productos dañados o incidencias') }}</h2>
-										<p>{{ __('Si el cliente recibe un producto dañado, defectuoso o diferente al solicitado, deberá comunicarlo lo antes posible enviando un correo electrónico a') }} <strong><a
-													href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></strong>{{ __(', indicando el número de pedido y adjuntando fotografías de la incidencia.') }}</p>
-										<p>{{ __('Una vez verificada la reclamación, se ofrecerá la solución que corresponda conforme a la legislación vigente.') }}</p>
-										<h2>{{ __('10. contatto') }}</h2>
-										<p>{{ __('Para cualquier consulta relacionada con los envíos, puede contactar con nuestro servicio de atención al cliente:') }}</p>
-										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
-										<p>{{ __('Via Fieschi 1/7') }}</p>
-										<p>{{ __('16121 Genova (GE), Italia') }}</p>
-										<p><strong>{{ __('Correo electrónico:') }}</strong> <a
-												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
-										</p>
-										<p><strong>{{ __('Sitio web:') }}</strong> <a
-												href="../">{{ __('https://teccontainer.eu') }}</a></p>
-									</div>
+					<article id="post-shipping-policy" class="entry-content post-shipping-policy page type-page status-publish hentry">
+						<div class="elementor elementor-shipping-policy">
+							<div class="e-con-inner">
+								<div class="elementor-element color-scheme-inherit text-left elementor-widget elementor-widget-text-editor">
+
+									<h2>Politica di Spedizione – Tec Container Srl</h2>
+
+									<h3>Tempi di preparazione e consegna</h3>
+									<ul>
+										<li><strong>Tempo di preparazione dell'ordine:</strong> da 1 a 3 giorni lavorativi</li>
+										<li><strong>Tempo di consegna:</strong> da 3 a 6 giorni lavorativi</li>
+										<li><strong>Tempo totale stimato</strong> (dalla conferma dell'ordine alla consegna): da 4 a 9 giorni lavorativi</li>
+									</ul>
+
+									<p>Questi tempi si applicano alle seguenti destinazioni:</p>
+									<ul>
+										<li>Spagna (penisola e isole maggiori)</li>
+										<li>Portogallo (continente)</li>
+										<li>Italia (penisola e isole maggiori)</li>
+										<li>Germania</li>
+									</ul>
+
+									<p>I tempi indicati sono orientativi e possono variare in base a:</p>
+									<ul>
+										<li>Disponibilità del prodotto</li>
+										<li>Volume e peso dell'ordine</li>
+										<li>Condizioni meteorologiche o logistiche eccezionali</li>
+										<li>Zone remote o isole minori</li>
+									</ul>
+
+									<h3>Spedizione</h3>
+									<p>La spedizione è gratuita per tutti gli ordini destinati a Spagna, Portogallo, Italia e Germania (salvo diversa indicazione esplicita per prodotti di dimensioni eccezionali o servizi speciali).</p>
+									<p>Riceverai il numero di tracking non appena il pacco sarà affidato al corriere.</p>
+									<p>La consegna avviene all'indirizzo indicato al momento dell'ordine. È responsabilità del cliente assicurarsi che qualcuno sia presente per il ritiro (soprattutto per colli voluminosi).</p>
+
+									<h3>Zone escluse o con tempi diversi</h3>
+									<p>Per destinazioni al di fuori di Spagna, Portogallo, Italia e Germania, o per zone particolarmente remote, contattaci prima dell'acquisto. Ti forniremo un preventivo personalizzato con tempi e costi aggiornati.</p>
+
+									<h3>Ritardi</h3>
+									<p>In caso di ritardo superiore ai tempi indicati, il nostro servizio clienti ti contatterà proattivamente.</p>
+
+									<h3>Contatti</h3>
+									<p><strong>Tec Container Srl</strong></p>
+									<p>Via Fieschi 1/7</p>
+									<p>16121 Genova (GE), Italia</p>
+									<p><strong>Email:</strong> <a href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></p>
+									<p><strong>Sito web:</strong> <a href="../">https://teccontainer.eu</a></p>
+
 								</div>
 							</div>
 						</div>
-
-
 					</article>
-
-
-
 				</div>
 
-
-
-				
 			</main>
 
 		</div>

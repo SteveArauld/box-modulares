@@ -511,20 +511,22 @@
                                                         <a href="{{ route('product', $previousProduct->translatedValue('slug')) }}"
                                                             class="wd-entities-title">
                                                             {{ $previousProduct->translatedValue('name') }} </a>
-                                                        <span class="price">
-                                                            @if ($previousProduct->on_sale && $previousProduct->regular_price > $previousProduct->price)
-                                                                <del><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                translate="no">€</span>{{ number_format($previousProduct->regular_price, 2, ',', '.') }}</bdi></span></del>
-                                                                <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                translate="no">€</span>{{ number_format($previousProduct->price, 2, ',', '.') }}</bdi></span></ins>
-                                                            @else
-                                                                <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                translate="no">€</span>{{ number_format($previousProduct->price, 2, ',', '.') }}</bdi></span>
-                                                            @endif
-                                                        </span>
+                                                        @if ($previousProduct->price > 0)
+                                                            <span class="price">
+                                                                @if ($previousProduct->on_sale && $previousProduct->regular_price > $previousProduct->price)
+                                                                    <del><span class="woocommerce-Price-amount amount"><bdi><span
+                                                                                    class="woocommerce-Price-currencySymbol"
+                                                                                    translate="no">€</span>{{ number_format($previousProduct->regular_price, 2, ',', '.') }}</bdi></span></del>
+                                                                    <ins><span class="woocommerce-Price-amount amount"><bdi><span
+                                                                                    class="woocommerce-Price-currencySymbol"
+                                                                                    translate="no">€</span>{{ number_format($previousProduct->price, 2, ',', '.') }}</bdi></span></ins>
+                                                                @else
+                                                                    <span class="woocommerce-Price-amount amount"><bdi><span
+                                                                                    class="woocommerce-Price-currencySymbol"
+                                                                                    translate="no">€</span>{{ number_format($previousProduct->price, 2, ',', '.') }}</bdi></span>
+                                                                @endif
+                                                            </span>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
@@ -555,20 +557,22 @@
                                                         <a href="{{ route('product', $nextProduct->translatedValue('slug')) }}"
                                                             class="wd-entities-title">
                                                             {{ $nextProduct->translatedValue('name') }} </a>
-                                                        <span class="price">
-                                                            @if ($nextProduct->on_sale && $nextProduct->regular_price > $nextProduct->price)
-                                                                <del><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                translate="no">€</span>{{ number_format($nextProduct->regular_price, 2, ',', '.') }}</bdi></span></del>
-                                                                <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                translate="no">€</span>{{ number_format($nextProduct->price, 2, ',', '.') }}</bdi></span></ins>
-                                                            @else
-                                                                <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                                class="woocommerce-Price-currencySymbol"
-                                                                                translate="no">€</span>{{ number_format($nextProduct->price, 2, ',', '.') }}</bdi></span>
-                                                            @endif
-                                                        </span>
+                                                        @if ($nextProduct->price > 0)
+                                                            <span class="price">
+                                                                @if ($nextProduct->on_sale && $nextProduct->regular_price > $nextProduct->price)
+                                                                    <del><span class="woocommerce-Price-amount amount"><bdi><span
+                                                                                    class="woocommerce-Price-currencySymbol"
+                                                                                    translate="no">€</span>{{ number_format($nextProduct->regular_price, 2, ',', '.') }}</bdi></span></del>
+                                                                    <ins><span class="woocommerce-Price-amount amount"><bdi><span
+                                                                                    class="woocommerce-Price-currencySymbol"
+                                                                                    translate="no">€</span>{{ number_format($nextProduct->price, 2, ',', '.') }}</bdi></span></ins>
+                                                                @else
+                                                                    <span class="woocommerce-Price-amount amount"><bdi><span
+                                                                                    class="woocommerce-Price-currencySymbol"
+                                                                                    translate="no">€</span>{{ number_format($nextProduct->price, 2, ',', '.') }}</bdi></span>
+                                                                @endif
+                                                            </span>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
@@ -727,14 +731,18 @@
                                         data-id="48be7f7" data-element_type="widget" data-e-type="widget"
                                         data-widget_type="wd_single_product_price.default">
                                         <div class="elementor-widget-container">
-                                            <p class="price">
-                                                @if ($product->on_sale && $product->regular_price > $product->price)
-                                                    <del><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">€</span>{{ number_format($product->regular_price, 2, ',', '.') }}</bdi></span></del>
-                                                    <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">€</span>{{ number_format($product->price, 2, ',', '.') }}</bdi></span></ins>
-                                                @else
-                                                    <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">€</span>{{ number_format($product->price, 2, ',', '.') }}</bdi></span>
-                                                @endif
-                                            </p>
+                                            @if ($product->price > 0)
+                                                <p class="price">
+                                                    @if ($product->on_sale && $product->regular_price > $product->price)
+                                                        <del><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">€</span>{{ number_format($product->regular_price, 2, ',', '.') }}</bdi></span></del>
+                                                        <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">€</span>{{ number_format($product->price, 2, ',', '.') }}</bdi></span></ins>
+                                                    @else
+                                                        <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">€</span>{{ number_format($product->price, 2, ',', '.') }}</bdi></span>
+                                                    @endif
+                                                </p>
+                                            @else
+                                                <p class="price">{{ __('Precio a consultar') }}</p>
+                                            @endif
                                         </div>
                                     </div>
                                     
@@ -779,22 +787,24 @@
                                                         aria-label="{{ __('Aumentar cantidad') }}">
                                                 </div>
 
-                                                <a href="#" class="js-add-to-cart single_add_to_cart_button button alt"
-                                                    data-product_id="{{ $product->source_id }}"
-                                                    data-product_sku="{{ $product->sku }}"
-                                                    data-product_name="{{ $product->translatedValue('name') }}"
-                                                    data-product_price="{{ $product->price }}"
-                                                    data-product_image="{{ $product->cover_image ? asset($product->cover_image) : '' }}"
-                                                    data-product_slug="{{ route('product', $product->translatedValue('slug')) }}"
-                                                    data-success_message="{{ __('«:product» se ha añadido a tu carrito', ['product' => $product->translatedValue('name')]) }}">{{ __('Añadir Al Carrito') }}</a>
+                                                @if ($product->price > 0)
+                                                    <a href="#" class="js-add-to-cart single_add_to_cart_button button alt"
+                                                        data-product_id="{{ $product->source_id }}"
+                                                        data-product_sku="{{ $product->sku }}"
+                                                        data-product_name="{{ $product->translatedValue('name') }}"
+                                                        data-product_price="{{ $product->price }}"
+                                                        data-product_image="{{ $product->cover_image ? asset($product->cover_image) : '' }}"
+                                                        data-product_slug="{{ route('product', $product->translatedValue('slug')) }}"
+                                                        data-success_message="{{ __('«:product» se ha añadido a tu carrito', ['product' => $product->translatedValue('name')]) }}">{{ __('Añadir Al Carrito') }}</a>
 
-                                                <a href="#" class="js-buy-now wd-buy-now-btn button alt"
-                                                    data-product_id="{{ $product->source_id }}"
-                                                    data-product_sku="{{ $product->sku }}"
-                                                    data-product_name="{{ $product->translatedValue('name') }}"
-                                                    data-product_price="{{ $product->price }}"
-                                                    data-product_image="{{ $product->cover_image ? asset($product->cover_image) : '' }}"
-                                                    data-product_slug="{{ route('product', $product->translatedValue('slug')) }}">{{ __('Comprar Ahora') }}</a>
+                                                    <a href="#" class="js-buy-now wd-buy-now-btn button alt"
+                                                        data-product_id="{{ $product->source_id }}"
+                                                        data-product_sku="{{ $product->sku }}"
+                                                        data-product_name="{{ $product->translatedValue('name') }}"
+                                                        data-product_price="{{ $product->price }}"
+                                                        data-product_image="{{ $product->cover_image ? asset($product->cover_image) : '' }}"
+                                                        data-product_slug="{{ route('product', $product->translatedValue('slug')) }}">{{ __('Comprar Ahora') }}</a>
+                                                @endif
 
                                                 <a href="#" class="mm-wishlist-btn js-favorite-btn wd-single-favorite-wrap" data-product_id="{{ $product->source_id }}" aria-label="{{ __('Añadir a favoritos') }}" title="{{ __('Añadir a favoritos') }}">
                                                     <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.4 2 4.5 5.7 4 8 3.7 10 4.9 12 7c2-2.1 4-3.3 6.3-3 3.7.5 5.2 4.4 3.7 7.9C19.5 16.4 12 21 12 21z"></path></svg>

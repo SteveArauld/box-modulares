@@ -52,7 +52,9 @@ class FeedController extends Controller
         $products = Product::query()
             ->with('category')
             ->whereHas('category', fn ($query) => $query->where('is_visible', true))
-            ->get();
+            ->get()
+            ->filter(fn (Product $product) => $product->price > 0)
+            ->values();
 
         $xml = view('feeds.google-shopping', [
             'products' => $products,

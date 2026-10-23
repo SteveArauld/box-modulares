@@ -39,7 +39,7 @@
                                     </h1>
 
                                     <p class="mm-hero-stat">
-                                        {{ __('Desde') }} <strong>149 €</strong> {{ __('· Envío en') }} <strong>{{ __('48-72h') }}</strong> {{ __('a toda España') }}
+                                        {{ __('Desde') }} <strong>149 €</strong> {{ __('· Entrega en') }} <strong>{{ __('4-9 días laborables') }}</strong> {{ __('en España, Portugal, Italia y Alemania') }}
                                     </p>
 
                                     <div class="mm-badges-row">
@@ -55,7 +55,7 @@
                                     </div>
 
                                     <div class="mm-trust-row">
-                                        <span>{{ __('✔ Envío a toda España') }}</span>
+                                        <span>{{ __('✔ Envío a España, Portugal, Italia y Alemania') }}</span>
                                         <span>{{ __('✔ Soporte técnico propio') }}</span>
                                     </div>
 
@@ -102,7 +102,7 @@
                                                 </svg>
                                             </span>
                                             <div class="mm-trust-badge-text">
-                                                <strong>{{ __('Envío a toda España') }}</strong>
+                                                <strong>{{ __('Envío a España, Portugal, Italia y Alemania') }}</strong>
                                                 <span>{{ __('Rápido y con seguimiento') }}</span>
                                             </div>
                                         </div>
@@ -356,7 +356,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Laura G.') }}</strong> {{ __('– Madrid') }}
                                                 <span class="mm-review-product">{{ __('Caseta de jardín de madera') }}</span>
-                                                <span class="mm-review-date">{{ __('Junio 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 4 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -380,7 +380,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Marta P.') }}</strong> {{ __('– Zaragoza') }}
                                                 <span class="mm-review-product">{{ __('Piscina desmontable') }}</span>
-                                                <span class="mm-review-date">{{ __('Mayo 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 5 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -404,7 +404,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Elena S.') }}</strong> {{ __('– Málaga') }}
                                                 <span class="mm-review-product">{{ __('Muebles de jardín') }}</span>
-                                                <span class="mm-review-date">{{ __('Junio 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 4 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -428,7 +428,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Sonia L.') }}</strong> {{ __('– Murcia') }}
                                                 <span class="mm-review-product">{{ __('Cenador para jardín') }}</span>
-                                                <span class="mm-review-date">{{ __('Abril 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 6 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -440,7 +440,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Miguel A.') }}</strong> {{ __('– Valladolid') }}
                                                 <span class="mm-review-product">{{ __('Herramienta para trabajo de madera') }}</span>
-                                                <span class="mm-review-date">{{ __('Mayo 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 5 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -476,7 +476,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Patricia V.') }}</strong> {{ __('– Santander') }}
                                                 <span class="mm-review-product">{{ __('Caseta de jardín') }}</span>
-                                                <span class="mm-review-date">{{ __('Junio 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 4 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -500,7 +500,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Isabel C.') }}</strong> {{ __('– Vigo') }}
                                                 <span class="mm-review-product">{{ __('Muebles de jardín') }}</span>
-                                                <span class="mm-review-date">{{ __('Mayo 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 5 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -512,7 +512,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Daniel H.') }}</strong> {{ __('– Salamanca') }}
                                                 <span class="mm-review-product">{{ __('Piscina desmontable') }}</span>
-                                                <span class="mm-review-date">{{ __('Abril 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 6 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -536,7 +536,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Sergio P.') }}</strong> {{ __('– Tarragona') }}
                                                 <span class="mm-review-product">{{ __('Pellet') }}</span>
-                                                <span class="mm-review-date">{{ __('Junio 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 4 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -548,7 +548,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Rosa M.') }}</strong> {{ __('– León') }}
                                                 <span class="mm-review-product">{{ __('Cenador de jardín') }}</span>
-                                                <span class="mm-review-date">{{ __('Mayo 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 5 meses') }}</span>
                                             </div>
                                         </div>
 
@@ -572,7 +572,7 @@
                                             <div class="mm-review-meta">
                                                 <strong>{{ __('Lucía T.') }}</strong> {{ __('– A Coruña') }}
                                                 <span class="mm-review-product">{{ __('Herramientas para madera') }}</span>
-                                                <span class="mm-review-date">{{ __('Abril 2026') }}</span>
+                                                <span class="mm-review-date">{{ __('Hace 6 meses') }}</span>
                                             </div>
                                         </div>
 

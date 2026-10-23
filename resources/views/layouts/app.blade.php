@@ -263,7 +263,7 @@
 
     <script>
         window.mmDeliveryLabels = {
-            shipping: @json(__('✅ Envío gratuito a toda España')),
+            shipping: @json(__('✅ Envío gratuito a España, Portugal, Italia y Alemania')),
             estimate: @json(__('📦 Entrega estimada: entre el')),
             and: @json(__('y el')),
         };

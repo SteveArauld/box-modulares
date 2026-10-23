@@ -34,31 +34,33 @@
             @if ($productCategory)
                 <div class="wd-product-cats"><a href="{{ route('category', $productCategory->translatedValue('slug')) }}" rel="tag">{{ $productCategory->translatedValue('name') }}</a></div>
             @endif
-            <span class="price">
-                @if ($product->on_sale && $product->regular_price > $product->price)
-                    <del><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">&euro;</span>{{ number_format($product->regular_price, 2, ',', '.') }}</bdi></span></del>
-                    <ins>
-                @endif
-                <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">&euro;</span>{{ number_format($product->price, 2, ',', '.') }}</bdi></span>
-                @if ($product->on_sale && $product->regular_price > $product->price)
-                    </ins>
-                @endif
-            </span>
-            <div class="wd-add-btn wd-add-btn-replace">
-                <a href="#" data-quantity="1"
-                    class="button product_type_simple add_to_cart_button ajax_add_to_cart add-to-cart-loop js-add-to-cart"
-                    data-product_id="{{ $product->source_id }}"
-                    data-product_sku="{{ $product->sku }}"
-                    data-product_name="{{ $productName }}"
-                    data-product_price="{{ $product->price }}"
-                    data-product_image="{{ $productImage }}"
-                    data-product_slug="{{ $productSlug }}"
-                    aria-label="{{ __('Añadir al carrito: :product', ['product' => $productName]) }}"
-                    rel="nofollow"
-                    data-success_message="{{ __('«:product» se ha añadido a tu carrito', ['product' => $productName]) }}">
-                    <span class="wd-action-icon"><span class="wd-check-icon"></span></span><span class="wd-action-text">{{ __('Añadir al carrito') }}</span>
-                </a>
-            </div>
+            @if ($product->price > 0)
+                <span class="price">
+                    @if ($product->on_sale && $product->regular_price > $product->price)
+                        <del><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">&euro;</span>{{ number_format($product->regular_price, 2, ',', '.') }}</bdi></span></del>
+                        <ins>
+                    @endif
+                    <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">&euro;</span>{{ number_format($product->price, 2, ',', '.') }}</bdi></span>
+                    @if ($product->on_sale && $product->regular_price > $product->price)
+                        </ins>
+                    @endif
+                </span>
+                <div class="wd-add-btn wd-add-btn-replace">
+                    <a href="#" data-quantity="1"
+                        class="button product_type_simple add_to_cart_button ajax_add_to_cart add-to-cart-loop js-add-to-cart"
+                        data-product_id="{{ $product->source_id }}"
+                        data-product_sku="{{ $product->sku }}"
+                        data-product_name="{{ $productName }}"
+                        data-product_price="{{ $product->price }}"
+                        data-product_image="{{ $productImage }}"
+                        data-product_slug="{{ $productSlug }}"
+                        aria-label="{{ __('Añadir al carrito: :product', ['product' => $productName]) }}"
+                        rel="nofollow"
+                        data-success_message="{{ __('«:product» se ha añadido a tu carrito', ['product' => $productName]) }}">
+                        <span class="wd-action-icon"><span class="wd-check-icon"></span></span><span class="wd-action-text">{{ __('Añadir al carrito') }}</span>
+                    </a>
+                </div>
+            @endif
         </div>
     </div>
 </div>
