@@ -2815,6 +2815,20 @@
         }
     }
 
+    /* ── Footer "Atención al Cliente" / "Información Legal" row ──
+       The row wrapping these two toggles (elementor-element-8a8e9df) never
+       received its mobile flex-direction: column rule during the WordPress
+       export — Elementor only wrote a --flex-wrap-mobile custom property
+       that nothing in the exported CSS ever consumes. Both toggles stay at
+       width:100% in a non-wrapping flex row, so once a toggle is expanded
+       its content overlaps the other toggle and the "Categorías" block
+       that follows instead of pushing it down. */
+    @media (max-width: 768px) {
+        .elementor-element-8a8e9df {
+            flex-direction: column !important;
+        }
+    }
+
 /* ── Error pages (404, 403, 419, 429, 500, 503…) ── */
 .wd-error-page {
     padding: 100px 0;
