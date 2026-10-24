@@ -35,7 +35,7 @@ class ShopController extends Controller
         'astilladoras-de-le-a' => 'assets/images/categories/Astilladoras-de-Lena-150x150.png',
     ];
 
-    public function home(Request $request): View
+    public function home(string $locale, Request $request): View
     {
         // On récupère TOUTES les catégories, indexées par leur slug espagnol (référence)
         $categoriesBySlug = Category::query()
@@ -89,12 +89,12 @@ class ShopController extends Controller
         return view('pages.home', compact('heroCategories', 'featuredProducts'));
     }
 
-    public function shopIndex(Request $request): View
+    public function shopIndex(string $locale, string $indexSegment, Request $request): View
     {
         return $this->renderCatalog($request, null);
     }
 
-    public function shop(string $slug): View
+    public function shop(string $locale, string $productSegment, string $slug): View
     {
         $product = Product::query()
             ->where(function (Builder $query) use ($slug) {
@@ -118,7 +118,7 @@ class ShopController extends Controller
         return view('pages.product', compact('product', 'relatedProducts', 'previousProduct', 'nextProduct'));
     }
 
-    public function category(Request $request, string $slug): View
+    public function category(string $locale, string $categorySegment, string $slug, Request $request): View
     {
         $category = Category::query()
             ->where(function (Builder $query) use ($slug) {
@@ -133,7 +133,7 @@ class ShopController extends Controller
         return $this->renderCatalog($request, $category);
     }
 
-    public function search(Request $request): View
+    public function search(string $locale, string $searchSegment, Request $request): View
     {
         $term = trim((string) $request->query('q', ''));
 
@@ -326,7 +326,7 @@ class ShopController extends Controller
         ]);
     }
 
-    public function myAccount(): View
+    public function myAccount(string $locale, string $myAccountSegment): View
     {
         if (Auth::check()) {
             $orders = Auth::user()->orders()->with('items')->get();
@@ -337,12 +337,12 @@ class ShopController extends Controller
         return view('pages.my-account');
     }
 
-    public function lostPassword(): View
+    public function lostPassword(string $locale, string $myAccountSegment, string $lostPasswordSegment): View
     {
         return view('pages.lost-password');
     }
 
-    public function sendLostPassword(Request $request): RedirectResponse
+    public function sendLostPassword(string $locale, string $myAccountSegment, string $lostPasswordSegment, Request $request): RedirectResponse
     {
         $request->validate(['user_login' => ['required', 'string']]);
 
@@ -353,67 +353,67 @@ class ShopController extends Controller
         return back()->with('status', 'Si ese correo existe en nuestro sistema, recibirás un enlace para restablecer tu contraseña.');
     }
 
-    public function carrito(): View
+    public function carrito(string $locale, string $cartSegment): View
     {
         $suggestedProducts = Product::query()->with('category')->inRandomOrder()->limit(4)->get();
 
         return view('pages.carrito', compact('suggestedProducts'));
     }
 
-    public function checkout(): View
+    public function checkout(string $locale, string $checkoutSegment): View
     {
         return view('pages.checkout');
     }
 
-    public function orderConfirmation(string $orderNumber): View
+    public function orderConfirmation(string $locale, string $checkoutSegment, string $orderConfirmationSegment, string $orderNumber): View
     {
         $order = Order::query()->where('order_number', $orderNumber)->with('items')->firstOrFail();
 
         return view('pages.order-confirmation', compact('order'));
     }
 
-    public function contact(): View
+    public function contact(string $locale, string $contactSegment): View
     {
         return view('pages.contact');
     }
 
-    public function shippingPolicy(): View
+    public function shippingPolicy(string $locale, string $shippingPolicySegment): View
     {
         return view('pages.shipping-policy');
     }
 
-    public function returnPolicy(): View
+    public function returnPolicy(string $locale, string $returnPolicySegment): View
     {
         return view('pages.return-policy');
     }
 
-    public function paymentPolicy(): View
+    public function paymentPolicy(string $locale, string $paymentPolicySegment): View
     {
         return view('pages.payment-policy');
     }
 
     // --- Legal Information ---
-    public function legalNotice(): View
+    public function legalNotice(string $locale, string $legalNoticeSegment): View
     {
         return view('pages.legal-notice');
     }
 
-    public function termsOfUse(): View
+    public function termsOfUse(string $locale, string $termsOfUseSegment): View
     {
         return view('pages.terms-of-use');
     }
 
-    public function termsOfSale(): View
+    public function termsOfSale(string $locale, string $termsOfSaleSegment): View
     {
         return view('pages.terms-of-sale');
     }
 
-    public function privacyPolicy(): View
+    public function privacyPolicy(string $locale, string $privacyPolicySegment): View
     {
         return view('pages.privacy-policy');
     }
 
-    public function cookiePolicy(): View
+    public function cookiePolicy(string $locale, string $cookiePolicySegment): View
     {
         return view('pages.cookie-policy');
     }

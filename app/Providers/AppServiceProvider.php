@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\Support\LocalizedSegments;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
@@ -49,8 +50,8 @@ class AppServiceProvider extends ServiceProvider
     private const LOCALE_LABELS = [
         'es' => 'ES',
         'it' => 'IT',
-        // 'de' => 'DE',
-        // 'pt' => 'PT',
+        'de' => 'DE',
+        'pt' => 'PT',
     ];
 
     /**
@@ -83,6 +84,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('currentCategoryName', $currentCategoryName);
             $view->with('availableLocales', self::LOCALE_LABELS);
             $view->with('currentLocale', app()->getLocale());
+            $view->with('localizedUrls', LocalizedSegments::urlsForOtherLocales());
         });
     }
 

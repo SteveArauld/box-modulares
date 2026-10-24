@@ -2,62 +2,64 @@
 
 namespace Tests\Feature;
 
+use App\Http\Middleware\SetLocale;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 class LocaleSwitchingTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_switching_to_a_supported_locale_updates_the_session(): void
+    public function test_each_supported_locales_home_page_renders_in_that_language(): void
     {
-        $this->get('/idioma/it');
-
-        $this->assertSame('it', session('locale'));
-    }
-
-    #[DataProvider('unsupportedLocales')]
-    public function test_switching_to_an_unsupported_locale_is_ignored(string $locale): void
-    {
-        $this->get('/idioma/'.$locale);
-
-        $this->assertNotSame($locale, session('locale'));
-    }
-
-    public static function unsupportedLocales(): array
-    {
-        return [
-            'english' => ['en'],
-            'french' => ['fr'],
-        ];
-    }
-
-    public function test_homepage_renders_in_each_supported_locale(): void
-    {
-        foreach (['es', 'it', 'de', 'pt'] as $locale) {
-            $this->withSession(['locale' => $locale])
-                ->get('/')
-                ->assertStatus(200);
+        foreach (SetLocale::SUPPORTED_LOCALES as $locale) {
+            $this->get("/{$locale}")
+                ->assertOk()
+                ->assertSee('<html lang="'.$locale.'"', false);
         }
     }
 
-    public function test_switching_locale_without_a_referer_redirects_home_instead_of_looping(): void
+    public function test_an_unsupported_locale_segment_is_not_routable(): void
     {
-        $this->get('/idioma/it')->assertRedirect(route('home'));
+        // Accept: application/json sidesteps a debug-mode HTML error
+        // renderer quirk in this environment (missing views/exception_full
+        // template) that masks the actual 404 behind a 500 — the JSON path
+        // still reports the real status code either way.
+        $this->getJson('/en')->assertNotFound();
+        $this->getJson('/fr')->assertNotFound();
     }
 
-    public function test_switching_locale_twice_in_a_row_does_not_loop_between_switch_urls(): void
+    /**
+     * Regression guard for a found bug: a URL matching no route at all
+     * (an old pre-rebuild link, a typo) never runs SetLocale — it's only
+     * registered on the locale-prefixed route group, which a completely
+     * unmatched request never enters — so URL::defaults() was never set.
+     * The 404 page itself links to route('shop.search'), which needs those
+     * defaults, so rendering the error page crashed into an unrelated 500
+     * instead of showing a translated 404.
+     */
+    public function test_a_completely_unmatched_url_renders_a_real_translated_404_not_a_500(): void
     {
-        $this->withHeaders(['referer' => url('/idioma/es')])
-            ->get('/idioma/it')
-            ->assertRedirect(route('home'));
+        foreach (SetLocale::SUPPORTED_LOCALES as $locale) {
+            $this->get("/{$locale}/cette-page-nexiste-pas")
+                ->assertNotFound()
+                ->assertSee('<html lang="'.$locale.'"', false);
+        }
+
+        // An old, pre-rebuild link with no locale segment at all.
+        $this->get('/contactanos/')->assertNotFound();
     }
 
-    public function test_switching_locale_with_a_real_page_referer_returns_to_that_page(): void
+    public function test_the_root_url_redirects_to_the_sites_default_locale(): void
     {
-        $this->withHeaders(['referer' => url('/contactanos')])
-            ->get('/idioma/de')
-            ->assertRedirect(url('/contactanos'));
+        $this->get('/')->assertRedirect(url('/'.SetLocale::DEFAULT_LOCALE));
+    }
+
+    public function test_the_same_static_page_has_a_distinct_translated_url_per_locale(): void
+    {
+        $this->get('/it/informativa-sulla-privacy')->assertOk();
+        $this->get('/de/datenschutzerklaerung')->assertOk();
+        $this->get('/es/politica-de-privacidad')->assertOk();
+        $this->get('/pt/politica-de-privacidade')->assertOk();
     }
 }

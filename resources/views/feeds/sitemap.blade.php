@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-@foreach ($urls as $url)
+@foreach ($entries as $entry)
+    @foreach ($entry as $locale => $url)
     <url>
         <loc>{{ $url }}</loc>
-        @foreach (\App\Http\Middleware\SetLocale::SUPPORTED_LOCALES as $locale)
-        <xhtml:link rel="alternate" hreflang="{{ $locale }}" href="{{ $url.'?lang='.$locale }}" />
+        @foreach ($entry as $altLocale => $altUrl)
+        <xhtml:link rel="alternate" hreflang="{{ $altLocale }}" href="{{ $altUrl }}" />
         @endforeach
-        <xhtml:link rel="alternate" hreflang="x-default" href="{{ $url.'?lang='.\App\Http\Middleware\SetLocale::DEFAULT_LOCALE }}" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="{{ $entry[\App\Http\Middleware\SetLocale::DEFAULT_LOCALE] }}" />
     </url>
+    @endforeach
 @endforeach
 </urlset>

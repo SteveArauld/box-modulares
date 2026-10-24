@@ -3817,7 +3817,7 @@
 															</a>
 														</li>
 														<li class="step-checkout step-active">
-															<a href="/">
+															<a href="{{ route('home') }}">
 																<span>{{ __('Finalizar compra') }}</span>
 															</a>
 														</li>

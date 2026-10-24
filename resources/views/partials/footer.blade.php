@@ -506,7 +506,7 @@
             </li>
         @endforeach
         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6056 item-level-0"><a
-                href="contactanos/" class="woodmart-nav-link"><span
+                href="{{ route('shop.contact') }}" class="woodmart-nav-link"><span
                     class="nav-link-text">{{ __('Contáctanos') }}</span></a></li>
     </ul>
 </div>
@@ -535,14 +535,14 @@
     href={{ asset('/wp-content/themes/woodmart/css/parts/opt-bottom-toolbar8833.css') }} type="text/css" media="all" />
 <div class="wd-toolbar wd-toolbar-label-show" role="complementary" aria-label="{{ __('Barra de herramientas fija') }}">
     <div class="wd-toolbar-shop wd-toolbar-item wd-tools-element">
-        <a href="tienda/">
+        <a href="{{ route('shop.index') }}">
             <span class="wd-tools-icon"></span>
             <span class="wd-toolbar-label">
                 {{ __('Tienda') }} </span>
         </a>
     </div>
     <div class="wd-header-cart wd-tools-element wd-design-5 cart-widget-opener" title="{{ __('Mi carrito') }}">
-        <a href="carrito/">
+        <a href="{{ route('shop.carrito') }}">
             <span class="wd-tools-icon">
                 <span class="wd-cart-number wd-tools-count">380 <span>{{ __('artículos') }}</span></span>
             </span>
@@ -551,7 +551,7 @@
         </a>
     </div>
     <div class="wd-header-my-account wd-tools-element wd-style-icon ">
-        <a href="mi-cuenta/">
+        <a href="{{ route('shop.my-account') }}">
             <span class="wd-tools-icon"></span>
             <span class="wd-toolbar-label">
                 {{ __('Mi cuenta') }} </span>

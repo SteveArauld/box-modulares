@@ -883,7 +883,7 @@
                                         <div class="container">
                                             <ul class="wd-checkout-steps">
                                                 <li class="step-cart step-active">
-                                                    <a href="/">
+                                                    <a href="{{ route('home') }}">
                                                         <span>{{ __('Carrito de compra') }}</span>
                                                     </a>
                                                 </li>

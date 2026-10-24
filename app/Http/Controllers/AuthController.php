@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Password;
 
 class AuthController extends Controller
 {
-    public function register(RegisterRequest $request): RedirectResponse
+    public function register(string $locale, RegisterRequest $request): RedirectResponse
     {
         $data = $request->validated();
 
@@ -30,7 +30,7 @@ class AuthController extends Controller
         return redirect()->route('shop.my-account')->with('status', 'Tu cuenta se ha creado correctamente.');
     }
 
-    public function login(LoginRequest $request): RedirectResponse
+    public function login(string $locale, LoginRequest $request): RedirectResponse
     {
         $credentials = $request->only('email', 'password');
 
@@ -45,7 +45,7 @@ class AuthController extends Controller
         return redirect()->intended(route('shop.my-account'));
     }
 
-    public function logout(): RedirectResponse
+    public function logout(string $locale): RedirectResponse
     {
         Auth::logout();
 
@@ -55,7 +55,7 @@ class AuthController extends Controller
         return redirect()->route('home');
     }
 
-    public function showResetForm(Request $request, string $token): View
+    public function showResetForm(string $locale, string $myAccountSegment, string $resetPasswordSegment, string $token, Request $request): View
     {
         return view('pages.reset-password', [
             'token' => $token,
@@ -63,7 +63,7 @@ class AuthController extends Controller
         ]);
     }
 
-    public function resetPassword(Request $request): RedirectResponse
+    public function resetPassword(string $locale, string $myAccountSegment, string $resetPasswordSegment, Request $request): RedirectResponse
     {
         $credentials = $request->validate([
             'token' => ['required'],

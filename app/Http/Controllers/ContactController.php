@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function send(Request $request): RedirectResponse
+    public function send(string $locale, string $contactSegment, Request $request): RedirectResponse
     {
         $data = $request->validate([
             'names.first_name' => ['required', 'string', 'max:100'],

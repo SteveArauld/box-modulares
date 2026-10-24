@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
-    public function store(StoreOrderRequest $request): JsonResponse
+    public function store(string $locale, string $checkoutSegment, StoreOrderRequest $request): JsonResponse
     {
         $data = $request->validated();
 

@@ -55,7 +55,7 @@
 						{{ __('Contraseña perdida') }} </h1>
 
 
-					<nav class="wd-breadcrumbs"><a href="/">{{ __('Inicio') }}</a><span
+					<nav class="wd-breadcrumbs"><a href="{{ route('home') }}">{{ __('Inicio') }}</a><span
 							class="wd-delimiter">•</span><span class="wd-last">{{ __('Mi cuenta') }}</span></nav>
 				</div>
 			</div>

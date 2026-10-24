@@ -9,7 +9,11 @@
         <g:id>{{ $product->sku ?: $product->id }}</g:id>
         <title>{{ \Illuminate\Support\Str::limit($product->translatedValue('name', $locale), 150, '') }}</title>
         <description>{{ \Illuminate\Support\Str::limit(trim(strip_tags($product->translatedValue('description', $locale) ?: $product->translatedValue('short_description', $locale) ?: $product->translatedValue('name', $locale))), 5000, '') }}</description>
-        <link>{{ route('product', $product->getTranslation('slug', 'es')) }}</link>
+        <link>{{ route('product', [
+            'locale' => $locale,
+            \App\Support\LocalizedSegments::paramName('product') => \App\Support\LocalizedSegments::segment('product', $locale),
+            'slug' => $product->getTranslation('slug', $locale),
+        ]) }}</link>
         @if ($product->coverImage)
         <g:image_link>{{ asset(ltrim($product->coverImage, '/')) }}</g:image_link>
         @endif

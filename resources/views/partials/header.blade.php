@@ -4,7 +4,7 @@
 		<ul class="mm-top-bar-langs">
 			@foreach ($availableLocales as $code => $label)
 				<li class="{{ $code === $currentLocale ? 'mm-top-bar-lang-active' : '' }}">
-					<a href="{{ route('locale.switch', $code) }}" rel="nofollow">{{ $label }}</a>
+					<a href="{{ $localizedUrls[$code] ?? route('home', ['locale' => $code]) }}" hreflang="{{ $code }}">{{ $label }}</a>
 				</li>
 			@endforeach
 		</ul>
@@ -19,7 +19,7 @@
 						<div class="whb-flex-row whb-general-header-inner">
 							<div class="whb-column whb-col-left whb-column8 whb-visible-lg">
 								<div class="site-logo whb-jey7bav40wk7t8zxlr1t wd-switch-logo">
-									<a href="/" class="wd-logo wd-main-logo" rel="home"
+									<a href="{{ route('home') }}" class="wd-logo wd-main-logo" rel="home"
 										aria-label="{{ __('Logotipo del sitio') }}">
 										<img width="175" height="44" src="{{ asset('assets/images/logo/tec-container-logo.png') }}"
 											class="attachment-full size-full" alt="{{ config('app.name') }}" style="max-width:175px;"
@@ -58,7 +58,7 @@
 										@endforeach
 										<li id="menu-item-6056"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6056 item-level-0 menu-simple-dropdown wd-event-hover">
-											<a href="contactanos/" class="woodmart-nav-link"><span
+											<a href="{{ route('shop.contact') }}" class="woodmart-nav-link"><span
 													class="nav-link-text">{{ __('Contáctanos') }}</span></a></li>
 									</ul>
 								</nav>
@@ -72,7 +72,7 @@
 								</div>
 								<div
 									class="wd-header-my-account wd-tools-element wd-event-hover wd-design-1 wd-style-icon whb-2x15qwfhcl3o3ujdxh9z">
-									<a href="mi-cuenta/" title="{{ __('Mi cuenta') }}">
+									<a href="{{ route('shop.my-account') }}" title="{{ __('Mi cuenta') }}">
 
 										<span class="wd-tools-icon">
 										</span>
@@ -153,7 +153,7 @@
 									class="wd-header-cart wd-tools-element wd-design-7 cart-widget-opener wd-style-text wd-with-wrap whb-8buyjktpo4jp6c7oimzq">
 									<link rel="stylesheet" id="wd-header-cart-css"
 										href={{ asset('/wp-content/themes/woodmart/css/parts/header-el-cart8833.css') }}
-										type="text/css" media="all" /> <a href="carrito/"
+										type="text/css" media="all" /> <a href="{{ route('shop.carrito') }}"
 										title="{{ __('Carrito de compra') }}">
 										<span class="wd-tools-inner">
 
@@ -187,7 +187,7 @@
 							</div>
 							<div class="whb-column whb-mobile-center whb-column_mobile3 whb-hidden-lg">
 								<div class="site-logo whb-ep1ny3r4ky7wli5rao3g wd-switch-logo">
-									<a href="/" class="wd-logo wd-main-logo" rel="home"
+									<a href="{{ route('home') }}" class="wd-logo wd-main-logo" rel="home"
 										aria-label="{{ __('Logotipo del sitio') }}">
 										<img width="150" height="38" src="{{ asset('assets/images/logo/tec-container-logo.png') }}"
 											class="attachment-full size-full" alt="{{ config('app.name') }}"
@@ -200,7 +200,7 @@
 
 								<div
 									class="wd-header-cart wd-tools-element wd-design-1 cart-widget-opener wd-style-icon whb-bg41lzhdhceld7novk8u">
-									<a href="carrito/" title="{{ __('Carrito de compra') }}">
+									<a href="{{ route('shop.carrito') }}" title="{{ __('Carrito de compra') }}">
 
 										<span class="wd-tools-icon">
 										</span>

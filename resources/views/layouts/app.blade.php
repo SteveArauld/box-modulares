@@ -21,24 +21,18 @@
     <meta name="theme-color" content="#F95228">
 
     @php
-        // The locale switcher normally works through a session cookie, which
-        // Googlebot does not carry between crawls — so every hreflang
-        // alternate would otherwise resolve to the same (session-default)
-        // language and the tags would be useless. SetLocale also accepts a
-        // stateless "?lang=" query parameter for exactly this case: each
-        // alternate below is a URL Google can fetch on its own and actually
-        // get that language's content from, independent of any cookie.
-        $hreflangBaseQuery = collect(request()->query())->except('lang')->all();
-        $hreflangUrl = fn (string $locale) => url()->current().'?'.http_build_query([...$hreflangBaseQuery, 'lang' => $locale]);
-        $canonicalUrl = request()->has('lang')
-            ? url()->current().'?'.http_build_query(request()->query())
-            : url()->current().(count($hreflangBaseQuery) ? '?'.http_build_query($hreflangBaseQuery) : '');
+        // Every language now lives at its own real, independently-crawlable
+        // URL (/it/..., /de/..., /es/..., /pt/...), so hreflang can point
+        // straight at them — no session, no query-string trick needed.
+        $hreflangUrls = \App\Support\LocalizedSegments::urlsForOtherLocales();
     @endphp
-    <link rel="canonical" href="{{ $canonicalUrl }}">
-    @foreach (\App\Http\Middleware\SetLocale::SUPPORTED_LOCALES as $hreflangLocale)
-        <link rel="alternate" hreflang="{{ $hreflangLocale }}" href="{{ $hreflangUrl($hreflangLocale) }}">
+    <link rel="canonical" href="{{ url()->current() }}">
+    @foreach ($hreflangUrls as $hreflangLocale => $hreflangHref)
+        <link rel="alternate" hreflang="{{ $hreflangLocale }}" href="{{ $hreflangHref }}">
     @endforeach
-    <link rel="alternate" hreflang="x-default" href="{{ $hreflangUrl(\App\Http\Middleware\SetLocale::DEFAULT_LOCALE) }}">
+    @if (isset($hreflangUrls[\App\Http\Middleware\SetLocale::DEFAULT_LOCALE]))
+        <link rel="alternate" hreflang="x-default" href="{{ $hreflangUrls[\App\Http\Middleware\SetLocale::DEFAULT_LOCALE] }}">
+    @endif
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ config('app.name') }}">

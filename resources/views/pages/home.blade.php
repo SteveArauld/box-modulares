@@ -51,7 +51,7 @@
 
                                     <div class="mm-cta-row">
                                         <a href="https://wa.me/34603547522" class="mm-btn mm-btn-primary">{{ __('Contactar por WhatsApp') }}</a>
-                                        <a href="tienda" class="mm-btn mm-btn-secondary">{{ __('Ver catálogo') }}</a>
+                                        <a href="{{ route('shop.index') }}" class="mm-btn mm-btn-secondary">{{ __('Ver catálogo') }}</a>
                                     </div>
 
                                     <div class="mm-trust-row">

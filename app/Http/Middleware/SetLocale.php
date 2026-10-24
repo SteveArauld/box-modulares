@@ -2,8 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use App\Support\LocalizedSegments;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 use Symfony\Component\HttpFoundation\Response;
 
 class SetLocale
@@ -23,31 +25,31 @@ class SetLocale
     /**
      * Handle an incoming request.
      *
+     * Every content route starts with a "{locale}" segment (see
+     * routes/web.php), so the active language is read from there rather
+     * than a session cookie — each language now lives at its own URL. This
+     * also fills in every route()'s "{xSegment}" translated-path parameter
+     * via URL::defaults(), so existing route('shop.privacy-policy') calls
+     * across the app keep working unchanged: Laravel silently supplies
+     * "locale" and "privacyPolicySegment" from these defaults whenever a
+     * call doesn't pass them explicitly.
+     *
      * @param  Closure(Request): (Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // A "?lang=" query parameter takes priority over the session when
-        // present. The language switcher itself never needs it (it already
-        // persists to the session), but it gives every page a second,
-        // stateless way to request a specific language — the one hreflang
-        // alternates use, since Googlebot does not carry session cookies
-        // between crawls and would otherwise see the same locale on every
-        // alternate URL.
-        $queryLocale = $request->query('lang');
+        $locale = $request->route('locale');
 
-        if (is_string($queryLocale) && in_array($queryLocale, self::SUPPORTED_LOCALES, true)) {
-            $request->session()->put('locale', $queryLocale);
-            app()->setLocale($queryLocale);
-
-            return $next($request);
+        if (! is_string($locale) || ! in_array($locale, self::SUPPORTED_LOCALES, true)) {
+            $locale = self::DEFAULT_LOCALE;
         }
 
-        $locale = $request->session()->get('locale');
+        app()->setLocale($locale);
 
-        if (is_string($locale) && in_array($locale, self::SUPPORTED_LOCALES, true)) {
-            app()->setLocale($locale);
-        }
+        URL::defaults(array_merge(
+            ['locale' => $locale],
+            LocalizedSegments::defaultsFor($locale),
+        ));
 
         return $next($request);
     }

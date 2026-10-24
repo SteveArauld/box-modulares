@@ -3,16 +3,116 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FeedController;
-use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Middleware\SetLocale;
+use App\Support\LocalizedSegments;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
-Route::get('/', [ShopController::class, 'home'])->name('home');
+// Every content page lives under "/{locale}/...", with the locale segment
+// AND the following path word both translated — so a product page, a
+// legal page, the cart... all get a real, distinct, shareable URL per
+// language (see app/Support/LocalizedSegments.php for the word list).
+// Sending someone "/it/informativa-sulla-privacy" gets them the Italian
+// privacy policy; "/pt/politica-de-privacidade" gets the Portuguese one.
+$locales = implode('|', SetLocale::SUPPORTED_LOCALES);
 
-// --- Google Merchant Center product feed ---
+// "/" has no language in it yet, so it isn't one of the pages above — it
+// just sends a first-time visitor to the site's default language.
+Route::get('/', fn () => redirect(URL::to('/'.SetLocale::DEFAULT_LOCALE)))->name('root');
+
+Route::get('/{locale}', [ShopController::class, 'home'])
+    ->where('locale', $locales)
+    ->name('home');
+
+Route::middleware(SetLocale::class)->where(['locale' => $locales])->group(function () {
+    foreach (LocalizedSegments::MAP as $routeName => $entry) {
+        $param = $entry['param'];
+        $alternatives = implode('|', array_map('preg_quote', [$entry['es'], $entry['it'], $entry['de'], $entry['pt']]));
+
+        match ($routeName) {
+            'shop.index' => Route::get("{locale}/{{$param}}", [ShopController::class, 'shopIndex'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.search' => Route::get("{locale}/{{$param}}", [ShopController::class, 'search'])
+                ->where($param, $alternatives)->name($routeName),
+            'product' => Route::get("{locale}/{{$param}}/{slug}", [ShopController::class, 'shop'])
+                ->where($param, $alternatives)->name($routeName),
+            'category' => Route::get("{locale}/{{$param}}/{slug}", [ShopController::class, 'category'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.contact' => (function () use ($param, $alternatives): void {
+                Route::get("{locale}/{{$param}}", [ShopController::class, 'contact'])
+                    ->where($param, $alternatives)->name('shop.contact');
+                Route::post("{locale}/{{$param}}", [ContactController::class, 'send'])
+                    ->where($param, $alternatives)->name('shop.contact.send');
+            })(),
+            'shop.shipping-policy' => Route::get("{locale}/{{$param}}", [ShopController::class, 'shippingPolicy'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.return-policy' => Route::get("{locale}/{{$param}}", [ShopController::class, 'returnPolicy'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.payment-policy' => Route::get("{locale}/{{$param}}", [ShopController::class, 'paymentPolicy'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.legal-notice' => Route::get("{locale}/{{$param}}", [ShopController::class, 'legalNotice'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.terms-of-use' => Route::get("{locale}/{{$param}}", [ShopController::class, 'termsOfUse'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.terms-of-sale' => Route::get("{locale}/{{$param}}", [ShopController::class, 'termsOfSale'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.privacy-policy' => Route::get("{locale}/{{$param}}", [ShopController::class, 'privacyPolicy'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.cookie-policy' => Route::get("{locale}/{{$param}}", [ShopController::class, 'cookiePolicy'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.my-account' => Route::get("{locale}/{{$param}}", [ShopController::class, 'myAccount'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.lost-password' => (function () use ($param, $alternatives): void {
+                $myAccount = LocalizedSegments::paramName('shop.my-account');
+                $myAccountAlts = implode('|', array_map('preg_quote', LocalizedSegments::alternatives('shop.my-account')));
+
+                Route::get("{locale}/{{$myAccount}}/{{$param}}", [ShopController::class, 'lostPassword'])
+                    ->where([$myAccount => $myAccountAlts, $param => $alternatives])->name('shop.lost-password');
+                Route::post("{locale}/{{$myAccount}}/{{$param}}", [ShopController::class, 'sendLostPassword'])
+                    ->where([$myAccount => $myAccountAlts, $param => $alternatives])->name('shop.lost-password.send');
+            })(),
+            'password.reset' => (function () use ($param, $alternatives): void {
+                $myAccount = LocalizedSegments::paramName('shop.my-account');
+                $myAccountAlts = implode('|', array_map('preg_quote', LocalizedSegments::alternatives('shop.my-account')));
+
+                Route::get("{locale}/{{$myAccount}}/{{$param}}/{token}", [AuthController::class, 'showResetForm'])
+                    ->where([$myAccount => $myAccountAlts, $param => $alternatives])->name('password.reset');
+                Route::post("{locale}/{{$myAccount}}/{{$param}}", [AuthController::class, 'resetPassword'])
+                    ->where([$myAccount => $myAccountAlts, $param => $alternatives])->name('password.reset.update');
+            })(),
+            'shop.carrito' => Route::get("{locale}/{{$param}}", [ShopController::class, 'carrito'])
+                ->where($param, $alternatives)->name($routeName),
+            'shop.checkout' => (function () use ($param, $alternatives): void {
+                Route::get("{locale}/{{$param}}", [ShopController::class, 'checkout'])
+                    ->where($param, $alternatives)->name('shop.checkout');
+                Route::post("{locale}/{{$param}}", [OrderController::class, 'store'])
+                    ->where($param, $alternatives)->name('shop.checkout.store');
+            })(),
+            'shop.order-confirmation' => (function () use ($param, $alternatives): void {
+                $checkout = LocalizedSegments::paramName('shop.checkout');
+                $checkoutAlts = implode('|', array_map('preg_quote', LocalizedSegments::alternatives('shop.checkout')));
+
+                Route::get("{locale}/{{$checkout}}/{{$param}}/{orderNumber}", [ShopController::class, 'orderConfirmation'])
+                    ->where([$checkout => $checkoutAlts, $param => $alternatives])->name('shop.order-confirmation');
+            })(),
+            default => null,
+        };
+    }
+
+    // Not content pages (no shareable/SEO value), so their path word stays
+    // literal in every language — only the "{locale}" prefix is translated.
+    Route::post('{locale}/login', [AuthController::class, 'login'])->name('login');
+    Route::post('{locale}/register', [AuthController::class, 'register'])->name('register');
+    Route::post('{locale}/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+// --- Google Merchant Center product feed --- (not locale-prefixed: a feed
+// URL is a machine endpoint pasted once into Merchant Center, not a page a
+// person browses or shares; its own "locale" query/path param already
+// selects which language's content it returns — see FeedController).
 // "flujo-productos.xml": URL stable à coller dans Merchant Center
 // (Produits > Flux > Ajouter un flux > Planification > "Récupérer maintenant/plus tard"),
 // Google revient la chercher tout seul selon la fréquence choisie.
@@ -21,44 +121,33 @@ Route::get('/flujo-productos.xml', [FeedController::class, 'googleShopping'])->n
 Route::get('/flujo-productos/descargar', [FeedController::class, 'googleShoppingDownload'])->name('feed.google-shopping.download');
 // Un flux par langue (es/it/de/pt), pour les marchés Merchant Center séparés par pays/langue.
 Route::get('/feeds/google-{locale}.xml', [FeedController::class, 'google'])
-    ->where('locale', implode('|', SetLocale::SUPPORTED_LOCALES))
+    ->where('locale', $locales)
     ->name('feed.google.locale');
-
-Route::get('/idioma/{locale}', [LocaleController::class, 'switch'])->name('locale.switch');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
-Route::get('/tienda', [ShopController::class, 'shopIndex'])->name('shop.index');
-Route::get('/buscar', [ShopController::class, 'search'])->name('shop.search');
+// Any URL that doesn't match a route above (e.g. an old pre-rebuild link
+// like "/contactanos/", or a typo) ends up here. SetLocale never runs for
+// a request that matches no route at all — it's only registered on the
+// locale-prefixed route group, which a truly unmatched URL never enters —
+// so without this, the 404 page itself would fail to render: it links to
+// route('shop.search'), and that needs the "locale"/"searchSegment"
+// URL::defaults() that only SetLocale sets up. This fallback sets them
+// from the URL's first segment (if it's a supported locale) before
+// raising the 404, so the error page always renders in a real language
+// instead of crashing into a second, unrelated 500.
+Route::fallback(function () {
+    $firstSegment = request()->segment(1);
+    $locale = in_array($firstSegment, SetLocale::SUPPORTED_LOCALES, true)
+        ? $firstSegment
+        : SetLocale::DEFAULT_LOCALE;
 
-Route::get('/producto/{slug}', [ShopController::class, 'shop'])->name('product');
-Route::get('/categoria-producto/{slug}', [ShopController::class, 'category'])->name('category');
+    app()->setLocale($locale);
 
-Route::get('/contactanos', [ShopController::class, 'contact'])->name('shop.contact');
-Route::post('/contactanos', [ContactController::class, 'send'])->name('shop.contact.send');
-Route::get('/politica-de-envios', [ShopController::class, 'shippingPolicy'])->name('shop.shipping-policy');
-Route::get('/politica-de-devoluciones-y-reembolsos', [ShopController::class, 'returnPolicy'])->name('shop.return-policy');
-Route::get('/politica-de-pago', [ShopController::class, 'paymentPolicy'])->name('shop.payment-policy');
+    URL::defaults(array_merge(
+        ['locale' => $locale],
+        LocalizedSegments::defaultsFor($locale),
+    ));
 
-// --- Legal Information ---
-Route::get('/aviso-legal', [ShopController::class, 'legalNotice'])->name('shop.legal-notice');
-Route::get('/condiciones-generales-de-uso-cgu', [ShopController::class, 'termsOfUse'])->name('shop.terms-of-use');
-Route::get('/condiciones-generales-de-venta', [ShopController::class, 'termsOfSale'])->name('shop.terms-of-sale');
-Route::get('/politica-de-privacidad', [ShopController::class, 'privacyPolicy'])->name('shop.privacy-policy');
-Route::get('/politica-de-cookies', [ShopController::class, 'cookiePolicy'])->name('shop.cookie-policy');
-
-Route::get('/mi-cuenta', [ShopController::class, 'myAccount'])->name('shop.my-account');
-Route::get('/mi-cuenta/lost-password', [ShopController::class, 'lostPassword'])->name('shop.lost-password');
-Route::post('/mi-cuenta/lost-password', [ShopController::class, 'sendLostPassword'])->name('shop.lost-password.send');
-Route::get('/mi-cuenta/reset-password/{token}', [AuthController::class, 'showResetForm'])->name('password.reset');
-Route::post('/mi-cuenta/reset-password', [AuthController::class, 'resetPassword'])->name('password.reset.update');
-
-Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::get('/carrito', [ShopController::class, 'carrito'])->name('shop.carrito');
-
-Route::get('/finalizar-compra', [ShopController::class, 'checkout'])->name('shop.checkout');
-Route::post('/finalizar-compra', [OrderController::class, 'store'])->name('shop.checkout.store');
-Route::get('/finalizar-compra/pedido-recibido/{orderNumber}', [ShopController::class, 'orderConfirmation'])->name('shop.order-confirmation');
+    abort(404);
+});
