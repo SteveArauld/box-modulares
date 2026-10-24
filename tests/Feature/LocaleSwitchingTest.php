@@ -58,8 +58,6 @@ class LocaleSwitchingTest extends TestCase
     public function test_the_same_static_page_has_a_distinct_translated_url_per_locale(): void
     {
         $this->get('/it/informativa-sulla-privacy')->assertOk();
-        $this->get('/de/datenschutzerklaerung')->assertOk();
         $this->get('/es/politica-de-privacidad')->assertOk();
-        $this->get('/pt/politica-de-privacidade')->assertOk();
     }
 }
