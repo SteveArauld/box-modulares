@@ -2,6 +2,8 @@
 
 namespace App\Support;
 
+use App\Http\Middleware\SetLocale;
+
 /**
  * Every content route's translated path word, per locale. Each entry's key
  * is both the route's name and the name of its dynamic "{xSegment}" route
@@ -65,14 +67,18 @@ class LocalizedSegments
     }
 
     /**
-     * @return array<int, string> every translated word for this route name,
-     *                            used to build the route's where() regex
+     * @return array<int, string> the translated word for this route name in
+     *                            every currently *active* locale (see
+     *                            SetLocale::SUPPORTED_LOCALES) — used to
+     *                            build the route's where() regex, so a
+     *                            disabled locale's word (e.g. the German one
+     *                            while only ES/IT are active) stops matching
      */
     public static function alternatives(string $routeName): array
     {
         $entry = self::MAP[$routeName];
 
-        return [$entry['es'], $entry['it'], $entry['de'], $entry['pt']];
+        return array_map(fn (string $locale) => $entry[$locale], SetLocale::SUPPORTED_LOCALES);
     }
 
     /**
@@ -102,7 +108,7 @@ class LocalizedSegments
 
         $urls = [];
 
-        foreach (['es', 'it', 'de', 'pt'] as $locale) {
+        foreach (SetLocale::SUPPORTED_LOCALES as $locale) {
             $targetParams = $params;
             $targetParams['locale'] = $locale;
 

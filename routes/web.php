@@ -30,7 +30,7 @@ Route::get('/{locale}', [ShopController::class, 'home'])
 Route::middleware(SetLocale::class)->where(['locale' => $locales])->group(function () {
     foreach (LocalizedSegments::MAP as $routeName => $entry) {
         $param = $entry['param'];
-        $alternatives = implode('|', array_map('preg_quote', [$entry['es'], $entry['it'], $entry['de'], $entry['pt']]));
+        $alternatives = implode('|', array_map('preg_quote', LocalizedSegments::alternatives($routeName)));
 
         match ($routeName) {
             'shop.index' => Route::get("{locale}/{{$param}}", [ShopController::class, 'shopIndex'])

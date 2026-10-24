@@ -47,11 +47,15 @@ class AppServiceProvider extends ServiceProvider
         'nuestros-remolques',
     ];
 
+    /**
+     * Labels shown in the language switcher. Only ES and IT are active for
+     * now — see SetLocale::SUPPORTED_LOCALES, the single source of truth
+     * for which locales are actually routable; add a locale back there
+     * first, then add its label here.
+     */
     private const LOCALE_LABELS = [
         'es' => 'ES',
         'it' => 'IT',
-        'de' => 'DE',
-        'pt' => 'PT',
     ];
 
     /**
