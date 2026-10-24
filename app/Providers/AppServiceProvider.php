@@ -49,8 +49,8 @@ class AppServiceProvider extends ServiceProvider
     private const LOCALE_LABELS = [
         'es' => 'ES',
         'it' => 'IT',
-        'de' => 'DE',
-        'pt' => 'PT',
+        // 'de' => 'DE',
+        // 'pt' => 'PT',
     ];
 
     /**
