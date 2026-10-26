@@ -11,13 +11,10 @@ use Symfony\Component\HttpFoundation\Response;
 class SetLocale
 {
     /**
-     * ES, IT and PT are active. DE is fully built (routes, translations,
-     * payment logos all exist) but intentionally disabled — add 'de' back
-     * here to re-enable it instantly; nothing else needs touching. See
-     * app/Support/LocalizedSegments.php for the full per-locale route-word
-     * map this list draws from.
+     * ES, IT, PT and DE are active. See app/Support/LocalizedSegments.php
+     * for the full per-locale route-word map this list draws from.
      */
-    public const SUPPORTED_LOCALES = ['es', 'it', 'pt'];
+    public const SUPPORTED_LOCALES = ['es', 'it', 'pt', 'de'];
 
     /**
      * The site's actual default language (APP_LOCALE), kept as a constant

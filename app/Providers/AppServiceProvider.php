@@ -56,6 +56,7 @@ class AppServiceProvider extends ServiceProvider
         'es' => 'ES',
         'it' => 'IT',
         'pt' => 'PT',
+        'de' => 'DE',
     ];
 
     /**
