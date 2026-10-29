@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Middleware\SetLocale;
 use App\Models\Product;
+use App\Support\GoogleShoppingFeed;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
@@ -57,7 +58,7 @@ class FeedController extends Controller
             ->values();
 
         $xml = view('feeds.google-shopping', [
-            'products' => $products,
+            'items' => (new GoogleShoppingFeed)->items($products, $locale),
             'locale' => $locale,
         ])->render();
 
