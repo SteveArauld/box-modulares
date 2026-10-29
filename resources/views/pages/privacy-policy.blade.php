@@ -51,7 +51,7 @@
 										</p>
 										<p><strong>{{ __('Centro de producción:') }}</strong> {{ __('Via Rocca dei Corvi 7, 16161 Genova (GE), Italia.') }}
 										</p>
-										<p><strong>{{ __('Correo electrónico de contatto:') }}</strong> <a
+										<p><strong>{{ __('Correo electrónico de contacto:') }}</strong> <a
 												href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
 										</p>
 										<p><strong>{{ __('Sitio web:') }}</strong> <a
@@ -201,7 +201,7 @@
 										<h2>{{ __('12. Modificaciones de la Política de Privacidad') }}</h2>
 										<p>{{ __('El Responsable podrá actualizar la presente Política de Privacidad para adaptarla a cambios legislativos, tecnológicos o en la actividad del sitio web.') }}</p>
 										<p>{{ __('Las modificaciones serán publicadas en esta misma página y producirán efectos desde su publicación.') }}</p>
-										<h2>{{ __('13. contatto') }}</h2>
+										<h2>{{ __('13. Contacto') }}</h2>
 										<p>{{ __('Para cualquier consulta relacionada con la protección de datos personales puede contactar con:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <title>{{ __('Confirmación de pedido') }}</title>
@@ -10,7 +10,7 @@
             <h1 style="color:#fff; font-size:20px; margin:0;">{{ config('app.name') }}</h1>
         </div>
         <div style="padding:24px;">
-            <h2 style="font-size:18px; margin-top:0;">¡Gracias por tu pedido, {{ $order->billing_first_name }}!</h2>
+            <h2 style="font-size:18px; margin-top:0;">{{ __('¡Gracias por tu pedido, :name!', ['name' => $order->billing_first_name]) }}</h2>
             <p>{{ __('Hemos recibido tu pedido correctamente. Aquí tienes el resumen:') }}</p>
 
             <p style="margin:4px 0;"><strong>{{ __('Número de pedido:') }}</strong> {{ $order->order_number }}</p>
@@ -42,11 +42,7 @@
                     <tr>
                         <td colspan="2" style="padding:8px 4px; text-align:right;">{{ __('Envío') }}</td>
                         <td style="padding:8px 4px; text-align:right;">
-                            @if ((float) $order->shipping_total > 0)
-                                {{ number_format((float) $order->shipping_total, 2, ',', '.') }} €
-                            @else
-                                Gratuito
-                            @endif
+                            {{ number_format((float) $order->shipping_total, 2, ',', '.') }} €
                         </td>
                     </tr>
                     <tr>

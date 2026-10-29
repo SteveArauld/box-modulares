@@ -10,6 +10,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', config('app.name'))</title>
+    <script type="application/ld+json">
+        {!! json_encode([
+            '@@context' => 'https://schema.org',
+            '@type' => 'Organization',
+            'name' => 'Tec Container Srl',
+            'url' => url('/'),
+            'email' => 'contatto@teccontainer.eu',
+            'address' => [
+                '@type' => 'PostalAddress',
+                'streetAddress' => 'Via Fieschi 1/7',
+                'postalCode' => '16121',
+                'addressLocality' => 'Genova',
+                'addressRegion' => 'GE',
+                'addressCountry' => 'IT',
+            ],
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
     <meta name="description" content="@yield('meta_description', __('Tec Container Srl: casetas de jardín, módulos prefabricados, generadores y equipamiento de obra y jardín.'))">
 
     <link rel="icon" type="image/png" sizes="48x48" href="{{ asset('assets/images/logo/favicon-48x48.png') }}">

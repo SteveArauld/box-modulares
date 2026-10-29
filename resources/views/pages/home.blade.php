@@ -50,7 +50,7 @@
                                     </div>
 
                                     <div class="mm-cta-row">
-                                        <a href="https://wa.me/34603547522" class="mm-btn mm-btn-primary">{{ __('Contactar por WhatsApp') }}</a>
+                                        <a href="mailto:contatto@teccontainer.eu" class="mm-btn mm-btn-primary">{{ __('Escríbenos por email') }}</a>
                                         <a href="{{ route('shop.index') }}" class="mm-btn mm-btn-secondary">{{ __('Ver catálogo') }}</a>
                                     </div>
 
@@ -594,7 +594,7 @@
 
                                         <details class="mm-faq-item">
                                             <summary>{{ __('¿Cuánto tarda en llegar mi pedido?') }}</summary>
-                                            <p>{{ __('El plazo de entrega depende del tipo de producto y del destino del envío. Una vez confirmado el pedido, nuestro equipo lo prepara y expide lo antes posible. Recibirá información de seguimiento cuando esté disponible.') }}</p>
+                                            <p>{{ __('El tiempo total estimado de entrega es de 4 a 10 días laborables: de 1 a 3 días laborables de preparación desde la confirmación del pago y de 3 a 7 días laborables de transporte. Estos plazos son estimaciones y pueden variar según la disponibilidad del producto, el destino, el volumen y el peso del pedido, y circunstancias excepcionales. Recibirá el número de seguimiento en cuanto el paquete se entregue al transportista.') }}</p>
                                         </details>
 
                                         <details class="mm-faq-item">
@@ -619,7 +619,7 @@
 
                                         <details class="mm-faq-item">
                                             <summary>{{ __('¿Cómo puedo contactar con el servicio de atención al cliente?') }}</summary>
-                                            <p>{{ __('Puede ponerse en contatto con nosotros en cualquier momento enviando un correo electrónico a') }} <a
+                                            <p>{{ __('Puede ponerse en contacto con nosotros en cualquier momento enviando un correo electrónico a') }} <a
                                                     href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>{{ __('. Nuestro equipo responderá a su consulta en el menor tiempo posible.') }}</p>
                                         </details>
 
@@ -638,9 +638,8 @@
                                     <h2>{{ __('¿Listo para equipar tu jardín y tu taller?') }}</h2>
                                     <p>{{ __('Envío a Italia, Alemania y España · Garantía 3 años · Soporte técnico propio') }}</p>
                                     <div class="mm-final-cta-buttons">
-                                        <a href="https://wa.me/34603547522" class="mm-btn mm-btn-primary">{{ __('Contactar por WhatsApp') }}</a>
-                                        <a href="mailto:contatto@teccontainer.eu"
-                                            class="mm-btn mm-btn-secondary">{{ __('Escríbenos por email') }}</a>
+                                        <a href="mailto:contatto@teccontainer.eu" class="mm-btn mm-btn-primary">{{ __('Escríbenos por email') }}</a>
+                                        <a href="{{ route('shop.index') }}" class="mm-btn mm-btn-secondary">{{ __('Ver catálogo') }}</a>
                                     </div>
                                 </div>
                             </div>

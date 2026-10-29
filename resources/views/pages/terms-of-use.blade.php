@@ -134,7 +134,7 @@
 										<h2>{{ __('14. Legislación aplicable y jurisdicción') }}</h2>
 										<p>{{ __('Las presentes Condiciones Generales de Uso se rigen por la legislación italiana.') }}</p>
 										<p>{{ __('En caso de conflicto o controversia, las partes se someterán a los Juzgados y Tribunales de Génova (Italia), sin perjuicio de los derechos que correspondan al consumidor según la legislación imperativa de protección de los consumidores de su país de residencia.') }}</p>
-										<h2>{{ __('15. contatto') }}</h2>
+										<h2>{{ __('15. Contacto') }}</h2>
 										<p>{{ __('Para cualquier consulta relacionada con estas Condiciones Generales de Uso, puede contactar con:') }}</p>
 										<p><strong>{{ __('Tec Container Srl') }}</strong></p>
 										<p>{{ __('Via Fieschi 1/7') }}</p>

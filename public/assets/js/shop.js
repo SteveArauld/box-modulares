@@ -365,10 +365,23 @@
             and: 'y el',
         };
 
-        var minDate = new Date();
-        minDate.setDate(minDate.getDate() + 4);
-        var maxDate = new Date();
-        maxDate.setDate(maxDate.getDate() + 10);
+        function addBusinessDays(start, days) {
+            var date = new Date(start.getTime());
+            var added = 0;
+
+            while (added < days) {
+                date.setDate(date.getDate() + 1);
+                var day = date.getDay();
+                if (day !== 0 && day !== 6) {
+                    added++;
+                }
+            }
+
+            return date;
+        }
+
+        var minDate = addBusinessDays(new Date(), 4);
+        var maxDate = addBusinessDays(new Date(), 10);
 
         return (
             '<div class="pellets-delivery-badge' + (modifierClass ? ' ' + modifierClass : '') + '">' +

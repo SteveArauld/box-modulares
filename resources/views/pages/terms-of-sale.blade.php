@@ -126,6 +126,8 @@
 											<li>{{ __('Circunstancias excepcionales.') }}</li>
 										</ul>
 										<p class="isSelectedEnd">{{ __('El riesgo sobre los productos se transmitirá al consumidor en el momento de la entrega.') }}</p>
+										<p class="isSelectedEnd">{{ __('El envío estándar a Italia, Alemania y España tiene un coste de 400 €, salvo que se indique una condición comercial distinta en la ficha del producto. Este coste se muestra siempre en el carrito antes de confirmar el pedido. La entrega con grúa y la instalación no están incluidas en el envío estándar: contáctenos para recibir un presupuesto personalizado según la ciudad, la dirección y las condiciones de acceso.') }}</p>
+										<p class="isSelectedEnd">{{ __('El tiempo total estimado de entrega es de 4 a 10 días laborables: de 1 a 3 días laborables de preparación desde la confirmación del pago y de 3 a 7 días laborables de transporte.') }}</p>
 										<h2>{{ __('9. Recepción del pedido') }}</h2>
 										<p class="isSelectedEnd">{{ __('El cliente deberá comprobar el estado del pedido en el momento de la entrega.') }}</p>
 										<p class="isSelectedEnd">{{ __('Si detecta daños visibles o incidencias en el embalaje, deberá hacerlo constar en el albarán del transportista y comunicarlo al vendedor en un plazo máximo de 48 horas.') }}</p>

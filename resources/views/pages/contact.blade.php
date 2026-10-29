@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contáctanos | '.config('app.name'))
+@section('title', __('Contáctanos').' | '.config('app.name'))
 
 
 @section('content')
@@ -51,7 +51,7 @@
 
                                                 <div class="title-after_title reset-last-child wd-fontsize-xs">
                                                     <p>{{ __('Si tiene alguna pregunta sobre nuestros productos, un pedido, un envío, una devolución o cualquier otro asunto relacionado con nuestros servicios, nuestro equipo de atención al cliente estará encantado de ayudarle.') }}</p>
-                                                    <p>{{ __('Puede ponerse en contatto con nosotros a través de los siguientes medios:') }}</p>
+                                                    <p>{{ __('Puede ponerse en contacto con nosotros a través de los siguientes medios:') }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,7 +68,7 @@
 
                                                     <div class="liner-continer">
                                                         <h4 class="woodmart-title-container title wd-fontsize-l">
-                                                            {{ __('Datos de contatto') }}</h4>
+                                                            {{ __('Datos de contacto') }}</h4>
                                                     </div>
 
                                                 </div>
@@ -100,32 +100,6 @@
                                                             <p><a
                                                                     href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a>
                                                             </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-6eafd27 e-con-full e-flex e-con e-child"
-                                            data-id="6eafd27" data-element_type="container" data-e-type="container">
-                                            <div class="elementor-element elementor-element-1db9dd8 elementor-widget__width-initial elementor-widget elementor-widget-wd_text_block"
-                                                data-id="1db9dd8" data-element_type="widget" data-e-type="widget"
-                                                data-widget_type="wd_text_block.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="wd-text-block reset-last-child text-left">
-
-                                                        <p>{{ __('Teléfono:') }}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="elementor-element elementor-element-56b4491 e-con-full e-flex e-con e-child"
-                                                data-id="56b4491" data-element_type="container" data-e-type="container">
-                                                <div class="elementor-element elementor-element-5d3ca23 elementor-widget elementor-widget-wd_text_block"
-                                                    data-id="5d3ca23" data-element_type="widget" data-e-type="widget"
-                                                    data-widget_type="wd_text_block.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="wd-text-block reset-last-child text-left">
-
-                                                            <p><a href="tel:+34603547522">+34 603 547 522</a></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -197,7 +171,7 @@
 
                                                 <div class="liner-continer">
                                                     <h4 class="woodmart-title-container title wd-fontsize-l">
-                                                        {{ __('Formulario de contatto') }}</h4>
+                                                        {{ __('Formulario de contacto') }}</h4>
                                                 </div>
 
                                             </div>
@@ -232,7 +206,7 @@
                                                             style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
                                                             <legend class="ff_screen_reader_title"
                                                                 style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">
-                                                                {{ __('Formulario de contatto') }}</legend>
+                                                                {{ __('Formulario de contacto') }}</legend>
                                                             <div data-type="name-element" data-name="names"
                                                                 class=" ff-field_container ff-name-field-wrapper">
                                                                 <div class='ff-t-container'>
@@ -282,7 +256,7 @@
                                                                 <div class='ff-el-input--content'><input type="email"
                                                                         name="email" id="ff_3_email"
                                                                         class="ff-el-form-control"
-                                                                        placeholder="correo@ejemplo.com" data-name="email"
+                                                                        placeholder="{{ __('correo@ejemplo.com') }}" data-name="email"
                                                                         value="{{ old('email') }}"
                                                                         aria-invalid="false" aria-required=true></div>
                                                             </div>
@@ -314,7 +288,7 @@
                                                             </div>
                                                             <div class='ff-el-group    ff-el-input--content'>
                                                                 <div class='ff-el-form-check ff-el-tc'><label
-                                                                        aria-label='Consiento que este sitio web almacene mi información enviada para que puedan responder a mi consulta.'
+                                                                        aria-label="{{ __('Consiento que este sitio web almacene mi información enviada para que puedan responder a mi consulta.') }}"
                                                                         class='ff-el-form-check-label ff_tc_label'
                                                                         for='gdpr-agreement_3a90edae93adc615272434d5e2740f6d'><span
                                                                             class='ff_tc_checkbox'><input type="checkbox"

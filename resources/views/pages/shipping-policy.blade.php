@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Politica di Spedizione | '.config('app.name'))
+@section('title', __('Política de Envíos').' | '.config('app.name'))
 
 
 @section('content')
 <div class="wd-page-content main-page-wrapper">
 
 			<link rel="stylesheet" id="wd-page-title-css"
-				href="{{ asset('/wp-content/themes/woodmart/css/parts/page-title8833.css') }} type="text/css"
+				href="{{ asset('/wp-content/themes/woodmart/css/parts/page-title8833.css') }}" type="text/css"
 				media="all" />
 			<div class="wd-page-title page-title  page-title-default title-size-small title-design-default color-scheme-light"
 				style="">
@@ -16,10 +16,10 @@
 						class="attachment-full size-full" alt="" decoding="async" fetchpriority="high" />
 				</div>
 				<div class="container">
-					<h1 class="entry-title title">Politica di Spedizione</h1>
+					<h1 class="entry-title title">{{ __('Política de Envíos') }}</h1>
 
-					<nav class="wd-breadcrumbs"><a href="../">Home</a><span
-							class="wd-delimiter">•</span><span class="wd-last">Politica di Spedizione</span></nav>
+					<nav class="wd-breadcrumbs"><a href="{{ route('home') }}">{{ __('Inicio') }}</a><span
+							class="wd-delimiter">•</span><span class="wd-last">{{ __('Política de Envíos') }}</span></nav>
 				</div>
 			</div>
 
@@ -31,57 +31,57 @@
 							<div class="e-con-inner">
 								<div class="elementor-element color-scheme-inherit text-left elementor-widget elementor-widget-text-editor">
 
-									<h2>Politica di Spedizione – Tec Container Srl</h2>
+									<h2>{{ __('Política de Envíos – Tec Container Srl') }}</h2>
 
-									<h3>Paesi serviti</h3>
-									<p>Tec Container Srl spedisce attualmente solo nei seguenti paesi:</p>
+									<h3>{{ __('Países servidos') }}</h3>
+									<p>{{ __('Tec Container Srl envía actualmente solo a los siguientes países:') }}</p>
 									<ul>
-										<li>Italia (penisola e isole maggiori)</li>
-										<li>Germania</li>
-										<li>Spagna (penisola e isole maggiori)</li>
+										<li>{{ __('Italia (península e islas mayores)') }}</li>
+										<li>{{ __('Alemania') }}</li>
+										<li>{{ __('España (península e islas mayores)') }}</li>
 									</ul>
-									<p>Nessun altro paese è attualmente servito. Per qualsiasi altra destinazione, contattaci prima dell'acquisto: verificheremo se è possibile organizzare una spedizione speciale su preventivo.</p>
+									<p>{{ __('Ningún otro país está actualmente servido. Para cualquier otro destino, contáctenos antes de la compra: comprobaremos si es posible organizar un envío especial bajo presupuesto.') }}</p>
 
-									<h3>Tempi di consegna</h3>
+									<h3>{{ __('Plazos de entrega') }}</h3>
 									<ul>
-										<li><strong>Tempo di preparazione dell'ordine:</strong> da 1 a 3 giorni lavorativi, a decorrere dalla conferma del pagamento.</li>
-										<li><strong>Tempo di trasporto:</strong> da 3 a 7 giorni lavorativi dopo l'affidamento al corriere.</li>
-										<li><strong>Tempo totale stimato:</strong> da 4 a 10 giorni lavorativi, somma della preparazione e del trasporto.</li>
+										<li><strong>{{ __('Tiempo de preparación del pedido:') }}</strong> {{ __('de 1 a 3 días laborables, a partir de la confirmación del pago.') }}</li>
+										<li><strong>{{ __('Tiempo de transporte:') }}</strong> {{ __('de 3 a 7 días laborables después de la entrega al transportista.') }}</li>
+										<li><strong>{{ __('Tiempo total estimado:') }}</strong> {{ __('de 4 a 10 días laborables, suma de la preparación y del transporte.') }}</li>
 									</ul>
-									<p>Questi tempi sono stime e non costituiscono una garanzia assoluta: possono variare in base a:</p>
+									<p>{{ __('Estos plazos son estimaciones y no constituyen una garantía absoluta: pueden variar en función de:') }}</p>
 									<ul>
-										<li>Disponibilità del prodotto</li>
-										<li>Paese e zona di destinazione (isole minori, zone remote o di difficile accesso)</li>
-										<li>Volume e peso dell'ordine</li>
-										<li>Condizioni meteorologiche o logistiche eccezionali</li>
+										<li>{{ __('Disponibilidad del producto') }}</li>
+										<li>{{ __('País y zona de destino (islas menores, zonas remotas o de difícil acceso)') }}</li>
+										<li>{{ __('Volumen y peso del pedido') }}</li>
+										<li>{{ __('Condiciones meteorológicas o logísticas excepcionales') }}</li>
 									</ul>
 
-									<h3>Costi di spedizione</h3>
-									<p>La spedizione standard ha un costo di <strong>400 €</strong> per gli ordini destinati a Italia, Germania e Spagna, salvo condizioni commerciali specifiche espressamente indicate sulla scheda del prodotto. Il costo di spedizione applicabile viene sempre mostrato chiaramente nel carrello, prima della conferma dell'ordine, e non viene mai aggiunto a sorpresa in un passaggio successivo.</p>
-									<p>Riceverai il numero di tracking non appena il pacco sarà affidato al corriere.</p>
-									<p>La consegna avviene all'indirizzo indicato al momento dell'ordine. È responsabilità del cliente assicurarsi che qualcuno sia presente per il ritiro, in particolare per colli voluminosi o pesanti.</p>
+									<h3>{{ __('Gastos de envío') }}</h3>
+									<p>{{ __('El envío estándar tiene un coste de') }} <strong>400 €</strong> {{ __('para los pedidos destinados a Italia, Alemania y España, salvo condiciones comerciales específicas indicadas expresamente en la ficha del producto. El coste de envío aplicable se muestra siempre claramente en el carrito, antes de la confirmación del pedido, y nunca se añade por sorpresa en un paso posterior.') }}</p>
+									<p>{{ __('Recibirá el número de seguimiento en cuanto el paquete se entregue al transportista.') }}</p>
+									<p>{{ __('La entrega se realiza en la dirección indicada en el momento del pedido. Es responsabilidad del cliente asegurarse de que alguien esté presente para la recepción, en particular para bultos voluminosos o pesados.') }}</p>
 
-									<h3>Consegna con gru e installazione</h3>
-									<p>Il tariffario di spedizione standard indicato sopra <strong>non comprende</strong> l'eventuale consegna con gru né l'installazione del prodotto. Questi due servizi sono distinti dalla spedizione standard:</p>
+									<h3>{{ __('Entrega con grúa e instalación') }}</h3>
+									<p>{{ __('La tarifa de envío estándar indicada arriba') }} <strong>{{ __('no incluye') }}</strong> {{ __('la eventual entrega con grúa ni la instalación del producto. Estos dos servicios son distintos del envío estándar:') }}</p>
 									<ul>
-										<li><strong>Spedizione standard:</strong> consegna del prodotto imballato all'indirizzo indicato, al costo fisso sopra indicato.</li>
-										<li><strong>Consegna con gru:</strong> necessaria per alcuni prodotti voluminosi o per accessi difficili; disponibile su preventivo personalizzato, calcolato in base a città, indirizzo e condizioni di accesso.</li>
-										<li><strong>Installazione:</strong> servizio opzionale, disponibile su preventivo personalizzato in base al prodotto e al luogo di installazione.</li>
+										<li><strong>{{ __('Envío estándar:') }}</strong> {{ __('entrega del producto embalado en la dirección indicada, al coste fijo indicado arriba.') }}</li>
+										<li><strong>{{ __('Entrega con grúa:') }}</strong> {{ __('necesaria para algunos productos voluminosos o para accesos difíciles; disponible bajo presupuesto personalizado, calculado según la ciudad, la dirección y las condiciones de acceso.') }}</li>
+										<li><strong>{{ __('Instalación:') }}</strong> {{ __('servicio opcional, disponible bajo presupuesto personalizado según el producto y el lugar de instalación.') }}</li>
 									</ul>
-									<p>Per richiedere un preventivo per la consegna con gru o l'installazione, contatta il nostro servizio clienti prima di confermare l'ordine, indicando città, indirizzo e condizioni di accesso. Riceverai le informazioni tariffarie applicabili prima di impegnarti definitivamente all'acquisto.</p>
+									<p>{{ __('Para solicitar un presupuesto de entrega con grúa o de instalación, contacte con nuestro servicio de atención al cliente antes de confirmar el pedido, indicando la ciudad, la dirección y las condiciones de acceso. Recibirá la información tarifaria aplicable antes de comprometerse definitivamente con la compra.') }}</p>
 
-									<h3>Zone escluse o con tempi diversi</h3>
-									<p>Per zone particolarmente remote o di difficile accesso all'interno di Italia, Germania e Spagna, contattaci prima dell'acquisto. Ti forniremo un preventivo personalizzato con tempi e costi aggiornati.</p>
+									<h3>{{ __('Zonas excluidas o con plazos distintos') }}</h3>
+									<p>{{ __('Para zonas particularmente remotas o de difícil acceso dentro de Italia, Alemania y España, contáctenos antes de la compra. Le facilitaremos un presupuesto personalizado con plazos y costes actualizados.') }}</p>
 
-									<h3>Ritardi</h3>
-									<p>In caso di ritardo superiore ai tempi indicati, il nostro servizio clienti ti contatterà proattivamente.</p>
+									<h3>{{ __('Retrasos') }}</h3>
+									<p>{{ __('En caso de retraso superior a los plazos indicados, nuestro servicio de atención al cliente se pondrá en contacto con usted de forma proactiva.') }}</p>
 
-									<h3>Contatti</h3>
-									<p><strong>Tec Container Srl</strong></p>
-									<p>Via Fieschi 1/7</p>
-									<p>16121 Genova (GE), Italia</p>
-									<p><strong>Email:</strong> <a href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></p>
-									<p><strong>Sito web:</strong> <a href="../">https://teccontainer.eu</a></p>
+									<h3>{{ __('Contacto') }}</h3>
+									<p><strong>{{ __('Tec Container Srl') }}</strong></p>
+									<p>{{ __('Via Fieschi 1/7') }}</p>
+									<p>{{ __('16121 Genova (GE), Italia') }}</p>
+									<p><strong>{{ __('Correo electrónico:') }}</strong> <a href="mailto:contatto@teccontainer.eu">contatto@teccontainer.eu</a></p>
+									<p><strong>{{ __('Sitio web:') }}</strong> <a href="{{ route('home') }}">https://teccontainer.eu</a></p>
 
 								</div>
 							</div>

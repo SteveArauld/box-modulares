@@ -132,7 +132,7 @@
 										<p>{{ __('Una vez recibidos los productos y comprobado su estado, el reembolso se efectuará utilizando el mismo medio de pago empleado por el cliente, salvo acuerdo expreso en contrario.') }}</p>
 										<p>{{ __('El reembolso se realizará') }} <strong>{{ __('en un plazo máximo de 14 días naturales') }}</strong> {{ __('desde la recepción de la comunicación del desistimiento, pudiendo ser retenido hasta recibir los productos o hasta que el cliente aporte una prueba suficiente de su devolución, conforme a la legislación vigente.') }}</p>
 										<h2>{{ __('9. Cambios de productos') }}</h2>
-										<p>{{ __('Si el cliente desea cambiar un producto por otro diferente, deberá ponerse en contatto con nuestro servicio de atención al cliente.') }}</p>
+										<p>{{ __('Si el cliente desea cambiar un producto por otro diferente, deberá ponerse en contacto con nuestro servicio de atención al cliente.') }}</p>
 										<p>{{ __('Los cambios estarán sujetos a la disponibilidad del nuevo producto solicitado.') }}</p>
 										<p>{{ __('En caso de diferencia de precio, se realizará el correspondiente abono o cargo.') }}</p>
 										<h2>{{ __('10. Garantía legal') }}</h2>
